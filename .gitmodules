@@ -1,0 +1,9 @@
+[submodule "CityGuideTestApp/CityGuideTestApp/Utilities/External/MTAlertWrapper"]
+	path = CityGuideTestApp/CityGuideTestApp/Utilities/External/MTAlertWrapper
+	url = https://github.com/maxxx777/MTAlertWrapper
+[submodule "CityGuideTestApp/CityGuideTestApp/Utilities/External/MTDataLayer"]
+	path = CityGuideTestApp/CityGuideTestApp/Utilities/External/MTDataLayer
+	url = https://github.com/maxxx777/MTDataLayer
+[submodule "CityGuideTestApp/CityGuideTestApp/Utilities/External/MTItemListCache"]
+	path = CityGuideTestApp/CityGuideTestApp/Utilities/External/MTItemListCache
+	url = https://github.com/maxxx777/MTItemListCache

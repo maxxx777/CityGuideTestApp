@@ -1,0 +1,2058 @@
+{
+    "places": [
+       {
+           "latitude": 0,
+           "longtitude": 0,
+           "name": "North Pole",
+           "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Nordpole.png/220px-Nordpole.png",
+           "description": "The North Pole, also known as the Geographic North Pole or Terrestrial North Pole, is, subject to the caveats explained below, defined as the point in the Northern Hemisphere where the Earth's axis of rotation meets its surface. It should not be confused with the North Magnetic Pole. The North Pole is the northernmost point on the Earth, lying diametrically opposite the South Pole. It defines geodetic latitude 90° North, as well as the direction of true north. At the North Pole all directions point south; all lines of longitude converge there, so its longitude can be defined as any degree value."
+       },
+       {
+       		"city": "Paris",
+           	"latitude": 48.858222,
+           	"longtitude": 2.2945,
+           	"name": "Eiffel Tower",
+           	"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/640px-Tour_Eiffel_Wikimedia_Commons.jpg",
+           	"description": "The Eiffel Tower (French: La Tour Eiffel, [tuʁ ɛfɛl]) is an iron lattice tower located on the Champ de Mars in Paris. It was named after the engineer Gustave Eiffel, whose company designed and built the tower. Erected in 1889 as the entrance arch to the 1889 World's Fair, it was initially criticised by some of France's leading artists and intellectuals for its design, but has become both a global cultural icon of France and one of the most recognizable structures in the world.[1] The tower is the tallest structure in Paris and the most-visited paid monument in the world; 6.98 million people ascended it in 2011.[2] The tower received its 250 millionth visitor in 2010."
+       },
+       {
+       		"city": "Moscow",
+           	"latitude": 55.754167,          	
+           	"longtitude": 37.62,
+           	"name": "Red Square",
+           	"image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/RedSquare_%28pixinn.net%29.jpg",
+           	"description": "Red Square (Russian: Красная площадь, tr. Krásnaya Plóshchaď, IPA: [ˈkrasnəjə ˈploɕːətʲ]) is a city square in Moscow, Russia. The square separates the Kremlin, the former royal citadel and currently the official residence of the President of Russia, from a historic merchant quarter known as Kitai-gorod. Red Square is often considered the central square of Moscow and all of Russia, because Moscow's major streets—which connect to Russia's major highways—originate from the square."
+       },
+		{
+       		"city": "San Francisco",
+           	"latitude": 37.819722,          	
+           	"longtitude": -122.478611,
+           	"name": "Golden Gate Bridge",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d0/Golden_Gate_bridge_pillar.jpg",
+           	"description": "The Golden Gate Bridge is a suspension bridge spanning the Golden Gate strait, the mile-wide, three-mile-long channel between San Francisco Bay and the Pacific Ocean. The structure links the U.S. city of San Francisco, on the northern tip of the San Francisco Peninsula, to Marin County, bridging both U.S. Route 101 and California State Route 1 across the strait. The bridge is one of the most internationally recognized symbols of San Francisco, California, and the United States. It has been declared one of the Wonders of the Modern World by the American Society of Civil Engineers."
+       },	
+       {
+       		"city": "Rome",
+           	"latitude": 41.890169,          	
+           	"longtitude": 12.492269,
+           	"name": "The Colosseum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+           	"description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio or Colosseo) is an elliptical amphitheatre in the centre of the city of Rome, Italy. Built of concrete and stone, it was the largest amphitheatre of the Roman Empire, and is considered one of the greatest works of Roman architecture and engineering. It is the largest amphitheatre in the world."
+       },	
+       {
+           	"latitude": 40.67693,          	
+           	"longtitude": 117.23193,
+           	"name": "Great Wall of China",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling.jpg",
+           	"description": "The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, wood, and other materials, generally built along an east-to-west line across the historical northern borders of China in part to protect the Chinese Empire or its prototypical states against intrusions by various nomadic groups or military incursions by various warlike peoples or forces. Several walls were being built as early as the 7th century BC; these, later joined together and made bigger and stronger, are now collectively referred to as the Great Wall. Especially famous is the wall built between 220–206 BC by the first Emperor of China, Qin Shi Huang. Little of that wall remains. Since then, the Great Wall has on and off been rebuilt, maintained, and enhanced; the majority of the existing wall are from the Ming Dynasty."
+       },	
+       {
+       		"city": "Cusco Region",
+           	"latitude": -13.163333,          	
+           	"longtitude": -72.545556,
+           	"name": "Machu Picchu",
+           	"image": "",
+           	"description": "Machu Picchu (in hispanicized spelling, Spanish pronunciation: [ˈmatʃu ˈpiktʃu]) or Machu Pikchu (Quechua machu old, old person, pikchu peak; mountain or prominence with a broad base which ends in sharp peaks, \"old peak\", pronunciation [ˈmɑtʃu ˈpixtʃu]) is a 15th-century Inca site located 2,430 metres (7,970 ft) above sea level. It is located in the Cusco Region, Urubamba Province, Machupicchu District in Peru. It is situated on a mountain ridge above the Sacred Valley which is 80 kilometres (50 mi) northwest of Cusco and through which the Urubamba River flows. Most archaeologists believe that Machu Picchu was built as an estate for the Inca emperor Pachacuti (1438–1472). Often mistakenly referred to as the \"Lost City of the Incas\", it is perhaps the most familiar icon of Inca civilization."
+       },	
+       {
+       		"city": "Yekaterinburg",
+           	"latitude": 56.844444,          	
+           	"longtitude": 60.609722,
+           	"name": "Church of All Saints",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f1/Yekaterinburg_cathedral_on_the_blood_2007.jpg",
+           	"description": "The Church on Blood in Honour of All Saints Resplendent in the Russian Land (Russian: Храм-на-Крови́ во и́мя Всех святы́х, в земле́ Росси́йской просия́вших) is a Russian Orthodox church built on the site of the Ipatiev House in Yekaterinburg, where Nicholas II, the last Emperor of Russia, and several members of his family and household were shot by the Bolsheviks during the Russian Civil War. The church commemorates the Romanov sainthood."
+       },	
+       {
+       		"city": "Bangkok",
+           	"latitude": 13.771667,          	
+           	"longtitude": 100.513056,
+           	"name": "Ananta Samakhom Throne Hall",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ca/Ananta_Samakhom_Martinp1.jpg",
+           	"description": "The Ananta Samakhom Throne Hall (Thai: พระที่นั่งอนันตสมาคม) is a former reception hall within Dusit Palace in Bangkok, Thailand. It now serves as a museum and is from time to time employed for certain state occasions.One year after the completion of the Amphorn Satharn Villa within the Dusit Palace in 1906, King Chulalongkorn (Rama V) commissioned the construction of a reception hall to replace the one built during the reign of King Mongkut (Rama IV.)."
+       },	
+       {
+       		"city": "Kyoto",
+           	"latitude":35.038889 ,          	
+           	"longtitude": 135.7725,
+           	"name": "Shimogamo Shrine",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/64/Shimogamo_01.jpg",
+           	"description": "Shimogamo Shrine (下鴨神社 Shimogamo-jinja?) in Japanese, is the common name of an important Shinto sanctuary in the Shimogamo district of Kyoto city's Sakyō ward. Its formal name is Kamo-mioya-jinja (賀茂御祖神社).[1] It is one of the oldest Shinto shrines in Japan and is one of the seventeen Historic Monuments of Ancient Kyoto which have been designated by UNESCO as a World Heritage Site. The term Kamo-jinja in Japanese is a general reference to Shimogamo Shrine and Kamigamo Shrine, the traditionally linked Kamo shrines of Kyoto;[2] Shimogamo is the older of the pair, being believed to be 100 years older than Kamigamo, and dating to the 6th century, centuries before Kyoto became the capital of Japan (794, see Heian-kyō). The Kamo-jinja serve the function of protecting Kyoto from malign influences"
+       },	
+       {
+       		"city": "Osaka",
+           	"latitude":34.687222 ,          	
+           	"longtitude":135.525833 ,
+           	"name": "Osaka Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ac/Osaka_Castle_Nishinomaru_Garden_April_2005.JPG",
+           	"description": "Osaka Castle (大坂城 or 大阪城, Ōsaka-jō?) is a Japanese castle in Chūō-ku, Osaka, Japan. The castle is one of Japan's most famous, and played a major role in the unification of Japan during the sixteenth century of the Azuchi-Momoyama period."
+       },	
+       {
+       		"city": "Beijing",
+           	"latitude": 39.882242,          	
+           	"longtitude": 116.406469,
+           	"name": "Temple of Heaven",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/87/11_Temple_of_Heaven.jpg",
+           	"description": "The Temple of Heaven, literally the Altar of Heaven (simplified Chinese: 天坛; traditional Chinese: 天壇; pinyin: Tiāntán; Manchu: Abkai mukdehun) is a complex of religious buildings situated in the southeastern part of central Beijing. The complex was visited by the Emperors of the Ming and Qing dynasties for annual ceremonies of prayer to Heaven for good harvest. It has been regarded as a Taoist temple, although Chinese heaven worship, especially by the reigning monarch of the day, pre-dates Taoism."
+       },	
+       {
+       		"city": "Hong Kong",
+           	"latitude": 22.254106 ,          	
+           	"longtitude": 113.905144,
+           	"name": "Tian Tan Buddha",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/8a/Tian_Tan_Buddha_2013.JPG",
+           	"description": "Tian Tan Buddha, also known as the Big Buddha, is a large bronze statue of a Buddha Amoghasiddhi, completed in 1993, and located at Ngong Ping, Lantau Island, in Hong Kong. The statue is located near Po Lin Monastery and symbolises the harmonious relationship between man and nature, people and religion. It is a major centre of Buddhism in Hong Kong, and is also a popular tourist attraction."
+       },	
+       {
+       		"city": "Ulan Bator",
+           	"latitude": 47.918611,          	
+           	"longtitude":106.919722 ,
+           	"name": "National Academic Theatre of Opera and Ballet of Mongolia",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/79/Opera_house_Ulan_Bator_3103523806_e339241503_o.jpg",
+           	"description": "The National Academic Theatre of Opera and Ballet of Mongolia (colloquially called Ulaanbaatar Opera House) opened on 15 May 1963 and made its opening ceremony on 18 May 1963 with Tchaikovsky’s Eugene Onegin. The repertoire includes classical and national ballet (Swan Lake, The Nutcracker) and opera (Madama Butterfly, La bohème). The beginnings of a contemporary professional theatre in Mongolia were laid down with the establishment of a National Central Theatre in 1931,[1] which was an extension of the Folk Stadium which was inaugurated in 1927."
+       },	
+       {
+       		"city": "Seoul",
+           	"latitude": 37.566944,          	
+           	"longtitude": 126.976111,
+           	"name": "Myeongdong Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/40/Myeongdongchurch.jpg",
+           	"description": "The Cathedral Church of the Virgin Mary of the Immaculate Conception also known as Myeongdong Cathedral, is a prominent Latin-rite Roman Catholic church located in the Myeongdong neighborhood of Jung-gu, Seoul, South Korea. It is the seat of the Archbishop of Seoul, Andrew Yeom Soo-jung, the highest Catholic prelate in the country. Dedicated in honor of Our Lady of the Immaculate Conception, the principal patroness of Korea and the Korean people, the cathedral is a community landmark and a notable symbol of Catholicism in Korea. The cathedral church is one of the earliest and most notable examples of Gothic Revival architecture in Korea."
+       },	
+       {
+       		"city": "Pyongyang",
+           	"latitude":39.044444 ,          	
+           	"longtitude": 125.752778,
+           	"name": "Arch of Triumph",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1b/Arch-of-Triumph-2014.jpg",
+           	"description": "The Arch of Triumph in Pyongyang (Korean: 개선문) was built to commemorate the Korean resistance to Japan from 1925 to 1945. It is the second tallest triumphal arch in the world, after Monumento a la Revolución in Mexico, standing 60 m (197 ft) high and 50 m (164 ft) wide. Built in 1982 on the Triumph Return Square at the foot of Moran Hill (모란봉) in the North Korean capital city of Pyongyang, the monument was built to honour and glorify President Kim Il-sung's role in the military resistance for Korean independence. Inaugurated on the occasion of his 70th birthday, each of its 25,500 blocks of finely-dressed white granite represents a day of his life up to that point."
+       },	
+       {
+       		"city": "Singapore",
+           	"latitude": 1.28265,          	
+           	"longtitude": 103.858417,
+           	"name": "Marina Bay Sands",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg",
+           	"description": "Marina Bay Sands is situated on 15.5 hectares of land with the gross floor area of 581,000 square metres. The iconic design has transformed Singapore's skyline and tourism landscape since it opened on 27 April 2010. The property has a hotel, convention and exhibition facilities, theatres, entertainment venues, retailers, and restaurants."
+       },	
+       {
+       		"city": "Hanoi",
+           	"latitude": 21.038889,          	
+           	"longtitude": 105.834167,
+           	"name": "Presidential Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Presidential_Palace_of_Vietnam.jpg",
+           	"description": "The Presidential Palace of Vietnam, located in the city of Hanoi, was built between 1900 and 1906 to house the French Governor-General of Indochina."
+       },	
+       {
+       		"city": "Vientiane",
+           	"latitude": 17.976167,          	
+           	"longtitude": 102.63425,
+           	"name": "Pha That Luan",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b6/Pha_That_Luang%2C_Vientiane%2C_Laos.jpg",
+           	"description": "Pha That Luang according to the Lao people was originally built as a Hindu temple in the 3rd century. Buddhist missionaries from the Mauryan Empire are believed to have been sent by the Emperor Ashoka, including Bury Chan or Praya Chanthabury Pasithisak and five Arahata monks who brought a holy relic (believed to be the breast bone) of Lord Buddha to the stupa. It was rebuilt in the 13th century as a Khmer temple which fell into ruin. In the mid-16th century, King Setthathirat relocated his capital from Luang Prabang to Vientiane and ordered construction of Pha That Luang in 1566.[3] It was rebuilt about 4 km from the centre of Vientiane at the end of That Luang Road and named Pha That Luang.The bases had a length of 69 metres each and was 45 metres high, and was surrounded by 30 small Stupas."
+       },	
+       {
+       		"city": "New Delhi",
+           	"latitude": 28.614342 ,          	
+           	"longtitude": 77.199804,
+           	"name": "Rashtrapati Bhavan",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/6a/PresidentPalaceDelhi.jpg",
+           	"description": "Rashtrapati Bhavan (Hindi: राष्ट्रपति भवन, About this sound pronunciation, \"Presidential Residence\") is the official home of the President of India, located in New Delhi, India. It may refer to only the mansion (the 340-room main building) that has the President's official residence, halls, guest rooms and offices; it may also refer to the entire 130 hectare (320 acre) President Estate that additionally includes huge presidential gardens (Mughal Gardens), large open spaces, residences of bodyguards and staff, stables, other offices and utilities within its perimeter walls. The main palace building was formerly known as Viceroy's House."
+       },	
+       {
+       		"city": "Washington, D.C.",
+           	"latitude": 38.907242,          	
+           	"longtitude": -77.072981,
+           	"name": "Healy Hall",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Healy_Hall_at_Georgetown_University.jpg",
+           	"description": "Healy Hall is the historic flagship building at the main campus of Georgetown University. Constructed between 1877-79, it was designed by prominent architects Paul J. Pelz and John L. Smithmeyer at the time they were working on the Library of Congress. The building was listed on DC Inventory of Historic Sites in 1964, on the National Register of Historic Places on May 25, 1971, and as a National Historic Landmark on December 23, 1987."
+       },	
+       {
+       		"city": "New York City",
+           	"latitude": 40.75773,          	
+           	"longtitude": -73.985708,
+           	"name": "Times Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg",
+           	"description": "Times Square is a major commercial intersection and a neighborhood in Midtown Manhattan, New York City, at the junction of Broadway (now converted into a pedestrian plaza) and Seventh Avenue and stretching from West 42nd to West 47th Streets. Times Square – iconified as \"The Crossroads of the World\", \"The Center of the Universe\",and the \"The Great White Way – is the brightly illuminated hub of the Broadway Theater District, one of the world's busiest pedestrian intersections, and a major center of the world's entertainment industry. According to Travel + Leisure magazine's October 2011 survey, Times Square is the world's most visited tourist attraction, hosting over 39 million visitors annually. Approximately 330,000 people pass through Times Square daily, many of whom are either tourists or people working in the area."
+       },	
+       {
+       		"city": "Ottawa",
+           	"latitude": 45.429434,          	
+           	"longtitude": -75.698386,
+           	"name": "National Gallery of Canada",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ce/National_Gallery_of_Canada.jpg",
+           	"description": "The Gallery is now housed in a glass and granite building on Sussex Drive with a notable view of the Canadian Parliament buildings on Parliament Hill. The building was designed by Moshe Safdie and opened in 1988.The Gallery's former director Jean Sutherland Boggs was chosen especially by Prime Minister Pierre Trudeau to oversee construction of the national gallery and museums.Marc Mayer was named the museum's director, succeeding Pierre Théberge, on 19 January 2009."
+       },	
+       {
+       		"city": "Mexico",
+           	"latitude": 20.6829,          	
+           	"longtitude": -88.56865,
+           	"name": "Chichen Itza",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/51/Chichen_Itza_3.jpg",
+           	"description": "Chichen Itza was a major focal point in the northern Maya lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c.AD 800–900) and into the early portion of the Early Postclassic period (c. AD 900–1200). The site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc and Chenes styles of the northern Maya lowlands. The presence of central Mexican styles was once thought to have been representative of direct migration or even conquest from central Mexico, but most contemporary interpretations view the presence of these non-Maya styles more as the result of cultural diffusion."
+       },	
+       {
+       		"city": "Havana",
+           	"latitude": 23.141667,          	
+           	"longtitude": -82.356667,
+           	"name": "Museum of the Revolution",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/5b/Museum_of_Revolution_Cuba.jpg",
+           	"description": "The Museum of the Revolution (Spanish: Museo de la Revolución) is a museum located in the Old Havana section of Havana, Cuba. The museum is housed in what was the Presidential Palace of all Cuban presidents from Mario García Menocal to Fulgencio Batista. It became the Museum of the Revolution during the years following the Cuban revolution."
+       },	
+       {
+       		"city": "Havana",
+           	"latitude": 23.141381,          	
+           	"longtitude": -82.351917,
+           	"name": "Havana Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/25/Plaza_de_la_Catedral_of_Havana_%28Jan_2014%29.jpg",
+           	"description": "The Cathedral of The Virgin Mary of the Immaculate Conception (also known in Spanish as La Catedral de la Virgen María de la Concepción Inmaculada de La Habana) is one of eleven Roman Catholic cathedrals on the island of Cuba. Located in the Plaza de la Catedral, the Havana Cathedral is found in the center of Old Havana. This thirty-four by thirty-five meter rectangle church serves as the seat of the Roman Catholic Archdiocese of San Cristobal de la Habana which overlooks 7,542 square kilometers of the island and 2,821,000 Catholics.[1]"
+       },	
+       {
+       		"city": "Havana",
+           	"latitude": 23.136078,          	
+           	"longtitude": -82.350061,
+           	"name": "Plaza Vieja",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/67/Old_Square%2C_Havana.jpg",
+           	"description": "The Old Square (Spanish: Plaza Vieja) is a plaza located in Old Havana, Cuba. The plaza and its surroundings are also one of the seven consejos populares (wards) of the municipality of Old Havana.[1] It has a residential population of 17,426.[1]"
+       },
+       {
+       		"city": "Brasilia",
+           	"latitude": -15.823611,          	
+           	"longtitude": -47.829444,
+           	"name": "Juscelino Kubitschek bridge",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/01/BSB_Ponte_JK_Panorama_05_2007_266.jpg",
+           	"description": "The Juscelino Kubitschek Bridge (Portuguese: Ponte Juscelino Kubitschek), also known as the President JK Bridge or just the JK Bridge, is a steel and concrete bridge that crosses Lake Paranoá in Brasília. It links the southern part of the lake, and St. Sebastian Paranoá the Pilot Plan (or the central and original part of the city), through the Monumental Axis. Inaugurated on December 15, 2002, the structure of the bridge has a total length of 1,200 metres (3,900 ft), a width of 24 metres (79 ft) and two carriageways with three lanes in each direction, two walkways on the sides for cyclists and pedestrians 1.5 metres (4.9 ft) wide, and three spans of 240 metres (790 ft)."
+       },	
+       {
+       		"city": "Brasilia",
+           	"latitude": -15.786944,          	
+           	"longtitude":  -47.903611,
+           	"name": "Monumental Axis",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/94/Brasilia_aerea_eixo_monumental.jpg",
+           	"description": "The Monumental Axis (\"Eixo Monumental\" in Portuguese) is a central avenue in Brasília's city design. The avenue begins on the National Congress of Brazil building and is considered part of the DF-002 road. Its first section is known as \"Ministries Esplanade\" (\"Esplanada dos Ministérios\"), as it is surrounded by ministries buildings. Many important government buildings, monuments and memorials are located on the Monumental Axis."
+       },	
+       {
+       		"city": "Brasilia",
+           	"latitude": -15.7835,
+           	"longtitude": -47.899164,
+           	"name": "Estádio Nacional Mané Garrincha",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/88/Estádio_Nacional_de_Bras%C3%ADlia.JPG",
+           	"description": "Estádio Nacional Mané Garrincha[3] is a multi-purpose stadium in Brasília, Brazil. It is currently used mostly for football matches. The stadium holds 69,349.[2] It was built in 1974. It is named after famed Brazilian footballer Garrincha. The stadium is one of several structures comprising the Ayrton Senna Multisport Complex, which also includes the Nilson Nelson Gymnasium and the Nelson Piquet International Autodrome."
+       },	
+       {
+       		"city": "Caracas",
+           	"latitude": 10.496667,          	
+           	"longtitude": -66.841111,
+           	"name": "Parque del Este",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/25/Planetario_Exterior.jpg",
+           	"description": "Parque del Este (\"East Park\"), officially Generalissimo Francisco de Miranda Park, in honor of the Venezuelan national hero, is a public recreation park located in the Sucre Municipality of Metropolitan Caracas in Venezuela. Opened in 1961 it is one of the most important of the city, with an area of 82 hectares (200 acres). The park was designed by Roberto Burle Marx and associates Fernando Tabora and John Stoddart. [1][2]"
+       },	
+       {
+       		"city": "Caracas",
+           	"latitude": 10.5129,          	
+           	"longtitude": -66.9126,
+           	"name": "National Pantheon of Venezuela",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/51/Panteón_Nacional_de_Venezuela.JPG",
+           	"description": "The Panthéon (Latin Pantheon,[1] from Greek Pantheon, meaning \"Temple of all the Gods\") is a building on the northern edge of the old town of Caracas, Venezuela. It was built as a church but is now a final resting place for national heroes. The entire central nave is dedicated to Simón Bolívar, with the altar's place taken by the hero's bronze sarcophagus, while lesser luminaries are relegated to the aisles. The national pantheon's vault is covered with 1930s paintings depicting scenes from Bolívar's life, and the huge crystal chandelier glittering overhead was installed in 1883 on the centennial of his birth."
+       },	
+       {
+       		"city": "Caracas",
+           	"latitude": 10.5062,          	
+           	"longtitude": -66.914,
+           	"name": "Caracas Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/04/Catedral-caracas.jpg",
+           	"description": "The Caracas Cathedral is the seat of the Roman Catholic Metropolitan archdiocese of Caracas, located on the Plaza Bolívar in Caracas, Venezuela. Its chapel of the Holy Trinity is the burial site of the parents and wife of Simón Bolívar. The Nuestra Senora de Venezuela y Santa Ana is a cuadra (urban block) situated between the cathedral and the central plaza, which is walled on three sides, but open to the east where it faces the cathedral.[1]"
+       },	
+       {
+       		"city": "Bogotá",
+           	"latitude": 4.598056,          	
+           	"longtitude":  -74.075833,
+           	"name": "Bolívar Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c3/CatedralPrimadaBogota2004-7.jpg",
+           	"description": "The Bolívar Square (Spanish: Plaza de Bolívar o Plaza Bolívar) is located in the heart of the historical area of Bogotá. It has a statue of Simón Bolívar sculpted in 1846 by the Italian Pietro Tenerani, which was the first ever public monument in the city. Plaza Bolívar is also the name given to the main square in every city or town of Venezuela, the native country of Simón Bolívar."
+       },	
+       {
+       		"city": "Bogotá",
+           	"latitude": 4.416667,          	
+           	"longtitude":  -74.1,
+           	"name": "Sumapaz Paramo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/2a/Paramo_de_Sumapaz_-_Yuri_Romero_Picon.jpg",
+           	"description": "Sumapaz Páramo (Spanish Páramo de Sumapaz - meaning \"Utterly peaceful moorland\" ) is a large páramo ecosystem located in the Altiplano Cundiboyacense mountain range, considered the largest páramo ecosystem in the world.[2] It was declared a National Park of Colombia in 1977 because of its importance as a biodiversity hotspot and main source of water for the most densely populated area of the country, the Bogotá Savannah."
+       },	
+       {
+       		"city": "Bogotá",
+           	"latitude": 4.5975,          	
+           	"longtitude": -74.076389,
+           	"name": "Capitolio Nacional",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/43/CapitolioNacionalDeColombia2004-7.jpg",
+           	"description": "Capitolio Nacional (or National Capitol) is a building on Bolivar Square in central Bogotá, the construction of which began in 1876, by order of president Tomás Cipriano de Mosquera, and was not concluded until 1926. It houses both houses of the Congress of Colombia. It was designed by Thomas Reed."
+       },	
+       {
+       		"city": "Quito",
+           	"latitude": -0.228611,          	
+           	"longtitude": -78.518611,
+           	"name": "El Panecillo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Quito_calle_Garc%C3%ADa_Moreno.jpg",
+           	"description": "El Panecillo (from Spanish panecillo small piece of bread, diminutive of pan bread) is a 200-metre-high hill of volcanic-origin, with loess soil, located between southern and central Quito. Its peak is at an elevation of 3,016 metres above sea level. The original name used by the aboriginal inhabitants of Quito was Yavirac. According to Juan de Velasco, a Jesuit historian, on top of Yavirac there was a temple which the Indians used to worship the sun. This temple is said[by whom?] to have been destroyed by the Spanish conquistadores. The street that leads up to El Panecillo is called Melchor Aymerich."
+       },	
+       {
+       		"city": "Quito",
+           	"latitude": -0.220278,          	
+           	"longtitude": -78.515556,
+           	"name": "Church and Convent of St. Francis",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/8f/SanFranciscoQuito.jpg",
+           	"description": "The Church and Monastery of St. Francis (Spanish: Iglesia y Monasterio de San Francisco), commonly known as el San Francisco, is a 16th-century Roman Catholic complex in Quito, Ecuador. It fronts onto its namesake Plaza de San Francisco. The imposing structure has the distinction of being the largest architectural ensemble among the historical structures of colonial Latin America and for this reason is sometimes known as \"El Escorial of the New World\"[by whom?]. The style evolved over almost 150 years of construction (1534-1680) through earthquakes and changes in artistic fashion. The Church houses the city's beloved Virgin of Quito (1734)."
+       },
+       {
+       		"city": "Quito",
+           	"latitude": -0.002222,          	
+           	"longtitude": -78.455833,
+           	"name": "Ciudad Mitad del Mundo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3f/Ecuador_SanAntoniodePichincha_MitaddelMundo_Monumentstreet.JPG",
+           	"description": "The Ciudad Mitad del Mundo (Spanish: Middle of the World City) is a tract of land owned by the prefecture of the province of Pichincha, Ecuador. It is located at San Antonio parish of the canton of Quito, north of the center of Quito. The grounds contain the Museo Etnográfico Mitad del Mundo, a museum about the indigenous ethnography of Ecuador."
+       },	
+       {
+       		"city": "Lima",
+           	"latitude": -12.04514,          	
+           	"longtitude": -77.02989,
+           	"name": "Government Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/99/Casadepizarrolima.jpg",
+           	"description": "The Government Palace of Peru, also known as House of Pizarro, was the house of the Peruvian government headquarters, erected in 1535, and was built over a huge Indian burying ground Waka that had a shrine of Indian chief Taulichusco. It has been through many alterations. The current structure was built in the 20th century, designed by Peru's dictators in the style of grandiose French Baroque architecture."
+       },	
+       {
+       		"city": "Lima",
+           	"latitude": -12.046472,          	
+           	"longtitude": -77.030036,
+           	"name": "Cathedral of Lima",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/8d/Lima.Catedral.JPG",
+           	"description": "The Basilica Cathedral of Lima is a Roman Catholic cathedral located in the Plaza Mayor of downtown Lima, Peru. Construction began in 1535, and the building has undergone many reconstructions and transformation since, however it still retains its colonial structure and facade. It is dedicated to St John, Apostle and Evangelist."
+       },	
+       {
+       		"city": "Lima",
+           	"latitude": -12.045833,          	
+           	"longtitude": -77.030556,
+           	"name": "Plaza Mayor",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/0f/Square_in_Lima_Peru_01.jpg",
+           	"description": "The Plaza Mayor or Plaza de Armas of Lima, is the birthplace [1] of the city of Lima, as well as the core of the city. Located in the Historic Centre of Lima, it is surrounded by the Government Palace, Cathedral of Lima, Archbishop's Palace of Lima, the Municipal Palace, and the Palace of the Union.[2]"
+       },	
+       {
+       		"city": "Sucre",
+           	"latitude": -19.048611,          	
+           	"longtitude": -65.260278,
+           	"name": "Sucre Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Church_in_Historic_Center_-_Sucre_-_Bolivia.jpg/640px-Church_in_Historic_Center_-_Sucre_-_Bolivia.jpg",
+           	"description": "The Metropolitan Cathedral of Sucre, formerly La Plata, Bolivia is the seat of the Roman Catholic Church in Bolivia. It was built between 1559 to 1712.[1]"
+       },	
+       {
+       		"city": "Santiago",
+           	"latitude": -33.44217,          	
+           	"longtitude": -70.68184,
+           	"name": "Chilean National Museum of Natural History",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a5/MNHN_Diego_Alarcon.jpg",
+           	"description": "The Chilean National Museum of Natural History (Spanish: Museo Nacional de Historia Natural or MNHN) is one of three national museums in Chile, along with the Museum of Fine Arts and the National History Museum. It is located in Quinta Normal Park."
+       },	
+       {
+       		"city": "Santiago",
+           	"latitude": -33.437,          	
+           	"longtitude": -70.634411,
+           	"name": "Plaza Baquedano",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/01/Baquedano_desde_Telefónica.jpg",
+           	"description": "Plaza Baquedano is a major landmark in Santiago, Chile. It is located where formerly the Mapocho River used to fork. The oval-shaped plaza is the focal point of celebrations and riots in the city. The area also serves as a hub for Santiago's street network. Some of the main streets of Santiago intersect in the area, including Avenida Providencia, Avenida Libertador General Bernardo O'Higgins and Avenida Vicuña Mackenna. A tunnel entrance to the Costanera Norte Highway is close to Plaza Baquedano. Parque Forestal, Balmaceda Park and Bustamante Park converge here."
+       },	
+       {
+       		"city": "Santiago",
+           	"latitude": -33.416889,          	
+           	"longtitude": -70.606706,
+           	"name": "Gran Torre Santiago",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/4d/Costanera_Center_Sep._13.jpg",
+           	"description": "The Gran Torre Santiago (Spanish for \"Grand Santiago Tower\"), previously known as Torre Gran Costanera, is a 64-story tall skyscraper under construction in Santiago, Chile. In 2011 it became the tallest building in South America,[3] and in 2012 the tallest in Latin America.[4] Upon completion it will become the second tallest building in the Southern Hemisphere, behind Q1 in Australia's sixth largest city the Gold Coast, Queensland, just surpassing the Eureka Tower in Australia's second largest city, Melbourne."
+       },	
+       {
+       		"city": "Buenos Aires",
+           	"latitude": -34.5923,          	
+           	"longtitude": -58.3737,
+           	"name": "Torre Monumental",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Torre_Monumental.jpg/640px-Torre_Monumental.jpg",
+           	"description": "Torre Monumental and before 1982 Torre de los Ingleses (Tower of the English) is a clock tower located in the barrio (district) of Retiro, Buenos Aires, Argentina. It is situated in the Plaza Fuerza Aérea Argentina (formerly Plaza Británica) next to the Rua San Martín and Avenida del Libertador. It was a gift from the local British community to the city in commemoration of the centennial of the May Revolution of 1810."
+       },	
+       {
+       		"city": "Buenos Aires",
+           	"latitude": -34.603611,          	
+           	"longtitude": -58.381667,
+           	"name": "Obelisco de Buenos Aires",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b5/20060128_-_Obelisco_%28Buenos_Aires%29.jpg",
+           	"description": "The Obelisco de Buenos Aires (Obelisk of Buenos Aires) is a national historic monument and icon of Buenos Aires. Located in the Plaza de la República, in the intersection of avenues Corrientes and 9 de Julio, it was built to commemorate the fourth centenary of the first foundation of the city."
+       },	
+       {
+       		"city": "Buenos Aires",
+           	"latitude": -34.608056,          	
+           	"longtitude": -58.370278,
+           	"name": "Casa Rosada",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/19/Casa_Rosada_2005-01-06.jpg",
+           	"description": "La Casa Rosada (English: The Pink House) is the executive mansion and office of the President of Argentina. The palatial mansion is known officially as Casa de Gobierno, (\"House of Government\" or \"Government House\"). Normally, the President lives at the Quinta de Olivos, the official residence of the President of Argentina, which is located in Olivos, Buenos Aires Province. The characteristic color of the Casa Rosada is baby pink, and is considered one of the most emblematic buildings in Buenos Aires. The building also houses a museum, which contains objects relating to former presidents of Argentina. It has been declared a National Historic Monument of Argentina."
+       },
+       {
+       		"city": "Montevideo",
+           	"latitude": -34.902222,          	
+           	"longtitude": -56.208611,
+           	"name": "Port of Montevideo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c1/Stk_1340.jpg",
+           	"description": "The Port of Montevideo (Spanish: Puerto de Montevideo), in the northern part of the Old City of Montevideo, Uruguay, is one of the major ports of South America and plays a very important role in the economy of Uruguay.[1][2]"
+       },	
+       {
+       		"city": "Montevideo",
+           	"latitude": -34.9065,          	
+           	"longtitude": -56.19975,
+           	"name": "Plaza Independencia",
+           	"image": "http://upload.wikimedia.org/wikipedia/en/2/2c/Plaza-Independencia.jpg",
+           	"description": "Plaza Independencia (Spanish for Independence Square) is the name of Montevideo's most important plaza. It separates Ciudad Vieja from downtown Montevideo, with the Gateway of The Citadel on one side and the beginning of 18 de Julio avenue on the other."
+       },	
+       {
+       		"city": "Montevideo",
+           	"latitude": -34.9065,          	
+           	"longtitude": -56.200778,
+           	"name": "Ciudadela",
+           	"image": "http://upload.wikimedia.org/wikipedia/en/a/a1/Ciudadela3.jpg",
+           	"description": "Puerta de la Ciudadela (Gateway of the Citadel), or simply Ciudadela is one of the few remaining parts of the wall that surrounded the oldest part of the city of Montevideo, the citadel, which was torn down in 1829. It is located by Plaza Independencia, in Ciudad Vieja."
+       },	
+       {
+       		"city": "Lisbon",
+           	"latitude": 38.70985,          	
+           	"longtitude": -9.132983,
+           	"name": "Lisbon Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b7/Lisboa_May_2013-1.jpg",
+           	"description": "The Patriarchal Cathedral of St. Mary Major (Portuguese: Santa Maria Maior de Lisboa or Sé de Lisboa) or simply Lisbon Cathedral is a Roman Catholic Cathedral located in Lisbon, Portugal. The oldest church in the city is the see of the Archdiocese of Lisbon. Since the beginning of the construction of the cathedral, in the year 1147, the building has been modified several times and survived many earthquakes. It is nowadays a mix of different architectural styles."
+       },	
+       {
+       		"city": "Lisbon",
+           	"latitude": 38.713889,          	
+           	"longtitude": -9.133611,
+           	"name": "São Jorge Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cf/LisbonCastle.jpg",
+           	"description": "The Castle of São Jorge (Portuguese: Castelo de São Jorge; Portuguese pronunciation: [kɐʃˈtɛlu dɨ sɐ̃w̃ ˈʒɔɾʒ(ɨ)]) is a Moorish castle occupying a commanding hilltop overlooking the historic centre of the Portuguese city of Lisbon and Tagus River. The strongly fortified citadel dates from medieval period of Portuguese history, and is one of the main tourist sites of Lisbon."
+       },	
+       {
+       		"city": "Lisbon",
+           	"latitude": 38.7084,          	
+           	"longtitude": -9.1368,
+           	"name": "Rua Augusta Arch",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG",
+           	"description": "The Rua Augusta Arch is a stone, triumphal arch-like, historical building and visitor attraction in Lisbon, Portugal, on Commerce Square, built to commemorate the city's reconstruction after the 1755 earthquake. It has six columns (some 11 m high) and is adorned with statues of various historical figures. Significant height from the arch crown to the cornice imparts an appearance of heaviness to the structure. The associated space is filled with the coat of arms of Portugal. The allegorical group at the top, made by French sculptor Célestin Anatole Calmels, represents Glory rewarding Valor and Genius."
+       },	
+       {
+       		"city": "Madrid",
+           	"latitude": 40.42,          	
+           	"longtitude": -3.688889,
+           	"name": "Puerta de Alcalá",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/39/Puerta_de_Alcalá_-_06.jpg",
+           	"description": "The Puerta de Alcalá (\"Alcalá Gate\") is a Neo-classical monument in the Plaza de la Independencia (\"Independence Square\") in Madrid, Spain. It stands near the city center and several meters away from the main entrance to the Parque del Buen Retiro. The square is bisected by Alcalá Street, although the street itself doesn't cross through the monument, and it is the origin of the Alfonso XII, Serrano and Olózaga streets. Its name originates from the old path from Madrid to the nearby town of Alcalá de Henares."
+       },	
+       {
+       		"city": "Madrid",
+           	"latitude": 40.42,          	
+           	"longtitude": -3.703611,
+           	"name": "Gran Vía",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Madrid_Gran_Via_Navidad_2008.jpg",
+           	"description": "Gran Vía (literally \"Great Way\") is an ornate and upscale shopping street located in central Madrid. Now, the street is known as the Spanish Broadway, and is one of the streets with more nightlife in Europe. It is known as the street that never sleeps. It leads from Calle de Alcalá, close to Plaza de Cibeles, to Plaza de España."
+       },	
+       {
+       		"city": "Madrid",
+           	"latitude": 40.415586,          	
+           	"longtitude":  -3.714558,
+           	"name": "Almudena Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/fe/Madrid_May_2014-13a.jpg",
+           	"description": "When the capital of Spain was transferred from Toledo to Madrid in 1561, the seat of the Church in Spain remained in Toledo and the new capital had no cathedral. Plans to build a cathedral in Madrid dedicated to the Virgin of Almudena were discussed as early as the 16th century but even though Spain built more than 40 cities in the new world during that century and plenty of Cathedrals, the cost of expanding and keeping the Empire came first and the construction of Madrid's cathedral was postponed. Making the cathedral the largest that the world had ever seen was then a priority, all other main Spanish cities had centuries old Cathedrals, Madrid also has old churches but the construction of Almudena only began in 1879."
+       },	
+       {
+       		"city": "Nîmes",
+           	"latitude": 43.835,          	
+           	"longtitude": 4.36,
+           	"name": "Arena of Nîmes",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/67/Arenes_de_Nimes_panorama.jpg",
+           	"description": "The Arena of Nîmes is a Roman amphitheatre found in the French city of Nîmes. Built around 70 AD, it was remodelled in 1863 to serve as a bullring. The Arenas of Nîmes is the site of two annual bullfights during the Feria de Nîmes, and it is also used for other public events."
+       },	
+       {
+       		"city": "Nîmes",
+           	"latitude": 43.9473,          	
+           	"longtitude": 4.5355,
+           	"name": "Pont du Gard",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/65/Gardon_au_pont_du_Gard.jpg",
+           	"description": "The Pont du Gard (literally: Gard Bridge) is an ancient Roman aqueduct bridge that crosses the Gardon River[4] in Vers-Pont-du-Gard near Remoulins, in the Gard département of southern France. It is part of the Nîmes aqueduct, a 50 km-long (31 mi) structure built by the Romans to carry water from a spring at Uzès to the Roman colony of Nemausus (Nîmes). Because the terrain between the two points is hilly, the aqueduct – built mostly underground – took a long, winding route that crossed the gorge of the Gardon, requiring the construction of an aqueduct bridge. Built in the 1st century AD, the Pont du Gard is the highest of all Roman aqueduct bridges and is, with the Aqueduct of Segovia, one of the best preserved. It was added to UNESCO's list of World Heritage Sites in 1985 because of its historical importance."
+       },
+       {
+       		"city": "Nîmes",
+           	"latitude": 43.838333,          	
+           	"longtitude":  4.360556,
+           	"name": "Nîmes Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/4d/Cathedral%2C_Nimes.JPG",
+           	"description": "Nîmes Cathedral (Cathédrale Notre-Dame-et-Saint-Castor de Nîmes) is a Roman Catholic cathedral in Nîmes, dedicated to the Blessed Virgin Mary and to the local saint Castor of Apt. It was the seat of the Bishops of Nîmes until 1877, when the name of the diocese was changed, and is still the seat of their successors the Bishops of Nîmes, Uzès and Alès."
+       },	
+       {
+       		"city": "Berlin",
+           	"latitude": 52.521111,          	
+           	"longtitude":  13.295833,
+           	"name": "Charlottenburg Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3a/Schloss_Charlottenburg_Berlin_2007.jpg",
+           	"description": "Charlottenburg Palace (German: Schloss Charlottenburg) is the largest palace in Berlin,[1] Germany, and the only surviving royal residence in the city dating back to the time of the Hohenzollern family.[2] It is located in the Charlottenburg district of the Charlottenburg-Wilmersdorf borough."
+       },	
+       {
+       		"city": "Berlin",
+           	"latitude": 52.520833,          	
+           	"longtitude": 13.409444,
+           	"name": "Fernsehturm",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/4c/Berlin_-_Fernsehturm_-_2012.jpg",
+           	"description": "Close to Alexanderplatz in Berlin, the tower was constructed between 1965 and 1969 by the administration of the German Democratic Republic. It was intended as a symbol of Berlin, which it remains today,[1] as it is easily visible throughout the central and some suburban districts of Berlin. With its height of 368 meters, it is the tallest structure in Germany."
+       },	
+       {
+       		"city": "Berlin",
+           	"latitude": 52.519167,          	
+           	"longtitude": 13.401111,
+           	"name": "Berlin Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ae/View_from_Humboldtbox_-_Berlin_Cathedral.jpg",
+           	"description": "Berlin Cathedral (German: Berliner Dom) is the short name for the Evangelical (i.e. Protestant) Supreme Parish and Collegiate Church (German: Oberpfarr- und Domkirche) in Berlin, Germany. It is located on Museum Island in the Mitte borough. The current building was finished in 1905 and is a main work of Historicist architecture of the \"Kaiserzeit\"."
+       },	
+       {
+       		"city": "Venice",
+           	"latitude": 45.433889,          	
+           	"longtitude": 12.338056,
+           	"name": "Piazza San Marco",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/fb/Piazza_San_Marco_with_the_Basilica%2C_by_Canaletto%2C_1730._Fogg_Art_Museum%2C_Cambridge.jpg",
+           	"description": "Piazza San Marco (Italian pronunciation: [ˈpjatt͡sa san ˈmarko], often known in English as St Mark's Square), is the principal public square of Venice, Italy, where it is generally known just as \"the Piazza\" (la Piazza). All other urban spaces in the city (except the Piazzetta and the Piazzale Roma) are called \"campi\" (fields). The Piazzetta (the 'little Piazza') is an extension of the Piazza towards the lagoon in its south east corner (see plan). The two spaces together form the social, religious and political centre of Venice and are commonly considered together. This article relates to both of them."
+       },	
+       {
+       		"city": "Venice",
+           	"latitude": 45.436667,          	
+           	"longtitude": 12.333056,
+           	"name": "Grand Canal",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/af/Rialto_Gondoliers.jpg",
+           	"description": "The Grand Canal (Italian: Canal Grande, Venetian: Canałasso) is a canal in Venice, Italy. It forms one of the major water-traffic corridors in the city.Public transport is provided by water buses (Italian: vaporetti) and private water taxis, and many tourists explore the canal by gondola."
+       },	
+       {
+       		"city": "Venice",
+           	"latitude": 45.433333,          	
+           	"longtitude": 12.333056,
+           	"name": "La Fenice",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Interior_of_La_Fenice_in_1837._Original_at_Museo_Correr.jpg",
+           	"description": "Venice (English /ˈvɛnɪs/; Italian: Venezia [veˈnɛttsia] ( listen)[1] alternative obsolete form: Vinegia; Venetian: Venexia [veˈnɛsja]; Latin: Venetia; Slovene: Benetke) is a city in northeastern Italy sited on a group of 118 small islands separated by canals and linked by bridges.[2] It is located in the marshy Venetian Lagoon which stretches along the shoreline, between the mouths of the Po and the Piave Rivers. Venice is renowned for the beauty of its setting, its architecture and its artworks.[2] The city in its entirety is listed as a World Heritage Site, along with its lagoon.[2]"
+       },	
+       {
+       		"city": "Amsterdam",
+           	"latitude": 52.373417,          	
+           	"longtitude": 4.898056,
+           	"name": "De Wallen",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/64/De_Wallen.JPG",
+           	"description": "De Wallen (Dutch pronunciation: [də ˈʋɑlə(n)]) or De Walletjes (Dutch pronunciation: [də ˈʋɑləcəs]) is the largest and best known red-light district in Amsterdam and consists of a network of alleys containing approximately three hundred one-room cabins rented by prostitutes who offer their sexual services from behind a window or glass door, typically illuminated with red lights. These \"kamers\" are the most visible and typical kind of red light district sex work in Amsterdam and are a large tourist attraction."
+       },	
+       {
+       		"city": "Amsterdam",
+           	"latitude": 52.36,          	
+           	"longtitude": 4.885278,
+           	"name": "Rijksmuseum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f8/Amsterdam_rijkmuseum.JPG",
+           	"description": "The Rijksmuseum (Dutch pronunciation: [ˈrɛi̯ksmyˌzeːjʏm]; English: State Museum) is a Dutch national museum dedicated to arts and history in Amsterdam in the Netherlands. The museum is located at the Museum Square in the borough Amsterdam South, close to the Van Gogh Museum, the Stedelijk Museum Amsterdam, and the Concertgebouw.[6]"
+       },	
+       {
+       		"city": "Amsterdam",
+           	"latitude": 52.374444,          	
+           	"longtitude": 4.898056,
+           	"name": "Oude Kerk",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/35/Amsterdam_oude_kerk2.jpg",
+           	"description": "The 800-year-old Oude Kerk (\"old church\") is Amsterdam’s oldest building and oldest parish church, founded ca. 1213 and finally consecrated in 1306 by the bishop of Utrecht with Saint Nicolas as its patron saint. After the Reformation in 1578 it became a Calvinist church, which it remains today. It stands in De Wallen, now Amsterdam's main red-light district. The square surrounding the church is the Oudekerksplein."
+       },	
+       {
+       		"city": "Dublin",
+           	"latitude": 53.347,          	
+           	"longtitude": -6.2413,
+           	"name": "Samuel Beckett Bridge",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c1/The_Samuel_Beckett_Bridge.jpg",
+           	"description": "Samuel Beckett Bridge (Irish: Droichead Samuel Beckett) is a cable-stayed bridge in Dublin[2] that joins Sir John Rogerson's Quay on the south side of the River Liffey to Guild Street and North Wall Quay in the Docklands area.[3]"
+       },
+       {
+       		"city": "Dublin",
+           	"latitude": 53.3444,          	
+           	"longtitude":  -6.2577,
+           	"name": "Trinity College",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/7f/Trinity_College_Dublin_Arms.svg",
+           	"description": "Trinity College (Irish: Coláiste na Tríonóide), formally known as the College of the Holy and Undivided Trinity of Queen Elizabeth near Dublin,[6] is the sole constituent college of the University of Dublin in Ireland. The college was founded in 1592 as the \"mother\" of a new university,[Note 1] modelled after the collegiate universities of Oxford and of Cambridge, but, unlike these, only one college was ever established; as such, the designations \"Trinity College\" and \"University of Dublin\" are usually synonymous for practical purposes. It is one of the seven ancient universities of Britain and Ireland[citation needed][clarification needed], as well as Ireland's oldest university."
+       },	
+       {
+       		"city": "Dublin",
+           	"latitude": 53.3479,          	
+           	"longtitude":  -6.2396,
+           	"name": "Convention Centre",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/17/CCD_June2010.jpg",
+           	"description": "The Convention Centre Dublin (CCD) in the Dublin Docklands was opened in September 2010. The Convention centre overlooks the River Liffey at Spencer Dock. It was designed by the American-Irish architect Kevin Roche. The CCD was shortlisted for the Engineers Ireland Excellence Awards – Engineering Project of the Year 2010.[1]"
+       },	
+       {
+       		"city": "London",
+           	"latitude": 51.508056,          	
+           	"longtitude": -0.076111,
+           	"name": "Tower of London",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg",
+           	"description": "Her Majesty's Royal Palace and Fortress, known as the Tower of London, is a historic castle on the north bank of the River Thames in central London. It lies within the London Borough of Tower Hamlets, separated from the eastern edge of the square mile of the City of London by the open space known as Tower Hill. It was founded towards the end of 1066 as part of the Norman Conquest of England. The White Tower, which gives the entire castle its name, was built by William the Conqueror in 1078, and was a resented symbol of oppression, inflicted upon London by the new ruling elite. The castle was used as a prison from 1100 (Ranulf Flambard) until 1952 (Kray twins),[3] although that was not its primary purpose. A grand palace early in its history, it served as a royal residence. As a whole, the Tower is a complex of several buildings set within two concentric rings of defensive walls and a moat. There were several phases of expansion, mainly under Kings Richard the Lionheart, Henry III, and Edward I in the 12th and 13th centuries. The general layout established by the late 13th century remains despite later activity on the site."
+       },	
+       {
+       		"city": "London",
+           	"latitude": 51.499167,          	
+           	"longtitude": -0.124722,
+           	"name": "Palace of Westminster",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/75/Parliament_at_Sunset.JPG",
+           	"description": "The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants, the Palace lies on the Middlesex bank of the River Thames in the City of Westminster, in central London. Its name, which derives from the neighbouring Westminster Abbey, may refer to either of two structures: the Old Palace, a medieval building complex that was destroyed by fire in 1834, and its replacement New Palace that stands today. For ceremonial purposes, the palace retains its original style and status as a royal residence."
+       },	
+       {
+       		"city": "London",
+           	"latitude": 51.5033,          	
+           	"longtitude": -0.1197,
+           	"name": "London Eye",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d6/London-Eye-2009.JPG",
+           	"description": "The London Eye is a giant Ferris wheel on the South Bank of the River Thames in London. Also known as the Millennium Wheel, its official name was originally the British Airways London Eye, then the Merlin Entertainments London Eye, and since January 2011, the EDF Energy London Eye."
+       },	
+       {
+       		"city": "Vienna",
+           	"latitude": 48.210833,          	
+           	"longtitude": 16.356944,
+           	"name": "Rathaus",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/93/Rathaus_Vienna_June_2006_165.jpg",
+           	"description": "The Rathaus (Town Hall) is a building in Vienna which serves as the seat both of the mayor and city council of the city of Vienna. The town hall also serves, in personal union, as Governor and Assembly (Landtag) of the State of Vienna, a state with the Austrian federal system."
+       },	
+       {
+       		"city": "Vienna",
+           	"latitude": 48.184516,          	
+           	"longtitude": 16.311865,
+           	"name": "Schönbrunn Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/00/Schönbrunn_Palace%2C_Vienna.JPG",
+           	"description": "Schönbrunn Palace (German: Schloss Schönbrunn [ʃøːnˈbʁʊn]) is a former imperial 1,441-room Rococo summer residence in modern Vienna, Austria. One of the most important cultural monuments in the country, since the 1960s it has been one of the major tourist attractions in Vienna. The palace and gardens illustrate the tastes, interests, and aspirations of successive Habsburg monarchs.[1]"
+       },	
+       {
+       		"city": "Vienna",
+           	"latitude": 48.202778,          	
+           	"longtitude": 16.368472,
+           	"name": "Vienna State Opera",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/86/Staatsoper-DSC_0231a.jpg",
+           	"description": "The Vienna State Opera (German: Wiener Staatsoper) is an opera house – and opera company – with a history dating back to the mid-19th century. It is located in the centre of Vienna, Austria. It was originally called the Vienna Court Opera (Wiener Hofoper). In 1920, with the replacement of the Habsburg Monarchy by the First Republic of Austria, it was renamed the Vienna State Opera. The members of the Vienna Philharmonic are recruited from its orchestra."
+       },	
+       {
+       		"city": "Copenhagen",
+           	"latitude": 55.675833,          	
+           	"longtitude": 12.578889,
+           	"name": "Christiansborg Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/48/Christiansborg_Kopenhamn_Danmark%2C_Johannes_Jansson_%286%29.jpg",
+           	"description": "Christiansborg Palace or Christiansborg Castle (Danish: Christiansborg Slot; pronounced [krɪsdjænsˈbɔːɐ̯ˀ]), on the islet of Slotsholmen in central Copenhagen, is the seat of the Danish Parliament (Folketinget), the Prime Minister's Office and the Supreme Court. Also, several parts of the palace are used by the monarchy, including the Royal Reception Rooms, the Palace Chapel and the Royal Stables.[1]"
+       },	
+       {
+       		"city": "Copenhagen",
+           	"latitude": 55.685,          	
+           	"longtitude": 12.589444,
+           	"name": "Frederik's Church",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1f/Kbh_Marmorkirche_1.jpg",
+           	"description": "Frederik's Church (Danish: Frederiks Kirke), popularly known as The Marble Church (Marmorkirken) for its rococo architecture, is an Evangelical Lutheran church in Copenhagen, Denmark. The church forms the focal point of the Frederiksstaden district; it is located due west of Amalienborg Palace."
+       },	
+       {
+       		"city": "Copenhagen",
+           	"latitude": 55.673611,          	
+           	"longtitude": 12.568333,
+           	"name": "Tivoli Gardens",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f0/Entrancetotivoli.jpg",
+           	"description": "Tivoli Gardens (or simply Tivoli) is a famous amusement park and pleasure garden in Copenhagen, Denmark. The park opened on 15 August 1843 and is the second oldest amusement park in the world,[citation needed] after Dyrehavsbakken in nearby Klampenborg."
+       },
+       {
+       		"city": "Reykjavík",
+           	"latitude": 64.141944,          	
+           	"longtitude": -21.948056,
+           	"name": "National Museum of Iceland",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f5/Iceland-Reykjavik-National-Museum-1.jpg",
+           	"description": "The National Museum of Iceland (Þjóðminjasafn Íslands) was established on 24 February 1863, with Jón Árnason the first curator of the Icelandic collection, previously kept in Danish museums. The second curator, Sigurður Guðmundsson, advocated the creation of an antiquarian collection, and the museum was called the Antiquarian Collection until 1911."
+       },	
+       {
+       		"city": "Reykjavík",
+           	"latitude": 64.145306,          	
+           	"longtitude": -21.9272,
+           	"name": "Laugavegur",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/30/Laugavegur%2C_Reykjavik.jpg",
+           	"description": "Laugavegur (Icelandic pronunciation: [ˈløːiɣavɛɣʏr̥]) is the primary commercial artery of downtown Reykjavík, Iceland and one of the oldest shopping streets. The name means \"wash road\", as it used to lead to the hot springs in Laugardalur where in olden times the women of Reykjavík took their laundry for washing."
+       },	
+       {
+       		"city": "Reykjavík",
+           	"latitude": 63.985,          	
+           	"longtitude": -22.605556,
+           	"name": "Keflavík International Airport",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/40/2006-05-27-082806_Iceland_Keflav%C3%ADk.jpg",
+           	"description": "Keflavík International Airport (Icelandic: Keflavíkurflugvöllur) (IATA: KEF, ICAO: BIKF), also known as Reykjavík-Keflavík Airport, is the largest airport in Iceland and the country's main hub for international transportation. It is situated 1.7 NM (3.1 km; 2.0 mi) west of Keflavík[2] and 50 km (31 mi) south-west of Reykjavík. The airport has three runways, of which two are operated, and the airport area is about 25 km2 (9.7 sq mi). Most international journeys to or from Iceland pass through this airport."
+       },	
+       {
+       		"city": "Oslo",
+           	"latitude": 59.907222,          	
+           	"longtitude": 10.749167,
+           	"name": "Bjørvika",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Bjørvika_Harbour_and_Bispegata_2004.JPG",
+           	"description": "Bjørvika is a neighborhood in the Sentrum borough of Oslo, Norway. The area is an inlet in the inner Oslofjord, situated between Gamlebyen and Akersness. It serves as an outlet for the river Akerselva. Since the 2000s, it has been undergoing urban redevelopment, being transformed from a container port. The neighborhood will be Oslo's cultural \"center.\" The National Opera is currently at Bjørvika, and the Munch/Stenersen museum might be built here, replacing the Munch Museum. A number of new roads are under construction and the Bjørvika Tunnel opens in May 2010."
+       },	
+       {
+       		"city": "Oslo",
+           	"latitude": 59.916911,          	
+           	"longtitude": 10.727567,
+           	"name": "Royal Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/77/Slottet_-_framsida_1.jpg",
+           	"description": "The Royal Palace (Norwegian: Slottet or formally Norwegian: Det kongelige slott (or Norwegian: Det kongelige slottet)) in Oslo was built in the first half of the 19th century as the Norwegian residence of King Charles III, who also reigned as king of Sweden and otherwise resided there, and is the official residence of the present Norwegian monarch. The crown prince resides at Skaugum in Asker west of Oslo. The palace has 173 rooms."
+       },	
+       {
+       		"city": "Oslo",
+           	"latitude": 59.906944,          	
+           	"longtitude": 10.753611,
+           	"name": "Opera House",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/10/Full_Opera_by_night.jpg",
+           	"description": "The Oslo Opera House (Norwegian: Operahuset) is the home of The Norwegian National Opera and Ballet, and the national opera theatre in Norway. The building is situated in the Bjørvika neighborhood of central Oslo, at the head of the Oslofjord. It is operated by Statsbygg, the government agency which manages property for the Norwegian government. The structure contains 1,100 rooms in a total area of 38,500 m2 (414,000 sq ft). The main auditorium seats 1,364 and two other performance spaces can seat 200 and 400. The main stage is 16 m (52 ft) wide and 40 m (130 ft) deep.[2] The angled exterior surfaces of the building are covered with Italian marble and white granite and make it appear to rise from the water. It is the largest cultural building constructed in Norway since Nidarosdomen was completed circa 1300.[3]"
+       },	
+       {
+       		"city": "Stockholm",
+           	"latitude": 59.325,          	
+           	"longtitude": 18.070833,
+           	"name": "Gamla stan",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Gamla_Stan_swe.jpg",
+           	"description": "Gamla stan (The Old Town), until 1980 officially Staden mellan broarna (The Town between the Bridges), is the old town of Stockholm, Sweden. Gamla stan consists primarily of the island Stadsholmen. The surrounding islets Riddarholmen, Helgeandsholmen, and Strömsborg are officially part of, but not colloquially included in, Gamla stan. The word \"stan\" is simply a contraction of the word \"staden\" (\"sta'n\"), meaning \"the town.\""
+       },	
+       {
+       		"city": "Stockholm",
+           	"latitude": 59.3275,          	
+           	"longtitude": 18.055,
+           	"name": "Stockholm City Hall",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e6/Stockholms_stadshus_september_2011.jpg",
+           	"description": "Stockholm City Hall (Swedish: Stockholms stadshus or Stadshuset locally) is the building of the Municipal Council for the City of Stockholm in Sweden. It stands on the eastern tip of Kungsholmen island, next to Riddarfjärden's northern shore and facing the islands of Riddarholmen and Södermalm. It houses offices and conference rooms as well as ceremonial halls, and the luxury restaurant Stadshuskällaren. It is the venue of the Nobel Prize banquet and one of Stockholm's major tourist attractions."
+       },	
+       {
+       		"city": "Stockholm",
+           	"latitude": 59.326667,
+           	"longtitude": 18.071667,
+           	"name": "Stockholm Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d2/Royalpalace_Stockholm.jpg",
+           	"description": "The Stockholm Palace or the Royal Palace (Swedish: Stockholms slott or Kungliga slottet) is the official residence and major royal palace of the Swedish monarch (the actual residence of King Carl XVI Gustaf and Queen Silvia is at Drottningholm Palace). Stockholm Palace is located on Stadsholmen (\"city island\"), in Gamla Stan (the old town) in the capital, Stockholm. It neighbours the Riksdag building and Stockholm Cathedral."
+       },	
+       {
+       		"city": "Helsinki",
+           	"latitude": 60.170278,          	
+           	"longtitude": 24.952222,
+           	"name": "Helsinki Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/36/Helsinki_July_2013-27a.jpg",
+           	"description": "Helsinki Cathedral (Finnish: Helsingin tuomiokirkko, Suurkirkko; Swedish: Helsingfors domkyrka, Storkyrkan) is the Finnish Evangelical Lutheran cathedral of the Diocese of Helsinki, located in the neighbourhood of Kruununhaka in the centre of Helsinki, Finland. The church was originally built from 1830-1852 as a tribute to the Grand Duke of Finland, Tsar Nicholas I of Russia. It was also known as St Nicholas' Church until the independence of Finland in 1917."
+       },	
+       {
+       		"city": "Helsinki",
+           	"latitude": 60.143611,          	
+           	"longtitude": 24.984444,
+           	"name": "Suomenlinna",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Suomenlinna_aerial.JPG/1280px-Suomenlinna_aerial.JPG",
+           	"description": "Suomenlinna, until 1918 Viapori (Finnish), or Sveaborg (Swedish), is an inhabited sea fortress built on six islands (Kustaanmiekka, Susisaari, Iso-Mustasaari, Pikku-Mustasaari, Länsi-Mustasaari and Långören) and which now forms part of the city of Helsinki, the capital of Finland."
+       },
+       {
+       		"city": "Helsinki",
+           	"latitude": 60.169444,          	
+           	"longtitude": 24.9525,
+           	"name": "Senate Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ac/Senate_Square_and_Lutheran_Cathedral_in_Helsinki.jpg",
+           	"description": "The Senate Square (Finnish: Senaatintori, Swedish: Senatstorget) presents Carl Ludvig Engel's architecture as a unique allegory of political, religious, scientific and commercial powers in the centre of Helsinki, Finland."
+       },	
+       {
+       		"city": "Warsaw",
+           	"latitude": 52.2475,          	
+           	"longtitude": 21.013611,
+           	"name": "Castle Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/18/Dzwonnica_kosciol_sw_anny.jpg",
+           	"description": "Warsaw's Castle Square (Polish: plac Zamkowy w Warszawie) is a historic square in front of the Royal Castle – the former official residence of Polish monarchs – located in Warsaw, Poland. It is a popular meeting place for tourists and locals. The Square (in a more or less triangular shape) features the landmark Sigismund's Column to the south-west, and is surrounded by historic townhouses. It marks the beginning of the bustling Royal Road extending to the south."
+       },	
+       {
+       		"city": "Warsaw",
+           	"latitude": 52.2498,          	
+           	"longtitude":  21.0122,
+           	"name": "Old Town",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/15/Warsaw_07-13_img07_Old_town.jpg",
+           	"description": "The Warsaw Old Town (Polish: Stare Miasto, and collectively with the New Town, known colloquially as: Starówka) is the oldest part of the capital city. It is bounded by the Wybrzeże Gdańskie, along with the bank of Vistula river, Grodzka, Mostowa and Podwale Streets. It is one of the most prominent tourist attractions in Warsaw."
+       },	
+       {
+       		"city": "Warsaw",
+           	"latitude": 52.248889,          	
+           	"longtitude": 21.013611,
+           	"name": "St. John's Archcathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/93/Katedra_p.w._św._Jana.jpg",
+           	"description": "St. John's Archcathedral in Warsaw (Polish: Archikatedra św. Jana w Warszawie) is a Catholic church in Warsaw's Old Town. St. John's stands immediately adjacent to Warsaw's Jesuit church, and is one of the oldest churches in the city and the main church of the Warsaw archdiocese. It is one of three cathedrals in Warsaw, but the only one which is also an archcathedral. St. John's Archcathedral is one of Poland's national pantheons. Along with the city, the church has been listed by UNESCO as of cultural significance."
+       },	
+       {
+       		"city": "Prague",
+           	"latitude": 50.08975,          	
+           	"longtitude": 14.3984,
+           	"name": "Prague Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ca/Night_view_of_the_Castle_and_Charles_Bridge%2C_Prague_-_8034.jpg",
+           	"description": "Prague Castle (Czech: Pražský hrad) is the official residence and office of the President of the Czech Republic. Located in the Hradčany district of Prague and dating back to the ninth century, the castle has been a seat of power for kings of Bohemia, Holy Roman emperors, and presidents of Czechoslovakia. The Bohemian Crown Jewels are kept within a hidden room inside it."
+       },	
+       {
+       		"city": "Prague",
+           	"latitude": 50.086242,          	
+           	"longtitude": 14.406947,
+           	"name": "Lennon Wall",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/ea/John_Lennon_-_Prag_-_1981.jpg",
+           	"description": "The Lennon Wall or John Lennon Wall, is a wall in Prague, Czech Republic. Once a normal wall, since the 1980s it has been filled with John Lennon-inspired graffiti and pieces of lyrics from Beatles songs."
+       },	
+       {
+       		"city": "Prague",
+           	"latitude": 50.090278,          	
+           	"longtitude": 14.419444,
+           	"name": "Josefov",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1c/V10p163001_Prague.jpg",
+           	"description": "Prague (/ˈprɑːɡ/; Czech: Praha pronounced [ˈpraɦa] ( listen)) is the capital and largest city of the Czech Republic. It is the fourteenth-largest city in the European Union.[5] It is also the historical capital of Bohemia. Situated in the north-west of the country on the Vltava River, the city is home to about 1.3 million people, while its larger urban zone is estimated to have a population of nearly 2 million.[6] The city has a temperate climate, with warm summers and chilly winters."
+       },	
+       {
+       		"city": "Kiev",
+           	"latitude": 50.448889,          	
+           	"longtitude": 30.513333,
+           	"name": "Golden Gate",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/82/Golden-gate-2008.jpg",
+           	"description": "The Golden Gates of Kiev (Ukrainian: Золоті ворота, Zoloti vorota, literally 'golden gates') is a major landmark of the Ancient Kiev and historic gateway in the ancient city fortress, located in the capital of Ukraine. Currently it serves as a museum and can be found on the corner of Volodymyr street and Yaroslaviv Val Street (Yaroslav's Moat). The name Zoloti Vorota is also used for a nearby theatre and a station of the Kiev Metro."
+       },	
+       {
+       		"city": "Kiev",
+           	"latitude": 50.441942,          	
+           	"longtitude": 30.511258,
+           	"name": "Red University Building",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/8c/Universidad_Roja_de_Kiev.jpg",
+           	"description": "The Red University Building (Ukrainian: Червоний корпус Київского університету; translit.: Chervonyi Korpus Universytetu, Russian: Красный корпус Киевского университета, translit. Krasnyi Korpus Universiteta) is the principal and oldest 4-story campus of the Kiev University located at 60 Volodymyrska Street, in Kiev, the capital of Ukraine. This building is a worldwide famous symbol of the Kiev University and the Ukrainian fundamental higher educational system."
+       },	
+       {
+       		"city": "Kiev",
+           	"latitude": 50.434167,          	
+           	"longtitude": 30.559167,
+           	"name": "Pechersk Lavra",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b4/2005-08-15_Pechersk_Lavra_seen_from_river_Dnepr_Kiev_311.JPG",
+           	"description": "Since its foundation as the cave monastery in 1051[5] the Lavra has been a preeminent center of the Eastern Orthodox Christianity in Eastern Europe. Together with the Saint Sophia Cathedral, it is inscribed as a UNESCO World Heritage Site.[6][nb 1] The monastery complex is considered a separate national historic-cultural preserve (sanctuary), the national status to which was granted on 13 March 1996.[8] The Lavra is not only located in another part of the city, but is part of a different national sanctuary than Saint Sophia Cathedral. While being a cultural attraction, the monastery is currently active. It was named one of the Seven Wonders of Ukraine on 21 August 2007, based on voting by experts and the internet community."
+       },	
+       {
+       		"city": "Kiev",
+           	"latitude": 50.458889,          	
+           	"longtitude": 30.518056,
+           	"name": "St Andrew's Church",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/37/Kyiv%2C_St_Andrew_church_%282%29.jpg",
+           	"description": "The Saint Andrew's Church (Ukrainian: Андріївська церква, Andriyvs'ka cherkva; Russian: Андреевская церковь, Andriyvskiy cherkov) is a major Baroque church located in Kiev, the capital of Ukraine. The church was constructed in 1747–1754, to a design by the Italian architect Bartolomeo Rastrelli. It is sometimes incorrectly referred to as a cathedral."
+       },
+       {
+       		"city": "Kiev",
+           	"latitude": 50.45,          	
+           	"longtitude": 30.524167,
+           	"name": "Berehynia",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/68/Береги́ня.jpg",
+           	"description": "Berehynia or Bereginia (Russian: Береги́ня/Ukrainian: Береги́ня) is a female spirit (Vila) in Slavic mythology, which recently came to be regarded as a \"Slavic goddess\" with a function of \"hearth mother, protectoress of the home\"[1] in late 20th century Ukrainian romantic nationalism centered on matriarchal myth.[2]"
+       },	
+       {
+       		"city": "Riga",
+           	"latitude": 56.9475,          	
+           	"longtitude": 24.109444,
+           	"name": "St. Peter's Church",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/97/St._Peter%27s_Church.JPG",
+           	"description": "First mention of the St. Peter's Church is in records dating to 1209. The church was a masonry construction and therefore undamaged by a city fire in Riga that year. The history of the church can be divided into three distinct periods: two associated with Gothic and Romanesque building styles, the third with the early Baroque period. The middle section of the church was built during the 13th century, which encompasses the first period. The only remnants of this period are located in the outer nave walls and on the inside of a few pillars in the nave, around which larger pillars were later built."
+       },	
+       {
+       		"city": "Riga",
+           	"latitude": 56.947222,          	
+           	"longtitude": 24.106944,
+           	"name": "House of the Blackheads",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/56/House_of_the_Blackheads%2C_Riga%2C_Latvia-24June2009.jpg",
+           	"description": "House of the Blackheads (Latvian: Melngalvju nams, German: Schwarzhäupterhaus) is a building situated in the old town of Riga, Latvia.[1] The original building was erected during the first third of the 14th century for the Brotherhood of Blackheads, a guild for unmarried German merchants in Riga. Major works were done in the years 1580 and 1886, adding most of the ornamentations."
+       },	
+       {
+       		"city": "Riga",
+           	"latitude": 56.95095,          	
+           	"longtitude": 24.100636,
+           	"name": "Riga Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/60/2006_09_14-17_RigaFortress054.jpg",
+           	"description": "Riga Castle (Latvian: Rīgas pils) is a castle on the banks of River Daugava in Riga, the capital of Latvia. The castle was founded in 1330. This structure was thoroughly rebuilt between 1497 and 1515. Upon the castle's seizure by the Swedes, they constructed spacious annexes in 1641. The fortress was continually augmented and reconstructed between the 17th and 19th centuries. Sometime in the 1930s, some renovation work was done by architect Eižens Laube. The Latvian government declared the castle its residence in 1938. Today it is the official residence of the President of Latvia as well as home to several museums."
+       },	
+       {
+       		"city": "Riga",
+           	"latitude": 56.951389,          	
+           	"longtitude": 24.113056,
+           	"name": "Freedom Monument",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/71/Monumento_a_la_Libertad%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_10.JPG",
+           	"description": "The Freedom Monument (Latvian: Brīvības piemineklis) is a memorial located in Riga, Latvia, honouring soldiers killed during the Latvian War of Independence (1918–1920). It is considered an important symbol of the freedom, independence, and sovereignty of Latvia.[1] Unveiled in 1935, the 42-metre (138 ft) high monument of granite, travertine, and copper often serves as the focal point of public gatherings and official ceremonies in Riga."
+       },	
+       {
+       		"city": "Tallinn",
+           	"latitude": 59.4356,          	
+           	"longtitude": 24.7372,
+           	"name": "Toompea Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/9a/Toompea_linnus.jpg",
+           	"description": "Toompea Castle (Estonian: Toompea loss) is a castle on Toompea hill in the central part of Tallinn, the capital of Estonia. The castle, an ancient stronghold site in use since at least the 9th century, today houses the Parliament of Estonia.[1]"
+       },	
+       {
+       		"city": "Tallinn",
+           	"latitude": 59.437372,          	
+           	"longtitude": 24.745319,
+           	"name": "Raekoja plats",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Tallinn_Town_Hall_Square%2C_2013.jpg",
+           	"description": "Raekoja plats (English: Town Hall Square) is a town square beside Tallinn Town Hall (Estonian: Raekoda) in the center of the Tallinn Old Town in Tallinn, Estonia. It is a venue for numerous small festivals or concerts like Tallinn Old Town Days (Estonian: Tallinna Vanalinna Päevad), and several bars and restaurants are located in the near vicinity. The square also hosts a market regularly, with many stalls selling traditional Estonian items and souvenirs (Estonian: Suveniirid)."
+       },	
+       {
+       		"city": "Tallinn",
+           	"latitude": 59.4,          	
+           	"longtitude": 24.766667,
+           	"name": "Lake Ülemiste",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/7f/Airplane_landing_at_Tallinn_Airport.jpg",
+           	"description": "Lake Ülemiste (Estonian: Ülemiste järv) is the largest of the lakes surrounding Tallinn, Estonia. Ülemiste is the main part of the Tallinn water supply system, where most of the city gets its drinking water from. The lake is fed mostly by Kurna stream and Pirita River (through Vaskjala–Ülemiste canal)."
+       },	
+       {
+       		"city": "Tallinn",
+           	"latitude": 59.436944,          	
+           	"longtitude": 24.74,
+           	"name": "Toompea",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e0/Tallinn_old_city_and_sea_view_two_crop.jpg",
+           	"description": "Toompea (from German: Domberg, \"Cathedral Hill\") is a limestone hill in the central part of the city of Tallinn, the capital of Estonia. The hill is an oblong tableland, which measures about 400 by 250 metres, has an area of 7 hectares (17 acres) and is about 20–30 metres higher than the surrounding areas. In folklore the hill is known as the tumulus mound over the grave of Kalev, erected in his memory by his grieving wife."
+       },	
+       {
+       		"city": "Minsk",
+           	"latitude": 53.905,          	
+           	"longtitude": 27.556111,
+           	"name": "Holy Spirit Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/6e/Holy_Spirit_Cathedral_in_Minsk.jpg",
+           	"description": "The Holy Spirit Cathedral (Belarusian: Кафедральный сабор Сашэсця Святога Духа) in Minsk, Belarus is dedicated to the Holy Spirit.The Theotokos icon in the Cathedral has been reported as miraculous. It is the central cathedral of the Belarusian Orthodox Church. The cathedral dates back to 1633-1642, when the Bernardine monastery was built, at a time when the city was in centre of the Polish–Lithuanian Commonwealth. The building was damaged by fire in 1741 and required the reconstruction of the monastery."
+       },	
+       {
+       		"city": "Minsk",
+           	"latitude": 53.910833,          	
+           	"longtitude": 27.553889,
+           	"name": "Svislach River",
+           	"image": "http://upload.wikimedia.org/wikipedia/en/0/02/Svislach_River_in_Minsk.jpg",
+           	"description": "Svislach (Belarusian: Свíслач, pronounced [ˈsʲvʲisɫatʂ] ( listen)) or Svisloch (Russian: Свислочь) is a river in Belarus, a right tributary of the Biarezina river. It is 327 km in length. The name is derived from the root -visl- 'flowing,' of Indo-European origin (compare the Vistula River).[1]"
+       },
+       {
+       		"city": "Minsk",
+           	"latitude": 53.908535,          	
+           	"longtitude": 27.555985,
+           	"name": "Trinity Hill",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/20/NCS_Troetskoe_predmest%27e_panorama.jpg",
+           	"description": "The Trinity Hill is the oldest surviving district of Minsk, although it's not part of the downtown, rather a suburb, hence another name, Trinity Banlieu (Trojeckaje Pradmiescie). The historic neighbourhood sprawls along the left bank of the Svislach River in the southeastern part of the modern city. The Belarusian 5-ruble bill features an image of Trayetskaye Pradmestsye."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.498889,          	
+           	"longtitude": 19.043611,
+           	"name": "Chain Bridge",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/fd/Széchenyi_Chain_Bridge_in_Budapest_at_night.jpg",
+           	"description": "The Széchenyi Chain Bridge (Hungarian: Széchenyi lánchíd, Hungarian pronunciation: [ˈseːt͡ʃeːɲi ˈlaːntshiːd]) is a suspension bridge that spans the River Danube between Buda and Pest, the western and eastern sides of Budapest, the capital of Hungary. Designed by the English engineer William Tierney Clark, it was the first permanent bridge across the Danube in Hungary, and was opened in 1849."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.515278,          	
+           	"longtitude": 19.078056,
+           	"name": "Hősök tere",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/81/Heroes_Square_Budapest_2010_01.jpg",
+           	"description": "Hősök tere (Hungarian pronunciation: [ˈhøːʃøk ˈtɛrɛ]; English: Heroes' Square) is one the major squares in Budapest, Hungary, noted for its iconic statue complex featuring the Seven Chieftains of the Magyars and other important national leaders, as well as the Tomb of the Unknown Soldier. The square lies at the outbound end of Andrássy Avenue next to City Park (Városliget). It hosts the Museum of Fine Arts and the Műcsarnok. The square has played an important part in contemporary Hungarian history and has been a host to many political events, such as the reburial of Imre Nagy in 1989."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.506944,          	
+           	"longtitude": 19.045556,
+           	"name": "Hungarian Parliament Building",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/87/Budapest%2C_Parliament_%286785000268%29.jpg",
+           	"description": "The Hungarian Parliament Building (Hungarian: Országház, Hungarian pronunciation: [ˈorsaːɡhaːz], which translates to House of the Country or House of the Nation) is the seat of the National Assembly of Hungary, one of Europe's oldest legislative buildings, a notable landmark of Hungary and a popular tourist destination of Budapest. It lies in Lajos Kossuth Square, on the bank of the Danube. It is currently the largest building in Hungary[1] and still the tallest building in Budapest.[2]"
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.501667,          	
+           	"longtitude": 19.035,
+           	"name": "Fisherman's Bastion",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/88/Budapestfishermansbastionavertical.jpg",
+           	"description": "The Halászbástya Hungarian pronunciation: [ˈhɒlaːsbaːʃcɒ] or Fisherman's Bastion is a terrace in neo-Gothic and neo-Romanesque style situated on the Buda bank of the Danube, on the Castle hill in Budapest, around Matthias Church. It was designed and built between 1895 and 1902 on the plans of Frigyes Schulek. Between 1947–48, the son of Frigyes Schulek, János Schulek, conducted the other restoration project after its near destruction during World War II."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.500833,          	
+           	"longtitude": 19.053889,
+           	"name": "St. Stephen's Basilica",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/5f/Budapest%2C_St._Stephen%27s_Basilica_C16.jpg",
+           	"description": "St. Stephen's Basilica (Hungarian: Szent István-bazilika, Hungarian pronunciation: [sent ˈiʃtvaːn ˈbɒzilikɒ]) is a Roman Catholic basilica in Budapest, Hungary. It is named in honour of Stephen, the first King of Hungary (c 975–1038), whose right hand is housed in the reliquary. It was the sixth largest church building in Hungary before 1920. Today, it is the third largest church building in present-day Hungary."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.486389,          	
+           	"longtitude": 19.045833,
+           	"name": "Gellért Hill",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/14/Budapest_from_Gellert_Hill.jpg",
+           	"description": "Gellért Hill (Hungarian: Gellért-hegy; German: Blocksberg; Latin: Mons Sancti Gerhardi; Turkish: Gürz Elyas bayiri) is a 235 m (771 ft) high hill overlooking the Danube in Budapest, Hungary. It is part of the 1st and 11th Districts. Gellért Hill was named after Saint Gerard who was thrown to death from the hill. The famous Hotel Gellért and the Gellért Baths can be found in Gellért Square at the foot of the hill, next to Liberty Bridge. The Gellért Hill Cave is located within the hill, facing toward Hotel Gellért and the Danube River."
+       },	
+       {
+       		"city": "Budapest",
+           	"latitude": 47.496111,          	
+           	"longtitude": 19.039722,
+           	"name": "Buda Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/5a/River_Beatrice_%28ship%2C_2007%29_005.jpg",
+           	"description": "Buda Castle (Hungarian: Budavári Palota, German: Burgpalast, Turkish: Budin Kalesi) is the historical castle and palace complex of the Hungarian kings in Budapest, and was first completed in 1265. In the past, it has been called Royal Palace (Hungarian: Királyi-palota) and Royal Castle (Hungarian: Királyi Vár, German: Königliche Burg)."
+       },	
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.4275,          	
+           	"longtitude":  26.0875,
+           	"name": "Palace of the Parliament",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Palatul_Parlamentului_1b.jpg",
+           	"description": "The Palace of Parliament (Romanian: Palatul Parlamentului) in Bucharest, Romania is a multi-purpose building containing both chambers of the Romanian Parliament. According to the World Records Academy, the Palace is the world's largest civilian building with an administrative function, most expensive administrative building and heaviest building.[3]"
+       },	
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.439794,          	
+           	"longtitude": 26.097319,
+           	"name": "Central University Library of Bucharest",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c4/Biblioteca_Nationala_Universitara.jpg",
+           	"description": "The Central University Library of Bucharest (Romanian: Biblioteca Centrală Universitară) is a library in central Bucharest, located across the street from the National Museum of Art of Romania."
+       },	
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.467219,          	
+           	"longtitude": 26.078072,
+           	"name": "Arcul de Triumf",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ce/Arcul_de_Triumf-Bucuresti.jpg",
+           	"description": "Arcul de Triumf is a triumphal arch located in the northern part of Bucharest, on the Kiseleff Road. The first, wooden, triumphal arch was built hurriedly, after Romania gained its independence (1878), so that the victorious troops could march under it. Another temporary arch was built on the same site, in 1922, after World War I, which was demolished in 1935 to make way for the current triumphal arch, which was inaugurated in September 1936."
+       },
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.442081,          	
+           	"longtitude": 26.094047,
+           	"name": "Calea Victoriei",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Nicolae_Ionescu_-_Victory_Avenue_between_Capşa_House_and_the_Telephone_Palace%2C_1935.jpg",
+           	"description": "Calea Victoriei (Victory Avenue) is a major avenue in central Bucharest. It leads from Splaiul Independenței (which runs parallel to the Dâmbovița River) to the north and then northwest up to Piața Victoriei, where Șoseaua Kiseleff continues north."
+       },	
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.437208,          	
+           	"longtitude":  26.152508,
+           	"name": "Arena Națională",
+           	"image": "http://en.wikipedia.org/wiki/Arena_Națională#mediaviewer/File:Stadionul_National_-_National_Arena_3.jpg",
+           	"description": "The National Arena (Romanian: Arena Națională) is a football stadium in Bucharest, Romania, in the Lia Manoliu National Sports Complex. It is replacing the former National Stadium, which was completed in 1953."
+       },	
+       {
+       		"city": "Bucharest",
+           	"latitude": 44.4414,          	
+           	"longtitude": 26.0971,
+           	"name": "Romanian Athenaeum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3d/Ateneul_Român_-_Gradina.jpg",
+           	"description": "The Romanian Athenaeum (Romanian: Ateneul Român) is a concert hall in the center of Bucharest, Romania and a landmark of the Romanian capital city. Opened in 1888, the ornate, domed, circular building is the city's main concert hall and home of the \"George Enescu\" Philharmonic and of the George Enescu annual international music festival."
+       },	
+       {
+       		"city": "Sofia",
+           	"latitude": 42.684722,          	
+           	"longtitude": 23.318889,
+           	"name": "National Palace of Culture",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/13/NDK_Sofia_2012_PD_06.jpg",
+           	"description": "The National Palace of Culture (Bulgarian: Национален дворец на културата, Natsionalen dvorets na kulturata; abbreviated as НДК, NDK), located in Sofia, the capital of Bulgaria, is the largest multifunctional conference and exhibition centre in south-eastern Europe. It was opened in 1981 in celebration of Bulgaria's 1300th anniversary."
+       },	
+       {
+       		"city": "Sofia",
+           	"latitude": 42.698056,          	
+           	"longtitude":  23.308611,
+           	"name": "Mall of Sofia",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/08/Mall_of_Sofia_2009_20090405_050.JPG",
+           	"description": "Mall of Sofia is a shopping centre in the centre of Sofia, the capital of Bulgaria. It was opened on 9 June 2006 and is located at the intersection of Aleksandar Stamboliyski Boulevard and Opalchenska Street in the centre of the city. Part of the complex is Sofia Tower, an office building located just above Mall of Sofia."
+       },	
+       {
+       		"city": "Sofia",
+           	"latitude": 42.694167,          	
+           	"longtitude": 23.326389,
+           	"name": "Ivan Vazov National Theatre",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/16/IvanVazov_National_Theatre_7.jpg",
+           	"description": "The Ivan Vazov National Theatre (Bulgarian: Народен театър „Иван Вазов“, Naroden teatar „Ivan Vazov“) is Bulgaria's national theatre, as well as the oldest and most authoritative theatre in the country and one of the important landmarks of Sofia, the capital of Bulgaria. It is located in the centre of the city, with the facade facing the City Garden."
+       },	
+       {
+       		"city": "Sofia",
+           	"latitude": 42.696508,          	
+           	"longtitude": 23.331425,
+           	"name": "Saint Sofia Church",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/51/Basilica_of_Hagia_Sofia%2C_Bulgaria.jpg",
+           	"description": "The Saint Sofia Church (Bulgarian: църква „Света София“, tsarkva „Sveta Sofia“) is the second oldest church in the Bulgarian capital Sofia, dating to the 6th century. In the 14th century, the church gave its name to the city, previously known as Sredets (Средец)."
+       },	
+       {
+       		"city": "Sofia",
+           	"latitude": 42.690556,          	
+           	"longtitude": 23.3375,
+           	"name": "Eagles' Bridge",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b7/Adlerbrücke_Sofia_c_014.JPG",
+           	"description": "Eagles' Bridge (Bulgarian: Орлов мост, Orlov most [1]) is a bridge over the Perlovska River in downtown Sofia, capital of Bulgaria.[2] The bridge and junction were it is located, sometimes referred to as Ploshtad Orlov Most (Orlov Most Square) are usually referred simply as Eagles' Bridge (Orlov most).[2]"
+       },	
+       {
+       		"city": "Athens",
+           	"latitude": 37.971421,          	
+           	"longtitude": 23.726166,
+           	"name": "Acropolis",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+           	"description": "The Acropolis of Athens (Greek: Ακρόπολη Αθηνών) is an ancient citadel located on a high rocky outcrop above the city of Athens and containing the remains of several ancient buildings of great architectural and historic significance, the most famous being the Parthenon. The word acropolis comes from the Greek words ἄκρον (akron, \"edge, extremity\") and πόλις (polis, \"city\").[1] Although there are many other acropoleis in Greece, the significance of the Acropolis of Athens is such that it is commonly known as \"The Acropolis\" without qualification."
+       },	
+       {
+       		"city": "Athens",
+           	"latitude": 37.975556,          	
+           	"longtitude": 23.734722,
+           	"name": "Syntagma Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/53/Attica_06-13_Athens_04_Syntagma.jpg",
+           	"description": "Syntagma Square (Greek: Πλατεία Συντάγματος, Greek pronunciation: [plaˈtia sinˈdaɣmatos], English: Constitution Square) (sometimes spelled 'Syndagma Square'), is a town square located in central Athens, Greece. The Square is named after the Constitution that King Otto was obliged to grant, after a popular and military uprising on September 3, 1843.[1] It is the oldest and socially most important square of modern Athens, at the epicentre of commercial activity during the nineteenth century."
+       },	
+       {
+       		"city": "Athens",
+           	"latitude": 37.971389,          	
+           	"longtitude": 23.736389,
+           	"name": "Zappeion",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/69/Zappion_AthensGR.jpg",
+           	"description": "The Zappeion (Greek: Ζάππειον Μέγαρο, Záppeion Mégaro) is a building in the National Gardens of Athens in the heart of Athens, Greece. It is generally used for meetings and ceremonies, both official and private."
+       },
+       {
+       		"city": "Athens",
+           	"latitude": 37.975556,          	
+           	"longtitude": 23.726111,
+           	"name": "Hadrian's Library",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/01/20100410_athina143.JPG",
+           	"description": "The building followed a typical Roman Forum architectural style, having only one entrance with a propylon of Corinthian order, a high surrounding wall with protruding niches (oikoi, exedrae) at its long sides, an inner courtyard surrounded by columns and a decorative oblong pool in the middle.[3] The library was on the eastern side where rolls of papyrus \"books\" were kept. Adjoining halls were used as reading rooms, and the corners served as lecture halls."
+       },	
+       {
+       		"city": "Athens",
+           	"latitude": 37.967222,          	
+           	"longtitude": 23.721389,
+           	"name": "Philopappos Monument",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ca/Monument_de_Philopappos_crop.jpg",
+           	"description": "The Philopappos Monument (Greek: Μνημείο Φιλοπάππου) is an ancient Greek mausoleum and monument dedicated to Gaius Julius Antiochus Epiphanes Philopappos or Philopappus, (Greek: Γάιος Ιούλιος Αντίοχος Επιφανής Φιλόπαππος, 65–116 AD), a prince from the Kingdom of Commagene. It is located on Mouseion Hill in Athens, Greece, southwest of the Acropolis."
+       },	
+       {
+       		"city": "Athens",
+           	"latitude": 37.9715,          	
+           	"longtitude": 23.7267,
+           	"name": "Parthenon",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg",
+           	"description": "The Parthenon (Greek: Παρθενών) is a temple on the Athenian Acropolis, Greece, dedicated to the goddess Athena, whom the people of Athens considered their patron. Its construction began in 447 BC when the Athenian Empire was at the height of its power. It was completed in 438 BC, although decoration of the building continued until 432 BC. It is the most important surviving building of Classical Greece, generally considered the culmination of the development of the Doric order. Its decorative sculptures are considered some of the high points of Greek art. The Parthenon is regarded as an enduring symbol of Ancient Greece, Athenian democracy, western civilization[3] and one of the world's greatest cultural monuments. The Greek Ministry of Culture is currently carrying out a program of selective restoration and reconstruction to ensure the stability of the partially ruined structure.[4]"
+       },	
+       {
+       		"city": "Ankara",
+           	"latitude": 39.925556,          	
+           	"longtitude": 32.8375,
+           	"name": "Anıtkabir",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/6b/Protect_Your_Republic_Protest_-_6_%282007-04-14%29_edit.jpg",
+           	"description": "Anıtkabir (literally, \"memorial tomb\") is the mausoleum of Mustafa Kemal Atatürk, the leader of the Turkish War of Independence and the founder and first President of the Republic of Turkey. It is located in Ankara and was designed by architects Professor Emin Onat and Assistant Professor Ahmet Orhan Arda, whose proposal beat 48 other entries from several countries in a competition held by the Turkish Government in 1941 for a \"monumental tomb\" for Atatürk."
+       },	
+       {
+       		"city": "Ankara",
+           	"latitude": 39.886111,          	
+           	"longtitude": 32.856111,
+           	"name": "Atakule",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Atakule.JPG/640px-Atakule.JPG",
+           	"description": "Atakule is a 125m (410 feet) high communications and observation tower located in the Çankaya district of central Ankara, Turkey, and is one of the primary landmarks of the city. As the district of Çankaya is itself on a hill, the tower can be spotted from almost anywhere in the city during clear days. The tower's design came from architect Ragıp Buluç and the construction works lasted from 1987 to 1989. The top section of the tower houses an open terrace and a revolving restaurant named Sevilla, which makes a full 360 degree rotation in one hour. On top of Sevilla is another restaurant, Dome, which is non-revolving and located directly under the cupola. Under the terrace is a café, named UFO. The bottom structures house a shopping mall and several indoor and outdoor restaurants. The tower was opened on 13 October 1989 by President Turgut Özal."
+       },	
+       {
+       		"city": "Ankara",
+           	"latitude": 39.938333,          	
+           	"longtitude": 32.861944,
+           	"name": "Museum of Anatolian Civilizations",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/ff/Musem_Of_Anatolian_Civilisations_Ankara.JPG",
+           	"description": "The Museum of Anatolian Civilizations (Turkish: Anadolu Medeniyetleri Müzesi) is located on the south side of Ankara Castle in the Atpazarı area in Ankara, Turkey. It consists of the old Ottoman Mahmut Paşa bazaar storage building, and the Kurşunlu Han. Because of Atatürk's desire to establish a Hittite museum, the buildings were bought upon the suggestion of Hamit Zübeyir Koşay, who was then Culture Minister, to the National Education Minister, Saffet Arıkan. After the remodelling and repairs were completed (1938–1968), the building was opened to the public as the Ankara Archaeological Museum."
+       },	
+       {
+       		"city": "Ankara",
+           	"latitude": 39.932668,          	
+           	"longtitude": 32.854894,
+           	"name": "Ethnography Museum of Ankara",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/73/Ankara-Turkey-viewP5280010.JPG",
+           	"description": "The Ethnography Museum of Ankara is a museum of ethnography dedicated to the cultures Turkish civilizations. The building was designed by architect Arif Hikmet Koyunoğlu and was built between 1925 and 1928.[1] The museum temporarily hosted the sarcophagus of Mustafa Kemal Atatürk from November 21, 1938 until November 10, 1953, during the period of the construction of Anıtkabir, its final resting place."
+       },	
+       {
+       		"city": "Algiers",
+           	"latitude": 36.745833,          	
+           	"longtitude": 3.069722,
+           	"name": "Maqam Echahid",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a9/Monument_aux_Martyrs.jpg",
+           	"description": "The Maqam Echahid (Arabic: مقام الشهيد‎ Arabic pronunciation: [mækæːm elchæːhiːd] English: Martyrs' Memorial) is an iconic concrete monument commemorating the Algerian war for independence. The monument was opened in 1982 on the 20th anniversary of Algeria's independence. It is fashioned in the shape of three standing palm leaves which shelter the \"Eternal Flame\" beneath. At the edge of each palm leaf stands a statue of a soldier, each representing a stage of Algeria's struggle."
+       },	
+       {
+       		"city": "Algiers",
+           	"latitude": 36.801111,          	
+           	"longtitude": 3.0425,
+           	"name": "Notre Dame d'Afrique",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/04/Notre_Dame_d%27Afrique_2010.jpg",
+           	"description": "The basilica was inaugurated in 1872, after fourteen years of construction. It was founded by Charles Lavigerie.[1] Its architect, Jean Eugène Fromageau, who had been appointed the chief architect for ecclesiastical buildings in French Algeria in 1859, employed a Neo-Byzantine style.[2] Its floor plan is unusual as the choir is situated on the southeast instead of the usual east side of the building.[who?]"
+       },	
+       {
+       		"city": "Algiers",
+           	"latitude": 36.785,          	
+           	"longtitude": 3.060556,
+           	"name": "Ketchaoua Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/95/Algiers_cathedral_1899.jpg",
+           	"description": "The Ketchaoua Mosque (Arabic: جامع كتشاوة‎, Djamaa Ketchaoua) is a mosque in Algiers, the capital of Algeria. It is located at the foot of the Casbah, which was built during the Ottoman rule in the 17th century, which is a UNESCO World Heritage Site. The mosque that stands on the first of the Casbah’s many steep stairways, was logistically and symbolically the cynosure of the pre-colonial city of Algiers.[1][2][3] The mosque is noted for its unique fusion of Moorish and Byzantine architecture.[4]"
+       },	
+       {
+       		"city": "Tunis",
+           	"latitude": 36.858056,          	
+           	"longtitude": 10.330833,
+           	"name": "Carthage",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/bf/Karthago_Antoninus-Pius-Thermen.JPG",
+           	"description": "Carthage (/ˈkɑrθɪdʒ/; Arabic: قرطاج‎ Qarṭāj, Berber: ⴽⴰⵔⵜⴰⵊⴻⵏ Kartajen) is a suburb of Tunis, Tunisia that was the centre of the Carthaginian Empire in antiquity. The city has existed for nearly 3,000 years, developing from a Phoenician colony of the 1st millennium BC into the capital of an ancient empire.[2] It was little more than an agricultural village for nine hundred years until the middle of the 20th century; since then it has grown rapidly as an upscale coastal suburb.[3][4] In 2004 it had a population of 15,922 according to the national census,[5] and an estimated population of 21,276 in January 2013.[6]"
+       },
+       {
+       		"city": "Tunis",
+           	"latitude": 36.7972,          	
+           	"longtitude": 10.1711,
+           	"name": "Al-Zaytuna Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/MinaretMosqueeZitounaTunis.JPG/1280px-MinaretMosqueeZitounaTunis.JPG",
+           	"description": "The mosque is the oldest in the Capital of Tunisia and covers an area of 5,000 square metres (1.2 acres) with nine entrances.[1] It has 160 authentic columns brought originally from the ruins of the old city of Carthage.[2] The mosque is known to host one of the first and greatest universities in the history of Islam.[3] Many Muslim scholars were graduated from the Al-Zaytuna for over a thousand years. From Ibn 'Arafa, one of the greatest scholars of Islam, Imam Maziri,[4] the great traditionalist and jurist to the famous Tunisian poet Aboul-Qacem Echebbi and countless others all taught there.[1][5][6"
+       },	
+       {
+       		"city": "Tunis",
+           	"latitude": 36.798333,          	
+           	"longtitude": 10.170833,
+           	"name": "Hammouda Pacha Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ad/Minaret_Hammouda.JPG",
+           	"description": "Hammouda Pacha Mosque or Hamouda Pacha al Mouradi is a mosque in Tunis, Tunisia, located in Medina area of the city. It is an official historical monument."
+       },	
+       {
+       		"city": "Tunis",
+           	"latitude": 36.809386,          	
+           	"longtitude": 10.134508,
+           	"name": "Bardo National Museum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bardo_Museum_-_Carthage_room.jpg/1280px-Bardo_Museum_-_Carthage_room.jpg",
+           	"description": "The museum's building was originally a 13th-century Hafsid palace, located in the suburbs of Tunis."
+       },	
+       {
+       		"city": "Damascus",
+           	"latitude": 33.511552,          	
+           	"longtitude": 36.3038,
+           	"name": "Temple of Jupiter",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/47/The_Jupiter_temple_in_Damascus.jpg",
+           	"description": "The Temple of Jupiter in Damascus was built by the Romans, beginning during the rule of Augustus[1] and completed during the rule of Constantius II.[2]"
+       },	
+       {
+       		"city": "Damascus",
+           	"latitude": 33.511944,          	
+           	"longtitude": 36.306667,
+           	"name": "Umayyad Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d5/Umayyad_Mosque%2C_Damascus.jpg",
+           	"description": "The Umayyad Mosque, also known as the Great Mosque of Damascus (Arabic: جامع بني أمية الكبير‎, Romanization Ğāmi' Banī 'Umayya al-Kabīr), located in the old city of Damascus, is one of the largest and oldest mosques in the world. It is considered by some Muslims to be the fourth-holiest place in Islam.[1][2]"
+       },	
+       {
+       		"city": "Damascus",
+           	"latitude": 33.511699,          	
+           	"longtitude": 36.30608,
+           	"name": "Qubbat al-Khazna",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/39/Umayyad_Mosque-Dome_of_the_Treasury.jpg",
+           	"description": "Qubbat al-Khazna (Arabic: قبة الخزنة Qubbat al-Khazna), meaning the \"Dome of the Treasury\", is an old structure, located inside the courtyard of the Umayyad Mosque in Damascus, Syria. It is an octagonal structure decorated with mosaics, standing on eight Roman columns.[1] The Dome of the Treasury, like the mosque's prayer hall facade, was once completely covered in the colorful mosaic decoration for which the mosque was famous.[2] The dome was built under orders from the governor of Damascus, Fadl ibn Salih, in 789.[3]"
+       },	
+       {
+       		"city": "Damascus",
+           	"latitude": 33.510833,          	
+           	"longtitude": 36.300833,
+           	"name": "Al-Hamidiyah Souq",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg",
+           	"description": "Al-Hamidiyah Souq (Arabic: سوق الحميدية‎) is the largest and the central souk in Syria, located inside the old walled city of Damascus next to the Citadel. The souq starts at Al-Thawra street and ends at the Umayyad Mosque plaza. It was one of the treasures featured in Around the World in 80 Treasures presented by Dan Cruickshank."
+       },	
+       {
+       		"city": "Damascus",
+           	"latitude": 33.513333,          	
+           	"longtitude": 36.315,
+           	"name": "Bab Tuma",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/45/DamascusBabTouma.jpg",
+           	"description": "Bab Tuma (Arabic: باب توما, meaning: \"Thomas’s Gate\") is a borough of Old Damascus in Syria, one of the gates inside the historical walls of the city, and a geographic landmark of Early Christianity. It owes its name to Thomas, one of the twelve apostles of Jesus Christ."
+       },	
+       {
+       		"city": "Baghdad",
+           	"latitude": 33.379969,          	
+           	"longtitude": 44.337956,
+           	"name": "Al-Kadhimiya Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a9/Entrance_to_Kazemein.jpg",
+           	"description": "The Al-Kādhimiya Mosque is a shrine located in the Kādhimayn suburb of Baghdad, Iraq. It contains the tombs of the seventh Twelver Shī‘ah Imām Mūsā al-Kādhim and the ninth Twelver Shī‘ah Imām Muhammad at-Taqī."
+       },	
+       {
+       		"city": "Baghdad",
+           	"latitude": 33.305167,          	
+           	"longtitude": 44.386464,
+           	"name": "Victory Arch",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/86/Swords_of_qadisiyah.jpg",
+           	"description": "The Arc of Triumph (Arabic: قوس النصر‎ Qaws an-Naṣr)[1][2] also called the Swords of Qādisīyah، and Hands of Victory in some Western sources, are a pair of triumphal arches in central Baghdad, Iraq. Each arch consists of a pair of hands holding crossed swords. The two arches mark the two entrances to Great Celebrations square and the parade-ground constructed to commemorate the Iran-Iraq war, led by then Iraqi President Saddam Hussein. The arches were opened to the public on August 8, 1989. It is one of Baghdad's sights and monuments and near to The Monument to the Unknown Soldier."
+       },	
+       {
+       		"city": "Baghdad",
+           	"latitude": 33.314845,          	
+           	"longtitude": 44.376417,
+           	"name": "Baghdad Zoo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f9/U.S._Tigers_Donated_To_Baghdad_Zoo.jpg",
+           	"description": "The Baghdad Zoo is a 200-acre (81 ha) zoo originally opened in 1971 and located in Baghdad, Iraq, in the Al Zawra’a Gardens area along with the Al Zawra’a Dream Park (amusement park) and Zawra'a Tower. Before the 2003 invasion of Iraq, the zoo housed 650 animals. After being decimated during the 2003 Iraqi war, when only about 35 animals survived, the zoo was reopened in 2003 and now houses about 1070 animals."
+       },
+       {
+       		"city": "Cairo",
+           	"latitude": 30.0475,          	
+           	"longtitude": 31.238333,
+           	"name": "Downtown Cairo",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/7a/26_July_st._Cairro.jpg",
+           	"description": "Downtown Cairo, (Arabic: وسط البلد‎ wasaṭ al-balad / wesṭ el-balad, \"middle of town\"), has been the urban center of Cairo, Egypt since the late 19th century, when the district was designed and built."
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.028889,          	
+           	"longtitude": 31.249444,
+           	"name": "Mosque of Ibn Tulun",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/ce/Kairo_Ibn_Tulun_Moschee_BW_4.jpg",
+           	"description": "The Mosque of Ahmad Ibn Ţūlūn (Arabic: مسجد أحمد بن طولون‎) is located in Cairo, Egypt. It is arguably the oldest mosque in the city surviving in its original form, and is the largest mosque in Cairo in terms of land area."
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.029444,          	
+           	"longtitude": 31.261389,
+           	"name": "Cairo Citadel",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/93/Flickr_-_HuTect_ShOts_-_Citadel_of_Salah_El.Din_and_Masjid_Muhammad_Ali_قلعة_صلاح_الدين_الأيوبي_ومسجد_محمد_علي_-_Cairo_-_Egypt_-_17_04_2010_%284%29.jpg",
+           	"description": "The Saladin Citadel of Cairo (Arabic: قلعة صلاح الدين‎ Qalaʿat Salāḥ ad-Dīn) is a medieval Islamic fortification in Cairo, Egypt. The location, on Mokattam hill near the center of Cairo, was once famous for its fresh breeze and grand views of the city. It is now a preserved historic site, with mosques and museums."
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.045833,          	
+           	"longtitude": 31.224444,
+           	"name": "Cairo Tower",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Cairotower.jpg",
+           	"description": "The Cairo Tower (Arabic: برج القاهرة‎, Borg Al-Qāhira) is a free-standing concrete tower located in Cairo, Egypt. At 187 m (614 ft), it has been the tallest structure in Egypt and North Africa about 50 years. It was the tallest structure in Africa for 10 years, until 1971 when it was surpassed by Hillbrow Tower in South Africa."
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.05,          	
+           	"longtitude": 31.216667,
+           	"name": "Gezira Island",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/75/Zamalek_Arial.jpg",
+           	"description": "Gezira Island is located in the Nile River, in central Cairo, Egypt. The southern portion of the island contains the Gezira District, and the northern third contains the affluent Zamalek District."
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.0276,          	
+           	"longtitude":  31.21014,
+           	"name": "Cairo University",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/57/CairoUniv.jpg",
+           	"description": "The university was founded on 21 December 1908, as the result of an effort to establish a national center for educational thought. Several constituent colleges preceded the establishment of the university including the College of Engineering (كلية الهندسة) in 1816, which was shut down by the Khedive of Egypt and Sudan, Sa'id Pasha, in 1854. Cairo University was founded as a European-inspired civil university, in contrast to the religious university of Al Azhar, and became the prime indigenous model for other state universities. In 1928, the first group of female students enrolled at the university.[1]"
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.0457,          	
+           	"longtitude": 31.2627,
+           	"name": "Al-Azhar Mosque",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Cairo_-_Islamic_district_-_Al_Azhar_Mosque_and_University.JPG",
+           	"description": "Al-Azhar Mosque (Arabic: الجامع الأزهر‎ al-Gāmi` al-Azhar, \"mosque of the most resplendent\") is a mosque in Islamic Cairo in Egypt. Al-Mu‘izz li-Dīn Allāh of the Fatimid Caliphate commissioned its construction for the newly established capital city in 970. Its name is usually thought to allude to the Islamic prophet Muhammad's daughter Fatimah, a revered figure in Islam who was given the title az-Zahrā′ (\"the shining one\"). It was the first mosque established in Cairo, a city that has since gained the nickname \"the city of a thousand minarets.\"[nb 1]"
+       },	
+       {
+       		"city": "Cairo",
+           	"latitude": 30.04605,          	
+           	"longtitude": 31.259881,
+           	"name": "Sultan Al-Ghuri Complex",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b7/Al-Ghuri_Complex_0930.JPG",
+           	"description": "The Sultan Al-Ghuri Complex was built between the years 1503 and 1505. This huge complex consists of a Khanqah, Mausoleum, Sabil-Kuttab, Mosque and Madrasa and is located at the Fahhamin Quarter, al Mu'izz li-Din Allah street in Cairo, Egypt. The structure lies on both sides of the al Mu'izz li-Din Allah street, with the congregational Mosque-Madrasa built on the western side, and the Khanqah-mausoleum-sabil-kuttab on the eastern side.[1]"
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.858667,          	
+           	"longtitude": 151.214028,
+           	"name": "Sydney Opera House",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ae/Sydney_Opera_House_at_Sunset.jpg",
+           	"description": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. Situated on Bennelong Point in Sydney Harbour, close to the Sydney Harbour Bridge, the facility is adjacent to the Sydney central business district and the Royal Botanic Gardens, between Sydney and Farm Coves."
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.870456,          	
+           	"longtitude": 151.208889,
+           	"name": "Sydney Tower",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/57/Amp_tower_center_point_tower_sydney.jpg",
+           	"description": "Sydney Tower is Sydney's tallest building and the third tallest in Australia (with the Q1 building on the Gold Coast and the Eureka Tower in Melbourne being the tallest). However by non-floor height or spire height, it is the second tallest in Australia.[1][2] It is also the second tallest observation tower in the Southern Hemisphere (after Auckland's Sky Tower, though Sydney Tower Eye's main observation deck is almost 50 m (164 ft) higher than that of Auckland's Sky Tower). The name Sydney Tower has become common in daily usage, however the tower is also known as the Sydney Tower Eye, AMP Tower, Westfield Centrepoint Tower, Centrepoint Tower or just Centrepoint. The Sydney Tower is a member of the World Federation of Great Towers.[3]"
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.863889,          	
+           	"longtitude": 151.216944,
+           	"name": "Royal Botanic Gardens",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/2a/Gates_at_Royal_Botanic_Gardens_viewed_from_Art_Gallery_Road.jpg",
+           	"description": "The Royal Botanic Gardens in Sydney, is the most central of the three major botanical gardens open to the public in Sydney (the others being the Mount Annan Botanic Garden and the Mount Tomah Botanic Garden). The gardens were opened in 1816, and are managed by the same trust that manages the adjoining The Domain. The gardens are open every day of the year, and access is free."
+       },
+       {
+       		"city": "Sydney",
+           	"latitude": -33.871133,          	
+           	"longtitude": 151.213208,
+           	"name": "St Mary's Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/32/Sydney_StMaryCathedral_perspective.JPG",
+           	"description": "The Metropolitan Cathedral of St Mary is the cathedral church of the Roman Catholic Archdiocese of Sydney and the seat of the Archbishop of Sydney, currently Cardinal George Pell. The cathedral is dedicated to \"Mary, Help of Christians\", Patron of Australia. St Mary’s holds the title and dignity of a minor basilica, bestowed upon it by Pope Pius XI on 4 August 1932.[2]"
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.868686,          	
+           	"longtitude": 151.217144,
+           	"name": "Art Gallery of New South Wales",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d9/NSWAG.jpg",
+           	"description": "The Art Gallery of New South Wales (AGNSW), located in The Domain in Sydney, New South Wales, Australia, was established in 1880 and is the most important public gallery in Sydney and the fourth largest in Australia. Admission is free to the general exhibition space, which displays Australian (from settlement to contemporary), European and Asian art."
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.863455,          	
+           	"longtitude": 151.214353,
+           	"name": "Sydney Conservatorium of Music",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/06/Syd_con_music.JPG",
+           	"description": "The Sydney Conservatorium of Music (formerly the New South Wales State Conservatorium of Music or ‘The Con’) is one of the oldest and most prestigious music schools in Australia. Located adjacent to the Sydney Royal Botanic Gardens, the Conservatorium incorporates a faculty of the University of Sydney, the community-based Conservatorium Open Academy and the Conservatorium High School."
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.887778,          	
+           	"longtitude": 151.187222,
+           	"name": "University of Sydney",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/69/SydneyUniversity_MainBuilding_Panorama.jpg",
+           	"description": "The University of Sydney (commonly referred to as Sydney University, Sydney Uni, USyd, or Sydney) is an Australian public university in Sydney. Founded in 1850, it is Australia's first university and is regarded as one of its most prestigious, ranked as the world's 27th most reputable university.[2] In 2013, it was ranked 38th and in the top 0.3% in the QS World University Rankings. Five Nobel or Crafoord laureates have been affiliated with the university as graduates and faculty.[3] Its campus is ranked in the top 10 of the world's most beautiful universities by the British Daily Telegraph, The Huffington Post and Disney Pixar and is spread across the inner-city suburbs of Camperdown and Darlington.[4][5]"
+       },	
+       {
+       		"city": "Sydney",
+           	"latitude": -33.860019,          	
+           	"longtitude": 151.208999,
+           	"name": "Museum of Contemporary Art Australia",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b9/SydneyMuseumContemporaryArt_gobeirne.jpg",
+           	"description": "The Museum of Contemporary Art (abbreviated MCA) in Sydney, Australia is an Australian museum solely dedicated to exhibiting, interpreting and collecting contemporary art, both from across Australia and around the world. It is housed in the Art Deco-style former Maritime Services Board Building on the western edge of Circular Quay. This area was the traditional lands of the Gadigal people of the Eora nation."
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.283333,          	
+           	"longtitude": 174.833333,
+           	"name": "Wellington Harbour",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/38/Wellington_Harbour%2C_New_Zealand%2C_Nov._2009.jpg",
+           	"description": "Wellington Harbour (Port Nicholson)[1] is the large natural harbour on the southern tip of New Zealand's North Island. New Zealand's capital city, Wellington, is located on its western side. The harbour, the sea area bounded by a line between Pencarrow and Palmer Heads to Petone foreshore, was Port Nicholson until 1984."
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.296155,          	
+           	"longtitude": 174.794479,
+           	"name": "Mount Victoria",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/bb/Wellington-FromTopOfMountVictoria.jpg",
+           	"description": "Mount Victoria, locally abbreviated to Mt. Vic, is a prominent hill (height 196 metres) to the east of the centre of Wellington, New Zealand, and its associated suburb. To the south of it is a spur, "
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.279484,          	
+           	"longtitude": 174.777975,
+           	"name": "Old Government Buildings",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/af/Old_Government_Buildings_-_whole.JPG",
+           	"description": "The Government Buildings Historic Reserve, or more commonly referred to as the Old Government Buildings, is situated on Lambton Quay in Wellington. It was completed in 1876, and until 1998 was the second-largest wooden building in the world (after Tōdai-ji in Nara, Japan).[1]"
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.2829,          	
+           	"longtitude": 174.766,
+           	"name": "Wellington Botanic Garden",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/af/WellBotGardenpath.JPG",
+           	"description": "The Wellington Botanic Garden, Wellington, New Zealand, covers 25 hectares of land on the side of the hill between Thorndon and Kelburn, near central Wellington."
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.2784,          	
+           	"longtitude": 174.7767,
+           	"name": "Beehive",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/22/Bowen_House_Beehive_Parliament.JPG",
+           	"description": "The Beehive is the common name for the Executive Wing of the New Zealand Parliament Buildings, located at the corner of Molesworth Street and Lambton Quay, Wellington. It is so-called because of its shape is reminiscent of that of a traditional woven form of beehive known as a \"skep\"."
+       },	
+       {
+       		"city": "Wellington",
+           	"latitude": -41.288889,          	
+           	"longtitude": 174.768333,
+           	"name": "Victoria University of Wellington",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/15/Old_Government_Buildings%2C_Wellington.JPG",
+           	"description": "Victoria University of Wellington (Māori: Te Whare Wānanga o Te Ūpoko o Te Ika a Māui) was established in 1897 by Act of Parliament, and was a constituent college of the University of New Zealand."
+       },
+       {
+       		"city": "Wellington",
+           	"latitude": -41.276614,          	
+           	"longtitude": 174.778372,
+           	"name": "National Library of New Zealand",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c8/National_library_wellington.jpg",
+           	"description": "The National Library of New Zealand (in Maori: Te Puna Mātauranga o Aotearoa) is New Zealand's legal deposit library charged with the obligation to \"enrich the cultural and economic life of New Zealand and its interchanges with other nations\" (National Library of New Zealand (Te Puna Mātauranga) Act 2003). Under the Act, the library is also expected to be:"
+       },	
+       {
+       		"city": "South Pole",
+           	"latitude": -90,          	
+           	"longtitude": 0,
+           	"name": "Amundsen–Scott South Pole Station",
+           	"image": "http://upload.wikimedia.org/wikipedia/en/b/b7/SouthPoleStationDestinationAlpha.jpg",
+           	"description": "The Amundsen–Scott South Pole Station is a US scientific research station at the Geographic South Pole, the southernmost place on the Earth. The station is located on the high plateau of Antarctica at an elevation of 2,835 metres (9,301 feet) above sea level."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 33.99083,          	
+           	"longtitude": -118.45917,
+           	"name": "Venice",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/6a/Venice.jpg",
+           	"description": "Venice was founded in 1905 as a seaside resort town. It was an independent city until 1926, when it merged with Los Angeles. Today, Venice is known for its canals, beaches and circus-like Ocean Front Walk, a two-and-a-half-mile pedestrian-only promenade that features performers, fortune-tellers, artists, and vendors."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.11856,          	
+           	"longtitude": -118.30037,
+           	"name": "Griffith Observatory",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/05/Griffith_observatory.jpg",
+           	"description": "Griffith Observatory is a facility in Los Angeles, California sitting on the south-facing slope of Mount Hollywood in Los Angeles' Griffith Park. It commands a view of the Los Angeles Basin, including Downtown Los Angeles to the southeast, Hollywood to the south, and the Pacific Ocean to the southwest. The observatory is a popular tourist attraction with an extensive array of space and science-related displays. Since the observatory opened in 1935, admission has been free, in accordance with Griffith's will."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.134103,          	
+           	"longtitude": -118.321694,
+           	"name": "Hollywood Sign",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/31/Aerial_Hollywood_Sign.jpg",
+           	"description": "The Hollywood Sign (formerly known as the Hollywoodland Sign) is a landmark and American cultural icon located in Los Angeles, California. It is situated on Mount Lee in the Hollywood Hills area of the Santa Monica Mountains. The sign overlooks the Hollywood district of Los Angeles."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.0536,          	
+           	"longtitude": -118.243,
+           	"name": "Los Angeles City Hall",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/48/Los_Angeles_City_Hall_%28color%29_edit1.jpg",
+           	"description": "Los Angeles City Hall, completed 1928, is the center of the government of the city of Los Angeles, California, and houses the mayor's office and the meeting chambers and offices of the Los Angeles City Council.[5] It is located in the Civic Center district of downtown Los Angeles in the city block bounded by Main, Temple, First, and Spring streets."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.014167,          	
+           	"longtitude": -118.287778,
+           	"name": "Los Angeles Memorial Coliseum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/43/11-11-06-LA-Coliseum-USC-UO.jpg",
+           	"description": "The Los Angeles Memorial Coliseum, colloquially known as just \"The Coliseum\", is a large outdoor sports stadium in the University Park neighborhood of Los Angeles, at Exposition Park, that is home to the Pacific-12 Conference's University of Southern California Trojans football team. It is the largest football stadium in the Pac-12."
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.101944,          	
+           	"longtitude": -118.340972,
+           	"name": "TCL Chinese Theatre",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/25/Grauman%27s_Chinese_Theatre%2C_by_Carol_Highsmith_fixed_%26_straightened.jpg",
+           	"description": "TCL Chinese Theatre is a cinema on the historic Hollywood Walk of Fame at 6925 Hollywood Boulevard in Hollywood, California. Originally Grauman's Chinese Theatre and renamed Mann's Chinese Theatre in 1973; the current name of the theatre became official January 11, 2013, after TCL Corporation purchased the naming rights.[2]"
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.058611,          	
+           	"longtitude": -118.2775,
+           	"name": "MacArthur Park",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d0/Macarthur_Park.jpg",
+           	"description": "MacArthur Park (formerly Westlake Park)[1] is a park in the Westlake neighborhood of Los Angeles, California, named after General Douglas MacArthur and designated City of Los Angeles Historic Cultural Monument #100.[2]"
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.058333,          	
+           	"longtitude": -118.245833,
+           	"name": "Cathedral of Our Lady of the Angels",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1b/Lacathedral.jpg",
+           	"description": "The Cathedral of Our Lady of the Angels, informally known as COLA or the Los Angeles Cathedral, is a Latin-rite cathedral of the Roman Catholic Church in Los Angeles, California, United States of America. Opened in 2002, the cathedral serves as the mother church for the Archdiocese of Los Angeles.[1] It is also the cathedra seat of Archbishop José Horacio Gómez.[2]"
+       },	
+       {
+       		"city": "Los Angeles",
+           	"latitude": 34.052806,          	
+           	"longtitude": -118.433917,
+           	"name": "Los Angeles California Temple",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ad/Los_Angeles_Temple_2.jpg",
+           	"description": "The Los Angeles California Temple (formerly the Los Angeles Temple), the tenth operating and the second-largest temple operated by The Church of Jesus Christ of Latter-day Saints (LDS Church), is on Santa Monica Boulevard in the Westwood district of Los Angeles, California, United States. When it was dedicated in 1956, it was the largest of the church's temples, though it has since been surpassed by the Salt Lake Temple due to later expansions. The temple serves 41 stakes in Los Angeles, Ventura, Kern, Santa Barbara, and San Luis Obispo counties.[1] The grounds include a visitors' center, which was renovated in 2010, the Los Angeles Regional Family History Center, both of which are open to the public, and the headquarters of the church's California Los Angeles Mission."
+       },
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.403611,          	
+           	"longtitude": 2.174444,
+           	"name": "Sagrada Família",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/ee/Sagrada_Familia_01.jpg",
+           	"description": "The Basílica i Temple Expiatori de la Sagrada Família (Catalan pronunciation: [səˈɣɾaðə fəˈmiɫiə]; English: Basilica and Expiatory Church of the Holy Family), is a large Roman Catholic church in Barcelona, Spain, designed by Catalan architect Antoni Gaudí (1852–1926). Although incomplete, the church is a UNESCO World Heritage Site,[5] and in November 2010 Pope Benedict XVI consecrated and proclaimed it a minor basilica,[6][7][8] as distinct from a cathedral which must be the seat of a bishop."
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.368333,          	
+           	"longtitude": 2.153333,
+           	"name": "Palau Nacional",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/54/Palau_Nacional_Barcelona_Pano_2013.jpg",
+           	"description": "The Palau Nacional (en: National Palace), situated in Montjuïc (Barcelona), is a palace constructed between the years 1926 and 1929 for the 1929 International Exhibition in Barcelona. Since 1934 it has been home to the National Art Museum of Catalonia. It was the main building of the exhibition, realised by Eugenio Cendoya and Eugene Henry Catà under the supervision of Pere Domènech i Roura, which disregarded the initial project proposed by Puig i Cadafalch and Guillermo Busquets.[1] The palace’s Oval Room was host to the opening ceremony of the Exhibition, presided by Alfons XIII and Queen Victòria Eugènia.[2]"
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.368472,          	
+           	"longtitude": 2.190239,
+           	"name": "W Barcelona",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/50/W_Barcelona_by_Ricardo_Bofill.jpg",
+           	"description": "W Barcelona, popularly known as the Hotel Vela (Sail Hotel) due to its shape, is a building designed by Ricardo Bofill is located in the Barceloneta district of Barcelona, in the expansion of the Port of Barcelona. The hotel is managed by Starwood Hotels and Resorts hotel chain and marketed under the brand W Hotels."
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.363333,          	
+           	"longtitude": 2.166111,
+           	"name": "Montjuïc Castle",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a7/Castell_de_Montjuic_-_Fossat_entrada_-_Barcelona_%28Catalonia%29.jpg",
+           	"description": "Montjuïc Castle (Catalan: Castell de Montjuïc, Spanish: Castillo de Montjuïc) is an old military fortress, with roots dating back from 1640, currently serving as a Barcelona municipal facility, built on top of Montjuïc hill in Barcelona, Catalonia, Spain."
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.38,          	
+           	"longtitude": 2.175,
+           	"name": "Plaça Reial",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/ff/Barcellona_Plaça_Reial.jpg",
+           	"description": "Plaça Reial (In Spanish Plaza Real, meaning \"Royal Plaza\") is a square in the Barri Gòtic of Barcelona, Catalonia, Spain. It lies next to La Rambla and constitutes a well-known touristic attraction, especially at night. On the plaza are a large number of restaurants and some of the city's most famous nightclubs including Sidecar, Jamboree or Karma. It is also known for its many outdoor venues and is a popular meeting place during the summer and the annual La Mercè festival in September, when open air concerts take place, and during other celebrations such as New Year's Eve, often being very crowded."
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.413611,          	
+           	"longtitude": 2.152778,
+           	"name": "Park Güell",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cb/Park_Güell_02.jpg",
+           	"description": "Park Güell (Catalan: Parc Güell [ˈparɡ ˈɡweʎ]) is a garden complex with architectural elements situated on the hill of El Carmel in the Gràcia district of Barcelona, Catalonia, Spain. It was designed by the Catalan architect Antoni Gaudí and built in the years 1900 to 1914. It has an extension of 17.18 ha (0.1718 km²), which makes it one of the largest architectural works in south Europe. It is part of the UNESCO World Heritage Site \"Works of Antoni Gaudí\".[1]"
+       },	
+       {
+       		"city": "Barcelona",
+           	"latitude": 41.391667,          	
+           	"longtitude": 2.165,
+           	"name": "Casa Batlló",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d9/CasaBatllo.jpg",
+           	"description": "Casa Batlló (Catalan pronunciation: [ˈkazə βəʎˈʎo]) is a renowned building located in the center of Barcelona and is one of Antoni Gaudí’s masterpieces. A remodel of a previously built house, it was redesigned in 1904 by Gaudí and has been refurbished several times after that. Gaudí's assistants Domènec Sugrañes i Gras, Josep Canaleta and Joan Rubió also contributed to the renovation project. The local name for the building is Casa dels ossos (House of Bones), as it has a visceral, skeletal organic quality. It was originally designed for a middle-class family and situated in a prosperous district of Barcelona."
+       },	
+       {
+       		"city": "Manchester",
+           	"latitude": 53.47545,          	
+           	"longtitude":  -2.25025,
+           	"name": "Beetham Tower",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/02/Beetham_Tower_from_below.jpg",
+           	"description": "Beetham Tower (also known as the Hilton Tower[8]) is a landmark 47-storey mixed-use skyscraper in Manchester, England. Completed in 2006, it is named after its developers, the Beetham Organisation, and was designed by Ian Simpson.[4] Occupying a narrow plot of land at the top of Deansgate, the development was proposed in July 2003 and construction started a year later. At a height of 168 metres (551 ft), it is the tallest skyscraper in Manchester, the ninth tallest building in the United Kingdom and the tallest building outside London."
+       },	
+       {
+       		"city": "Manchester",
+           	"latitude": 53.477222,          	
+           	"longtitude": -2.245,
+           	"name": "Midland Hotel",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/7/77/Midland_Hotel_west%2C_Manchester.jpg",
+           	"description": "The Midland is a grand hotel in Manchester, England. Opened in September 1903, it was built by the Midland Railway to serve Manchester Central railway station, its northern terminus for its rail services to London St. Pancras. The hotel was designed by Charles Trubshaw in a highly-individualistic Edwardian Baroque style. It is a Grade II* listed building.[1]"
+       },	
+       {
+       		"city": "Manchester",
+           	"latitude": 53.4874,          	
+           	"longtitude": -2.2369,
+           	"name": "One Angel Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/fb/One_Angel_Square_during_night%2C_December_2012.jpg",
+           	"description": "One Angel Square[1] is an office building in Manchester, England. Construction work began in 2010 and was completed in February 2013. The landmark building is the head office of the Co-operative Group. Standing 72.5 metres (237.8 feet) tall, the building forms the centrepiece of the new £800 million NOMA development in the northern quarter of Manchester city centre. The building cost at least £105 million to construct and was sold on leaseback terms in 2013 for £142 million."
+       },	
+       {
+       		"city": "Manchester",
+           	"latitude": 53.479167,          	
+           	"longtitude": -2.244167,
+           	"name": "Manchester Town Hall",
+           	"image": "http://en.wikipedia.org/wiki/Manchester_Town_Hall#mediaviewer/File:Manchester_Town_Hall_from_Lloyd_St.jpg",
+           	"description": "Manchester Town Hall is a Victorian, Neo-gothic municipal building in Manchester, England. It is the ceremonial headquarters of Manchester City Council and houses a number of local government departments."
+       },
+       {
+       		"city": "Manchester",
+           	"latitude": 53.488056,          	
+           	"longtitude": -2.243889,
+           	"name": "Manchester Arena",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/56/Manchester_Arena_concert%2C_November_2012.jpg",
+           	"description": "The Manchester Arena (currently under the sponsored name Phones 4u Arena Manchester) is an indoor arena in Hunts Bank, Manchester, England. Situated immediately west of the city centre, most of the arena is situated above Manchester Victoria station in air rights space."
+       },	
+       {
+       		"city": "Manchester",
+           	"latitude": 53.460278,          	
+           	"longtitude": -2.229444,
+           	"name": "Whitworth Art Gallery",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d9/Whitworth_Gallery.JPG",
+           	"description": "The Whitworth Art Gallery is an art gallery in Manchester, England, containing about 55,000 items in its collection. The museum is located south of the Manchester University campus, in Whitworth Park."
+       },	
+       {
+       		"city": "Edinburgh",
+           	"latitude": 55.955278,          	
+           	"longtitude": -3.182222,
+           	"name": "Calton Hill",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a5/Edinburgh_Calton_Hill.jpg",
+           	"description": "Calton Hill (archaically spelt Caltoun or Caldoun[1] and also known as \"the Calton Hill\"), is a hill in central Edinburgh, Scotland, just to the east of Princes Street and is included in the city's UNESCO World Heritage Site. Views of, and from, the hill are often used in photographs and paintings of the city."
+       },	
+       {
+       		"city": "Edinburgh",
+           	"latitude": 55.947389,          	
+           	"longtitude": -3.187194,
+           	"name": "Old College, University of Edinburgh",
+           	"image": "Old College is a building of the University of Edinburgh, Scotland. It is located on South Bridge, and presently houses parts of the University's administration, the University of Edinburgh School of Law, and the Talbot Rice Gallery. Originally called the \"New College\", it was designed by Robert Adam to replace a number of older buildings.",
+           	"description": "Old College is a building of the University of Edinburgh, Scotland. It is located on South Bridge, and presently houses parts of the University's administration, the University of Edinburgh School of Law, and the Talbot Rice Gallery. Originally called the \"New College\", it was designed by Robert Adam to replace a number of older buildings."
+       },	
+       {
+       		"city": "Edinburgh",
+           	"latitude": 55.947572,          	
+           	"longtitude": -3.191631,
+           	"name": "Old Town",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/4/42/Old_Town_from_Princes_Street.JPG",
+           	"description": "The Old Town (Scots: Auld Toun) is the name popularly given to the oldest part of Scotland's capital city of Edinburgh. The area has preserved much of its medieval street plan and many Reformation-era buildings. Together with the 18th-century New Town, it is a protected UNESCO World Heritage Site.[1]"
+       },	
+       {
+       		"city": "Edinburgh",
+           	"latitude": 55.949444,          	
+           	"longtitude": -3.190833,
+           	"name": "St Giles' Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/56/St._Giles_Cathedral%2C_Edinburgh.jpg",
+           	"description": "St Giles' Cathedral, more properly termed the High Kirk of Edinburgh, is the principal place of worship of the Church of Scotland in Edinburgh. Its distinctive crown steeple is a prominent feature of the city skyline, at about a third of the way down the Royal Mile which runs from the Castle to Holyrood Palace. The church has been one of Edinburgh's religious focal points for approximately 900 years. The present church dates from the late 14th century, though it was extensively restored in the 19th century, and is protected as a category A listed building.[1] Today it is sometimes regarded as the \"Mother Church of Presbyterianism\".[2] The cathedral is dedicated to Saint Giles, who is the patron saint of Edinburgh,[3] as well as of cripples and lepers, and was a very popular saint in the Middle Ages. It is the Church of Scotland parish church for part of Edinburgh's Old Town. The most recent Minister (since 1973) of St Giles' was the Very Reverend Dr Gilleasbuig Macmillan; he retired on 30 September 2013.[4]"
+       },	
+       {
+       		"city": "Bern",
+           	"latitude": 46.940614,          	
+           	"longtitude": 46.940614,
+           	"name": "Swissmint",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/8e/Swissmint_building.JPG",
+           	"description": "Swissmint is the official mint of the Swiss Confederation. It is responsible for manufacturing Swiss franc coins, both of the currency and bullion variety. Apart from making coins for the government, Swissmint also manufactures medals and commemorative coins for private customers."
+       },	
+       {
+       		"city": "Bern",
+           	"latitude": 46.949167,          	
+           	"longtitude": 7.473889,
+           	"name": "Zentrum Paul Klee",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/15/Paul-klee-zentrum-ansicht-zoom.jpg",
+           	"description": "The Zentrum Paul Klee is a museum dedicated to the artist Paul Klee, located in Bern, Switzerland and designed by the Italian architect Renzo Piano. It features about 40 percent of Paul Klee’s entire pictorial oeuvre."
+       },	
+       {
+       		"city": "Bern",
+           	"latitude": 46.950519,
+           	"longtitude": 7.438109,
+           	"name": "University of Bern",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/86/UNI-bern-Front.jpg",
+           	"description": "The University of Bern (German: Universität Bern, French: Université de Berne, Latin: Universitas Bernensis) is a university in the Swiss capital of Bern and was founded in 1834.[2] It is regulated and financed by the Canton of Bern. It is a comprehensive university offering a broad choice of courses and programmes in eight faculties and some 160 institutes.[3] With around 15,000 students, the University of Bern is a medium-sized Swiss university.[4]"
+       },	
+       {
+       		"city": "Bern",
+           	"latitude": 46.949,          	
+           	"longtitude": 7.447,
+           	"name": "Bern Theatre",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Stadttheater_Bern.jpg",
+           	"description": "Bern Theatre, known in the city as Stadttheater Bern, is an opera house and theatre in Bern, Switzerland."
+       },	
+       {
+       		"city": "Jakarta",
+           	"latitude": -6.135,          	
+           	"longtitude": 106.813056,
+           	"name": "Jakarta History Museum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b6/Museum_fatahillah.jpg",
+           	"description": "The Jakarta History Museum (Indonesian: Museum Sejarah Jakarta), also known as Fatahillah Museum or Batavia Museum, is located in the Old Town (known as Kota) of Jakarta, Indonesia. The building was built in 1710 as the Stadhuis (city hall) of Batavia. Jakarta History Museum, opened in 1974, displays objects from the prehistory period of the city region, the founding of Jayakarta in 1527, and through the Dutch colonization period from the 16th century until Indonesia’s Independence in 1948. The museum is located in south side of Fatahillah Square (former Batavia city square) near Wayang Museum and Fine Art and Ceramic Museum."
+       },
+       {
+       		"city": "Jakarta",
+           	"latitude": -6.133889,
+           	"longtitude": 106.814167,
+           	"name": "Fine Art and Ceramic Museum",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/98/Museum_Seni_Rupa_dan_Keramik_Main_images10.png",
+           	"description": "The Fine Art and Ceramic Museum (Indonesian: Museum Seni Rupa dan Keramik is a museum in Jakarta, Indonesia. The museum is dedicated especially to the display of traditional fine art and ceramics of Indonesia. The museum is located in east side of Fatahillah square, near Jakarta History Museum and Wayang Museum."
+       },	
+       {
+       		"city": "Lhasa",
+           	"latitude": 29.653056,          	
+           	"longtitude": 91.131389,
+           	"name": "Jokhang",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ab/Jokhang_Temple_in_Tibet.jpg",
+           	"description": "Zuglagkang (Tibetan: གཙུག་ལག་ཁང༌།, Wylie: gtsug-lag-khang, ZYPY: Zuglagkang; also Tsuklakang), is located on Barkhor Square in Lhasa. For most Tibetans it is the most sacred and important temple in Tibet. It is in some regards pan-sectarian, but is controlled by the Gelug school. The temple's architectural style is a mixture of Indian vihara design, Chinese Tang Dynasty design, and Nepalese design."
+       },	
+       {
+       		"city": "Lhasa",
+           	"latitude": 29.653889,          	
+           	"longtitude": 91.091667,
+           	"name": "Norbulingka",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/36/Norbulingka.jpg",
+           	"description": "Norbulingka (Standard Tibetan: ནོར་བུ་གླིང་ཀ་; Wylie: Nor-bu-gling-ka; simplified Chinese: 罗布林卡; traditional Chinese: 羅布林卡; literally \"The Jewelled Park\") is a palace and surrounding park in Lhasa, Tibet, built from 1755.[1] It served as the traditional summer residence of the successive Dalai Lamas from the 1780s up until the 14th Dalai Lama's exile in 1959. Part of the \"Historic Ensemble of the Potala Palace\", Norbulingka is recognized as a UNESCO World Heritage Site, and was added as an extension of this Historic Ensemble in 2001.[2] It was built by the 7th Dalai Lama and served both as administrative centre and religious centre. It is a unique representation of Tibetan palace architecture."
+       },	
+       {
+       		"city": "Lhasa",
+           	"latitude": 29.657778,          	
+           	"longtitude": 91.116944,
+           	"name": "Potala Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cd/布达拉宫.jpg",
+           	"description": "The palace is named after Mount Potalaka, the mythical abode of Chenresig or Avalokitesvara.[1] Lozang Gyatso, the Great Fifth Dalai Lama, started its construction in 1645[2] after one of his spiritual advisers, Konchog Chophel (died 1646), pointed out that the site was ideal as a seat of government, situated as it is between Drepung and Sera monasteries and the old city of Lhasa.[3] It may overlay the remains of an earlier fortress, called the White or Red Palace,[4] on the site built by Songtsen Gampo in 637.[5]"
+       },	
+       {
+       		"city": "Lhasa",
+           	"latitude": 29.698056,          	
+           	"longtitude": 91.133333,
+           	"name": "Sera Monastery",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/f8/Sera_Mey.jpg",
+           	"description": "Sera Monastery (Tibetan: སེ་ར་, Wylie: Se-ra; Chinese: 色拉寺; pinyin: Sèlā Sì) is one of the 'great three' Gelukpa university monasteries of Tibet, located 1.25 miles (2.01 km) north of Lhasa.[1] The other two are Ganden Monastery and Drepung Monastery. The origin of the name 'Sera' is attributed to a fact that the site where the monastery was built was surrounded by wild roses (se ra in Tibetan language) in bloom. The original Sera monastery is located in Lhasa, Tibet, about 5 kilometres (3.1 mi) north of the Jokang and is responsible for some 19 hermitages, including four nunneries, which are all located in the foot hills north of Lhasa. [2][3] The Sera Monastery, as a complex of structures with the Great Assembly Hall and three colleges, was founded in 1419 by Jamchen Chojey of Sakya Yeshe of Zel Gungtang (1355–1435), a disciple of Tsongkhapa.[4]"
+       },	
+       {
+       		"city": "Lhasa",
+           	"latitude": 29.653056,          	
+           	"longtitude": 91.117222,
+           	"name": "Monument to the Peaceful Liberation of Tibet",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/81/024_-_Peaceful_Liberation_Monument.jpg",
+           	"description": "The monument to the Peaceful Liberation of Tibet stands in the southern part of the Potala square in Lhasa, just outside the protective zone and buffer zone of the world heritage site.[1] It celebrates what the People's Republic of China calls the \"Peaceful Liberation of Tibet\" by the People's Liberation Army,.[2]"
+       },	
+       {
+       		"city": "Montreal",
+           	"latitude": 45.508889,          	
+           	"longtitude": -73.551389,
+           	"name": "Bonsecours Market",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e9/Marché_Bonsecours.jpg",
+           	"description": "Bonsecours Market (French: Marché Bonsecours), at 350 rue Saint-Paul in Old Montreal, is a two-story domed public market. For more than 100 years, it was the main public market in the Montreal area. It also briefly accommodated the Parliament of United Canada for one session in 1849."
+       },	
+       {
+       		"city": "Montreal",
+           	"latitude": 45.521646,          	
+           	"longtitude": -73.57545,
+           	"name": "Le Plateau-Mont-Royal",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/07/Plateau_Mont-Royal.jpg",
+           	"description": "The Plateau-Mont-Royal takes its name from its location on relatively flat terrain north of Sherbrooke Street and downtown, and east of Mont-Royal. The borough is bordered to the north and north-east by the Canadian Pacific Railway tracks; to the west by Hutchison (north of Mount Royal Avenue), Park Avenue (between Mount Royal and Pine Avenue) and University Street (south of Pine Avenue); and to the south by Sherbrooke Street. It is the most densely populated borough in Canada, with 101,054 people living in an 8.1 square kilometre area."
+       },	
+       {
+       		"city": "Montreal",
+           	"latitude": 45.50759,          	
+           	"longtitude": -73.5608,
+           	"name": "Chinatown",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/19/Montreal_Chinatown_gate.jpg",
+           	"description": "Chinatown in Montreal (French: Le quartier chinois de Montréal; simplified Chinese: 蒙特利尔唐人街; traditional Chinese: 蒙特利爾唐人街; pinyin: Méngtèlì'ěr Tángrénjiē) is located in the area of De la Gauchetière Street in Montreal. The neighborhood contains many Asian restaurants, food markets, and convenience stores as well being home to many of Montreal's East Asian community centres, such as the Montreal Chinese Hospital and the Montreal Chinese Community and Cultural Center.[1]"
+       },	
+       {
+       		"city": "Montreal",
+           	"latitude": 45.30314,          	
+           	"longtitude": -73.34021,
+           	"name": "Place des Arts",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/1/1a/Place_des_Arts_Entree_01.jpg",
+           	"description": "Located in the eastern part of the city's downtown, between Ste-Catherine and de Maisonneuve Streets, and St-Urbain and Jeanne-Mance streets, in an area now known as the Quartier des Spectacles, the complex is home to the Montreal Symphony Orchestra, Les Grands Ballets Canadiens, and the Opéra de Montréal."
+       },	
+       {
+       		"city": "Montreal",
+           	"latitude": 45.491667,          	
+           	"longtitude": -73.616667,
+           	"name": "Saint Joseph's Oratory",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/69/Oratoire_Saint-Joseph_du_Mont-Royal_-_Montreal.jpg",
+           	"description": "Saint Joseph's Oratory of Mount Royal, (French: Oratoire Saint-Joseph du Mont-Royal), is a Roman Catholic minor basilica and national shrine on Westmount Summit in Montreal, Quebec. It is Canada's largest church.[1]"
+       },
+       {
+       		"city": "San José",
+           	"latitude": 9.933133,          	
+           	"longtitude": -84.077017,
+           	"name": "National Theatre of Costa Rica",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/69/Costa_Rica-Teatro_Nacional.JPG",
+           	"description": "The National Theatre of Costa Rica (Spanish: Teatro Nacional de Costa Rica) is the national theatre of Costa Rica. It is located in the central section of San José, Costa Rica. Construction began in 1891, and it opened to the public on 21 October 1897 with a performance of Johann Wolfgang von Goethe's Faust."
+       },	
+       {
+       		"city": "San José",
+           	"latitude": 9.932778,          	
+           	"longtitude": -84.071389,
+           	"name": "Museo Nacional de Costa Rica",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/90/Torreon_Museo_Nacional_CR1.jpg",
+           	"description": "The Museo Nacional de Costa Rica is the national museum of Costa Rica, located in the capital of San José. It is located at Calle 17, between Central and Second Avenue, Cuesta de Moras, in the Bellavista Fortress, a crenallated, ochre colored building opposite the Legislative Assembly of Costa Rica. The fortress was built in 1917 and was originally a military barracks: the exterior walls still have many bullets lodged in them from the country's 1948 civil war. It became the site of the museum in 1950.[1]"
+       },	
+       {
+       		"city": "San José",
+           	"latitude": 9.935556,          	
+           	"longtitude": -84.104167,
+           	"name": "La Sabana Metropolitan Park",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/ab/La_Sabana-Costa_Rica_2.JPG",
+           	"description": "La Sabana Metropolitan Park (Spanish: Parque Metropolitano La Sabana) is located in downtown San José, Costa Rica. It is the country's largest and most significant urban park.[1] La Sabana is considered \"the lungs of San José\" by Costa Ricans.[2]"
+       },	
+       {
+       		"city": "Cape Town",
+           	"latitude": -33.934722,          	
+           	"longtitude": 18.389167,
+           	"name": "Lion's Head",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3c/Lions_Head_from_Table_Mountain.jpg",
+           	"description": "Lion's Head is a mountain in Cape Town, South Africa, between Table Mountain and Signal Hill. Lion's Head peaks at 669 metres (2,195 ft) above sea level. The peak forms part of a dramatic backdrop to the city of Cape Town and is part of the Table Mountain National Park."
+       },	
+       {
+       		"city": "Cape Town",
+           	"latitude": -34.087222,          	
+           	"longtitude": 18.360556,
+           	"name": "Chapman's Peak",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/b4/Chapman%27s_Peak.JPG",
+           	"description": "Chapman's Peak is the name of a mountain on the western side of the Cape Peninsula, about 15 kilometres south of Cape Town, South Africa. It is opposite the inlet on which the town of Hout Bay is centred."
+       },	
+       {
+       		"city": "Cape Town",
+           	"latitude": -33.952222,          	
+           	"longtitude": 18.466111,
+           	"name": "Mostert's Mill",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3b/Mosterts_Mill.jpg",
+           	"description": "The mill was built around 1796 as a private mill on the farm 'Welgelegen', owned by Gysbert van Renen and was named after his son-in-law, Sybrand Mostert, after Van Renen's death.[1] It was the first privately owned mill in Cape Town. Prior to the British occupation of the Cape in the Battle of Muizenberg in 1795, only mills controlled by the Dutch East India Company were allowed. Mostert's Mill had ceased working by 1873[2] but was owned by the Mostert family until 1889, when it was sold to a Mr Wilks, who sold it in 1891 to Cecil Rhodes. The mill became derelict but a restoration was undertaked by the Dutch millwright Christiaan Bremer. The restored mill was opened on 1 February 1936 by Dr Lorentz, the Minister Plenipotentiary and Envoy Extraordinary to the Netherlands. The ceremony was attended by the Prime Minister, General Hertzog and flour was ground for the guests.[1]"
+       },	
+       {
+       		"city": "Skien",
+           	"latitude": 59.210278,          	
+           	"longtitude": 9.606389,
+           	"name": "Skien Church",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Skien_kirke_-_front.jpg",
+           	"description": "Skien Church is a Neo-Gothic church from 1894, located in Skien, Telemark county in Norway. The church is the main church in Skien and has 1,200 seats. The church is 47 meters long with a tower height of 68 meters for two twin towers, the interior height is 17 meters. The church was designed by architect Martin Hagbarth Schytte-Berg. Inspiration was taken from the German architects John Vollmer and John Otzens. The church was consecrated on August 31, 1894 by Bishop Johan Christian Heuch (Church of Norway) of the Diocese of Agder og Telemark."
+       },	
+       {
+       		"city": "Nuuk",
+           	"latitude": 64.16916,          	
+           	"longtitude":  -51.73805,
+           	"name": "Queen Ingrid's Hospital",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Greenland_edcp_location_map.svg",
+           	"description": "Queen Ingrid's Hospital (Greenlandic: Dronning Ingridip Napparsimmavissua) is a hospital in Nuuk, Greenland. The hospital not only serves as the main hospital for the municipality but is the central hospital in all of Greenland. The hospital has around 130 beds.[1]"
+       },	
+       {
+       		"city": "Nuuk",
+           	"latitude": 64.176417,          	
+           	"longtitude": -51.746472,
+           	"name": "Nuuk Tourist Office",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/26/Nuuk_Tourist_office.JPG",
+           	"description": "Nuuk Tourist Office is a landmark in Nuuk, the capital of Greenland, built in 1992 to house the headquarters of the new National Tourist Board of Greenland.[1] It was built to not only provide information to tourists but as an attraction, with a fake Christmas tree and an extremely large postal box."
+       },	
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.776117,          	
+           	"longtitude": 35.223456,
+           	"name": "Mamilla",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/eb/Old_city_walls_and_mamilla_ave._at_night_-_as_seen_from_%22Rooftop%22_restauran_-_Jerusalem%2C_Israel.jpg",
+           	"description": "Mamilla (Hebrew: ממילא‎) was a neighbourhood of Jerusalem established in the late 19th century outside the Old City, west of the Jaffa Gate. It was a mixed Jewish-Arab business district. Between the 1948 Arab-Israeli War and the 1967 Six-Day War, it was located along the armistice line between the Israeli and Jordanian-held sector of the city and many buildings were destroyed by Jordanian shelling. The Israeli government approved an urban renewal project for Mamilla, apportioning land for residential and commercial zones, including hotels and office space. The Mamilla Mall opened in 2007."
+       },	
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.778,          	
+           	"longtitude": 35.2354,
+           	"name": "Dome of the Rock",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/60/Israel-2013%282%29-Jerusalem-Temple_Mount-Dome_of_the_Rock_%28SE_exposure%29.jpg",
+           	"description": "The Dome of the Rock (Arabic: قبة الصخرة‎, translit.: Qubbat As-Sakhrah, Hebrew: כיפת הסלע‎, translit.: Kipat Hasela) is a shrine located on the Temple Mount in the Old City of Jerusalem. The domed central plan structure was patterned after the Christian Church of the Holy Sepulchre.[1] It was initially completed in 691 CE at the order of Umayyad Caliph Abd al-Malik during the Second Fitna, now one of the oldest works of Islamic architecture.[2]"
+       },
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.776111,          	
+           	"longtitude": 35.227778,
+           	"name": "Tower of David",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cc/DavidTower.jpg",
+           	"description": "Built to strengthen a strategically weak point in the Old City's defenses, the citadel that stands today has ancient foundations and was constructed during the 2nd century BC and subsequently destroyed and rebuilt by, in succession, the Christian, Muslim, Mamluk, and Ottoman conquerors of Jerusalem. It contains important archaeological finds dating back 2,700 years, and is a popular venue for benefit events, craft shows, concerts, and sound-and-light performances."
+       },	
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.780833,          	
+           	"longtitude": 35.203611,
+           	"name": "Supreme Court of Israel",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/e2/Israel_Supreme_Court.jpg",
+           	"description": "The Supreme Court of Israel (Hebrew: בית המשפט העליון‎, Beit HaMishpat HaElyon, Arabic: المحكمة العليا‎, Al-Mahkamah al-‘Ulyā) is the highest court in Israel. It has ultimate appellate jurisdiction over all other courts and, in some cases, original jurisdiction."
+       },	
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.788942,          	
+           	"longtitude": 35.230086,
+           	"name": "Orient House",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/90/Orient_House.jpg",
+           	"description": "Orient House (Arabic: بيت الشرق‎; bayt ʾal-šarq) is a building located in East Jerusalem that served as the headquarters of the Palestine Liberation Organization (PLO) in the 1980s and 1990s. Built in 1897 by Ismail Musa al-Husseini, it has been owned by the Al-Husayni family since. Originally intended to serve as a family residence, it was at times vacated to host important guests, such as Kaiser Wilhelm II of Germany in 1898, and Emperor Haile Selassie of Ethiopia in 1936."
+       },	
+       {
+       		"city": "Jerusalem",
+           	"latitude": 31.797222,          	
+           	"longtitude": 35.213611,
+           	"name": "Ezrat Torah",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Ezrath_Thora.jpg",
+           	"description": "Ezrat Torah (Hebrew: עזרת תורה‎, in Ashkenazi Hebrew pronunciation: Ezras Torah) is a Haredi neighborhood in northern Jerusalem. It is bordered by Kiryat Sanz on the west, Golda Meir Blvd. on the north and east, and Shikun Chabad and Tel Arza on the south."
+       },	
+       {
+       		"city": "Port Stanley",
+           	"latitude": -51.692222,          	
+           	"longtitude": -57.858611,
+           	"name": "Christ Church Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/0d/WhaleboneArchCathedral.JPG",
+           	"description": "Christ Church Cathedral on Ross Road, in Stanley, Falkland Islands, is the southernmost Anglican cathedral in the world, consecrated in 1892. This is the parish church of the Falkland Islands, South Georgia and the British Antarctic Territories. The Parish of the Falkland Islands is part of the Anglican Communion. The Rector of the Cathedral is under the ordinary jurisdiction of the Bishop of the Falkland Islands; since 1978 this office has been held ex officio by the Archbishop of Canterbury, who is both ordinary and metropolitan for the small autonomous diocese. In practice authority is exercised through a bishop-commissary appointed by the Archbishop of Canterbury, and known as the Bishop for the Falkland Islands."
+       },	
+       {
+       		"city": "Port Stanley",
+           	"latitude": -51.678,          	
+           	"longtitude": -57.803,
+           	"name": "Yorke Bay",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/5/54/Gypsy-Cove.jpg",
+           	"description": "Yorke Bay is a bay on East Falkland in the Falkland Islands. It is located one-half mile north of Port Stanley Airport, four miles to the northeast of the capital city of Stanley, on a peninsula connected to the mainland by the Boxer Bridge and a narrow isthmus known as \"The Neck\". Gypsy Cove is a smaller bay located on the west side of Yorke Bay. Most cruise ships pass Yorke Bay and Gypsy Cove on the way to dock in Stanley Harbour. It faces northwards into Port William, with Canopus Hill to the south, and is known internationally as a breeding site for the threatened Magellanic penguin."
+       },	
+       {
+       		"city": "Kathmandu",
+           	"latitude": 27.704075,          	
+           	"longtitude": 85.307083,
+           	"name": "Basantapur Durbar Square",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/6/69/Durbar_Square%2C_Kathmandu.jpg",
+           	"description": "Kathmandu Durbar Square or Hanuman Dhoka Durbar Square is the plaza in front of the old royal palace of the then Kathmandu Kingdom. It is one of three Durbar (royal palace) Squares in the Kathmandu Valley in Nepal, all of which are UNESCO World Heritage Sites."
+       },	
+       {
+       		"city": "Kathmandu",
+           	"latitude": 27.721389,          	
+           	"longtitude": 85.361944,
+           	"name": "Boudhanath",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/39/Stupa_in_bodnath.jpg",
+           	"description": "Boudhanath (Devanagari: बौद्धनाथ) (also called Boudha, Bouddhanath or Baudhanath or the Khāsa Caitya) is a stupa in Kathmandu, Nepal. It is known as Khāsti in Nepal Bhasa, Jyarung Khasyor in Tamang language or as Bauddha by speakers of Nepali.[2] Located about 11 km (6.8 mi) from the center and northeastern outskirts of Kathmandu, the stupa's massive mandala makes it one of the largest spherical stupas in Nepal.[3]"
+       },	
+       {
+       		"city": "Kathmandu",
+           	"latitude": 26.121944,          	
+           	"longtitude": 85.708056,
+           	"name": "Bagmati River",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/2c/Pashupatinath2.jpg",
+           	"description": "The Bagmati River (Nepal Bhasa:बागमती खुसी, Nepali: बागमती नदी) is a river of Nepal. It flows through the Kathmandu valley and separates Kathmandu from Lalitpur. It is considered a holy river by Hindus and Buddhists. A number of Hindu temples are located on its banks."
+       },	
+       {
+       		"city": "Kathmandu",
+           	"latitude": 27.709722,          	
+           	"longtitude": 85.348611,
+           	"name": "Pashupatinath Temple",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/c8/Pashupatinath_ritesh.JPG",
+           	"description": "Pashupatinath Temple (Nepali: पशुपतिनाथ मन्दिर) is one of the most significant Hindu temples of Shiva in the world, located on the banks of the Bagmati River in the eastern part of Kathmandu, the capital of Nepal. The temple serves as the seat of the national deity, Lord Pashupatinath. The temple is listed in UNESCO World Heritage Sites list.[1]"
+       },	
+       {
+       		"city": "Kathmandu",
+           	"latitude": 27.68184,          	
+           	"longtitude": 85.28646,
+           	"name": "Tribhuvan University",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/0/0e/TU_building.jpg",
+           	"description": "Tribhuvan University (TU) [Tribhuvan University ] is a public university in Kirtipur, Kathmandu, Nepal. Established in 1959, TU is the oldest[3] of the five universities in Nepal. Enrolment in 2013-2014 is 10 making it the one of the largest in the world.Tribhuvan University was set up in association with the Indian Embassy and government of India (the Indian Aid Mission), and its statutes were entirely written by late Professor Bidhu Bhusan Das, distinguished and visionary academic and administrator, public intellectual and legendary professor, who was part of the Indian Aid Mission of the Indian Embassy, Kathmandu."
+       },
+       {
+       		"city": "Moscow",
+           	"latitude": 55.7525,          	
+           	"longtitude": 37.623056,
+           	"name": "Saint Basil's Cathedral",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/e/ec/Moscow_July_2011-4a.jpg",
+           	"description": "The Cathedral of Vasily the Blessed (Russian: Собор Василия Блаженного), commonly known as Saint Basil's Cathedral, is a former church in Red Square in Moscow, Russia. The building, now a museum, is officially known as the Cathedral of the Intercession of the Blessed Virgin on the Moat (Russian: Собор Покрова пресвятой Богородицы, что на Рву) or Pokrovsky Cathedral (Russian: Покровский собор).[5] It was built from 1555–61 on orders from Ivan the Terrible and commemorates the capture of Kazan and Astrakhan. It has been the hub of the city's growth since the 14th century[6][7] and was the city's tallest building until the completion of the Ivan the Great Bell Tower in 1600.[8]"
+       },	
+       {
+       		"city": "Moscow",
+           	"latitude": 55.760278,          	
+           	"longtitude": 37.618611,
+           	"name": "Bolshoi Theatre",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/3/3f/Moscow_05-2012_Bolshoi_after_renewal.jpg",
+           	"description": "The Bolshoi Theatre (Russian: Большо́й теа́тр, tr. Bol'shoy Teatr, IPA: [bɐlʲˈʂoj tʲɪˈatr]) is a historic theatre in Moscow, Russia, designed by architect Joseph Bové, which holds performances of ballet and opera. The theatre's original name was the Imperial Bolshoi Theatre of Moscow, while the St. Petersburg Bolshoi Theatre (demolished in 1886), was called the Imperial Bolshoi Kamenny Theatre."
+       },	
+       {
+       		"city": "Moscow",
+           	"latitude": 55.744444,          	
+           	"longtitude": 37.605556,
+           	"name": "Cathedral of Christ the Saviour",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/d/d6/Moscow_July_2011-7a.jpg",
+           	"description": "The Cathedral of Christ the Saviour (Russian: Храм Христа Спасителя, Khram Khrista Spasitelya) is a cathedral in Moscow, Russia, on the northern bank of the Moskva River, a few blocks southwest of the Kremlin. With an overall height of 103 metres (338 ft),[1] it is the tallest Orthodox Christian church in the world.[2]"
+       },	
+       {
+       		"city": "Moscow",
+           	"latitude": 55.615,          	
+           	"longtitude": 37.681944,
+           	"name": "Tsaritsyno Park",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/9/9b/Tsaritsino_from_helicopter-1.jpg",
+           	"description": "Tsaritsyno museum and reserve in Moscow (near Tsaritsyno metro station and commuter suburb train station) was founded in 1984 in the park of the same name."
+       },	
+       {
+       		"city": "Moscow",
+           	"latitude": 55.733056,          	
+           	"longtitude": 37.646667,
+           	"name": "Moscow International House of Music",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/b/bd/Moscow_International_House_of_Music.jpg",
+           	"description": "The Moscow International Performing Arts Centre was officially opened on September 28, 2003 with the debut of a new orchestra, the National Philharmonic of Russia under musical director Vladimir Spivakov.[1] Also known as the Moscow International House of Music (Dom Muzyki), it is situated on the Kosmodamianskaya Embankment off the Garden Ring Road.[2]"
+       },	
+       {
+       		"city": "Paris",
+           	"latitude": 48.860854,          	
+           	"longtitude": 2.335812,
+           	"name": "Louvre Pyramid",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1920px-Louvre_Museum_Wikimedia_Commons.jpg",
+           	"description": "The Louvre Pyramid (Pyramide du Louvre) is a large glass and metal pyramid, surrounded by three smaller pyramids, in the main courtyard (Cour Napoléon) of the Louvre Palace (Palais du Louvre) in Paris. The large pyramid serves as the main entrance to the Louvre Museum. Completed in 1989,[1] it has become a landmark of the city of Paris."
+       },	
+       {
+       		"city": "Paris",
+           	"latitude": 48.870278,          	
+           	"longtitude": 2.316389,
+           	"name": "Élysée Palace",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/c/cf/PalaisDeL%27Elysée.jpg",
+           	"description": "The Élysée Palace (French: Palais de l'Élysée, pronounced: [pa.lɛ d(ə) le.li.ze]) is the official residence of the President of the French Republic, containing his office, and is where the Council of Ministers meets. It is located near the Champs-Élysées in the 8th arrondissement of Paris, the name Élysée deriving from Elysian Fields, the place of the blessed dead in Greek mythology."
+       },	
+       {
+       		"city": "Paris",
+           	"latitude": 48.863333,          	
+           	"longtitude": 2.336944,
+           	"name": "Conseil d'Etat",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/8/85/Conseil_d%27Etat_Paris_WA.jpg",
+           	"description": "In France, the Council of State (French: Conseil d'État; French pronunciation: ​[kɔ̃.sɛj.deˈta]) is a body of the French national government that acts both as legal adviser of the executive branch and as the supreme court for administrative justice. Established in 1799 by Napoléon Bonaparte as a successor to the King's Council (Conseil du Roi), it is located in the Palais Royal in Paris and is primarily made up of top-level legal officers. The Vice President of the Council of State is the highest-ranking civil servant in France."
+       },	
+       {
+       		"city": "Paris",
+           	"latitude": 48.868719,          	
+           	"longtitude": 2.7818,
+           	"name": "Disneyland Paris",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/2/20/Disney_castle_paris.JPG",
+           	"description": "Disneyland Paris, originally Euro Disney Resort, is an entertainment resort in Marne-la-Vallée, a new town located 32 km (20 mi) east of the centre of Paris and is the most visited attraction in all of France and Europe.[1] It is owned and operated by Euro Disney S.C.A., a publicly traded company in which The Walt Disney Company owns a minority stake.[2] The resort covers 4,800 acres (19 km2)[3] and encompasses two theme parks, several resort hotels, a shopping, dining, and entertainment complex, and a golf course, in addition to several additional recreational and entertainment venues. Disneyland Park is the original theme park of the complex, opening with the resort on 12 April 1992. A second theme park, Walt Disney Studios Park opened in 2002."
+       },	
+       {
+       		"city": "Paris",
+           	"latitude": 48.85964,          	
+           	"longtitude": 2.359593,
+           	"name": "Museum of French History",
+           	"image": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Hôtel_de_Soubise_-_exterior_view.JPG",
+           	"description": "The Musée de l'Histoire de France was a state museum of French history operated by the Archives Nationales. It occupied two buildings within the 3rd arrondissement in the Marais, Paris, France: the Hôtel de Soubise at 60 rue des Francs-Bourgeois, and the Hôtel de Rohan at 87 rue Vieille-du-Temple."
+       }
+    ]
+}
