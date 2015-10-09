@@ -7,6 +7,8 @@
 //
 
 #import "MTItemListCell.h"
+#import "MTMappedCity.h"
+#import "MTMappedPlace.h"
 
 @implementation MTItemListCell
 
@@ -17,6 +19,11 @@
 
 - (void)configureCellWithItem:(id)item
 {
+    if ([item isKindOfClass:[MTMappedCity class]]) {
+        self.backgroundColor = [UIColor redColor];
+    } else {
+        self.backgroundColor = [UIColor greenColor];
+    }
     self.textLabel.text = [item valueForKey:@"itemName"];
 }
 

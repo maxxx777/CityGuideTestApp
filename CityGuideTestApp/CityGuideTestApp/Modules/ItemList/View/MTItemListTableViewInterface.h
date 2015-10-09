@@ -20,5 +20,7 @@
 - (void)stopPullToRefreshAnimating;
 - (void)clearLoadMoreValues;
 - (void)startLoadCells;
+- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths;
+- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths;
 
 @end

@@ -54,6 +54,7 @@
 		7502C2581BC59018008ECF59 /* NSObject+MTMergeObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1B71BC59018008ECF59 /* NSObject+MTMergeObjects.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BB1BC59018008ECF59 /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25B1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BE1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
+		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D3F1BC6299D0010D705 /* MTItemOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D3D1BC6299D0010D705 /* MTItemOperator.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D451BC649110010D705 /* places_25_06.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D421BC649110010D705 /* places_25_06.json */; settings = {ASSET_TAGS = (); }; };
 		75D32D461BC649110010D705 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D441BC649110010D705 /* Base.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -214,6 +215,9 @@
 		7502C1C21BC59018008ECF59 /* MTItemListCacheInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheInterface.h; sourceTree = "<group>"; };
 		7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificColorsInterface.h; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
+		756901051BC6E45F00825B62 /* MTItemListExpander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpander.h; sourceTree = "<group>"; };
+		756901061BC6E45F00825B62 /* MTItemListExpander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListExpander.m; sourceTree = "<group>"; };
+		756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpanderIOInterface.h; sourceTree = "<group>"; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -459,6 +463,7 @@
 		7502C1291BC59017008ECF59 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				756901041BC6E44300825B62 /* Expanders */,
 				75D32D3B1BC6299D0010D705 /* Operators */,
 				7502C12A1BC59017008ECF59 /* Fetchers */,
 				7502C12E1BC59017008ECF59 /* Requesters */,
@@ -828,6 +833,16 @@
 			path = RequestBuilder;
 			sourceTree = "<group>";
 		};
+		756901041BC6E44300825B62 /* Expanders */ = {
+			isa = PBXGroup;
+			children = (
+				756901051BC6E45F00825B62 /* MTItemListExpander.h */,
+				756901061BC6E45F00825B62 /* MTItemListExpander.m */,
+				756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */,
+			);
+			path = Expanders;
+			sourceTree = "<group>";
+		};
 		75D32D3B1BC6299D0010D705 /* Operators */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1026,7 @@
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
 				7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */,
 				7502C2221BC59018008ECF59 /* MTAppModulesConnector.m in Sources */,
+				756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */,
 				7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */,
 				7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */,
 				7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */,

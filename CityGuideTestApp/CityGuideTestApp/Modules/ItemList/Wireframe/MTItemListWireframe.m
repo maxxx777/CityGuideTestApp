@@ -13,7 +13,7 @@
 #import "MTArrayBasedItemListCache.h"
 #import "MTItemDataManager.h"
 #import "MTItemListRequester.h"
-#import "MTItemListFetcher.h"
+#import "MTItemListExpander.h"
 #import "MTItemListSearcher.h"
 #import "MTItemListSearchPresenter.h"
 #import "MTItemListTablePresenter.h"
@@ -73,18 +73,15 @@
                                               initWithCityListCache:cityListCache
                                               placeListCache:placeListCache
                                               itemDataManager:itemDataManager];
-    MTItemListFetcher *cityListFetcher = [[MTItemListFetcher alloc]
-                                          initWithItemListCache:cityListCache
-                                          rootDataManager:itemDataManager];
-    MTItemListFetcher *placeListFetcher = [[MTItemListFetcher alloc]
-                                          initWithItemListCache:placeListCache
-                                          rootDataManager:itemDataManager];
+    MTItemListExpander *itemListExpander = [[MTItemListExpander alloc]
+                                            initWithCityListCache:cityListCache
+                                            placeListCache:placeListCache
+                                            itemDataManager:itemDataManager];
     
     //init presenter
     MTItemListTablePresenter *itemListTablePresenter = [[MTItemListTablePresenter alloc]
                                                         initWithItemListRequester:itemListRequester
-                                                        cityListFetcher:cityListFetcher
-                                                        placeListFetcher:placeListFetcher
+                                                        itemListExpander:itemListExpander
                                                         wireframe:self];
     MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithWireframe:self];
     
@@ -105,8 +102,7 @@
     
     //bind interactor
     itemListRequester.outputs = @[itemListTablePresenter];
-    cityListFetcher.outputs = @[itemListTablePresenter];
-    placeListFetcher.outputs = @[itemListTablePresenter];
+    itemListExpander.outputs = @[itemListTablePresenter];
     
     //bind data manager
     itemDataManager.itemWebService = itemWebService;

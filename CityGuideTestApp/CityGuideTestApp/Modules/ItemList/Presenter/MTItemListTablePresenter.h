@@ -9,7 +9,7 @@
 #import "MTRootTablePresenter.h"
 #import "MTItemListTablePresenterInterface.h"
 #import "MTItemListRequesterIOInterface.h"
-#import "MTItemListFetcherIOInterface.h"
+#import "MTItemListExpanderIOInterface.h"
 
 @class MTItemListWireframe;
 
@@ -19,14 +19,13 @@
 <
     MTItemListTablePresenterInterface,
     MTItemListRequesterOutputInterface,
-    MTItemListFetcherOutputInterface
+    MTItemListExpanderOutputInterface
 >
 
 @property (nonatomic, weak) UIViewController<MTItemListTableViewInterface> *userInterface;
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
-                          cityListFetcher:(id<MTItemListFetcherInputInterface>)cityListFetcher
-                         placeListFetcher:(id<MTItemListFetcherInputInterface>)placeListFetcher
+                         itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
                                 wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -21,8 +21,7 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
 }
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
-@property (nonatomic, strong) id<MTItemListFetcherInputInterface>cityListFetcher;
-@property (nonatomic, strong) id<MTItemListFetcherInputInterface>placeListFetcher;
+@property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTItemListCell *prototypeCell;
@@ -32,16 +31,14 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
 @implementation MTItemListTablePresenter
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
-                          cityListFetcher:(id<MTItemListFetcherInputInterface>)cityListFetcher
-                         placeListFetcher:(id<MTItemListFetcherInputInterface>)placeListFetcher
+                         itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
                                 wireframe:(MTItemListWireframe *)wireframe
 {
     self = [super init];
     if (self) {
         
         _itemListRequester = itemListRequester;
-        _cityListFetcher = cityListFetcher;
-        _placeListFetcher = placeListFetcher;
+        _itemListExpander = itemListExpander;
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
@@ -89,7 +86,7 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section
 {
-    return [self.cityListFetcher countOfItems];
+    return [self.itemListExpander numberOfRows];
 }
 
 - (NSArray *)sectionIndexTitles
@@ -111,7 +108,7 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
           atIndexPath:(NSIndexPath *)indexPath
           inTableView:(UITableView *)tableView
 {
-    id item = [self.cityListFetcher objectAtIndexPath:indexPath];
+    id item = [self.itemListExpander objectAtIndexPath:indexPath];
     MTItemListCell *cellToConfigure = (MTItemListCell *)cell;
     [cellToConfigure configureCellWithItem:item];
 }
@@ -125,16 +122,16 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
         self.prototypeCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenCellIdentifier];
     }
     
-    id item = [self.cityListFetcher objectAtIndexPath:indexPath];
+    id item = [self.itemListExpander objectAtIndexPath:indexPath];
     
     return [self.prototypeCell heightForCellWithItem:item];
 }
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id item = [self.cityListFetcher objectAtIndexPath:indexPath];
+    [self.itemListExpander openOrCloseCityAtIndexPath:indexPath];
     
-    [self.wireframe onDidSelectItem:item];
+//    [self.wireframe onDidSelectItem:item];
 }
 
 - (void)registerCellForTableView:(UITableView *)tableView
@@ -171,6 +168,18 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
                                            } didDismissCompletion:nil];
     }
     [self.userInterface stopPullToRefreshAnimating];
+}
+
+#pragma mark - MTItemListExpanderOutputInterface
+
+- (void)onDidOpenCityPlacesAtIndexPaths:(NSArray *)indexPaths
+{
+    [self.userInterface insertRowsAtIndexPaths:indexPaths];
+}
+
+- (void)onDidCloseCityPlacesAtIndexPaths:(NSArray *)indexPaths
+{
+    [self.userInterface deleteRowsAtIndexPaths:indexPaths];
 }
 
 #pragma mark - Helper

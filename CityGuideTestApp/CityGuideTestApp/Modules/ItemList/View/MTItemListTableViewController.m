@@ -296,6 +296,22 @@ static NSInteger loadMoreCount = 10;
     loadedRowsCountInLastSection = 0;
 }
 
+- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths
+{
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:indexPaths
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
+}
+
+- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths
+{
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:indexPaths
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
+}
+
 #pragma mark - Load More
 
 - (void)startLoadCells
