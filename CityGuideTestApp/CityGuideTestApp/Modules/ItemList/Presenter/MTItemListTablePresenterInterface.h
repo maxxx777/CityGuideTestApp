@@ -39,8 +39,4 @@
 
 - (void)willCloseView;
 
-@optional
-
-- (void)refreshContent;
-
 @end

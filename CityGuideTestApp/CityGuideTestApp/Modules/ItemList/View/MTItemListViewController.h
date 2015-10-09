@@ -10,17 +10,16 @@
 #import "MTItemListViewInterface.h"
 #import "MTItemListPresenterInterface.h"
 
-@class MTItemListTableViewController, MTItemListSearchViewController;
+@class MTItemListTableViewController;
 
 @interface MTItemListViewController : MTRootViewController
 <
     MTItemListViewInterface
 >
 
-@property (nonatomic, strong) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) IBOutlet UIView *containerView;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *barButtonFilter;
 @property (nonatomic, strong) MTItemListTableViewController *childTableViewController;
-@property (nonatomic, strong) MTItemListSearchViewController *searchViewController;
 @property (nonatomic, strong) id<MTItemListPresenterInterface> presenter;
 
 @end

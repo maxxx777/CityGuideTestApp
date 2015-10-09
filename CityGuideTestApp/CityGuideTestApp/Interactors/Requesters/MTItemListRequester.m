@@ -36,17 +36,60 @@
     return self;
 }
 
-- (void)fetchItems
+- (void)fetchAllItems
 {
-    [self.itemDataManager fetchItemListWithCityListCache:self.cityListCache
-                                          placeListCache:self.placeListCache
-                                              completion:^(NSError *error, id fetchedItem){
+    [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterTypeAll
+                                        cityListCache:self.cityListCache
+                                       placeListCache:self.placeListCache
+                                           completion:^(NSError *error, id fetchedItem){
         for (id<MTItemListRequesterOutputInterface> output in self.outputs) {
             if ([output respondsToSelector:@selector(onDidFetchItemsWithError:)]) {
                 [output onDidFetchItemsWithError:error];
             }
         }
                                               }];
+}
+
+- (void)fetchItemsWithin1Mile
+{
+    [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType1Mile
+                                        cityListCache:self.cityListCache
+                                       placeListCache:self.placeListCache
+                                           completion:^(NSError *error, id fetchedItem){
+                                               for (id<MTItemListRequesterOutputInterface> output in self.outputs) {
+                                                   if ([output respondsToSelector:@selector(onDidFetchItemsWithError:)]) {
+                                                       [output onDidFetchItemsWithError:error];
+                                                   }
+                                               }
+                                           }];
+}
+
+- (void)fetchItemsWithin10Mile
+{
+    [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType10Mile
+                                        cityListCache:self.cityListCache
+                                       placeListCache:self.placeListCache
+                                           completion:^(NSError *error, id fetchedItem){
+                                               for (id<MTItemListRequesterOutputInterface> output in self.outputs) {
+                                                   if ([output respondsToSelector:@selector(onDidFetchItemsWithError:)]) {
+                                                       [output onDidFetchItemsWithError:error];
+                                                   }
+                                               }
+                                           }];
+}
+
+- (void)fetchItemsWithin100Mile
+{
+    [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType100Mile
+                                        cityListCache:self.cityListCache
+                                       placeListCache:self.placeListCache
+                                           completion:^(NSError *error, id fetchedItem){
+                                               for (id<MTItemListRequesterOutputInterface> output in self.outputs) {
+                                                   if ([output respondsToSelector:@selector(onDidFetchItemsWithError:)]) {
+                                                       [output onDidFetchItemsWithError:error];
+                                                   }
+                                               }
+                                           }];
 }
 
 @end

@@ -10,8 +10,10 @@
 
 @optional
 
-- (void)fetchItems;
-- (void)refreshItems;
+- (void)fetchAllItems;
+- (void)fetchItemsWithin1Mile;
+- (void)fetchItemsWithin10Mile;
+- (void)fetchItemsWithin100Mile;
 - (void)searchItemsWithSearchString: (NSString *)searchString;
 - (void)cancelActions;
 

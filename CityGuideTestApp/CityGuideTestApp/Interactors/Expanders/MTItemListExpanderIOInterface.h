@@ -15,6 +15,7 @@
 - (BOOL)isCityObjectAtIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath;
 - (void)openOrCloseCityAtIndexPath:(NSIndexPath *)indexPath;
+- (void)onDidUpdateItemList;
 
 @end
 

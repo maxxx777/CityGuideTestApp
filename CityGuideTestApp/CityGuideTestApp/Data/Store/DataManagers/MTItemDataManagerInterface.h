@@ -7,16 +7,15 @@
 //
 
 #import "MTRootDataManagerInterface.h"
+#import "MTItemDataManagerConstants.h"
 
 @protocol MTFetchedResultsControllerBasedItemListCacheInterface;
 
 @protocol MTItemDataManagerInterface <NSObject, MTRootDataManagerInterface>
 
-- (void)fetchItemListWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
-                        placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
-                            completion:(MTRootDataManagerCompletionBlock)completionBlock;
-- (void)refreshItemListWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
-                          placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
-                              completion:(MTRootDataManagerCompletionBlock)completionBlock;
+- (void)fetchItemListWithFilterType:(MTItemListFilterType)filterType
+                      cityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
+                     placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
+                         completion:(MTRootDataManagerCompletionBlock)completionBlock;
 
 @end

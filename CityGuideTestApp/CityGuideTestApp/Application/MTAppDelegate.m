@@ -8,6 +8,7 @@
 
 #import "MTAppDelegate.h"
 #import "MTAppModulesConnector.h"
+#import "MTAppSettingsConfigurator.h"
 
 @interface MTAppDelegate ()
 
@@ -20,8 +21,10 @@
     UIWindow* window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     appModulesConnector = [[MTAppModulesConnector alloc] initWithWindow:window];
+    appSettingsConfigurator = [[MTAppSettingsConfigurator alloc] init];
     
     [appModulesConnector configureDependencies];
+    [appSettingsConfigurator configureSettings];
     
     [appModulesConnector showMainScreen];
     

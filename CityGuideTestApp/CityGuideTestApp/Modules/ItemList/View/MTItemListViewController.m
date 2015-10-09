@@ -36,6 +36,13 @@
     
 }
 
+#pragma mark - IB Actions
+
+- (IBAction)filterButtonPressed:(id)sender
+{
+    [self.presenter filterBarButtonPressed];
+}
+
 #pragma mark - Helper 
 
 - (void)configureChildTableViewController
@@ -77,9 +84,9 @@
     [self.navigationItem.rightBarButtonItem setTitle:title];
 }
 
-- (void)configureSearchBarWithPlaceholder: (NSString*)placeholder
+- (void)configureBarButtonFilterWithTitle:(NSString *)title
 {
-    self.searchBar.placeholder = placeholder;
+    self.barButtonFilter.title = title;
 }
 
 @end

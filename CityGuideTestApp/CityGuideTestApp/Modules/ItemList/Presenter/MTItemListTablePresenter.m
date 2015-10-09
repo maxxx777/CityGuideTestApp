@@ -59,18 +59,13 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 {
     if (self.isFirstAppearance) {
         [self.userInterface updateFooterLabelWithText:@"Data Loading..."];
-        [self.itemListRequester fetchItems];
+        [self.itemListRequester fetchAllItems];
     }
 }
 
 - (void)updateViewAfterAppearing
 {
     
-}
-
-- (void)refreshContent
-{
-    [self.itemListRequester refreshItems];
 }
 
 - (void)willCloseView
@@ -176,6 +171,8 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (void)onDidFetchItemsWithError:(NSError *)error
 {
+    [self.itemListExpander onDidUpdateItemList];
+    
     self.isFirstAppearance = NO;
     if (!error) {
         
@@ -185,7 +182,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
         [alertWrapper showRepeatRequestAlertInViewController:self.userInterface withTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"Sorry, can't receive countries from server", nil)
                                            clickedCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
                                                if (buttonIndex == 1) {
-                                                   [self.itemListRequester refreshItems];
+//                                                   [self.itemListRequester refreshItems];
                                                } else {
                                                    [self.userInterface stopPullToRefreshAnimating];
                                                    [self reloadView];
@@ -211,7 +208,12 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (void)reloadView
 {
-    [self.userInterface updateFooterLabelWithText:@""];
+    if ([self.itemListExpander numberOfRows] == 0) {
+        [self.userInterface updateFooterLabelWithText:NSLocalizedString(@"There is no places", nil)];
+    } else {
+        [self.userInterface updateFooterLabelWithText:@""];
+    }
+    
     [self.userInterface reloadData];
 }
 

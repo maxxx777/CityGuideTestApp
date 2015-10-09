@@ -13,5 +13,6 @@
 @optional
 - (void)configureLeftBarButtonWithTitle: (NSString *)title;
 - (void)configureRightBarButtonWithTitle: (NSString *)title;
+- (void)configureBarButtonFilterWithTitle:(NSString *)title;
 
 @end

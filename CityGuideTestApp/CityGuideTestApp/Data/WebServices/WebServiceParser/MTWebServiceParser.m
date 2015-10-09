@@ -86,7 +86,7 @@
         itemId = [NSNumber mt_newItemId];
         itemName = rawData[@"name"] ? rawData[@"name"] : @"";
         latitude = rawData[@"latitude"] ? rawData[@"latitude"] : @0;
-        longitude = rawData[@"longitude"] ? rawData[@"longitude"] : @0;
+        longitude = rawData[@"longtitude"] ? rawData[@"longtitude"] : @0;
         imageUrl = rawData[@"image"] ? rawData[@"image"] : @"";
         placeDescription = rawData[@"description"] ? rawData[@"description"] : @"";
         

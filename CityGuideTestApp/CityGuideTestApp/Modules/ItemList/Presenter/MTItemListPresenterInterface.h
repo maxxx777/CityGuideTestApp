@@ -17,5 +17,6 @@
 - (void)updateViewAfterAppearing;
 - (void)leftBarButtonPressed;
 - (void)rightBarButtonPressed;
+- (void)filterBarButtonPressed;
 
 @end

@@ -81,7 +81,8 @@
                                                         initWithItemListRequester:itemListRequester
                                                         itemListExpander:itemListExpander
                                                         wireframe:self];
-    MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithWireframe:self];
+    MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithItemListRequester:itemListRequester
+                                                                                          wireframe:self];
     
     //init view controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];

@@ -7,6 +7,7 @@
 //
 
 #import "MTRootPresenter.h"
+#import "MTItemListRequesterIOInterface.h"
 #import "MTItemListPresenterInterface.h"
 
 @protocol MTItemListViewInterface;
@@ -15,11 +16,13 @@
 
 @interface MTItemListPresenter : MTRootPresenter
 <
-    MTItemListPresenterInterface
+    MTItemListPresenterInterface,
+    MTItemListRequesterOutputInterface
 >
 
 @property (nonatomic, weak) UIViewController<MTItemListViewInterface> *userInterface;
 
-- (instancetype)initWithWireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
+                                wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

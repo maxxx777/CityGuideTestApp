@@ -53,6 +53,9 @@
 		7564866F1BC7B42B0012A794 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7564866E1BC7B42B0012A794 /* disclosure.png */; settings = {ASSET_TAGS = (); }; };
 		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
 		7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */; settings = {ASSET_TAGS = (); }; };
+		757831AB1BC81639008BD2FC /* MTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 757831AA1BC81639008BD2FC /* MTLocationManager.m */; settings = {ASSET_TAGS = (); }; };
+		757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */; settings = {ASSET_TAGS = (); }; };
+		757831B11BC823B2008BD2FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757831B01BC823B2008BD2FC /* CoreLocation.framework */; };
 		75D32D3F1BC6299D0010D705 /* MTItemOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D3D1BC6299D0010D705 /* MTItemOperator.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D451BC649110010D705 /* places_25_06.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D421BC649110010D705 /* places_25_06.json */; settings = {ASSET_TAGS = (); }; };
 		75D32D461BC649110010D705 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D441BC649110010D705 /* Base.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -211,6 +214,13 @@
 		756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpanderIOInterface.h; sourceTree = "<group>"; };
 		7578319A1BC7FA14008BD2FC /* MTTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableFooterView.h; sourceTree = "<group>"; };
 		7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableFooterView.m; sourceTree = "<group>"; };
+		7578319D1BC80015008BD2FC /* MTItemDataManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDataManagerConstants.h; sourceTree = "<group>"; };
+		757831A91BC81639008BD2FC /* MTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLocationManager.h; sourceTree = "<group>"; };
+		757831AA1BC81639008BD2FC /* MTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLocationManager.m; sourceTree = "<group>"; };
+		757831AC1BC82031008BD2FC /* MTAppSettingsConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAppSettingsConfigurator.h; sourceTree = "<group>"; };
+		757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAppSettingsConfigurator.m; sourceTree = "<group>"; };
+		757831AE1BC82031008BD2FC /* MTAppSettingsConfiguratorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAppSettingsConfiguratorInterface.h; sourceTree = "<group>"; };
+		757831B01BC823B2008BD2FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -245,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757831B11BC823B2008BD2FC /* CoreLocation.framework in Frameworks */,
 				C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +343,9 @@
 		7502C0FD1BC59017008ECF59 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				757831AC1BC82031008BD2FC /* MTAppSettingsConfigurator.h */,
+				757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */,
+				757831AE1BC82031008BD2FC /* MTAppSettingsConfiguratorInterface.h */,
 				7502C0FE1BC59017008ECF59 /* Images.xcassets */,
 				7502C0FF1BC59017008ECF59 /* MTAppDelegate.h */,
 				7502C1001BC59017008ECF59 /* MTAppDelegate.m */,
@@ -422,6 +436,7 @@
 				7502C1121BC59017008ECF59 /* MTItemDataManager.h */,
 				7502C1131BC59017008ECF59 /* MTItemDataManager.m */,
 				7502C1141BC59017008ECF59 /* MTItemDataManagerInterface.h */,
+				7578319D1BC80015008BD2FC /* MTItemDataManagerConstants.h */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -710,6 +725,7 @@
 		7502C17D1BC59018008ECF59 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				757831A81BC81639008BD2FC /* MTLocationManager */,
 				757831991BC7FA14008BD2FC /* CustomControls */,
 				75D32D621BC66E990010D705 /* NSNumber-NewItemId */,
 				7502C1851BC59018008ECF59 /* DataMapping */,
@@ -850,6 +866,15 @@
 			path = CustomControls;
 			sourceTree = "<group>";
 		};
+		757831A81BC81639008BD2FC /* MTLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				757831A91BC81639008BD2FC /* MTLocationManager.h */,
+				757831AA1BC81639008BD2FC /* MTLocationManager.m */,
+			);
+			path = MTLocationManager;
+			sourceTree = "<group>";
+		};
 		75D32D3B1BC6299D0010D705 /* Operators */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +923,7 @@
 		D4F01DB5D825D904DAA3CA79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				757831B01BC823B2008BD2FC /* CoreLocation.framework */,
 				908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */,
 			);
 			name = Frameworks;
@@ -973,6 +999,7 @@
 				TargetAttributes = {
 					7502C0C01BC58F72008ECF59 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = BJN9J8JUPL;
 					};
 					7502C0DF1BC58F72008ECF59 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -1077,11 +1104,13 @@
 				7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */,
 				7502C2221BC59018008ECF59 /* MTAppModulesConnector.m in Sources */,
 				756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */,
+				757831AB1BC81639008BD2FC /* MTLocationManager.m in Sources */,
 				7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */,
 				7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */,
 				7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */,
 				7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */,
 				7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */,
+				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
 				7502C2571BC59018008ECF59 /* NSObject+MTMergeObject.m in Sources */,
 				7502C22A1BC59018008ECF59 /* MTItemWebService.m in Sources */,
 				7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */,
@@ -1245,11 +1274,14 @@
 			baseConfigurationReference = D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1258,11 +1290,14 @@
 			baseConfigurationReference = 49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

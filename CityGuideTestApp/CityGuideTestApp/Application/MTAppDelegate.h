@@ -7,6 +7,7 @@
 //
 
 @class MTAppModulesConnector;
+@class MTAppSettingsConfigurator;
 
 @interface MTAppDelegate : UIResponder
 <
@@ -14,6 +15,7 @@
 >
 {
     MTAppModulesConnector *appModulesConnector;
+    MTAppSettingsConfigurator *appSettingsConfigurator;
 }
 
 @end

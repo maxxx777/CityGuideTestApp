@@ -137,6 +137,11 @@
     }
 }
 
+- (void)onDidUpdateItemList
+{
+    _openedCities = nil;
+}
+
 #pragma mark - Helper
 
 - (NSInteger)cityIndexForIndexPath:(NSIndexPath *)indexPath
