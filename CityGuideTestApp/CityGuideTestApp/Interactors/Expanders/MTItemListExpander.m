@@ -93,7 +93,7 @@
 - (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger cityIndex = [self cityIndexForIndexPath:indexPath];
-    return [self.openedCities objectAtIndex:cityIndex];
+    return [self.openedCities objectAtIndex:cityIndex] && ![[self.openedCities objectAtIndex:cityIndex] isEqualToNumber:@0];
 }
 
 - (void)openOrCloseCityAtIndexPath:(NSIndexPath *)indexPath

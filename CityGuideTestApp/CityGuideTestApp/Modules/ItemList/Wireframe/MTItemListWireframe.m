@@ -15,10 +15,8 @@
 #import "MTItemListRequester.h"
 #import "MTItemListExpander.h"
 #import "MTItemListSearcher.h"
-#import "MTItemListSearchPresenter.h"
 #import "MTItemListTablePresenter.h"
 #import "MTItemListPresenter.h"
-#import "MTItemListSearchViewController.h"
 #import "MTItemListTableViewController.h"
 #import "MTItemListViewController.h"
 
@@ -36,7 +34,7 @@
 {
     //init
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
-    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListViewControllerWithSearch"];
+    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListViewController"];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     
     //configure
@@ -88,8 +86,8 @@
     //init view controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
     MTItemListTableViewController *itemListTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListTableViewController"];
-    itemListTableViewController.enableIndexedList = YES;
-    itemListTableViewController.enablePullToRefresh = YES;
+    itemListTableViewController.enableIndexedList = NO;
+    itemListTableViewController.enablePullToRefresh = NO;
     
     //bind view controller
     self.viewController.childTableViewController = itemListTableViewController;

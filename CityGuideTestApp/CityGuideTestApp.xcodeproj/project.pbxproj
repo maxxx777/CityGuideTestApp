@@ -26,10 +26,8 @@
 		7502C22F1BC59018008ECF59 /* MTItemListSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1341BC59018008ECF59 /* MTItemListSearcher.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C13D1BC59018008ECF59 /* MTItemDetailWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1411BC59018008ECF59 /* MTItemListPresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2321BC59018008ECF59 /* MTItemListSearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1441BC59018008ECF59 /* MTItemListSearchPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2341BC59018008ECF59 /* MTItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C14B1BC59018008ECF59 /* MTItemListCell.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2351BC59018008ECF59 /* MTItemListSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C14D1BC59018008ECF59 /* MTItemListSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7502C2341BC59018008ECF59 /* MTCityListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C14B1BC59018008ECF59 /* MTCityListCell.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2361BC59018008ECF59 /* MTItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2371BC59018008ECF59 /* MTItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1531BC59018008ECF59 /* MTItemListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1581BC59018008ECF59 /* MTItemListWireframe.m */; settings = {ASSET_TAGS = (); }; };
@@ -43,9 +41,6 @@
 		7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1751BC59018008ECF59 /* MTRootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1791BC59018008ECF59 /* MTRootWebService.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C17C1BC59018008ECF59 /* MTRootWireframe.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2431BC59018008ECF59 /* MTTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1801BC59018008ECF59 /* MTTableFooterView.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2441BC59018008ECF59 /* MTTableViewSectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1821BC59018008ECF59 /* MTTableViewSectionFooter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2451BC59018008ECF59 /* MTTableViewSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1841BC59018008ECF59 /* MTTableViewSectionHeader.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2461BC59018008ECF59 /* MTDataMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1871BC59018008ECF59 /* MTDataMapping.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2471BC59018008ECF59 /* MTAlertWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C18D1BC59018008ECF59 /* MTAlertWrapper.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2481BC59018008ECF59 /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1921BC59018008ECF59 /* UIDevice+SystemVersion.m */; settings = {ASSET_TAGS = (); }; };
@@ -54,7 +49,10 @@
 		7502C2581BC59018008ECF59 /* NSObject+MTMergeObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1B71BC59018008ECF59 /* NSObject+MTMergeObjects.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BB1BC59018008ECF59 /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25B1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BE1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
+		7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */; settings = {ASSET_TAGS = (); }; };
+		7564866F1BC7B42B0012A794 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7564866E1BC7B42B0012A794 /* disclosure.png */; settings = {ASSET_TAGS = (); }; };
 		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
+		7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D3F1BC6299D0010D705 /* MTItemOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D3D1BC6299D0010D705 /* MTItemOperator.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D451BC649110010D705 /* places_25_06.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D421BC649110010D705 /* places_25_06.json */; settings = {ASSET_TAGS = (); }; };
 		75D32D461BC649110010D705 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D441BC649110010D705 /* Base.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -68,6 +66,7 @@
 		75D32D601BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D591BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D611BC66C200010D705 /* MTManagedPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D5B1BC66C200010D705 /* MTManagedPlace.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D651BC66E990010D705 /* NSNumber+MTNewItemId.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D641BC66E990010D705 /* NSNumber+MTNewItemId.m */; settings = {ASSET_TAGS = (); }; };
+		C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		7502C0C11BC58F72008ECF59 /* CityGuideTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityGuideTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7502C0E01BC58F72008ECF59 /* CityGuideTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityGuideTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7502C0E41BC58F72008ECF59 /* CityGuideTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityGuideTestAppTests.m; sourceTree = "<group>"; };
@@ -136,17 +136,11 @@
 		7502C1401BC59018008ECF59 /* MTItemListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListPresenter.h; sourceTree = "<group>"; };
 		7502C1411BC59018008ECF59 /* MTItemListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListPresenter.m; sourceTree = "<group>"; };
 		7502C1421BC59018008ECF59 /* MTItemListPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListPresenterInterface.h; sourceTree = "<group>"; };
-		7502C1431BC59018008ECF59 /* MTItemListSearchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearchPresenter.h; sourceTree = "<group>"; };
-		7502C1441BC59018008ECF59 /* MTItemListSearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListSearchPresenter.m; sourceTree = "<group>"; };
-		7502C1451BC59018008ECF59 /* MTItemListSearchPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearchPresenterInterface.h; sourceTree = "<group>"; };
 		7502C1461BC59018008ECF59 /* MTItemListTablePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTablePresenter.h; sourceTree = "<group>"; };
 		7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListTablePresenter.m; sourceTree = "<group>"; };
 		7502C1481BC59018008ECF59 /* MTItemListTablePresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTablePresenterInterface.h; sourceTree = "<group>"; };
-		7502C14A1BC59018008ECF59 /* MTItemListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCell.h; sourceTree = "<group>"; };
-		7502C14B1BC59018008ECF59 /* MTItemListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListCell.m; sourceTree = "<group>"; };
-		7502C14C1BC59018008ECF59 /* MTItemListSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearchViewController.h; sourceTree = "<group>"; };
-		7502C14D1BC59018008ECF59 /* MTItemListSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListSearchViewController.m; sourceTree = "<group>"; };
-		7502C14E1BC59018008ECF59 /* MTItemListSearchViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearchViewInterface.h; sourceTree = "<group>"; };
+		7502C14A1BC59018008ECF59 /* MTCityListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityListCell.h; sourceTree = "<group>"; };
+		7502C14B1BC59018008ECF59 /* MTCityListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityListCell.m; sourceTree = "<group>"; };
 		7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTableViewController.h; sourceTree = "<group>"; };
 		7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListTableViewController.m; sourceTree = "<group>"; };
 		7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTableViewInterface.h; sourceTree = "<group>"; };
@@ -182,12 +176,6 @@
 		7502C1791BC59018008ECF59 /* MTRootWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootWebService.m; sourceTree = "<group>"; };
 		7502C17B1BC59018008ECF59 /* MTRootWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootWireframe.h; sourceTree = "<group>"; };
 		7502C17C1BC59018008ECF59 /* MTRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootWireframe.m; sourceTree = "<group>"; };
-		7502C17F1BC59018008ECF59 /* MTTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableFooterView.h; sourceTree = "<group>"; };
-		7502C1801BC59018008ECF59 /* MTTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableFooterView.m; sourceTree = "<group>"; };
-		7502C1811BC59018008ECF59 /* MTTableViewSectionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableViewSectionFooter.h; sourceTree = "<group>"; };
-		7502C1821BC59018008ECF59 /* MTTableViewSectionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableViewSectionFooter.m; sourceTree = "<group>"; };
-		7502C1831BC59018008ECF59 /* MTTableViewSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableViewSectionHeader.h; sourceTree = "<group>"; };
-		7502C1841BC59018008ECF59 /* MTTableViewSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableViewSectionHeader.m; sourceTree = "<group>"; };
 		7502C1861BC59018008ECF59 /* MTDataMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDataMapping.h; sourceTree = "<group>"; };
 		7502C1871BC59018008ECF59 /* MTDataMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDataMapping.m; sourceTree = "<group>"; };
 		7502C1881BC59018008ECF59 /* MTDataMappingInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDataMappingInterface.h; sourceTree = "<group>"; };
@@ -215,9 +203,14 @@
 		7502C1C21BC59018008ECF59 /* MTItemListCacheInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheInterface.h; sourceTree = "<group>"; };
 		7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificColorsInterface.h; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
+		7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCell.h; sourceTree = "<group>"; };
+		7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListCell.m; sourceTree = "<group>"; };
+		7564866E1BC7B42B0012A794 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
 		756901051BC6E45F00825B62 /* MTItemListExpander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpander.h; sourceTree = "<group>"; };
 		756901061BC6E45F00825B62 /* MTItemListExpander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListExpander.m; sourceTree = "<group>"; };
 		756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpanderIOInterface.h; sourceTree = "<group>"; };
+		7578319A1BC7FA14008BD2FC /* MTTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableFooterView.h; sourceTree = "<group>"; };
+		7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableFooterView.m; sourceTree = "<group>"; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -243,6 +236,8 @@
 		75D32D5B1BC66C200010D705 /* MTManagedPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTManagedPlace.m; sourceTree = "<group>"; };
 		75D32D631BC66E990010D705 /* NSNumber+MTNewItemId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+MTNewItemId.h"; sourceTree = "<group>"; };
 		75D32D641BC66E990010D705 /* NSNumber+MTNewItemId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+MTNewItemId.m"; sourceTree = "<group>"; };
+		908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CityGuideTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +266,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0674B0BE189B2A069FED0DA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */,
+				49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7502C0B81BC58F72008ECF59 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +282,8 @@
 				7502C0E31BC58F72008ECF59 /* CityGuideTestAppTests */,
 				7502C0EE1BC58F72008ECF59 /* CityGuideTestAppUITests */,
 				7502C0C21BC58F72008ECF59 /* Products */,
+				0674B0BE189B2A069FED0DA7 /* Pods */,
+				D4F01DB5D825D904DAA3CA79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -561,9 +568,6 @@
 				7502C1401BC59018008ECF59 /* MTItemListPresenter.h */,
 				7502C1411BC59018008ECF59 /* MTItemListPresenter.m */,
 				7502C1421BC59018008ECF59 /* MTItemListPresenterInterface.h */,
-				7502C1431BC59018008ECF59 /* MTItemListSearchPresenter.h */,
-				7502C1441BC59018008ECF59 /* MTItemListSearchPresenter.m */,
-				7502C1451BC59018008ECF59 /* MTItemListSearchPresenterInterface.h */,
 				7502C1461BC59018008ECF59 /* MTItemListTablePresenter.h */,
 				7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */,
 				7502C1481BC59018008ECF59 /* MTItemListTablePresenterInterface.h */,
@@ -574,11 +578,10 @@
 		7502C1491BC59018008ECF59 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7502C14A1BC59018008ECF59 /* MTItemListCell.h */,
-				7502C14B1BC59018008ECF59 /* MTItemListCell.m */,
-				7502C14C1BC59018008ECF59 /* MTItemListSearchViewController.h */,
-				7502C14D1BC59018008ECF59 /* MTItemListSearchViewController.m */,
-				7502C14E1BC59018008ECF59 /* MTItemListSearchViewInterface.h */,
+				7502C14A1BC59018008ECF59 /* MTCityListCell.h */,
+				7502C14B1BC59018008ECF59 /* MTCityListCell.m */,
+				7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */,
+				7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */,
 				7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */,
 				7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */,
 				7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */,
@@ -707,8 +710,8 @@
 		7502C17D1BC59018008ECF59 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				757831991BC7FA14008BD2FC /* CustomControls */,
 				75D32D621BC66E990010D705 /* NSNumber-NewItemId */,
-				7502C17E1BC59018008ECF59 /* CustomControls */,
 				7502C1851BC59018008ECF59 /* DataMapping */,
 				7502C1891BC59018008ECF59 /* External */,
 				7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */,
@@ -716,19 +719,6 @@
 				7502C21C1BC59018008ECF59 /* RequestBuilder */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		7502C17E1BC59018008ECF59 /* CustomControls */ = {
-			isa = PBXGroup;
-			children = (
-				7502C17F1BC59018008ECF59 /* MTTableFooterView.h */,
-				7502C1801BC59018008ECF59 /* MTTableFooterView.m */,
-				7502C1811BC59018008ECF59 /* MTTableViewSectionFooter.h */,
-				7502C1821BC59018008ECF59 /* MTTableViewSectionFooter.m */,
-				7502C1831BC59018008ECF59 /* MTTableViewSectionHeader.h */,
-				7502C1841BC59018008ECF59 /* MTTableViewSectionHeader.m */,
-			);
-			path = CustomControls;
 			sourceTree = "<group>";
 		};
 		7502C1851BC59018008ECF59 /* DataMapping */ = {
@@ -833,6 +823,14 @@
 			path = RequestBuilder;
 			sourceTree = "<group>";
 		};
+		7564866D1BC7B42B0012A794 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7564866E1BC7B42B0012A794 /* disclosure.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		756901041BC6E44300825B62 /* Expanders */ = {
 			isa = PBXGroup;
 			children = (
@@ -841,6 +839,15 @@
 				756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */,
 			);
 			path = Expanders;
+			sourceTree = "<group>";
+		};
+		757831991BC7FA14008BD2FC /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				7578319A1BC7FA14008BD2FC /* MTTableFooterView.h */,
+				7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */,
+			);
+			path = CustomControls;
 			sourceTree = "<group>";
 		};
 		75D32D3B1BC6299D0010D705 /* Operators */ = {
@@ -856,6 +863,7 @@
 		75D32D401BC649110010D705 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7564866D1BC7B42B0012A794 /* Images */,
 				75D32D411BC649110010D705 /* RawData */,
 				75D32D431BC649110010D705 /* Storyboards */,
 			);
@@ -887,6 +895,14 @@
 			path = "NSNumber-NewItemId";
 			sourceTree = "<group>";
 		};
+		D4F01DB5D825D904DAA3CA79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -894,9 +910,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7502C0F41BC58F72008ECF59 /* Build configuration list for PBXNativeTarget "CityGuideTestApp" */;
 			buildPhases = (
+				5DE1D3BA88DA45B4BE8210F1 /* Check Pods Manifest.lock */,
 				7502C0BD1BC58F72008ECF59 /* Sources */,
 				7502C0BE1BC58F72008ECF59 /* Frameworks */,
 				7502C0BF1BC58F72008ECF59 /* Resources */,
+				530E71AA55A152AB4FC1E945 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -991,6 +1009,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7564866F1BC7B42B0012A794 /* disclosure.png in Resources */,
 				7502C2241BC59018008ECF59 /* Info.plist in Resources */,
 				75D32D461BC649110010D705 /* Base.storyboard in Resources */,
 				75D32D451BC649110010D705 /* places_25_06.json in Resources */,
@@ -1014,14 +1033,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		530E71AA55A152AB4FC1E945 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DE1D3BA88DA45B4BE8210F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7502C0BD1BC58F72008ECF59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7502C2351BC59018008ECF59 /* MTItemListSearchViewController.m in Sources */,
 				7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */,
-				7502C2441BC59018008ECF59 /* MTTableViewSectionFooter.m in Sources */,
 				7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */,
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
 				7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */,
@@ -1052,19 +1102,18 @@
 				7502C2561BC59018008ECF59 /* MTDataStore.m in Sources */,
 				7502C2371BC59018008ECF59 /* MTItemListViewController.m in Sources */,
 				7502C2281BC59018008ECF59 /* MTSaveItemsOperation.m in Sources */,
-				7502C2341BC59018008ECF59 /* MTItemListCell.m in Sources */,
+				7502C2341BC59018008ECF59 /* MTCityListCell.m in Sources */,
 				75D32D5D1BC66C200010D705 /* MTManagedItem.m in Sources */,
 				7502C2231BC59018008ECF59 /* NSString+MTSpecificStrings.m in Sources */,
-				7502C2431BC59018008ECF59 /* MTTableFooterView.m in Sources */,
 				7502C2471BC59018008ECF59 /* MTAlertWrapper.m in Sources */,
 				75D32D651BC66E990010D705 /* NSNumber+MTNewItemId.m in Sources */,
 				7502C2361BC59018008ECF59 /* MTItemListTableViewController.m in Sources */,
 				7502C23E1BC59018008ECF59 /* MTRootTablePresenter.m in Sources */,
+				7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */,
 				7502C2391BC59018008ECF59 /* MTRootCell.m in Sources */,
 				75D32D4D1BC6514B0010D705 /* MTMappedCity.m in Sources */,
+				7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */,
 				7502C2261BC59018008ECF59 /* CityGuideTestApp.xcdatamodeld in Sources */,
-				7502C2451BC59018008ECF59 /* MTTableViewSectionHeader.m in Sources */,
-				7502C2321BC59018008ECF59 /* MTItemListSearchPresenter.m in Sources */,
 				75D32D5F1BC66C200010D705 /* MTManagedCity.m in Sources */,
 				7502C2481BC59018008ECF59 /* UIDevice+SystemVersion.m in Sources */,
 				7502C23D1BC59018008ECF59 /* MTRootPresenter.m in Sources */,
@@ -1193,6 +1242,7 @@
 		};
 		7502C0F51BC58F72008ECF59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
@@ -1205,6 +1255,7 @@
 		};
 		7502C0F61BC58F72008ECF59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";

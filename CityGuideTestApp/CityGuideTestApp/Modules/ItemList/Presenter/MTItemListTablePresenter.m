@@ -9,11 +9,14 @@
 #import "MTItemListTablePresenter.h"
 #import "MTItemListTableViewInterface.h"
 #import "MTItemListWireframe.h"
-#import "MTItemListCell.h"
+#import "MTCityListCell.h"
+#import "MTPlaceListCell.h"
 #import "MTAlertWrapper.h"
 
-static NSString *MTOffScreenCellIdentifier = @"OffScreenTableViewCell";
-static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
+static NSString *MTCityListCellIdentifier = @"CityListCell";
+static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
+static NSString *MTOffScreenCityListCellIdentifier = @"OffScreenCityListCell";
+static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 @interface MTItemListTablePresenter ()
 {
@@ -24,7 +27,8 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
-@property (nonatomic, strong) MTItemListCell *prototypeCell;
+@property (nonatomic, strong) MTCityListCell *prototypeCityListCell;
+@property (nonatomic, strong) MTPlaceListCell *prototypePlaceListCell;
 
 @end
 
@@ -109,22 +113,35 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
           inTableView:(UITableView *)tableView
 {
     id item = [self.itemListExpander objectAtIndexPath:indexPath];
-    MTItemListCell *cellToConfigure = (MTItemListCell *)cell;
-    [cellToConfigure configureCellWithItem:item];
+    if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
+        MTCityListCell *cellToConfigure = (MTCityListCell *)cell;
+        [cellToConfigure configureCellWithItem:item
+                                      isOpened:[self.itemListExpander isOpenedCityAtIndexPath:indexPath]];
+    } else {
+        MTPlaceListCell *cellToConfigure = (MTPlaceListCell *)cell;
+        [cellToConfigure configureCellWithItem:item];
+    }
 }
 
 - (CGFloat)heightForCell:(UITableViewCell *)cell
              atIndexPath:(NSIndexPath *)indexPath
              inTableView:(UITableView *)tableView
 {
-    return 60.0f;
-    if (!self.prototypeCell) {
-        self.prototypeCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenCellIdentifier];
-    }
-    
     id item = [self.itemListExpander objectAtIndexPath:indexPath];
     
-    return [self.prototypeCell heightForCellWithItem:item];
+    if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
+        if (!self.prototypeCityListCell) {
+            self.prototypeCityListCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenCityListCellIdentifier];
+        }
+        
+        return [self.prototypeCityListCell heightForCellWithItem:item];
+    } else {
+        if (!self.prototypePlaceListCell) {
+            self.prototypePlaceListCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenPlaceListCellIdentifier];
+        }
+        
+        return [self.prototypePlaceListCell heightForCellWithItem:item];
+    }
 }
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -136,15 +153,23 @@ static NSString *MTTableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (void)registerCellForTableView:(UITableView *)tableView
 {
-    [tableView registerClass:[MTItemListCell class]
-      forCellReuseIdentifier:MTTableViewCellIdentifier];
-    [tableView registerClass:[MTItemListCell class]
-      forCellReuseIdentifier:MTOffScreenCellIdentifier];
+    [tableView registerClass:[MTCityListCell class]
+      forCellReuseIdentifier:MTCityListCellIdentifier];
+    [tableView registerClass:[MTCityListCell class]
+      forCellReuseIdentifier:MTOffScreenCityListCellIdentifier];
+    [tableView registerClass:[MTPlaceListCell class]
+      forCellReuseIdentifier:MTPlaceListCellIdentifier];
+    [tableView registerClass:[MTPlaceListCell class]
+      forCellReuseIdentifier:MTOffScreenPlaceListCellIdentifier];
 }
 
 - (NSString *)cellIdentifierForIndexPath:(NSIndexPath *)indexPath
 {
-    return MTTableViewCellIdentifier;
+    if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
+        return MTCityListCellIdentifier;
+    } else {
+        return MTPlaceListCellIdentifier;
+    }
 }
 
 #pragma mark - MTItemListFetcherOutputInterface

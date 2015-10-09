@@ -7,11 +7,7 @@
 //
 
 #import "MTItemListTableViewController.h"
-//#import "SVPullToRefresh.h"
-#import "MTTableViewSectionHeader.h"
 #import "MTTableFooterView.h"
-
-static NSString *HeaderIdentifier = @"ItemListTableViewSectionHeader";
 
 static NSInteger loadMoreCount = 10;
 
@@ -122,15 +118,6 @@ static NSInteger loadMoreCount = 10;
     return [self.presenter titleForHeaderInSection:section];
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    MTTableViewSectionHeader *header = [[MTTableViewSectionHeader alloc] initWithReuseIdentifier:HeaderIdentifier];
-    
-    [header setTitle:[self tableView:tableView titleForHeaderInSection:section]];
-
-    return header.contentView;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
@@ -144,17 +131,17 @@ static NSInteger loadMoreCount = 10;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 44.0f;
+    return 0.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0;
+    return 0.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.0f;
+    return 60.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

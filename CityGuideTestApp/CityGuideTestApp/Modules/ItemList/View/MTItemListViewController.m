@@ -8,7 +8,6 @@
 
 #import "MTItemListViewController.h"
 #import "MTItemListTableViewController.h"
-#import "MTItemListSearchViewController.h"
 
 @interface MTItemListViewController ()
 
@@ -23,7 +22,6 @@
     
     [self.presenter configureView];
     [self configureChildTableViewController];
-    [self configureSearchDisplayController];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -60,13 +58,6 @@
                                         views:NSDictionaryOfVariableBindings(tableView)]];
     
     [self.childTableViewController didMoveToParentViewController:self];
-}
-
-- (void)configureSearchDisplayController
-{
-    self.searchDisplayController.delegate = self.searchViewController;
-    self.searchDisplayController.searchResultsTableView.delegate = self.searchViewController;
-    self.searchDisplayController.searchResultsTableView.dataSource = self.searchViewController;
 }
 
 #pragma mark - MTItemListViewInterface

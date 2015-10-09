@@ -8,4 +8,7 @@
 
 @interface MTRootCell : UITableViewCell
 
+- (void)configureCellForOffScreenWithItem:(id)item;
+- (CGFloat)heightForCellWithItem:(id)item;
+
 @end

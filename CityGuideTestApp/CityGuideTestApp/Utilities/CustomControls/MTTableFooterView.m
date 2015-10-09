@@ -59,7 +59,7 @@
                               metrics:nil
                               views:NSDictionaryOfVariableBindings(_activityFooter)]];
         
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     }
     return self;
 }

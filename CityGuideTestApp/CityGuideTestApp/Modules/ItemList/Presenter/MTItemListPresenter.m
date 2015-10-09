@@ -33,8 +33,7 @@
 
 - (void)configureView
 {
-    [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Select item", nil)];
-    [self.userInterface configureSearchBarWithPlaceholder:NSLocalizedString(@"Search item", nil)];
+    [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Cities", nil)];
 }
 
 @end

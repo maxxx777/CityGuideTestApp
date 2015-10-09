@@ -13,6 +13,5 @@
 @optional
 - (void)configureLeftBarButtonWithTitle: (NSString *)title;
 - (void)configureRightBarButtonWithTitle: (NSString *)title;
-- (void)configureSearchBarWithPlaceholder: (NSString *)placeholder;
 
 @end
