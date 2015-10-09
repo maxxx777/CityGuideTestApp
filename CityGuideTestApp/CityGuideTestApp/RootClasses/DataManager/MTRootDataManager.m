@@ -9,6 +9,7 @@
 #import "MTRootDataManager.h"
 #import "MTRootDataManagerDelegate.h"
 #import "MTItemListCacheInterface.h"
+#import "MTDataMapping.h"
 
 @interface MTRootDataManager ()
 
@@ -39,7 +40,9 @@
 - (id)mappedObjectAtIndexPath:(NSIndexPath *)indexPath
                 itemListCache:(id<MTItemListCacheInterface>)itemListCache
 {
-    return [itemListCache objectAtIndexPath:indexPath];
+    MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
+    id managedObject = [itemListCache objectAtIndexPath:indexPath];
+    return [dataMapping mappedObjectFromManagedObject:managedObject];
 }
 
 #pragma mark - MTItemListCacheDelegate

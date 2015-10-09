@@ -22,9 +22,9 @@
         
         return [[MTMappedCity alloc] initWithItemId:[managedObject valueForKey:@"itemId"]
                                            itemName:[managedObject valueForKey:@"itemName"]
-                                             places:[managedObject valueForKey:@"places"]];
+                                             places:nil];
         
-    } else if ([managedObject isKindOfClass:[MTManagedCity class]]) {
+    } else if ([managedObject isKindOfClass:[MTManagedPlace class]]) {
         
         NSManagedObject *managedCity = [managedObject valueForKey:@"city"];
         
