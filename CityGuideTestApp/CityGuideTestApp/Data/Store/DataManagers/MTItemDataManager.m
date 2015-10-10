@@ -207,15 +207,4 @@
     return result;
 }
 
-//- (NSPredicate *)predicateWithMileValue:(NSNumber *)mileValue
-//{
-//    NSPredicate *result;
-//
-//    NSDictionary *currentLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"MTSettingsCurrentLocation"];
-//    if (currentLocation) {
-//        [NSPredicate predicateWithFormat:@""]
-//    }
-//    return result;
-//}
-
 @end

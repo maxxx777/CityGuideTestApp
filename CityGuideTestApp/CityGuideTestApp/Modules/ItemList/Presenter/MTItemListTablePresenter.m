@@ -209,7 +209,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 - (void)reloadView
 {
     if ([self.itemListExpander numberOfRows] == 0) {
-        [self.userInterface updateFooterLabelWithText:NSLocalizedString(@"There is no places", nil)];
+        [self.userInterface updateFooterLabelWithText:NSLocalizedString(@"There are no places", nil)];
     } else {
         [self.userInterface updateFooterLabelWithText:@""];
     }
