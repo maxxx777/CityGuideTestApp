@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "MTRootTablePresenterInterface.h"
 
-@protocol MTShowPlaceDetailPresenterInterface <NSObject, MTRootTablePresenterInterface>
+@protocol MTItemDetailPresenterInterface <NSObject, MTRootTablePresenterInterface>
 
 - (void)configureView;
+
+@optional
+
+- (void)leftBarButtonPressed;
+- (void)rightBarButtonPressed;
 
 @end

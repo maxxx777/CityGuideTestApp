@@ -7,7 +7,7 @@
 //
 
 #import "MTRootTablePresenter.h"
-#import "MTShowPlaceDetailPresenterInterface.h"
+#import "MTItemDetailPresenterInterface.h"
 #import "MTPlaceDetailFetcherIOInterface.h"
 
 @class MTItemDetailWireframe;
@@ -17,7 +17,7 @@
 @interface MTShowPlaceDetailPresenter : MTRootTablePresenter
 <
     MTPlaceDetailFetcherOutputInterface,
-    MTShowPlaceDetailPresenterInterface
+    MTItemDetailPresenterInterface
 >
 
 @property (nonatomic, weak) UIViewController<MTItemDetailViewInterface> *userInterface;

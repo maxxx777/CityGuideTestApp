@@ -44,6 +44,11 @@
     [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"All", nil)];
 }
 
+- (void)rightBarButtonPressed
+{
+    [self.wireframe onDidAddNewItem];
+}
+
 - (void)filterBarButtonPressed
 {
     [alertWrapper showActionSheetInViewController:self.userInterface

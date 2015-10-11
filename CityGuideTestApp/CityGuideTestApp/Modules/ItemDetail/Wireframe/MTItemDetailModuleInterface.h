@@ -10,5 +10,6 @@
 
 - (void)showDetailsForPlace:(id)place
        navigationController:(UINavigationController *)navigationController;
+- (void)addNewPlaceWithNavigationController:(UINavigationController *)navigationController;
 
 @end

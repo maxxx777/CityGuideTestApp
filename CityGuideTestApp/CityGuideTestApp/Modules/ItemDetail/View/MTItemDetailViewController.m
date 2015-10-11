@@ -22,6 +22,11 @@
 
 #pragma mark - MTItemDetailViewInterface
 
+- (void)configureNavigationBarWithTitle:(NSString *)title
+{
+    self.navigationItem.title = title;
+}
+
 - (void)configureNameWithText:(NSString *)text
 {
     self.textFieldName.text = text;

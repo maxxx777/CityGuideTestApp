@@ -10,6 +10,7 @@
 
 @protocol MTItemDetailViewInterface <NSObject>
 
+- (void)configureNavigationBarWithTitle: (NSString *)title;
 - (void)configureMapWithCoordinates:(NSDictionary *)coordinates;
 - (void)configureNameWithText:(NSString *)text;
 - (void)configureDescriptionWithText:(NSString *)text;

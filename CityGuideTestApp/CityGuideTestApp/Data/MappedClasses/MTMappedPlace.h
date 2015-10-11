@@ -10,7 +10,14 @@
 
 @class MTMappedCity;
 
-@interface MTMappedPlace : MTMappedItem
+@interface MTMappedPlace : MTMappedItem <NSMutableCopying>
+{
+    NSString *_itemName;
+    NSNumber *_latitude;
+    NSNumber *_longitude;
+    NSString *_imageUrl;
+    NSString *_placeDescription;
+}
 
 @property (nonatomic, strong, readonly) NSNumber *latitude;
 @property (nonatomic, strong, readonly) NSNumber *longitude;
@@ -18,7 +25,6 @@
 @property (nonatomic, strong, readonly) NSString *placeDescription;
 @property (nonatomic, strong, readonly) MTMappedCity *city;
 
-- (instancetype) __unavailable init;
 - (instancetype) __unavailable initWithItemId: (NSNumber *)itemId_
                                      itemName: (NSString *)itemName_;
 - (instancetype)initWithItemId: (NSNumber *)itemId_

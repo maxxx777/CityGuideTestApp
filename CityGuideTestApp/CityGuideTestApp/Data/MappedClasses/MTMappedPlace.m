@@ -8,18 +8,18 @@
 
 #import "MTMappedPlace.h"
 #import "MTMappedCity.h"
+#import "MTMutablePlace.h"
 
 @interface MTMappedPlace ()
-
-@property (nonatomic, strong, readwrite) NSNumber *latitude;
-@property (nonatomic, strong, readwrite) NSNumber *longitude;
-@property (nonatomic, strong, readwrite) NSString *imageUrl;
-@property (nonatomic, strong, readwrite) NSString *placeDescription;
-@property (nonatomic, strong, readwrite) MTMappedCity *city;
 
 @end
 
 @implementation MTMappedPlace
+@synthesize itemName = _itemName;
+@synthesize latitude = _latitude;
+@synthesize longitude = _longitude;
+@synthesize placeDescription = _placeDescription;
+@synthesize imageUrl = _imageUrl;
 
 - (instancetype)initWithItemId:(NSNumber *)itemId_
                       itemName:(NSString *)itemName_
@@ -33,6 +33,7 @@
                         itemName:itemName_];
     if (self) {
         
+        _itemName = itemName_;
         _latitude = latitude_;
         _longitude = longitude_;
         _imageUrl = imageUrl_;
@@ -53,6 +54,17 @@
                        imageUrl:nil
                placeDescription:nil
                            city:nil];
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    return [[MTMutablePlace allocWithZone:zone] initWithItemId:self.itemId
+                                                      itemName:self.itemName
+                                                      latitude:self.latitude
+                                                     longitude:self.longitude
+                                                      imageUrl:self.imageUrl
+                                              placeDescription:self.placeDescription
+                                                          city:self.city];
 }
 
 @end

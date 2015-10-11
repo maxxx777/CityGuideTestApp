@@ -36,6 +36,8 @@
 
 - (void)configureView
 {
+    [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
+    
     NSString *placeName = [self.placeDetailFetcher placeName];
     NSString *cityName = [self.placeDetailFetcher cityName];
     [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@ (%@)", placeName, cityName]];

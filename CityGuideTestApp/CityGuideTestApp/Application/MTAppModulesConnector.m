@@ -36,8 +36,10 @@
 {
     _itemListModule = [[MTItemListWireframe alloc] init];
     MTItemDetailWireframe *itemDetailModule = [[MTItemDetailWireframe alloc] init];
+    MTItemDetailWireframe *addItemModule = [[MTItemDetailWireframe alloc] init];
     
     self.itemListModule.itemDetailModule = itemDetailModule;
+    self.itemListModule.addItemModule = addItemModule;
 }
 
 - (void)showMainScreen

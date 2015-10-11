@@ -11,7 +11,6 @@
 @property (nonatomic, strong, readonly) NSNumber *itemId;
 @property (nonatomic, strong, readonly) NSString *itemName;
 
-- (instancetype) __unavailable init;
 - (instancetype)initWithItemId:(NSNumber *)itemId_
                       itemName:(NSString *)itemName_ NS_DESIGNATED_INITIALIZER;
 

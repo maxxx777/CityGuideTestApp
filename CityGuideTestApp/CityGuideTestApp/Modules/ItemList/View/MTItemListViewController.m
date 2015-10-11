@@ -38,6 +38,11 @@
 
 #pragma mark - IB Actions
 
+- (IBAction)addButtonPressed:(id)sender
+{
+    [self.presenter rightBarButtonPressed];
+}
+
 - (IBAction)filterButtonPressed:(id)sender
 {
     [self.presenter filterBarButtonPressed];

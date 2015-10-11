@@ -9,8 +9,12 @@
 #import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewController.h"
 #import "MTShowPlaceDetailPresenter.h"
+#import "MTEditPlaceDetailPresenter.h"
 #import "MTPlaceDetailMapViewHelper.h"
 #import "MTPlaceDetailFetcher.h"
+#import "MTPlaceDetailConfigurator.h"
+#import "MTItemOperator.h"
+#import "MTItemDataManager.h"
 
 @interface MTItemDetailWireframe ()
 
@@ -20,7 +24,7 @@
 
 @implementation MTItemDetailWireframe
 
-#pragma mark - MTCityListModuleInterface
+#pragma mark - MTItemDetailModuleInterface
 
 - (void)showDetailsForPlace:(id)place
        navigationController:(UINavigationController *)navigationController
@@ -31,6 +35,20 @@
     
     //configure
     [self configureShowDetailStackWithItem:place];
+    
+    //navigate
+    [navigationController pushViewController:self.viewController
+                                    animated:YES];
+}
+
+- (void)addNewPlaceWithNavigationController:(UINavigationController *)navigationController
+{
+    //init
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
+    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+    
+    //configure
+    [self configureEditDetailStack];
     
     //navigate
     [navigationController pushViewController:self.viewController
@@ -63,6 +81,33 @@
     
     //bind presenter - interactor
     placeDetailFetcher.outputs = @[presenter];
+}
+
+- (void)configureEditDetailStack
+{
+    //init data manager
+    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] init];
+    
+    //init interactor
+    MTPlaceDetailConfigurator *placeDetailConfigurator = [[MTPlaceDetailConfigurator alloc] initWithNewItem];
+    MTItemOperator *itemOperator = [[MTItemOperator alloc] initWithItemListCache:nil
+                                                                 itemDataManager:itemDataManager];
+    
+    //init presenter
+    MTEditPlaceDetailPresenter *presenter = [[MTEditPlaceDetailPresenter alloc]
+                                             initWithPlaceDetailConfigurator:placeDetailConfigurator
+                                             itemOperator:itemOperator
+                                             wireframe:self];
+    
+    //bind view controller - presenter
+    self.viewController.presenter = presenter;
+    
+    //bind presenter - view controller
+    presenter.userInterface = self.viewController;
+    
+    //bind presenter - interactor
+    placeDetailConfigurator.outputs = @[presenter];
+    itemOperator.outputs = @[presenter];
 }
 
 @end

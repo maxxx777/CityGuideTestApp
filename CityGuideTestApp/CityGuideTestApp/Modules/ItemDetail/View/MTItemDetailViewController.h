@@ -9,7 +9,7 @@
 #import "MTRootTableViewController.h"
 #import <MapKit/MapKit.h>
 #import "MTItemDetailViewInterface.h"
-#import "MTShowPlaceDetailPresenterInterface.h"
+#import "MTItemDetailPresenterInterface.h"
 #import "MTPlaceDetailMapViewHelper.h"
 
 @interface MTItemDetailViewController : MTRootTableViewController
@@ -18,7 +18,7 @@
 >
 
 @property (nonatomic, strong) IBOutlet UITableViewCell *photoCell;
-@property (nonatomic, strong) id<MTShowPlaceDetailPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTItemDetailPresenterInterface> presenter;
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UITextField *textFieldName;
 @property (nonatomic, strong) IBOutlet UITextView *textViewDescription;

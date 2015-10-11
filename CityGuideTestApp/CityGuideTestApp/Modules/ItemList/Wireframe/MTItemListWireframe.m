@@ -46,6 +46,11 @@
 
 #pragma mark - Public
 
+- (void)onDidAddNewItem
+{
+    [self.itemDetailModule addNewPlaceWithNavigationController:self.viewController.navigationController];
+}
+
 - (void)onDidSelectItem:(id)item
 {
     [self.itemDetailModule showDetailsForPlace:item

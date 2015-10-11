@@ -43,7 +43,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Выбор города" id="XFY-aH-bof" userLabel="title"/>
+                    <navigationItem key="navigationItem" title="Выбор города" id="XFY-aH-bof" userLabel="title">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tfM-k5-ZlI">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="TEL-0Y-uNO" id="3ig-67-oaI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="barButtonFilter" destination="IWx-H7-beG" id="1wL-Mw-3um"/>
                         <outlet property="containerView" destination="rh0-7z-5D1" id="WcO-I7-by8"/>
@@ -51,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYl-k8-J7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-1407"/>
+            <point key="canvasLocation" x="3132" y="-1407"/>
         </scene>
         <!--Item List Table View Controller-->
         <scene sceneID="nQy-JW-Tii">

@@ -17,7 +17,9 @@
 >
 
 @property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>itemDetailModule;
+@property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>addItemModule;
 
+- (void)onDidAddNewItem;
 - (void)onDidSelectItem:(__nonnull id)item;
 
 @end
