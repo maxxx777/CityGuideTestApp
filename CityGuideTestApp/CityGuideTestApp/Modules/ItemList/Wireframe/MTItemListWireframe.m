@@ -48,8 +48,8 @@
 
 - (void)onDidSelectItem:(id)item
 {
-    [self.itemDetailModule showItemDetailsForItem:item
-                             navigationController:self.viewController.navigationController];
+    [self.itemDetailModule showDetailsForPlace:item
+                          navigationController:self.viewController.navigationController];
 }
 
 #pragma mark - Helper

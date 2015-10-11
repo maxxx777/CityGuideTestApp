@@ -70,7 +70,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (void)willCloseView
 {
-    [self.itemListRequester cancelActions];
+//    [self.itemListRequester cancelActions];
 }
 
 - (void)scrollViewWithOffset:(CGPoint)offset
@@ -141,9 +141,12 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.itemListExpander openOrCloseCityAtIndexPath:indexPath];
-    
-//    [self.wireframe onDidSelectItem:item];
+    if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
+        [self.itemListExpander openOrCloseCityAtIndexPath:indexPath];
+    } else {
+        id item = [self.itemListExpander objectAtIndexPath:indexPath];
+        [self.wireframe onDidSelectItem:item];
+    }
 }
 
 - (void)registerCellForTableView:(UITableView *)tableView

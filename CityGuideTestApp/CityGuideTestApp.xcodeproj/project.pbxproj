@@ -69,6 +69,11 @@
 		75D32D601BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D591BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D611BC66C200010D705 /* MTManagedPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D5B1BC66C200010D705 /* MTManagedPlace.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D651BC66E990010D705 /* NSNumber+MTNewItemId.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D641BC66E990010D705 /* NSNumber+MTNewItemId.m */; settings = {ASSET_TAGS = (); }; };
+		75EAA90E1BC9788E000BE44A /* MTItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
+		75EAA9191BC97C22000BE44A /* MTPlaceDetailFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */; settings = {ASSET_TAGS = (); }; };
+		75EAA9211BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */; settings = {ASSET_TAGS = (); }; };
+		75EAA9241BC9A4A1000BE44A /* MTPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */; settings = {ASSET_TAGS = (); }; };
 		C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +251,19 @@
 		75D32D5B1BC66C200010D705 /* MTManagedPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTManagedPlace.m; sourceTree = "<group>"; };
 		75D32D631BC66E990010D705 /* NSNumber+MTNewItemId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+MTNewItemId.h"; sourceTree = "<group>"; };
 		75D32D641BC66E990010D705 /* NSNumber+MTNewItemId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+MTNewItemId.m"; sourceTree = "<group>"; };
+		75EAA90C1BC9788E000BE44A /* MTItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemDetailViewController.h; sourceTree = "<group>"; };
+		75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemDetailViewController.m; sourceTree = "<group>"; };
+		75EAA9121BC97A0F000BE44A /* MTItemDetailViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemDetailViewInterface.h; sourceTree = "<group>"; };
+		75EAA9131BC97BBA000BE44A /* MTShowPlaceDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShowPlaceDetailPresenter.h; sourceTree = "<group>"; };
+		75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShowPlaceDetailPresenter.m; sourceTree = "<group>"; };
+		75EAA9161BC97BCE000BE44A /* MTShowPlaceDetailPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShowPlaceDetailPresenterInterface.h; sourceTree = "<group>"; };
+		75EAA9171BC97C22000BE44A /* MTPlaceDetailFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailFetcher.h; sourceTree = "<group>"; };
+		75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceDetailFetcher.m; sourceTree = "<group>"; };
+		75EAA91A1BC97C44000BE44A /* MTPlaceDetailFetcherIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailFetcherIOInterface.h; sourceTree = "<group>"; };
+		75EAA91E1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailMapViewHelper.h; sourceTree = "<group>"; };
+		75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceDetailMapViewHelper.m; sourceTree = "<group>"; };
+		75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceAnnotation.h; sourceTree = "<group>"; };
+		75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceAnnotation.m; sourceTree = "<group>"; };
 		908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CityGuideTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -500,6 +518,9 @@
 				7502C12B1BC59017008ECF59 /* MTItemListFetcher.h */,
 				7502C12C1BC59017008ECF59 /* MTItemListFetcher.m */,
 				7502C12D1BC59017008ECF59 /* MTItemListFetcherIOInterface.h */,
+				75EAA9171BC97C22000BE44A /* MTPlaceDetailFetcher.h */,
+				75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */,
+				75EAA91A1BC97C44000BE44A /* MTPlaceDetailFetcherIOInterface.h */,
 			);
 			path = Fetchers;
 			sourceTree = "<group>";
@@ -536,6 +557,7 @@
 		7502C1371BC59018008ECF59 /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				75EAA91B1BC97F96000BE44A /* Helper */,
 				7502C1381BC59018008ECF59 /* Presenter */,
 				7502C1391BC59018008ECF59 /* View */,
 				7502C13A1BC59018008ECF59 /* Wireframe */,
@@ -546,6 +568,9 @@
 		7502C1381BC59018008ECF59 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				75EAA9131BC97BBA000BE44A /* MTShowPlaceDetailPresenter.h */,
+				75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */,
+				75EAA9161BC97BCE000BE44A /* MTShowPlaceDetailPresenterInterface.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -553,6 +578,11 @@
 		7502C1391BC59018008ECF59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */,
+				75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */,
+				75EAA90C1BC9788E000BE44A /* MTItemDetailViewController.h */,
+				75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */,
+				75EAA9121BC97A0F000BE44A /* MTItemDetailViewInterface.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -920,6 +950,15 @@
 			path = "NSNumber-NewItemId";
 			sourceTree = "<group>";
 		};
+		75EAA91B1BC97F96000BE44A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				75EAA91E1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.h */,
+				75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D4F01DB5D825D904DAA3CA79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1099,6 +1138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */,
+				75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */,
 				7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */,
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
 				7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */,
@@ -1113,10 +1153,12 @@
 				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
 				7502C2571BC59018008ECF59 /* NSObject+MTMergeObject.m in Sources */,
 				7502C22A1BC59018008ECF59 /* MTItemWebService.m in Sources */,
+				75EAA9191BC97C22000BE44A /* MTPlaceDetailFetcher.m in Sources */,
 				7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */,
 				7502C2211BC59018008ECF59 /* MTAppDelegate.m in Sources */,
 				7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */,
 				7502C2251BC59018008ECF59 /* main.m in Sources */,
+				75EAA90E1BC9788E000BE44A /* MTItemDetailViewController.m in Sources */,
 				7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */,
 				75D32D5E1BC66C200010D705 /* MTManagedCity+CoreDataProperties.m in Sources */,
 				7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */,
@@ -1137,10 +1179,12 @@
 				7502C2471BC59018008ECF59 /* MTAlertWrapper.m in Sources */,
 				75D32D651BC66E990010D705 /* NSNumber+MTNewItemId.m in Sources */,
 				7502C2361BC59018008ECF59 /* MTItemListTableViewController.m in Sources */,
+				75EAA9241BC9A4A1000BE44A /* MTPlaceAnnotation.m in Sources */,
 				7502C23E1BC59018008ECF59 /* MTRootTablePresenter.m in Sources */,
 				7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */,
 				7502C2391BC59018008ECF59 /* MTRootCell.m in Sources */,
 				75D32D4D1BC6514B0010D705 /* MTMappedCity.m in Sources */,
+				75EAA9211BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m in Sources */,
 				7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */,
 				7502C2261BC59018008ECF59 /* CityGuideTestApp.xcdatamodeld in Sources */,
 				75D32D5F1BC66C200010D705 /* MTManagedCity.m in Sources */,
@@ -1223,7 +1267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1261,7 +1305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1278,6 +1322,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1294,6 +1339,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
