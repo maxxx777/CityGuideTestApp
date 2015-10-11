@@ -10,8 +10,20 @@
 
 @protocol MTPlaceDetailConfiguratorInputInterface <NSObject, MTPlaceDetailFetcherInputInterface>
 
+- (void)configurePlaceCoordinates:(NSDictionary *)coordinates;
+- (void)configurePlaceName:(NSString *)name;
+- (void)configurePlaceDescription:(NSString *)description;
+
+- (id)currentItem;
+
 @end
 
 @protocol MTPlaceDetailConfiguratorOutputInterface <NSObject, MTPlaceDetailFetcherOutputInterface>
+
+@optional
+
+- (void)onDidConfigurePlaceCoordinates;
+- (void)onDidConfigurePlaceName;
+- (void)onDidConfigurePlaceDescription;
 
 @end

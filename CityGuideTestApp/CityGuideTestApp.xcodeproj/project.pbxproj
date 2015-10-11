@@ -77,6 +77,8 @@
 		75FE08FF1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE08FD1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		75FE09031BCA41B600765F7D /* MTPlaceDetailConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09021BCA41B600765F7D /* MTPlaceDetailConfigurator.m */; settings = {ASSET_TAGS = (); }; };
 		75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09091BCA4E9000765F7D /* MTMutablePlace.m */; settings = {ASSET_TAGS = (); }; };
+		75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */; settings = {ASSET_TAGS = (); }; };
+		75FE09121BCA7E2000765F7D /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
 		C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +276,11 @@
 		75FE09041BCA41D600765F7D /* MTPlaceDetailConfiguratorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailConfiguratorIOInterface.h; sourceTree = "<group>"; };
 		75FE09081BCA4E9000765F7D /* MTMutablePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMutablePlace.h; sourceTree = "<group>"; };
 		75FE09091BCA4E9000765F7D /* MTMutablePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMutablePlace.m; sourceTree = "<group>"; };
+		75FE090B1BCA780200765F7D /* MTSavePlaceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSavePlaceOperation.h; sourceTree = "<group>"; };
+		75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSavePlaceOperation.m; sourceTree = "<group>"; };
+		75FE090F1BCA7E2000765F7D /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
+		75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
+		75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
 		908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CityGuideTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -474,6 +481,8 @@
 		7502C1151BC59017008ECF59 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				75FE090B1BCA780200765F7D /* MTSavePlaceOperation.h */,
+				75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */,
 				7502C1161BC59017008ECF59 /* MTSaveItemsOperation.h */,
 				7502C1171BC59017008ECF59 /* MTSaveItemsOperation.m */,
 				7502C1181BC59017008ECF59 /* MTMergeObjectsOperationDelegate.h */,
@@ -515,6 +524,7 @@
 		7502C1291BC59017008ECF59 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				75FE090E1BCA7E2000765F7D /* ChangeDetectors */,
 				75FE09001BCA419E00765F7D /* Configurators */,
 				756901041BC6E44300825B62 /* Expanders */,
 				75D32D3B1BC6299D0010D705 /* Operators */,
@@ -984,6 +994,16 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
+		75FE090E1BCA7E2000765F7D /* ChangeDetectors */ = {
+			isa = PBXGroup;
+			children = (
+				75FE090F1BCA7E2000765F7D /* MTItemListChangeDetector.h */,
+				75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */,
+				75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */,
+			);
+			path = ChangeDetectors;
+			sourceTree = "<group>";
+		};
 		D4F01DB5D825D904DAA3CA79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1163,6 +1183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */,
+				75FE09121BCA7E2000765F7D /* MTItemListChangeDetector.m in Sources */,
 				75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */,
 				7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */,
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
@@ -1189,6 +1210,7 @@
 				75EAA90E1BC9788E000BE44A /* MTItemDetailViewController.m in Sources */,
 				7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */,
 				75D32D5E1BC66C200010D705 /* MTManagedCity+CoreDataProperties.m in Sources */,
+				75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */,
 				7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */,
 				7502C22F1BC59018008ECF59 /* MTItemListSearcher.m in Sources */,
 				7502C25B1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m in Sources */,

@@ -59,4 +59,49 @@
     return [NSURL URLWithString:self.place.imageUrl];
 }
 
+- (void)configurePlaceName:(NSString *)name
+{
+    _place.itemName = name;
+    
+    for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
+        if ([output respondsToSelector:@selector(onDidConfigurePlaceName)]) {
+            [output onDidConfigurePlaceName];
+        }
+    }
+}
+
+- (void)configurePlaceDescription:(NSString *)description
+{
+    _place.placeDescription = description;
+    
+    for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
+        if ([output respondsToSelector:@selector(onDidConfigurePlaceDescription)]) {
+            [output onDidConfigurePlaceDescription];
+        }
+    }
+}
+
+- (void)configurePlaceCoordinates:(NSDictionary *)coordinates
+{
+    _place.latitude = coordinates[@"latitude"];
+    _place.longitude = coordinates[@"longitude"];
+    
+    for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
+        if ([output respondsToSelector:@selector(onDidConfigurePlaceCoordinates)]) {
+            [output onDidConfigurePlaceCoordinates];
+        }
+    }
+}
+
+- (id)currentItem
+{
+    return [[MTMappedPlace alloc] initWithItemId:self.place.itemId
+                                        itemName:self.place.itemName
+                                        latitude:self.place.latitude
+                                       longitude:self.place.longitude
+                                        imageUrl:self.place.imageUrl
+                                placeDescription:self.place.placeDescription
+                                            city:self.place.city];
+}
+
 @end

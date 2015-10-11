@@ -55,8 +55,13 @@
         NSNumber *itemId;
         NSString *itemName;
         
-        itemId = [NSNumber mt_newItemId];
-        itemName = rawData[@"city"] ? rawData[@"city"] : NSLocalizedString(@"Unknown City", nil);
+        if (rawData[@"city"]) {
+            itemId = [NSNumber mt_newItemId];
+            itemName = rawData[@"city"];
+        } else {
+            itemId = @0;
+            itemName = NSLocalizedString(@"Unknown City", nil);
+        }
         
         NSArray *citiesArray = [parsedCities filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"itemName LIKE %@", itemName]];
         if ([citiesArray count] == 0) {

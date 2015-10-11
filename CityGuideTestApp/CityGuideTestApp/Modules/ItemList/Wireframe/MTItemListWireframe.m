@@ -12,6 +12,7 @@
 #import "MTFetchedResultsControllerBasedItemListCache.h"
 #import "MTArrayBasedItemListCache.h"
 #import "MTItemDataManager.h"
+#import "MTItemListChangeDetector.h"
 #import "MTItemListRequester.h"
 #import "MTItemListExpander.h"
 #import "MTItemListSearcher.h"
@@ -64,12 +65,15 @@
     //init web serice
     MTItemWebService *itemWebService = [[MTItemWebService alloc] init];
     
-    //init cache
-    MTArrayBasedItemListCache *cityListCache = [[MTArrayBasedItemListCache alloc] init];
-    MTFetchedResultsControllerBasedItemListCache *placeListCache = [[MTFetchedResultsControllerBasedItemListCache alloc] init];
+    //init item list change detector
+    MTItemListChangeDetector *itemListChangeDetector = [[MTItemListChangeDetector alloc] init];
     
     //init data manager
-    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] init];
+    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] initWithDelegate:itemListChangeDetector];
+    
+    //init cache
+    MTArrayBasedItemListCache *cityListCache = [[MTArrayBasedItemListCache alloc] init];
+    MTFetchedResultsControllerBasedItemListCache *placeListCache = [[MTFetchedResultsControllerBasedItemListCache alloc] initWithDelegate:itemDataManager];
     
     //init interactor
     MTItemListRequester *itemListRequester = [[MTItemListRequester alloc]

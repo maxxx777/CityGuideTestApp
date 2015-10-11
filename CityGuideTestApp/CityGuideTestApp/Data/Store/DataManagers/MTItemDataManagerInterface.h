@@ -17,5 +17,7 @@
                       cityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
                      placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
                          completion:(MTRootDataManagerCompletionBlock)completionBlock;
+- (void)saveItem:(id)item
+      completion:(MTRootDataManagerCompletionBlock)completionBlock;
 
 @end

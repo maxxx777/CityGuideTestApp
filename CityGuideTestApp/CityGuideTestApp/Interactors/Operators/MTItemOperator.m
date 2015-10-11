@@ -32,11 +32,18 @@
     return self;
 }
 
-#pragma mark - MTNoteOperatorInputInterface
+#pragma mark - MTItemOperatorInputInterface
 
-- (void)saveItem:(id)note
+- (void)saveItem:(id)item
 {
-
+    [self.itemDataManager saveItem:item
+                        completion:^(NSError *error, id fetchedItem){
+        for (id<MTItemOperatorOutputInterface> output in self.outputs) {
+            if ([output respondsToSelector:@selector(onDidSaveItem)]) {
+                [output onDidSaveItem];
+            }
+        }
+    }];
 }
 
 @end

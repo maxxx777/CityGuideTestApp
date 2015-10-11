@@ -8,6 +8,7 @@
 
 #import "MTItemDataManager.h"
 #import "MTItemWebService.h"
+#import "MTSavePlaceOperation.h"
 #import "MTSaveItemsOperation.h"
 #import "MTOperationManager.h"
 #import "MTArrayBasedItemListCacheInterface.h"
@@ -22,6 +23,7 @@
 @interface MTItemDataManager ()
 
 @property (nonatomic) MTItemListFilterType filterType;
+@property (nonatomic, strong) MTSavePlaceOperation *savePlaceOperation;
 @property (nonatomic, strong) MTSaveItemsOperation *saveItemsOperation;
 @property (nonatomic, weak) id<MTArrayBasedItemListCacheInterface>cityListCache;
 @property (nonatomic, weak) id<MTFetchedResultsControllerBasedItemListCacheInterface>placeListCache;
@@ -52,28 +54,14 @@
     }
 }
 
-- (void)refreshItemListWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
-                          placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
-                              completion:(MTRootDataManagerCompletionBlock)completionBlock
+- (void)saveItem:(id)item
+      completion:(MTRootDataManagerCompletionBlock)completionBlock
 {
     [self setProcessItemCompletion:completionBlock];
-    [self setCityListCache:cityListCache];
-    [self setPlaceListCache:placeListCache];
     
-    [self.itemWebService fetchItemListWithCompletion:^(id data, NSError *error){
-        if (data) {
-            
-            _saveItemsOperation = [[MTSaveItemsOperation alloc] initWithItems:data
-                                                                     delegate:self];
-            [[MTOperationManager sharedManager] queueOperation:self.saveItemsOperation];
-            
-        } else {
-            if (self.processItemCompletion) {
-                self.processItemCompletion(error, nil);
-                [self setProcessItemCompletion:nil];
-            }
-        }
-    }];
+    _savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:item
+                                               mergeOperationDelegate:self];
+    [[MTOperationManager sharedManager] queueOperation:self.savePlaceOperation];
 }
 
 - (void)searchItemsWithSearchString:(NSString *)searchString
@@ -97,7 +85,15 @@
     {
         [self cacheItemListWithCompletion:self.processItemCompletion];
     }];
-    
+}
+
+- (void)onDidObjectMergeWithError:(NSError *)error
+             isOperationCancelled:(BOOL)isOperationCancelled
+{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^
+     {
+         self.processItemCompletion(error, nil);
+     }];
 }
 
 #pragma mark - Helper
@@ -108,6 +104,30 @@
                                                     predicate:nil
                                             sortedDescriptors:nil
                                                       context:[[MTDataStore sharedStore] mainQueueContext]];
+}
+
+- (void)refreshItemListWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
+                          placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
+                              completion:(MTRootDataManagerCompletionBlock)completionBlock
+{
+    [self setProcessItemCompletion:completionBlock];
+    [self setCityListCache:cityListCache];
+    [self setPlaceListCache:placeListCache];
+    
+    [self.itemWebService fetchItemListWithCompletion:^(id data, NSError *error){
+        if (data) {
+            
+            _saveItemsOperation = [[MTSaveItemsOperation alloc] initWithItems:data
+                                                                     delegate:self];
+            [[MTOperationManager sharedManager] queueOperation:self.saveItemsOperation];
+            
+        } else {
+            if (self.processItemCompletion) {
+                self.processItemCompletion(error, nil);
+                [self setProcessItemCompletion:nil];
+            }
+        }
+    }];
 }
 
 - (void)cacheItemListWithCompletion:(MTRootDataManagerCompletionBlock)completionBlock
