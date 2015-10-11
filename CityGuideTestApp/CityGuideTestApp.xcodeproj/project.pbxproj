@@ -23,7 +23,6 @@
 		7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1231BC59017008ECF59 /* MTWebServiceParser.m */; settings = {ASSET_TAGS = (); }; };
 		7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C12C1BC59017008ECF59 /* MTItemListFetcher.m */; settings = {ASSET_TAGS = (); }; };
 		7502C22E1BC59018008ECF59 /* MTItemListRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1301BC59017008ECF59 /* MTItemListRequester.m */; settings = {ASSET_TAGS = (); }; };
-		7502C22F1BC59018008ECF59 /* MTItemListSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1341BC59018008ECF59 /* MTItemListSearcher.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C13D1BC59018008ECF59 /* MTItemDetailWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1411BC59018008ECF59 /* MTItemListPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */; settings = {ASSET_TAGS = (); }; };
@@ -144,9 +143,6 @@
 		7502C12F1BC59017008ECF59 /* MTItemListRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListRequester.h; sourceTree = "<group>"; };
 		7502C1301BC59017008ECF59 /* MTItemListRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListRequester.m; sourceTree = "<group>"; };
 		7502C1311BC59017008ECF59 /* MTItemListRequesterIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListRequesterIOInterface.h; sourceTree = "<group>"; };
-		7502C1331BC59018008ECF59 /* MTItemListSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearcher.h; sourceTree = "<group>"; };
-		7502C1341BC59018008ECF59 /* MTItemListSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListSearcher.m; sourceTree = "<group>"; };
-		7502C1351BC59018008ECF59 /* MTItemListSearcherIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListSearcherIOInterface.h; sourceTree = "<group>"; };
 		7502C13B1BC59018008ECF59 /* MTItemDetailModuleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemDetailModuleInterface.h; sourceTree = "<group>"; };
 		7502C13C1BC59018008ECF59 /* MTItemDetailWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemDetailWireframe.h; sourceTree = "<group>"; };
 		7502C13D1BC59018008ECF59 /* MTItemDetailWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemDetailWireframe.m; sourceTree = "<group>"; };
@@ -544,7 +540,6 @@
 				75D32D3B1BC6299D0010D705 /* Operators */,
 				7502C12A1BC59017008ECF59 /* Fetchers */,
 				7502C12E1BC59017008ECF59 /* Requesters */,
-				7502C1321BC59018008ECF59 /* Searchers */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -570,16 +565,6 @@
 				7502C1311BC59017008ECF59 /* MTItemListRequesterIOInterface.h */,
 			);
 			path = Requesters;
-			sourceTree = "<group>";
-		};
-		7502C1321BC59018008ECF59 /* Searchers */ = {
-			isa = PBXGroup;
-			children = (
-				7502C1331BC59018008ECF59 /* MTItemListSearcher.h */,
-				7502C1341BC59018008ECF59 /* MTItemListSearcher.m */,
-				7502C1351BC59018008ECF59 /* MTItemListSearcherIOInterface.h */,
-			);
-			path = Searchers;
 			sourceTree = "<group>";
 		};
 		7502C1361BC59018008ECF59 /* Modules */ = {
@@ -1270,7 +1255,6 @@
 				75D32D5E1BC66C200010D705 /* MTManagedCity+CoreDataProperties.m in Sources */,
 				75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */,
 				7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */,
-				7502C22F1BC59018008ECF59 /* MTItemListSearcher.m in Sources */,
 				7502C25B1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m in Sources */,
 				7502C2581BC59018008ECF59 /* NSObject+MTMergeObjects.m in Sources */,
 				75D32D4E1BC6514B0010D705 /* MTMappedPlace.m in Sources */,

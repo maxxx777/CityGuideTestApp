@@ -16,10 +16,6 @@
 @optional
 
 - (void)cancelActions;
-- (void)searchItemsWithSearchString:(NSString *)searchString
-                      itemListCache:(id<MTItemListCacheInterface>)itemListCache
-                 searchResultsCache:(id<MTArrayBasedItemListCacheInterface>)searchResultsCache
-                         completion:(MTRootDataManagerCompletionBlock)completionBlock;
 - (id)mappedObjectAtIndexPath:(NSIndexPath *)indexPath
                 itemListCache:(id<MTItemListCacheInterface>)itemListCache;
 

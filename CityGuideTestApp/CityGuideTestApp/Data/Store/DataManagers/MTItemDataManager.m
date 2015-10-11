@@ -64,18 +64,6 @@
     [[MTOperationManager sharedManager] queueOperation:self.savePlaceOperation];
 }
 
-- (void)searchItemsWithSearchString:(NSString *)searchString
-                      itemListCache:(id<MTItemListCacheInterface>)itemListCache
-                 searchResultsCache:(id<MTArrayBasedItemListCacheInterface>)searchResultsCache
-                         completion:(MTRootDataManagerCompletionBlock)completionBlock
-{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemName BEGINSWITH[cd] %@", searchString];
-    
-    [searchResultsCache cacheItemListWithSourceObjects:[itemListCache allCachedItems]
-                                             predicate:predicate
-                                            completion:completionBlock];
-}
-
 #pragma mark - MTMergeObjectsOperationDelegate
 
 - (void)onDidObjectsMergeWithError:(NSError *)error

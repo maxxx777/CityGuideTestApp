@@ -14,7 +14,6 @@
 - (void)fetchItemsWithin1Mile;
 - (void)fetchItemsWithin10Mile;
 - (void)fetchItemsWithin100Mile;
-- (void)searchItemsWithSearchString: (NSString *)searchString;
 - (void)cancelActions;
 
 @end

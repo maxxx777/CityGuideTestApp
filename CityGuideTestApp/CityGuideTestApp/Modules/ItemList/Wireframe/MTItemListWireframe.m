@@ -15,7 +15,6 @@
 #import "MTItemListChangeDetector.h"
 #import "MTItemListRequester.h"
 #import "MTItemListExpander.h"
-#import "MTItemListSearcher.h"
 #import "MTItemListTablePresenter.h"
 #import "MTItemListPresenter.h"
 #import "MTItemListTableViewController.h"
