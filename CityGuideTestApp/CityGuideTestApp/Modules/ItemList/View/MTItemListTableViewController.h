@@ -14,14 +14,10 @@
 
 @interface MTItemListTableViewController : MTRootTableViewController
 <
-    MTItemListTableViewInterface,
-    UIScrollViewDelegate
+    MTItemListTableViewInterface
 >
 
 @property (nonatomic, strong) IBOutlet MTTableFooterView *tableFooterView;
 @property (nonatomic, strong) id<MTItemListTablePresenterInterface> presenter;
-@property (nonatomic) BOOL enablePullToRefresh;
-@property (nonatomic) BOOL enableIndexedList;
-@property (nonatomic) BOOL enableLoadMore;
 
 @end

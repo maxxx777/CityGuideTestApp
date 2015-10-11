@@ -63,7 +63,7 @@
         <scene sceneID="nQy-JW-Tii">
             <objects>
                 <tableViewController storyboardIdentifier="ItemListTableViewController" id="NJo-L7-08D" customClass="MTItemListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RV2-7k-qg8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="RV2-7k-qg8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,15 +89,15 @@
         <scene sceneID="chj-cQ-6rD">
             <objects>
                 <tableViewController storyboardIdentifier="ItemDetailViewController" id="Sa7-vx-0lQ" customClass="MTItemDetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QXM-nQ-cZL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="QXM-nQ-cZL">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="plv-zI-TvK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="jo7-Xb-vli">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="173"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jo7-Xb-vli" id="C6g-jW-Fws">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
@@ -110,7 +110,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xn1-yQ-Jdj">
-                                        <rect key="frame" x="0.0" y="237" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="173" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xn1-yQ-Jdj" id="qkF-JK-cPN">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -128,7 +128,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="0HU-ut-iyu">
-                                        <rect key="frame" x="0.0" y="281" width="600" height="157"/>
+                                        <rect key="frame" x="0.0" y="217" width="600" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0HU-ut-iyu" id="2hh-oj-hL0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
@@ -147,7 +147,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="157" id="ey2-Px-PFS">
-                                        <rect key="frame" x="0.0" y="438" width="600" height="157"/>
+                                        <rect key="frame" x="0.0" y="374" width="600" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ey2-Px-PFS" id="ZmH-em-cbX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
@@ -167,6 +167,7 @@
                             <outlet property="delegate" destination="Sa7-vx-0lQ" id="ff4-KT-KC2"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Dt0-ul-5Yp"/>
                     <connections>
                         <outlet property="imageViewPhoto" destination="Cdq-28-y8p" id="dH3-A7-mzo"/>

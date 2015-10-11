@@ -187,12 +187,10 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
                                                if (buttonIndex == 1) {
 //                                                   [self.itemListRequester refreshItems];
                                                } else {
-                                                   [self.userInterface stopPullToRefreshAnimating];
                                                    [self reloadView];
                                                }
                                            } didDismissCompletion:nil];
     }
-    [self.userInterface stopPullToRefreshAnimating];
 }
 
 #pragma mark - MTItemListExpanderOutputInterface

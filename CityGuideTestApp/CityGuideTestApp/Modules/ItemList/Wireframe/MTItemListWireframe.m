@@ -96,8 +96,6 @@
     //init view controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
     MTItemListTableViewController *itemListTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListTableViewController"];
-    itemListTableViewController.enableIndexedList = NO;
-    itemListTableViewController.enablePullToRefresh = NO;
     
     //bind view controller
     self.viewController.childTableViewController = itemListTableViewController;
