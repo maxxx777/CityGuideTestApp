@@ -16,4 +16,9 @@
 - (void)configureDescriptionWithText:(NSString *)text;
 - (void)configureImageWithURL:(NSURL *)url;
 
+- (void)enableDropPinOnMapView;
+- (void)disableDropPinOnMapView;
+
+- (void)closeView;
+
 @end

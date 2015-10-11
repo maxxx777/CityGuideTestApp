@@ -10,6 +10,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MTPlaceAnnotation.h"
 
+@interface MTItemDetailViewController ()
+
+@property (nonatomic, strong) MTPlaceAnnotation *placeAnnotation;
+
+@end
+
 @implementation MTItemDetailViewController
 @synthesize presenter = _presenter;
 
@@ -17,7 +23,7 @@
 {
     [super viewDidLoad];
     
-    [self.presenter configureView];
+    [self.presenter onDidLoadView];
 }
 
 #pragma mark - MTItemDetailViewInterface
@@ -94,6 +100,91 @@
                                               NSURL *imageURL){
                                       [activityIndicator removeFromSuperview];
                                   }];
+}
+
+- (void)enableDropPinOnMapView
+{
+    UILongPressGestureRecognizer *dropPinGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                              action:@selector(handleDropPin:)];
+    dropPinGestureRecognizer.minimumPressDuration = 1.0; //user needs to press for 1 second
+    [self.mapView addGestureRecognizer:dropPinGestureRecognizer];
+}
+
+- (void)disableDropPinOnMapView
+{
+    for (UIGestureRecognizer *gestureRecognizer in [self.mapView gestureRecognizers]) {
+        [self.mapView removeGestureRecognizer:gestureRecognizer];
+    }
+}
+
+- (void)closeView
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - IB Actions
+
+- (IBAction)saveButtonPressed:(id)sender
+{
+    [self.presenter onDidPressRightBarButtonOnNavigationBar];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if([string isEqualToString:@"\n"]){
+        
+        [self.textFieldName endEditing:YES];
+        
+        return NO;
+    } else {
+        
+        [self.presenter onDidChangeTextFieldName:textField.text];
+    }
+    
+    return YES;
+}
+
+#pragma mark - UITextViewDelegate
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([text isEqualToString:@"\n"]){
+        
+        [self.textViewDescription endEditing:YES];
+        
+        return NO;
+    } else {
+        
+        [self.presenter onDidChangeTextViewDescription:textView.text];
+    }
+    
+    return YES;
+}
+
+#pragma mark - Helper
+
+- (void)handleDropPin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
+        return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+    CLLocationCoordinate2D touchMapCoordinate =
+    [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    
+    if (self.placeAnnotation) {
+        [self.mapView removeAnnotation:self.placeAnnotation];
+        _placeAnnotation = nil;
+    }
+    _placeAnnotation = [[MTPlaceAnnotation alloc] initWithCoordinate:touchMapCoordinate];
+    [self.mapView addAnnotation:self.placeAnnotation];
+    
+    [self.presenter onDidChangeMapCoordinates:@{
+                                           @"latitude" : @(touchMapCoordinate.latitude),
+                                           @"longitude" : @(touchMapCoordinate.longitude)
+                                           }];
 }
 
 @end

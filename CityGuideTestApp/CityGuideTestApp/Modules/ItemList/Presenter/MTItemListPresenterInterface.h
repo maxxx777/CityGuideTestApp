@@ -10,13 +10,4 @@
 
 @protocol MTItemListPresenterInterface <NSObject, MTRootPresenterInterface>
 
-@optional
-
-- (void)configureView;
-- (void)updateViewBeforeAppearing;
-- (void)updateViewAfterAppearing;
-- (void)leftBarButtonPressed;
-- (void)rightBarButtonPressed;
-- (void)filterBarButtonPressed;
-
 @end

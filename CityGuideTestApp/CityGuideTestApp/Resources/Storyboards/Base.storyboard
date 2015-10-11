@@ -97,7 +97,7 @@
                             <tableViewSection id="plv-zI-TvK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="jo7-Xb-vli">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="173"/>
+                                        <rect key="frame" x="0.0" y="64" width="600" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jo7-Xb-vli" id="C6g-jW-Fws">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
@@ -110,7 +110,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xn1-yQ-Jdj">
-                                        <rect key="frame" x="0.0" y="173" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="237" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xn1-yQ-Jdj" id="qkF-JK-cPN">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -120,12 +120,15 @@
                                                     <rect key="frame" x="8" y="8" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Sa7-vx-0lQ" id="5T1-ik-VDa"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="0HU-ut-iyu">
-                                        <rect key="frame" x="0.0" y="217" width="600" height="157"/>
+                                        <rect key="frame" x="0.0" y="281" width="600" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0HU-ut-iyu" id="2hh-oj-hL0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
@@ -136,12 +139,15 @@
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Sa7-vx-0lQ" id="9Tb-56-Ifa"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="ey2-Px-PFS">
-                                        <rect key="frame" x="0.0" y="374" width="600" height="157"/>
+                                        <rect key="frame" x="0.0" y="438" width="600" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ey2-Px-PFS" id="ZmH-em-cbX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
@@ -161,6 +167,13 @@
                             <outlet property="delegate" destination="Sa7-vx-0lQ" id="ff4-KT-KC2"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Dt0-ul-5Yp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fRr-YC-26O">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Sa7-vx-0lQ" id="DMO-Qf-C8q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageViewPhoto" destination="Cdq-28-y8p" id="dH3-A7-mzo"/>
                         <outlet property="mapView" destination="NMn-pu-Ebw" id="48v-id-FkO"/>
@@ -170,6 +183,24 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Oo-1d-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cmv-jq-Hbe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WmT-hf-N9N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcF-ix-cyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sa7-vx-0lQ" kind="relationship" relationship="rootViewController" id="UbH-CU-cGg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxW-Ep-3Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="337"/>
         </scene>

@@ -12,10 +12,6 @@
 
 @optional
 
-- (void)updateView;
-- (void)updateViewBeforeAppearing;
-- (void)updateViewAfterAppearing;
-
 - (void)scrollViewWithOffset: (CGPoint)offset;
 
 - (NSUInteger)numberOfAllItemsOfSelectedType;
@@ -36,7 +32,5 @@
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)registerCellForTableView:(UITableView *)tableView;
 - (NSString *)cellIdentifierForIndexPath:(NSIndexPath *)indexPath;
-
-- (void)willCloseView;
 
 @end

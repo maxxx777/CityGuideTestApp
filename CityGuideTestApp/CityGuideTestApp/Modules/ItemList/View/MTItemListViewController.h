@@ -22,4 +22,7 @@
 @property (nonatomic, strong) MTItemListTableViewController *childTableViewController;
 @property (nonatomic, strong) id<MTItemListPresenterInterface> presenter;
 
+- (IBAction)addButtonPressed:(id)sender;
+- (IBAction)filterButtonPressed:(id)sender;
+
 @end

@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-@protocol MTRootTablePresenterInterface <NSObject>
+#import "MTRootPresenterInterface.h"
+
+@protocol MTRootTablePresenterInterface <NSObject, MTRootPresenterInterface>
 
 @end

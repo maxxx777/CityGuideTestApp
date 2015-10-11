@@ -9,6 +9,7 @@
 #import "MTEditPlaceDetailPresenter.h"
 #import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
+#import "MTLocationManager.h"
 
 @interface MTEditPlaceDetailPresenter ()
 
@@ -37,7 +38,7 @@
 
 #pragma mark - MTItemDetailPresenterInterface
 
-- (void)configureView
+- (void)onDidLoadView
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
     
@@ -48,7 +49,39 @@
     [self.userInterface configureDescriptionWithText:placeDescription];
     
 //    [self.userInterface configureImageWithURL:[self.placeDetailConfigurator photoURL]];
-//    [self.userInterface configureMapWithCoordinates:[self.placeDetailConfigurator placeCoordinates]];
+    
+//    if ([[MTLocationManager sharedManager] isCurrentLocationDetected]) {
+//        [self.userInterface configureMapWithCoordinates:[[MTLocationManager sharedManager] currentLocation]];
+//    }
+    
+    [self.userInterface enableDropPinOnMapView];
+}
+
+- (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates
+{
+    [self.placeDetailConfigurator configurePlaceCoordinates:coordinates];
+}
+
+- (void)onDidChangeTextFieldName:(NSString *)name
+{
+    [self.placeDetailConfigurator configurePlaceName:name];
+}
+
+- (void)onDidChangeTextViewDescription:(NSString *)description
+{
+    [self.placeDetailConfigurator configurePlaceDescription:description];
+}
+
+- (void)onDidPressRightBarButtonOnNavigationBar
+{
+    [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
+}
+
+#pragma mark - MTItemOperatorOutputInterface
+
+- (void)onDidSaveItem
+{
+    [self.userInterface closeView];
 }
 
 @end

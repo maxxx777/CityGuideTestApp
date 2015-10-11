@@ -55,7 +55,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 #pragma mark - MTItemListTablePresenterInterface
 
-- (void)updateViewBeforeAppearing
+- (void)onWillAppearView
 {
     if (self.isFirstAppearance) {
         [self.userInterface updateFooterLabelWithText:@"Data Loading..."];
@@ -63,12 +63,12 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
     }
 }
 
-- (void)updateViewAfterAppearing
+- (void)onDidAppearView
 {
     
 }
 
-- (void)willCloseView
+- (void)onWillDisappearView
 {
 //    [self.itemListRequester cancelActions];
 }

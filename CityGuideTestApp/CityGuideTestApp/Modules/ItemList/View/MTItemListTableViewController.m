@@ -64,7 +64,7 @@ static NSInteger loadMoreCount = 10;
 //                       options: UIViewAnimationOptionTransitionNone
 //                    animations: ^(void)
 //     {
-         [self.presenter updateViewBeforeAppearing];
+         [self.presenter onWillAppearView];
 //     }
 //                    completion: ^(BOOL isFinished)
 //     {
@@ -76,7 +76,7 @@ static NSInteger loadMoreCount = 10;
 {
     [super viewDidAppear:animated];
     
-    [self.presenter updateViewAfterAppearing];
+    [self.presenter onDidAppearView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -84,7 +84,7 @@ static NSInteger loadMoreCount = 10;
     [super viewWillDisappear:animated];
     
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [self.presenter willCloseView];
+        [self.presenter onWillDisappearView];
     }
 }
 

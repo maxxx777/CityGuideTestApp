@@ -38,18 +38,18 @@
 
 #pragma mark - MTItemListPresenterInterface
 
-- (void)configureView
+- (void)onDidLoadView
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Cities", nil)];
     [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"All", nil)];
 }
 
-- (void)rightBarButtonPressed
+- (void)onDidPressRightBarButtonOnNavigationBar
 {
     [self.wireframe onDidAddNewItem];
 }
 
-- (void)filterBarButtonPressed
+- (void)onDidPressRightBarButtonOnToolbar
 {
     [alertWrapper showActionSheetInViewController:self.userInterface
                                         withTitle:NSLocalizedString(@"Filter Places", nil)

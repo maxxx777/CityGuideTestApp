@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    [self.presenter configureView];
+    [self.presenter onDidLoadView];
     [self configureChildTableViewController];
 }
 
@@ -40,12 +40,12 @@
 
 - (IBAction)addButtonPressed:(id)sender
 {
-    [self.presenter rightBarButtonPressed];
+    [self.presenter onDidPressRightBarButtonOnNavigationBar];
 }
 
 - (IBAction)filterButtonPressed:(id)sender
 {
-    [self.presenter filterBarButtonPressed];
+    [self.presenter onDidPressRightBarButtonOnToolbar];
 }
 
 #pragma mark - Helper 

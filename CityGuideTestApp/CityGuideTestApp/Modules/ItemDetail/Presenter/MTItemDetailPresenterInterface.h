@@ -11,11 +11,10 @@
 
 @protocol MTItemDetailPresenterInterface <NSObject, MTRootTablePresenterInterface>
 
-- (void)configureView;
-
 @optional
 
-- (void)leftBarButtonPressed;
-- (void)rightBarButtonPressed;
+- (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates;
+- (void)onDidChangeTextFieldName:(NSString *)name;
+- (void)onDidChangeTextViewDescription:(NSString *)description;
 
 @end

@@ -14,7 +14,9 @@
 
 @interface MTItemDetailViewController : MTRootTableViewController
 <
-    MTItemDetailViewInterface
+    MTItemDetailViewInterface,
+    UITextFieldDelegate,
+    UITextViewDelegate
 >
 
 @property (nonatomic, strong) IBOutlet UITableViewCell *photoCell;
@@ -24,5 +26,7 @@
 @property (nonatomic, strong) IBOutlet UITextView *textViewDescription;
 @property (nonatomic, strong) IBOutlet UIImageView *imageViewPhoto;
 @property (nonatomic, strong) MTPlaceDetailMapViewHelper *mapViewHelper;
+
+- (IBAction)saveButtonPressed:(id)sender;
 
 @end

@@ -8,4 +8,18 @@
 
 @protocol MTRootPresenterInterface <NSObject>
 
+@optional
+
+- (void)onDidLoadView;
+
+- (void)onWillAppearView;
+- (void)onDidAppearView;
+- (void)onWillDisappearView;
+- (void)onDidDisappearView;
+
+- (void)onDidPressLeftBarButtonOnNavigationBar;
+- (void)onDidPressRightBarButtonOnNavigationBar;
+- (void)onDidPressLeftBarButtonOnToolbar;
+- (void)onDidPressRightBarButtonOnToolbar;
+
 @end
