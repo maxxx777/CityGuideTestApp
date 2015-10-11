@@ -93,6 +93,17 @@
     }
 }
 
+- (void)configurePlacePhotoPath:(NSString *)photoPath
+{
+    _place.filePath = photoPath;
+    
+    for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
+        if ([output respondsToSelector:@selector(onDidConfigurePlacePhotoPath)]) {
+            [output onDidConfigurePlacePhotoPath];
+        }
+    }
+}
+
 - (id)currentItem
 {
     return [[MTMappedPlace alloc] initWithItemId:self.place.itemId
@@ -100,6 +111,7 @@
                                         latitude:self.place.latitude
                                        longitude:self.place.longitude
                                         imageUrl:self.place.imageUrl
+                                        filePath:self.place.filePath
                                 placeDescription:self.place.placeDescription
                                             city:self.place.city];
 }

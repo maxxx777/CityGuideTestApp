@@ -8,7 +8,8 @@
 
 #import "MTPlaceListCell.h"
 #import "MTMappedPlace.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+MTActivityAnimation.h"
+#import "MTImageManager.h"
 
 @interface MTPlaceListCell ()
 
@@ -74,44 +75,27 @@
     MTMappedPlace *mappedPlace = (MTMappedPlace *)item;
     
     self.labelName.text = mappedPlace.itemName;
-
-    __block UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityIndicator.hidesWhenStopped = YES;
     
-    [self.imageViewPhoto addSubview:activityIndicator];
-    [activityIndicator startAnimating];
-    
-    [activityIndicator setTranslatesAutoresizingMaskIntoConstraints:NO];
-    NSLayoutConstraint *heightConstraint =
-    [NSLayoutConstraint constraintWithItem:self.imageViewPhoto
-                                 attribute:NSLayoutAttributeCenterX
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:activityIndicator
-                                 attribute:NSLayoutAttributeCenterX
-                                multiplier:1.0
-                                  constant:0];
-    [self.contentView addConstraint:heightConstraint];
-    
-    NSLayoutConstraint *widthConstraint =
-    [NSLayoutConstraint constraintWithItem:self.imageViewPhoto
-                                 attribute:NSLayoutAttributeCenterY
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:activityIndicator
-                                 attribute:NSLayoutAttributeCenterY
-                                multiplier:1.0
-                                  constant:0];
-    [self.contentView addConstraint:widthConstraint];
-    
-    [self.imageViewPhoto sd_setImageWithURL:[NSURL URLWithString:mappedPlace.imageUrl]
-                           placeholderImage:nil
-                                    options:SDWebImageRetryFailed
-                                  completed:^(UIImage *image,
-                                              NSError *error,
-                                              SDImageCacheType cacheType,
-                                              NSURL *imageURL){
-                                      [activityIndicator removeFromSuperview];
-                           }];
-    
+    if (mappedPlace.filePath) {
+        UIImage *image = [UIImage imageWithContentsOfFile:mappedPlace.filePath];
+        [self.imageViewPhoto setImage:image];
+    } else {
+        if (mappedPlace.imageUrl) {
+            
+            [self.imageViewPhoto mt_startActivityAnimation];
+            
+            MTImageManager *imageManager = [[MTImageManager alloc] init];
+            [imageManager loadImageFromURL:[NSURL URLWithString:mappedPlace.imageUrl]
+                                completion:^(NSError *error, UIImage *image, NSString *filePath){
+                                    self.imageViewPhoto.image = image;
+                                    
+                                    [self.imageViewPhoto mt_stopActivityAnimation];
+                                       }];
+        } else {
+            UIImage *image = [UIImage imageNamed:@"image-placeholder.png"];
+            [self.imageViewPhoto setImage:image];
+        }
+    }
 
 }
 

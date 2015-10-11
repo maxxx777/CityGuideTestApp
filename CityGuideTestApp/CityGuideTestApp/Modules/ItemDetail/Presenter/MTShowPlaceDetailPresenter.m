@@ -9,6 +9,7 @@
 #import "MTShowPlaceDetailPresenter.h"
 #import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
+#import "MTImageManager.h"
 
 @interface MTShowPlaceDetailPresenter ()
 
@@ -38,11 +39,30 @@
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
     
-    NSString *placeName = [self.placeDetailFetcher placeName];
-    NSString *cityName = [self.placeDetailFetcher cityName];
-    [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@ (%@)", placeName, cityName]];
-    [self.userInterface configureDescriptionWithText:[self.placeDetailFetcher placeDescription]];
-    [self.userInterface configureImageWithURL:[self.placeDetailFetcher photoURL]];
+    NSString *placeName = [self.placeDetailFetcher placeName] ? [self.placeDetailFetcher placeName] : @"";
+    [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@", placeName]];
+    
+    NSString *placeDescription = [self.placeDetailFetcher placeDescription] ? [self.placeDetailFetcher placeDescription] : @"";
+    [self.userInterface configureDescriptionWithText:placeDescription];
+    
+    if ([self.placeDetailFetcher filePath]) {
+        [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
+    } else {
+        if ([self.placeDetailFetcher photoURL]) {
+            
+            [self.userInterface enableActivityForImageLoading];
+            
+            MTImageManager *imageManager = [[MTImageManager alloc] init];
+            [imageManager loadImageFromURL:[self.placeDetailFetcher photoURL]
+                                completion:^(NSError *error, UIImage *image, NSString *filePath){
+                                    [self.userInterface configureImageWithFilePath:filePath];
+                                    [self.userInterface disableActivityForImageLoading];
+            }];
+        } else {
+            [self.userInterface configureImageWithPlaceholder];
+        }
+    }
+    
     [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
 }
 

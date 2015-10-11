@@ -146,7 +146,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="ey2-Px-PFS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="157" id="ey2-Px-PFS">
                                         <rect key="frame" x="0.0" y="438" width="600" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ey2-Px-PFS" id="ZmH-em-cbX">
@@ -167,13 +167,7 @@
                             <outlet property="delegate" destination="Sa7-vx-0lQ" id="ff4-KT-KC2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Dt0-ul-5Yp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fRr-YC-26O">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="Sa7-vx-0lQ" id="DMO-Qf-C8q"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Dt0-ul-5Yp"/>
                     <connections>
                         <outlet property="imageViewPhoto" destination="Cdq-28-y8p" id="dH3-A7-mzo"/>
                         <outlet property="mapView" destination="NMn-pu-Ebw" id="48v-id-FkO"/>

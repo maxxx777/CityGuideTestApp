@@ -18,5 +18,6 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic city;
+@dynamic filePath;
 
 @end

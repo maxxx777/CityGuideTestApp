@@ -15,6 +15,7 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic imageUrl;
+@dynamic filePath;
 
 - (instancetype)initWithPlace:(MTMappedPlace *)place_
 {
@@ -23,6 +24,7 @@
                         latitude:place_.latitude
                        longitude:place_.longitude
                         imageUrl:place_.imageUrl
+                        filePath:place_.filePath
                 placeDescription:place_.placeDescription
                             city:nil];
     if (self) {
@@ -31,6 +33,7 @@
         self.latitude = place_.latitude;
         self.longitude = place_.longitude;
         self.imageUrl = place_.imageUrl;
+        self.filePath = place_.filePath;
     }
     return self;
 }
@@ -40,6 +43,7 @@
                       latitude:(NSNumber *)latitude_
                      longitude:(NSNumber *)longitude_
                       imageUrl:(NSString *)imageUrl_
+                      filePath:(NSString *)filePath_
               placeDescription:(NSString *)placeDescription_
                           city:(MTMappedCity *)city_
 {
@@ -54,6 +58,7 @@
                                                               latitude:nil
                                                              longitude:nil
                                                               imageUrl:nil
+                                                              filePath:nil
                                                       placeDescription:nil
                                                                   city:nil];
     return [self initWithPlace:mappedPlace];
@@ -82,6 +87,11 @@
 - (void)setImageUrl:(NSString *)imageUrl
 {
     _imageUrl = [imageUrl copy];
+}
+
+- (void)setFilePath:(NSString *)filePath
+{
+    _filePath = [filePath copy];
 }
 
 @end

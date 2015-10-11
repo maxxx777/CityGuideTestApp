@@ -9,10 +9,13 @@
 #import "MTItemDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MTPlaceAnnotation.h"
+#import "MTItemDetailViewConstants.h"
+#import "UIImageView+MTActivityAnimation.h"
 
 @interface MTItemDetailViewController ()
 
 @property (nonatomic, strong) MTPlaceAnnotation *placeAnnotation;
+@property (nonatomic, strong) UIImagePickerController *imagePicker;
 
 @end
 
@@ -23,6 +26,7 @@
 {
     [super viewDidLoad];
     
+    [self configureView];
     [self.presenter onDidLoadView];
 }
 
@@ -62,44 +66,35 @@
     [self.mapView regionThatFits:region];
 }
 
-- (void)configureImageWithURL:(NSURL *)url
+- (void)configureImageWithFilePath:(NSString *)filePath
 {
-    __block UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityIndicator.hidesWhenStopped = YES;
-    
-    [self.imageViewPhoto addSubview:activityIndicator];
-    [activityIndicator startAnimating];
-    
-    [activityIndicator setTranslatesAutoresizingMaskIntoConstraints:NO];
-    NSLayoutConstraint *heightConstraint =
-    [NSLayoutConstraint constraintWithItem:self.imageViewPhoto
-                                 attribute:NSLayoutAttributeCenterX
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:activityIndicator
-                                 attribute:NSLayoutAttributeCenterX
-                                multiplier:1.0
-                                  constant:0];
-    [self.photoCell.contentView addConstraint:heightConstraint];
-    
-    NSLayoutConstraint *widthConstraint =
-    [NSLayoutConstraint constraintWithItem:self.imageViewPhoto
-                                 attribute:NSLayoutAttributeCenterY
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:activityIndicator
-                                 attribute:NSLayoutAttributeCenterY
-                                multiplier:1.0
-                                  constant:0];
-    [self.photoCell.contentView addConstraint:widthConstraint];
-    
-    [self.imageViewPhoto sd_setImageWithURL:url
-                           placeholderImage:nil
-                                    options:SDWebImageRetryFailed
-                                  completed:^(UIImage *image,
-                                              NSError *error,
-                                              SDImageCacheType cacheType,
-                                              NSURL *imageURL){
-                                      [activityIndicator removeFromSuperview];
-                                  }];
+    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+    [self.imageViewPhoto setImage:image];
+}
+
+- (void)configureImageWithPlaceholder
+{
+    UIImage *image = [UIImage imageNamed:@"image-placeholder.png"];
+    [self.imageViewPhoto setImage:image];
+}
+
+- (void)configureRightBarButtonOnNavigationBarAsSave
+{
+    UIBarButtonItem *saveBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                      target:self
+                                      action:@selector(saveButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = saveBarButton;
+}
+
+- (void)enableActivityForImageLoading
+{
+    [self.imageViewPhoto mt_startActivityAnimation];
+}
+
+- (void)disableActivityForImageLoading
+{
+    [self.imageViewPhoto mt_stopActivityAnimation];
 }
 
 - (void)enableDropPinOnMapView
@@ -120,6 +115,24 @@
 - (void)closeView
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)openPhotoCamera
+{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentImagePicker];
+}
+
+- (void)openPhotoLibrary
+{
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentImagePicker];
 }
 
 #pragma mark - IB Actions
@@ -163,7 +176,51 @@
     return YES;
 }
 
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+//    [self.popOver dismissPopoverAnimated:YES];
+    
+    // Extracting image from the picker and saving it
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    if ([mediaType isEqualToString:@"public.image"]){
+        
+        if ([self.presenter respondsToSelector:@selector(onDidSelectImage:)]) {
+            [self.presenter onDidSelectImage:info[UIImagePickerControllerOriginalImage]];
+        }
+    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+//    [self.popOver dismissPopoverAnimated:YES];
+}
+
+#pragma mark = TableView
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewImageCellIdentifier]) {
+
+        [self.presenter onDidSelectImageCell];
+        
+    } 
+}
+
 #pragma mark - Helper
+
+- (void)configureView
+{
+    _imagePicker = [[UIImagePickerController alloc] init];
+    self.imagePicker.delegate = self;
+}
 
 - (void)handleDropPin:(UIGestureRecognizer *)gestureRecognizer
 {
@@ -185,6 +242,21 @@
                                            @"latitude" : @(touchMapCoordinate.latitude),
                                            @"longitude" : @(touchMapCoordinate.longitude)
                                            }];
+}
+
+- (void)presentImagePicker
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        //        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
+        //        [popover presentPopoverFromRect:presentingViewController.navigationController.navigationBar.bounds
+        //                                 inView:presentingViewController.view permittedArrowDirections:UIPopoverArrowDirectionAny
+        //                               animated:YES];
+        //        self.popOver = popover;
+    } else {
+        [self presentViewController:self.imagePicker
+                           animated:YES
+                         completion:nil];
+    }
 }
 
 @end

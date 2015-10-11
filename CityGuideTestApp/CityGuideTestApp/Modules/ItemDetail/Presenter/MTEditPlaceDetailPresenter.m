@@ -10,6 +10,8 @@
 #import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
 #import "MTLocationManager.h"
+#import "MTImageManager.h"
+#import "MTAlertWrapper.h"
 
 @interface MTEditPlaceDetailPresenter ()
 
@@ -42,17 +44,7 @@
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
     
-    NSString *placeName = [self.placeDetailConfigurator placeName] ? [self.placeDetailConfigurator placeName] : @"";
-    [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@", placeName]];
-    
-    NSString *placeDescription = [self.placeDetailConfigurator placeDescription] ? [self.placeDetailConfigurator placeDescription] : @"";
-    [self.userInterface configureDescriptionWithText:placeDescription];
-    
-//    [self.userInterface configureImageWithURL:[self.placeDetailConfigurator photoURL]];
-    
-//    if ([[MTLocationManager sharedManager] isCurrentLocationDetected]) {
-//        [self.userInterface configureMapWithCoordinates:[[MTLocationManager sharedManager] currentLocation]];
-//    }
+    [self.userInterface configureRightBarButtonOnNavigationBarAsSave];
     
     [self.userInterface enableDropPinOnMapView];
 }
@@ -75,6 +67,52 @@
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
     [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
+}
+
+- (void)onDidSelectImageCell
+{
+    MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
+    [alertWrapper showActionSheetInViewController:self.userInterface
+                                        withTitle:NSLocalizedString(@"Attach photo", nil)
+                                cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                           otherButtonTitlesArray:@[NSLocalizedString(@"Camera", nil), NSLocalizedString(@"Photo library", nil)]
+                                clickedCompletion:nil
+                             didDismissCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
+                                 if (actionTitle) {
+                                     
+                                     if ([actionTitle isEqualToString:NSLocalizedString(@"Camera", nil)]) {
+                                         
+                                         [self.userInterface openPhotoCamera];
+                                         
+                                     } else if ([actionTitle isEqualToString:NSLocalizedString(@"Photo library", nil)]) {
+                                         
+                                         [self.userInterface openPhotoLibrary];
+                                         
+                                     }
+                                     
+                                 } else {
+                                     
+                                     if (buttonIndex == 1) {
+                                         
+                                         [self.userInterface openPhotoCamera];
+                                         
+                                     } else if (buttonIndex == 2) {
+                                         
+                                         [self.userInterface openPhotoLibrary];
+                                         
+                                     }
+                                 }
+                             }];
+}
+
+- (void)onDidSelectImage:(UIImage *)image
+{
+    MTImageManager *imageManager = [[MTImageManager alloc] init];
+    [imageManager saveImageToFile:image
+                       completion:^(NSError *error, UIImage *image, NSString *filePath){
+                        [self.placeDetailConfigurator configurePlacePhotoPath:filePath];
+                        [self.userInterface configureImageWithFilePath:filePath];
+    }];
 }
 
 #pragma mark - MTItemOperatorOutputInterface

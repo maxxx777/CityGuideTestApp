@@ -49,6 +49,10 @@
 		7502C2581BC59018008ECF59 /* NSObject+MTMergeObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1B71BC59018008ECF59 /* NSObject+MTMergeObjects.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BB1BC59018008ECF59 /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
 		7502C25B1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1BE1BC59018008ECF59 /* MTFetchedResultsControllerBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
+		756174E11BCAA1B2004A843C /* NSString+MTFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 756174CC1BCAA1B2004A843C /* NSString+MTFormatting.m */; settings = {ASSET_TAGS = (); }; };
+		756174F81BCAAA11004A843C /* MTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 756174F71BCAAA11004A843C /* MTImageManager.m */; settings = {ASSET_TAGS = (); }; };
+		756175011BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */; settings = {ASSET_TAGS = (); }; };
+		756175031BCAB74F004A843C /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 756175021BCAB74F004A843C /* image_placeholder.png */; settings = {ASSET_TAGS = (); }; };
 		7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */; settings = {ASSET_TAGS = (); }; };
 		7564866F1BC7B42B0012A794 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7564866E1BC7B42B0012A794 /* disclosure.png */; settings = {ASSET_TAGS = (); }; };
 		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
@@ -216,6 +220,15 @@
 		7502C1C21BC59018008ECF59 /* MTItemListCacheInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheInterface.h; sourceTree = "<group>"; };
 		7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificColorsInterface.h; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
+		756174CB1BCAA1B2004A843C /* NSString+MTFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MTFormatting.h"; sourceTree = "<group>"; };
+		756174CC1BCAA1B2004A843C /* NSString+MTFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTFormatting.m"; sourceTree = "<group>"; };
+		756174F61BCAAA11004A843C /* MTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManager.h; sourceTree = "<group>"; };
+		756174F71BCAAA11004A843C /* MTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageManager.m; sourceTree = "<group>"; };
+		756174F91BCAAA4B004A843C /* MTImageManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTImageManagerConstants.h; sourceTree = "<group>"; };
+		756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManagerInterface.h; sourceTree = "<group>"; };
+		756174FF1BCAB2AE004A843C /* UIImageView+MTActivityAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MTActivityAnimation.h"; sourceTree = "<group>"; };
+		756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MTActivityAnimation.m"; sourceTree = "<group>"; };
+		756175021BCAB74F004A843C /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCell.h; sourceTree = "<group>"; };
 		7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListCell.m; sourceTree = "<group>"; };
 		7564866E1BC7B42B0012A794 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
@@ -281,6 +294,7 @@
 		75FE090F1BCA7E2000765F7D /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
 		75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
 		75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
+		75FE09131BCA9F1300765F7D /* MTItemDetailViewConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDetailViewConstants.h; sourceTree = "<group>"; };
 		908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CityGuideTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -608,6 +622,7 @@
 				75EAA90C1BC9788E000BE44A /* MTItemDetailViewController.h */,
 				75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */,
 				75EAA9121BC97A0F000BE44A /* MTItemDetailViewInterface.h */,
+				75FE09131BCA9F1300765F7D /* MTItemDetailViewConstants.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -780,6 +795,8 @@
 		7502C17D1BC59018008ECF59 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				756174FE1BCAB2AE004A843C /* UIImageView-MTActivityView */,
+				756174F51BCAA9F4004A843C /* MTImageLoader */,
 				757831A81BC81639008BD2FC /* MTLocationManager */,
 				757831991BC7FA14008BD2FC /* CustomControls */,
 				75D32D621BC66E990010D705 /* NSNumber-NewItemId */,
@@ -805,6 +822,7 @@
 		7502C1891BC59018008ECF59 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				756174C91BCAA1B2004A843C /* NSString-MTFormating */,
 				7502C18A1BC59018008ECF59 /* MTAlertWrapper */,
 				7502C1AA1BC59018008ECF59 /* MTDataLayer */,
 				7502C1B91BC59018008ECF59 /* MTItemListCache */,
@@ -894,9 +912,47 @@
 			path = RequestBuilder;
 			sourceTree = "<group>";
 		};
+		756174C91BCAA1B2004A843C /* NSString-MTFormating */ = {
+			isa = PBXGroup;
+			children = (
+				756174CA1BCAA1B2004A843C /* Classes */,
+			);
+			path = "NSString-MTFormating";
+			sourceTree = "<group>";
+		};
+		756174CA1BCAA1B2004A843C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				756174CB1BCAA1B2004A843C /* NSString+MTFormatting.h */,
+				756174CC1BCAA1B2004A843C /* NSString+MTFormatting.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		756174F51BCAA9F4004A843C /* MTImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				756174F91BCAAA4B004A843C /* MTImageManagerConstants.h */,
+				756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */,
+				756174F61BCAAA11004A843C /* MTImageManager.h */,
+				756174F71BCAAA11004A843C /* MTImageManager.m */,
+			);
+			path = MTImageLoader;
+			sourceTree = "<group>";
+		};
+		756174FE1BCAB2AE004A843C /* UIImageView-MTActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				756174FF1BCAB2AE004A843C /* UIImageView+MTActivityAnimation.h */,
+				756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */,
+			);
+			path = "UIImageView-MTActivityView";
+			sourceTree = "<group>";
+		};
 		7564866D1BC7B42B0012A794 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				756175021BCAB74F004A843C /* image_placeholder.png */,
 				7564866E1BC7B42B0012A794 /* disclosure.png */,
 			);
 			path = Images;
@@ -1121,6 +1177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7564866F1BC7B42B0012A794 /* disclosure.png in Resources */,
+				756175031BCAB74F004A843C /* image_placeholder.png in Resources */,
 				7502C2241BC59018008ECF59 /* Info.plist in Resources */,
 				75D32D461BC649110010D705 /* Base.storyboard in Resources */,
 				75D32D451BC649110010D705 /* places_25_06.json in Resources */,
@@ -1196,6 +1253,7 @@
 				7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */,
 				7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */,
 				7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */,
+				756174E11BCAA1B2004A843C /* NSString+MTFormatting.m in Sources */,
 				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
 				7502C2571BC59018008ECF59 /* NSObject+MTMergeObject.m in Sources */,
 				75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */,
@@ -1225,6 +1283,7 @@
 				7502C2281BC59018008ECF59 /* MTSaveItemsOperation.m in Sources */,
 				7502C2341BC59018008ECF59 /* MTCityListCell.m in Sources */,
 				75D32D5D1BC66C200010D705 /* MTManagedItem.m in Sources */,
+				756175011BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m in Sources */,
 				7502C2231BC59018008ECF59 /* NSString+MTSpecificStrings.m in Sources */,
 				7502C2471BC59018008ECF59 /* MTAlertWrapper.m in Sources */,
 				75D32D651BC66E990010D705 /* NSNumber+MTNewItemId.m in Sources */,
@@ -1240,6 +1299,7 @@
 				75D32D5F1BC66C200010D705 /* MTManagedCity.m in Sources */,
 				7502C2481BC59018008ECF59 /* UIDevice+SystemVersion.m in Sources */,
 				7502C23D1BC59018008ECF59 /* MTRootPresenter.m in Sources */,
+				756174F81BCAAA11004A843C /* MTImageManager.m in Sources */,
 				75D32D601BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m in Sources */,
 				7502C22E1BC59018008ECF59 /* MTItemListRequester.m in Sources */,
 				75D32D611BC66C200010D705 /* MTManagedPlace.m in Sources */,

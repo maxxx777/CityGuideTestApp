@@ -16,7 +16,9 @@
 <
     MTItemDetailViewInterface,
     UITextFieldDelegate,
-    UITextViewDelegate
+    UITextViewDelegate,
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate
 >
 
 @property (nonatomic, strong) IBOutlet UITableViewCell *photoCell;

@@ -59,4 +59,9 @@
     return [NSURL URLWithString:self.place.imageUrl];
 }
 
+- (NSString *)filePath
+{
+    return self.place.filePath;
+}
+
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSString *imageUrl;
+@property (nonatomic, strong) NSString *filePath;
 @property (nonatomic, strong) NSString *placeDescription;
 
 - (instancetype)initWithPlace:(MTMappedPlace *)place_ NS_DESIGNATED_INITIALIZER;

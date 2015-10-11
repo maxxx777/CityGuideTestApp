@@ -15,6 +15,7 @@
 - (NSString *)placeDescription;
 - (NSDictionary *)placeCoordinates;
 - (NSURL *)photoURL;
+- (NSString *)filePath;
 
 @end
 
