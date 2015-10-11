@@ -223,5 +223,54 @@
             </objects>
             <point key="canvasLocation" x="305" y="337"/>
         </scene>
+        <!--Image Browser View Controller-->
+        <scene sceneID="vhD-nR-iAD">
+            <objects>
+                <viewController storyboardIdentifier="ImageBrowserViewController" id="K4T-Yk-QnI" customClass="MTImageBrowserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="47j-oB-csx"/>
+                        <viewControllerLayoutGuide type="bottom" id="vm4-iN-Rxc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p4u-do-acC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="A0Z-Mq-3qf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ghm-rL-MW9">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ghm-rL-MW9" firstAttribute="leading" secondItem="A0Z-Mq-3qf" secondAttribute="leading" id="0dL-n2-CnB"/>
+                                    <constraint firstItem="Ghm-rL-MW9" firstAttribute="centerY" secondItem="A0Z-Mq-3qf" secondAttribute="centerY" id="9IW-NO-WgG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghm-rL-MW9" secondAttribute="bottom" id="OJ0-vh-Vlm"/>
+                                    <constraint firstItem="Ghm-rL-MW9" firstAttribute="top" secondItem="A0Z-Mq-3qf" secondAttribute="top" id="V7T-da-pcS"/>
+                                    <constraint firstItem="Ghm-rL-MW9" firstAttribute="centerX" secondItem="A0Z-Mq-3qf" secondAttribute="centerX" id="Vms-Vu-mfY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghm-rL-MW9" secondAttribute="trailing" id="ilv-WR-tf9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="K4T-Yk-QnI" id="QSZ-Pf-OWb"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A0Z-Mq-3qf" firstAttribute="leading" secondItem="p4u-do-acC" secondAttribute="leading" id="0br-52-Xv2"/>
+                            <constraint firstAttribute="trailing" secondItem="A0Z-Mq-3qf" secondAttribute="trailing" id="Jar-C4-0p3"/>
+                            <constraint firstItem="vm4-iN-Rxc" firstAttribute="top" secondItem="A0Z-Mq-3qf" secondAttribute="bottom" id="jyb-vf-S8r"/>
+                            <constraint firstItem="A0Z-Mq-3qf" firstAttribute="top" secondItem="p4u-do-acC" secondAttribute="top" id="uZE-3a-1zh"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="imageView" destination="Ghm-rL-MW9" id="B8o-Yx-Th5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zh4-jZ-vae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="997"/>
+        </scene>
     </scenes>
 </document>

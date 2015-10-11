@@ -9,6 +9,7 @@
 #import "MTAppModulesConnector.h"
 #import "MTItemListWireframe.h"
 #import "MTItemDetailWireframe.h"
+#import "MTImageBrowserWireframe.h"
 
 @interface MTAppModulesConnector ()
 
@@ -37,9 +38,12 @@
     _itemListModule = [[MTItemListWireframe alloc] init];
     MTItemDetailWireframe *itemDetailModule = [[MTItemDetailWireframe alloc] init];
     MTItemDetailWireframe *addItemModule = [[MTItemDetailWireframe alloc] init];
+    MTImageBrowserWireframe *imageBrowserModule = [[MTImageBrowserWireframe alloc] init];
     
     self.itemListModule.itemDetailModule = itemDetailModule;
     self.itemListModule.addItemModule = addItemModule;
+    
+    itemDetailModule.imageBrowserModule = imageBrowserModule;
 }
 
 - (void)showMainScreen

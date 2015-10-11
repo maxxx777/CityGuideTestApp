@@ -9,9 +9,15 @@
 #import "MTRootWireframe.h"
 #import "MTItemDetailModuleInterface.h"
 
+@protocol MTImageBrowserModuleInterface;
+
 @interface MTItemDetailWireframe : MTRootWireframe
 <
     MTItemDetailModuleInterface
 >
+
+@property (nonatomic, strong, nonnull) id<MTImageBrowserModuleInterface>imageBrowserModule;
+
+- (void)onDidSelectImage:(UIImage *)image;
 
 @end

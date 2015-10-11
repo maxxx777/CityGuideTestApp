@@ -69,4 +69,9 @@
     [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
 }
 
+- (void)onDidSelectImageCell
+{
+    [self.wireframe onDidSelectImage:[self.userInterface imagePhoto]];
+}
+
 @end

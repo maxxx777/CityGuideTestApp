@@ -34,4 +34,6 @@
 
 - (void)closeView;
 
+- (UIImage *)imagePhoto;
+
 @end

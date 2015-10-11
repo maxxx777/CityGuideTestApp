@@ -7,6 +7,7 @@
 //
 
 #import "MTItemDetailWireframe.h"
+#import "MTImageBrowserModuleInterface.h"
 #import "MTItemDetailViewController.h"
 #import "MTShowPlaceDetailPresenter.h"
 #import "MTEditPlaceDetailPresenter.h"
@@ -53,6 +54,14 @@
     //navigate
     [navigationController pushViewController:self.viewController
                                     animated:YES];
+}
+
+#pragma mark - Public
+
+- (void)onDidSelectImage:(UIImage *)image
+{
+    [self.imageBrowserModule showImage:image
+                  navigationController:self.viewController.navigationController];
 }
 
 #pragma mark - Helper

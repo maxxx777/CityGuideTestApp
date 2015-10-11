@@ -150,6 +150,11 @@
     [self presentImagePicker];
 }
 
+- (UIImage *)imagePhoto
+{
+    return self.imageViewPhoto.image;
+}
+
 #pragma mark - IB Actions
 
 - (IBAction)saveButtonPressed:(id)sender

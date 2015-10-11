@@ -52,6 +52,9 @@
 		756174F81BCAAA11004A843C /* MTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 756174F71BCAAA11004A843C /* MTImageManager.m */; settings = {ASSET_TAGS = (); }; };
 		756175011BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */; settings = {ASSET_TAGS = (); }; };
 		756175031BCAB74F004A843C /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 756175021BCAB74F004A843C /* image_placeholder.png */; settings = {ASSET_TAGS = (); }; };
+		7561750C1BCAE457004A843C /* MTImageBrowserWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */; settings = {ASSET_TAGS = (); }; };
+		756175101BCAE514004A843C /* MTImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750F1BCAE514004A843C /* MTImageBrowserViewController.m */; settings = {ASSET_TAGS = (); }; };
+		756175141BCAEA79004A843C /* MTImageBrowserPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 756175131BCAEA79004A843C /* MTImageBrowserPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */; settings = {ASSET_TAGS = (); }; };
 		7564866F1BC7B42B0012A794 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7564866E1BC7B42B0012A794 /* disclosure.png */; settings = {ASSET_TAGS = (); }; };
 		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
@@ -225,6 +228,15 @@
 		756174FF1BCAB2AE004A843C /* UIImageView+MTActivityAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MTActivityAnimation.h"; sourceTree = "<group>"; };
 		756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MTActivityAnimation.m"; sourceTree = "<group>"; };
 		756175021BCAB74F004A843C /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
+		7561750A1BCAE457004A843C /* MTImageBrowserWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserWireframe.h; sourceTree = "<group>"; };
+		7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageBrowserWireframe.m; sourceTree = "<group>"; };
+		7561750D1BCAE470004A843C /* MTImageBrowserModuleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserModuleInterface.h; sourceTree = "<group>"; };
+		7561750E1BCAE514004A843C /* MTImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserViewController.h; sourceTree = "<group>"; };
+		7561750F1BCAE514004A843C /* MTImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageBrowserViewController.m; sourceTree = "<group>"; };
+		756175121BCAEA79004A843C /* MTImageBrowserPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserPresenter.h; sourceTree = "<group>"; };
+		756175131BCAEA79004A843C /* MTImageBrowserPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageBrowserPresenter.m; sourceTree = "<group>"; };
+		756175151BCAEA8D004A843C /* MTImageBrowserPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserPresenterInterface.h; sourceTree = "<group>"; };
+		756175161BCAEAC7004A843C /* MTImageBrowserViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserViewInterface.h; sourceTree = "<group>"; };
 		7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCell.h; sourceTree = "<group>"; };
 		7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListCell.m; sourceTree = "<group>"; };
 		7564866E1BC7B42B0012A794 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
@@ -570,6 +582,7 @@
 		7502C1361BC59018008ECF59 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				756175071BCAE3CA004A843C /* ImageBrowser */,
 				7502C1371BC59018008ECF59 /* ItemDetail */,
 				7502C13E1BC59018008ECF59 /* ItemList */,
 			);
@@ -934,6 +947,46 @@
 			path = "UIImageView-MTActivityView";
 			sourceTree = "<group>";
 		};
+		756175071BCAE3CA004A843C /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				756175111BCAE9D4004A843C /* Presenter */,
+				756175081BCAE3FA004A843C /* View */,
+				756175091BCAE3FA004A843C /* Wireframe */,
+			);
+			path = ImageBrowser;
+			sourceTree = "<group>";
+		};
+		756175081BCAE3FA004A843C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7561750E1BCAE514004A843C /* MTImageBrowserViewController.h */,
+				7561750F1BCAE514004A843C /* MTImageBrowserViewController.m */,
+				756175161BCAEAC7004A843C /* MTImageBrowserViewInterface.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		756175091BCAE3FA004A843C /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				7561750A1BCAE457004A843C /* MTImageBrowserWireframe.h */,
+				7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */,
+				7561750D1BCAE470004A843C /* MTImageBrowserModuleInterface.h */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		756175111BCAE9D4004A843C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				756175121BCAEA79004A843C /* MTImageBrowserPresenter.h */,
+				756175131BCAEA79004A843C /* MTImageBrowserPresenter.m */,
+				756175151BCAEA8D004A843C /* MTImageBrowserPresenterInterface.h */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		7564866D1BC7B42B0012A794 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1232,8 +1285,10 @@
 				7502C25A1BC59018008ECF59 /* MTArrayBasedItemListCache.m in Sources */,
 				7502C2221BC59018008ECF59 /* MTAppModulesConnector.m in Sources */,
 				756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */,
+				756175101BCAE514004A843C /* MTImageBrowserViewController.m in Sources */,
 				757831AB1BC81639008BD2FC /* MTLocationManager.m in Sources */,
 				7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */,
+				756175141BCAEA79004A843C /* MTImageBrowserPresenter.m in Sources */,
 				7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */,
 				7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */,
 				7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */,
@@ -1241,6 +1296,7 @@
 				756174E11BCAA1B2004A843C /* NSString+MTFormatting.m in Sources */,
 				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
 				7502C2571BC59018008ECF59 /* NSObject+MTMergeObject.m in Sources */,
+				7561750C1BCAE457004A843C /* MTImageBrowserWireframe.m in Sources */,
 				75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */,
 				75FE08FF1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m in Sources */,
 				7502C22A1BC59018008ECF59 /* MTItemWebService.m in Sources */,
