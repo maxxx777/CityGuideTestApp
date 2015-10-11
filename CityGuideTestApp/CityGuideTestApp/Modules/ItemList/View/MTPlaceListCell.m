@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) UIImageView *imageViewPhoto;
 @property (nonatomic, strong) UILabel *labelName;
+@property (nonatomic, strong) UIView *viewLine;
 
 @end
 
@@ -37,13 +38,19 @@
         self.labelName.font = [UIFont fontWithName:@"ArialMT" size:16.0f];
         self.labelName.numberOfLines = 0;
         
+        _viewLine = [[UIView alloc] init];
+        self.viewLine.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        
         [self.contentView addSubview:self.imageViewPhoto];
         [self.contentView addSubview:self.labelName];
+        [self.contentView addSubview:self.viewLine];
         
         UIView *imageView = self.imageViewPhoto;
         UIView *labelName = self.labelName;
+        UIView *viewLine = self.viewLine;
         [self.imageViewPhoto setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.labelName setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self.viewLine setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.contentView addConstraints:[NSLayoutConstraint
                                           constraintsWithVisualFormat:@"H:|-5-[imageView(==50)]-5-[labelName]-5-|"
                                           options:NSLayoutFormatDirectionLeadingToTrailing
@@ -59,6 +66,16 @@
                                           options:NSLayoutFormatDirectionLeadingToTrailing
                                           metrics:nil
                                           views:NSDictionaryOfVariableBindings(labelName)]];
+        [self.contentView addConstraints:[NSLayoutConstraint
+                                          constraintsWithVisualFormat:@"H:|-0-[viewLine]-(-33)-|"
+                                          options:NSLayoutFormatDirectionLeadingToTrailing
+                                          metrics:nil
+                                          views:NSDictionaryOfVariableBindings(viewLine)]];
+        [self.contentView addConstraints:[NSLayoutConstraint
+                                          constraintsWithVisualFormat:@"V:[viewLine(==1)]-0-|"
+                                          options:NSLayoutFormatDirectionLeadingToTrailing
+                                          metrics:nil
+                                          views:NSDictionaryOfVariableBindings(viewLine)]];
     }
     return self;
 }
