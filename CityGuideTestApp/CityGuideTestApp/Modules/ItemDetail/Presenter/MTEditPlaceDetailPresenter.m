@@ -47,6 +47,8 @@
     [self.userInterface configureRightBarButtonOnNavigationBarAsSave];
     
     [self.userInterface enableDropPinOnMapView];
+    
+    [self.userInterface configureImageWithPlaceholder];
 }
 
 - (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates
@@ -67,6 +69,16 @@
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
     [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
+}
+
+- (void)onDidSelectNameCell
+{
+    [self.userInterface beginEditName];
+}
+
+- (void)onDidSelectDescriptionCell
+{
+    [self.userInterface beginEditDescription];
 }
 
 - (void)onDidSelectImageCell

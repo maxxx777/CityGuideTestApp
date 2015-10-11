@@ -19,6 +19,10 @@
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;
 
+- (void)beginEditName;
+- (void)beginEditDescription;
+- (void)showFullScreenPhoto;
+
 - (void)enableActivityForImageLoading;
 - (void)disableActivityForImageLoading;
 

@@ -16,6 +16,9 @@
 - (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates;
 - (void)onDidChangeTextFieldName:(NSString *)name;
 - (void)onDidChangeTextViewDescription:(NSString *)description;
+- (void)onDidSelectMapCell;
+- (void)onDidSelectNameCell;
+- (void)onDidSelectDescriptionCell;
 - (void)onDidSelectImageCell;
 - (void)onDidSelectImage:(UIImage *)image;
 

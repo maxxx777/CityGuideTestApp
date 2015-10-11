@@ -55,8 +55,11 @@
             MTImageManager *imageManager = [[MTImageManager alloc] init];
             [imageManager loadImageFromURL:[self.placeDetailFetcher photoURL]
                                 completion:^(NSError *error, UIImage *image, NSString *filePath){
-                                    [self.userInterface configureImageWithFilePath:filePath];
-                                    [self.userInterface disableActivityForImageLoading];
+                                    [imageManager saveImageToFile:image
+                                                       completion:^(NSError *error, UIImage *image, NSString *filePath){
+                                                           [self.userInterface configureImageWithFilePath:filePath];
+                                                           [self.userInterface disableActivityForImageLoading];
+                                    }];                                    
             }];
         } else {
             [self.userInterface configureImageWithPlaceholder];

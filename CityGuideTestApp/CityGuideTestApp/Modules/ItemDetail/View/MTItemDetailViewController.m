@@ -74,7 +74,7 @@
 
 - (void)configureImageWithPlaceholder
 {
-    UIImage *image = [UIImage imageNamed:@"image-placeholder.png"];
+    UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
     [self.imageViewPhoto setImage:image];
 }
 
@@ -110,6 +110,21 @@
     for (UIGestureRecognizer *gestureRecognizer in [self.mapView gestureRecognizers]) {
         [self.mapView removeGestureRecognizer:gestureRecognizer];
     }
+}
+
+- (void)beginEditName
+{
+    [self.textFieldName becomeFirstResponder];
+}
+
+- (void)beginEditDescription
+{
+    [self.textViewDescription becomeFirstResponder];
+}
+
+- (void)showFullScreenPhoto
+{
+    
 }
 
 - (void)closeView
@@ -207,9 +222,29 @@
 {
     UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
-    if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewImageCellIdentifier]) {
+    if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewMapCellIdentifier]) {
+        
+        if ([self.presenter respondsToSelector:@selector(onDidSelectMapCell)]) {
+            [self.presenter onDidSelectMapCell];
+        }
+        
+    } else if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewNameCellIdentifier]) {
+        
+        if ([self.presenter respondsToSelector:@selector(onDidSelectNameCell)]) {
+            [self.presenter onDidSelectNameCell];
+        }
+        
+    } else if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewDescriptionCellIdentifier]) {
+        
+        if ([self.presenter respondsToSelector:@selector(onDidSelectDescriptionCell)]) {
+            [self.presenter onDidSelectDescriptionCell];
+        }
+        
+    } else if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewImageCellIdentifier]) {
 
-        [self.presenter onDidSelectImageCell];
+        if ([self.presenter respondsToSelector:@selector(onDidSelectImageCell)]) {
+            [self.presenter onDidSelectImageCell];
+        }
         
     } 
 }

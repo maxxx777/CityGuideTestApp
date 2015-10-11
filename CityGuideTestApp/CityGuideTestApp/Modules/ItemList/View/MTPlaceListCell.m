@@ -92,7 +92,7 @@
                                     [self.imageViewPhoto mt_stopActivityAnimation];
                                        }];
         } else {
-            UIImage *image = [UIImage imageNamed:@"image-placeholder.png"];
+            UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
             [self.imageViewPhoto setImage:image];
         }
     }
