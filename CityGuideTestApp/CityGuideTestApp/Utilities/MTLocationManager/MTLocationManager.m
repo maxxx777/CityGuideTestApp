@@ -59,6 +59,11 @@ static NSString *MTSettingsCurrentLocation = @"MTSettingsCurrentLocation";
     return currentLocation != nil;
 }
 
+- (NSDictionary *)currentLocation
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:MTSettingsCurrentLocation];
+}
+
 - (BOOL)isLocationWithLatitude:(NSNumber *)latitude
                      longitude:(NSNumber *)longitude
                   withinRadius:(NSNumber *)radius
@@ -105,13 +110,6 @@ static NSString *MTSettingsCurrentLocation = @"MTSettingsCurrentLocation";
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     [self.locationManager stopUpdatingLocation];
-}
-
-#pragma mark - Helper
-
-- (NSDictionary *)currentLocation
-{
-    return [[NSUserDefaults standardUserDefaults] valueForKey:MTSettingsCurrentLocation];
 }
 
 @end
