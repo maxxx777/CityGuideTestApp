@@ -17,8 +17,14 @@
 - (NSURL *)photoURL;
 - (NSString *)filePath;
 
+- (id)currentItem;
+
+- (void)refreshCurrentItem;
+
 @end
 
 @protocol MTPlaceDetailFetcherOutputInterface <NSObject>
+
+- (void)onDidRefreshCurrentItem;
 
 @end

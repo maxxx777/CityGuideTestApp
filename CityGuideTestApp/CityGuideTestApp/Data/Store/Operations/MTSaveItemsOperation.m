@@ -76,16 +76,13 @@
         }
     }
     
-    NSUInteger count = [[MTDataStore sharedStore] countOfObjectsForEntity:@"MTManagedCity"
-                                                                predicate:nil
-                                                        sortedDescriptors:nil
-                                                                  context:[[MTDataStore sharedStore] mainQueueContext]];
-    NSLog(@"count: %lu", (unsigned long)count);
-    
-    if ([self.delegate respondsToSelector:@selector(onDidObjectsMergeWithError:isOperationCancelled:)]) {
-        [self.delegate onDidObjectsMergeWithError:error
-                             isOperationCancelled:self.isCancelled];
-    }
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^
+     {
+         if ([self.delegate respondsToSelector:@selector(onDidObjectsMergeWithError:isOperationCancelled:)]) {
+             [self.delegate onDidObjectsMergeWithError:error
+                                  isOperationCancelled:self.isCancelled];
+         }
+     }];
 }
 
 @end

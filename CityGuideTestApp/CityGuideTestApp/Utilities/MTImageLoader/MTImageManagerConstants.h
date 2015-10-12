@@ -8,4 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^MTImageManagerCompletionBlock)(NSError *error, UIImage *image, NSString *filePath);
+typedef void (^MTImageManagerFetchImageCompletionBlock)(NSError *error, NSString *filePath);
+typedef void (^MTImageManagerDownloadFileCompletionBlock)(NSError *error, NSData *data);
+typedef void (^MTImageManagerSaveFileCompletionBlock)(NSError *error, NSString *filePath);

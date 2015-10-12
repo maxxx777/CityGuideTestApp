@@ -50,17 +50,24 @@
     } else {
         if ([self.placeDetailFetcher photoURL]) {
             
-            [self.userInterface enableActivityForImageLoading];
             
-            MTImageManager *imageManager = [[MTImageManager alloc] init];
-            [imageManager loadImageFromURL:[self.placeDetailFetcher photoURL]
-                                completion:^(NSError *error, UIImage *image, NSString *filePath){
-                                    [imageManager saveImageToFile:image
-                                                       completion:^(NSError *error, UIImage *image, NSString *filePath){
-                                                           [self.userInterface configureImageWithFilePath:filePath];
-                                                           [self.userInterface disableActivityForImageLoading];
-                                    }];                                    
-            }];
+            
+            if ([self.placeDetailFetcher filePath]) {
+                [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
+            } else {
+                __weak __typeof(self)weakSelf = self;
+                [self.userInterface enableActivityForImageLoading];
+                [[MTImageManager sharedManager] fetchImageForPlace:[self.placeDetailFetcher currentItem]
+                                                        completion:^(NSError *error, NSString *filePath){
+                                                            if (filePath) {
+                                                                [weakSelf.placeDetailFetcher refreshCurrentItem];
+                                                            } else {
+                                                                [weakSelf.userInterface configureImageWithPlaceholder];
+                                                            }
+                                                            [weakSelf.userInterface disableActivityForImageLoading];
+                                                        }];
+            }
+            
         } else {
             [self.userInterface configureImageWithPlaceholder];
         }
@@ -72,6 +79,13 @@
 - (void)onDidSelectImageCell
 {
     [self.wireframe onDidSelectImage:[self.userInterface imagePhoto]];
+}
+
+#pragma mark - MTPlaceDetailFetcherOutputInterface
+
+- (void)onDidRefreshCurrentItem
+{
+    [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
 }
 
 @end

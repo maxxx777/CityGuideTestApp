@@ -13,6 +13,7 @@
 - (void)updateFooterLabelWithText:(NSString *)text;
 - (void)reloadData;
 - (void)insertRowsAtIndexPaths:(NSArray *)indexPaths;
+- (void)reloadRowsAtIndexPaths:(NSArray *)indexPaths;
 - (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths;
 
 @end

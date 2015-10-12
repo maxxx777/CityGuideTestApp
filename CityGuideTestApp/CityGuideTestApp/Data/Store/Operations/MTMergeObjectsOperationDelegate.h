@@ -11,6 +11,7 @@
 - (void)onDidObjectsMergeWithError: (NSError *)error
               isOperationCancelled: (BOOL)isOperationCancelled;
 - (void)onDidObjectMergeWithError: (NSError *)error
+                           object: (id)object
              isOperationCancelled: (BOOL)isOperationCancelled;
 
 @end

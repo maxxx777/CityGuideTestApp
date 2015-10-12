@@ -119,12 +119,12 @@
 
 - (void)onDidSelectImage:(UIImage *)image
 {
-    MTImageManager *imageManager = [[MTImageManager alloc] init];
-    [imageManager saveImageToFile:image
-                       completion:^(NSError *error, UIImage *image, NSString *filePath){
-                        [self.placeDetailConfigurator configurePlacePhotoPath:filePath];
-                        [self.userInterface configureImageWithFilePath:filePath];
-    }];
+//    MTImageManager *imageManager = [[MTImageManager alloc] init];
+//    [imageManager saveImageToFile:image
+//                       completion:^(NSError *error, UIImage *image, NSString *filePath){
+//                        [self.placeDetailConfigurator configurePlacePhotoPath:filePath];
+//                        [self.userInterface configureImageWithFilePath:filePath];
+//    }];
 }
 
 #pragma mark - MTItemOperatorOutputInterface

@@ -25,6 +25,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
+@property (nonatomic, strong) id<MTItemListChangeDetectorInputInterface>itemListChangeDetector;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTCityListCell *prototypeCityListCell;
@@ -36,6 +37,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
+                   itemListChangeDetector:(id<MTItemListChangeDetectorInputInterface>)itemListChangeDetector
                                 wireframe:(MTItemListWireframe *)wireframe
 {
     self = [super init];
@@ -43,6 +45,7 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
         
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
+        _itemListChangeDetector = itemListChangeDetector;
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];

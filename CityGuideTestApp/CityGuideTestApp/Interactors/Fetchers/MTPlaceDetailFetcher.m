@@ -64,4 +64,9 @@
     return self.place.filePath;
 }
 
+- (id)currentItem
+{
+    return self.place;
+}
+
 @end

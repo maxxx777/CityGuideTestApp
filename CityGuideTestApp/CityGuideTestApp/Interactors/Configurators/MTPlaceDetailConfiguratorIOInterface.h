@@ -15,8 +15,6 @@
 - (void)configurePlaceDescription:(NSString *)description;
 - (void)configurePlacePhotoPath:(NSString *)photoPath;
 
-- (id)currentItem;
-
 @end
 
 @protocol MTPlaceDetailConfiguratorOutputInterface <NSObject, MTPlaceDetailFetcherOutputInterface>

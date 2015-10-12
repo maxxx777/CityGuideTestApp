@@ -69,19 +69,14 @@
 - (void)onDidObjectsMergeWithError:(NSError *)error
               isOperationCancelled:(BOOL)isOperationCancelled
 {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^
-    {
-        [self cacheItemListWithCompletion:self.processItemCompletion];
-    }];
+    [self cacheItemListWithCompletion:self.processItemCompletion];
 }
 
 - (void)onDidObjectMergeWithError:(NSError *)error
+                           object:(id)object
              isOperationCancelled:(BOOL)isOperationCancelled
 {
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^
-     {
-         self.processItemCompletion(error, nil);
-     }];
+    self.processItemCompletion(error, nil);
 }
 
 #pragma mark - Helper
@@ -130,8 +125,10 @@
          
             NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@"city.itemName"
                                                                 ascending:YES];
+            NSSortDescriptor *sd2 = [[NSSortDescriptor alloc] initWithKey:@"itemName"
+                                                                ascending:YES];
             [self.placeListCache cacheItemListWithEntityName:@"MTManagedPlace"
-                                             sortDescriptors:@[sd1]
+                                             sortDescriptors:@[sd1, sd2]
                                                    predicate:[self predicateForFilterType:self.filterType]
                                           sectionNameKeyPath:@"city.itemName"
                                                      context:[[MTDataStore sharedStore] mainQueueContext]

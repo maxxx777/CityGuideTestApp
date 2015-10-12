@@ -152,6 +152,14 @@
     [self.tableView endUpdates];
 }
 
+- (void)reloadRowsAtIndexPaths:(NSArray *)indexPaths
+{
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
+}
+
 - (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths
 {
     [self.tableView beginUpdates];

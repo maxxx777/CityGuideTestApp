@@ -10,9 +10,12 @@
 
 @protocol MTImageManagerInterface <NSObject>
 
-- (void)loadImageFromURL:(NSURL *)url
-              completion:(MTImageManagerCompletionBlock)completionBlock;
-- (void)saveImageToFile:(UIImage *)image
-             completion:(MTImageManagerCompletionBlock)completionBlock;
+- (void)fetchImageForPlace:(id)place
+                completion:(MTImageManagerFetchImageCompletionBlock)completionBlock;
+
+//- (void)loadImageFromURL:(NSURL *)url
+//              completion:(MTImageManagerCompletionBlock)completionBlock;
+//- (void)saveImageToFile:(UIImage *)image
+//             completion:(MTImageManagerCompletionBlock)completionBlock;
 
 @end

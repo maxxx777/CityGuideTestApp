@@ -8,6 +8,7 @@
 
 #import "MTSavePlaceOperation.h"
 #import "MTMappedPlace.h"
+#import "MTMappedCity.h"
 #import "MTDataStore.h"
 #import "MTDataMapping.h"
 #import "NSObject+MTMergeObject.h"
@@ -39,8 +40,14 @@
     NSError *error = nil;
     NSManagedObjectContext *context = [[MTDataStore sharedStore] privateQueueContext];
     
+    NSPredicate *predicate;
+    if (self.place.city && self.place.city.itemId) {
+        predicate = [NSPredicate predicateWithFormat:@"itemId == %@", self.place.city.itemId];
+    } else {
+        predicate = [NSPredicate predicateWithFormat:@"itemId == 0"];
+    }
     NSManagedObject *managedCity = [[MTDataStore sharedStore] objectForEntity:@"MTManagedCity"
-                                                                    predicate:[NSPredicate predicateWithFormat:@"itemId == 0"]
+                                                                    predicate:predicate
                                                             sortedDescriptors:nil
                                                                       context:context];
     
@@ -59,10 +66,24 @@
         }
     }
     
-    if ([self.delegate respondsToSelector:@selector(onDidObjectMergeWithError:isOperationCancelled:)]) {
-        [self.delegate onDidObjectMergeWithError:error
-                            isOperationCancelled:self.isCancelled];
-    }
+    __block BOOL isCancelledOperation = self.isCancelled;
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^
+     {
+         if ([self.delegate respondsToSelector:@selector(onDidObjectMergeWithError:object:isOperationCancelled:)]) {
+             
+             NSManagedObject *managedPlace = [[MTDataStore sharedStore] objectForEntity:@"MTManagedPlace"
+                                                                              predicate:[NSPredicate predicateWithFormat:@"itemId == %@", self.place.itemId]
+                                                                      sortedDescriptors:nil
+                                                                                context:[[MTDataStore sharedStore] mainQueueContext]];
+             MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
+             MTMappedPlace *mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];
+             
+             [self.delegate onDidObjectMergeWithError:error
+                                               object:mappedPlace
+                                 isOperationCancelled:isCancelledOperation];
+         }
+     }];
 }
 
 @end

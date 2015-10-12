@@ -7,10 +7,16 @@
 //
 
 #import "MTImageManagerInterface.h"
+#import "MTMergeObjectsOperationDelegate.h"
 
 @interface MTImageManager : NSObject
 <
-    MTImageManagerInterface
+    MTImageManagerInterface,
+    MTMergeObjectsOperationDelegate
 >
+
+- (instancetype) __unavailable init;
+
++ (MTImageManager *)sharedManager;
 
 @end

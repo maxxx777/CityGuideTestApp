@@ -88,6 +88,7 @@
     MTItemListTablePresenter *itemListTablePresenter = [[MTItemListTablePresenter alloc]
                                                         initWithItemListRequester:itemListRequester
                                                         itemListExpander:itemListExpander
+                                                        itemListChangeDetector:itemListChangeDetector
                                                         wireframe:self];
     MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithItemListRequester:itemListRequester
                                                                                           wireframe:self];
@@ -108,6 +109,7 @@
     //bind interactor
     itemListRequester.outputs = @[itemListTablePresenter];
     itemListExpander.outputs = @[itemListTablePresenter];
+    itemListChangeDetector.outputs = @[itemListTablePresenter];
     
     //bind data manager
     itemDataManager.itemWebService = itemWebService;
