@@ -19,5 +19,7 @@
                          completion:(MTRootDataManagerCompletionBlock)completionBlock;
 - (void)saveItem:(id)item
       completion:(MTRootDataManagerCompletionBlock)completionBlock;
+- (void)fetchItemWithItemId:(NSNumber *)itemId
+                 completion:(MTRootDataManagerCompletionBlock)completionBlock;
 
 @end

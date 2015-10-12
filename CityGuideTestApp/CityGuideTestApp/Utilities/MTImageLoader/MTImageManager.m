@@ -60,10 +60,12 @@
     } else {
         
         NSString *clientId = [NSString stringWithFormat:@"%@", mappedPlace.itemId];
-        if (![self.imageClients objectForKey:clientId]) {
-            
-            [self.imageClients setObject:completionBlock
-                                  forKey:clientId];
+        BOOL isClientInQueue = [self.imageClients objectForKey:clientId];
+        
+        [self.imageClients setObject:completionBlock
+                              forKey:clientId];
+        
+        if (!isClientInQueue) {
             
             [self downloadFileWithURL:[NSURL URLWithString:mappedPlace.imageUrl]
                            completion:^(NSError *error, NSData *data){
@@ -95,8 +97,6 @@
         }
     }
 }
-
-#pragma mark - Helper 
 
 - (void)downloadFileWithURL:(NSURL *)url
                  completion:(MTImageManagerDownloadFileCompletionBlock)completionBlock
@@ -132,10 +132,11 @@
         NSString *filePath = [fileName mt_formatDocumentsPath];
         
         // Save as JPG
-        [data writeToFile:filePath atomically:YES];
+        NSError *error;
+        [data writeToFile:filePath options:NSDataWritingAtomic error:&error];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
-            completionBlock(nil, filePath);
+            completionBlock(error, filePath);
         }];
     }];
 }
@@ -156,6 +157,8 @@
                 MTImageManagerFetchImageCompletionBlock completionBlock = [self.imageClients objectForKey:clientId];
                 if (completionBlock) {
                     completionBlock(error, place.filePath);
+                    
+                    [self.imageClients removeObjectForKey:clientId];
                 }                
             }
         }

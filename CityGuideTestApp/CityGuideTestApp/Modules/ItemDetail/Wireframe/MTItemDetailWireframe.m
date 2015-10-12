@@ -68,8 +68,13 @@
 
 - (void)configureShowDetailStackWithItem:(id)item
 {
+    //init data manager
+    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] init];
+    
     //init interactor
-    MTPlaceDetailFetcher *placeDetailFetcher = [[MTPlaceDetailFetcher alloc] initWithPlace:item];
+    MTPlaceDetailFetcher *placeDetailFetcher = [[MTPlaceDetailFetcher alloc]
+                                                initWithPlace:item                                                
+                                                itemDataManager:itemDataManager];
 
     //init presenter
     MTShowPlaceDetailPresenter *presenter = [[MTShowPlaceDetailPresenter alloc]

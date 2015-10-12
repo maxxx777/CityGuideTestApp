@@ -11,11 +11,14 @@
 
 @class MTMappedPlace;
 
+@protocol MTItemDataManagerInterface;
+
 @interface MTPlaceDetailFetcher : MTRootInteractor
 <
     MTPlaceDetailFetcherInputInterface
 >
 
-- (instancetype)initWithPlace:(MTMappedPlace *)place NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlace:(MTMappedPlace *)place
+              itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;
 
 @end

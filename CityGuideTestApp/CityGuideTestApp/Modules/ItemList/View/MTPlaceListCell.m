@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UIImageView *imageViewPhoto;
 @property (nonatomic, strong) UILabel *labelName;
 @property (nonatomic, strong) UIView *viewLine;
-@property (nonatomic, strong) NSString *imageFilePath;
 
 @end
 
@@ -85,13 +84,6 @@
 {
     [super layoutSubviews];
     
-    if (self.imageFilePath) {
-        UIImage *image = [UIImage imageWithContentsOfFile:self.imageFilePath];
-        [self.imageViewPhoto setImage:image];
-    }
-//    else {
-//        image = [UIImage imageNamed:@"image_placeholder.png"];
-//    }
 }
 
 - (void)configureCellWithItem:(id)item
@@ -104,16 +96,18 @@
         UIImage *image = [UIImage imageWithContentsOfFile:mappedPlace.filePath];
         [self.imageViewPhoto setImage:image];
     } else {
-//        __weak __typeof(self)weakSelf = self;
         [self.imageViewPhoto mt_startActivityAnimation];
         [[MTImageManager sharedManager] fetchImageForPlace:mappedPlace
                                                 completion:^(NSError *error, NSString *filePath){
-                                                    _imageFilePath = filePath;
-                                                    [self setNeedsLayout];
-//                                                    if (!filePath) {
-//                                                        UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
-//                                                        [self.imageViewPhoto setImage:image];
-//                                                    }
+
+                                                    UIImage *image;
+                                                    if (filePath) {
+                                                        image = [UIImage imageWithContentsOfFile:filePath];
+                                                    } else {
+                                                        image = [UIImage imageNamed:@"image_placeholder.png"];
+                                                    }
+                                                    [self.imageViewPhoto setImage:image];
+                                                    
                                                     [self.imageViewPhoto mt_stopActivityAnimation];
         }];
     }

@@ -9,21 +9,25 @@
 #import "MTPlaceDetailFetcher.h"
 #import "MTMappedPlace.h"
 #import "MTMappedCity.h"
+#import "MTItemDataManagerInterface.h"
 
 @interface MTPlaceDetailFetcher ()
 
 @property (nonatomic, strong) MTMappedPlace *place;
+@property (nonatomic, strong) id<MTItemDataManagerInterface>itemDataManager;
 
 @end
 
 @implementation MTPlaceDetailFetcher
 
 - (instancetype)initWithPlace:(MTMappedPlace *)place
+              itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager
 {
     self = [super init];
     if (self) {
         
         _place = place;
+        _itemDataManager = itemDataManager;
         
     }
     return self;
@@ -67,6 +71,20 @@
 - (id)currentItem
 {
     return self.place;
+}
+
+- (void)refreshCurrentItem
+{
+    [self.itemDataManager fetchItemWithItemId:self.place.itemId
+                                   completion:^(NSError *error, id fetchedItem){
+                                       _place = fetchedItem;
+                                       
+                                       for (id<MTPlaceDetailFetcherOutputInterface> output in self.outputs) {
+                                           if ([output respondsToSelector:@selector(onDidRefreshCurrentItem)]) {
+                                               [output onDidRefreshCurrentItem];
+                                           }
+                                       }
+    }];
 }
 
 @end

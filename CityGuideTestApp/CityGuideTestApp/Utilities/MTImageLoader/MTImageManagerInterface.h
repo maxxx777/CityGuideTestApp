@@ -12,10 +12,9 @@
 
 - (void)fetchImageForPlace:(id)place
                 completion:(MTImageManagerFetchImageCompletionBlock)completionBlock;
-
-//- (void)loadImageFromURL:(NSURL *)url
-//              completion:(MTImageManagerCompletionBlock)completionBlock;
-//- (void)saveImageToFile:(UIImage *)image
-//             completion:(MTImageManagerCompletionBlock)completionBlock;
+- (void)downloadFileWithURL:(NSURL *)url
+                 completion:(MTImageManagerDownloadFileCompletionBlock)completionBlock;
+- (void)saveFileWithData:(NSData *)data
+              completion:(MTImageManagerSaveFileCompletionBlock)completionBlock;
 
 @end

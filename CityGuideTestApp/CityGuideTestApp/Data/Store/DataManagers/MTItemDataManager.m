@@ -64,6 +64,22 @@
     [[MTOperationManager sharedManager] queueOperation:self.savePlaceOperation];
 }
 
+- (void)fetchItemWithItemId:(NSNumber *)itemId
+                 completion:(MTRootDataManagerCompletionBlock)completionBlock
+{
+    [self setProcessItemCompletion:completionBlock];
+    
+    NSManagedObject *managedPlace = [[MTDataStore sharedStore] objectForEntity:@"MTManagedPlace"
+                                                                     predicate:[NSPredicate predicateWithFormat:@"itemId == %@", itemId]
+                                                             sortedDescriptors:nil
+                                                                       context:[[MTDataStore sharedStore] mainQueueContext]];
+    MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
+    id mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];
+    
+    self.processItemCompletion(nil, mappedPlace);
+    [self setProcessItemCompletion:nil];
+}
+
 #pragma mark - MTMergeObjectsOperationDelegate
 
 - (void)onDidObjectsMergeWithError:(NSError *)error
