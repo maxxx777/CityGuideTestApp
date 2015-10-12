@@ -85,7 +85,6 @@
 		75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09091BCA4E9000765F7D /* MTMutablePlace.m */; settings = {ASSET_TAGS = (); }; };
 		75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */; settings = {ASSET_TAGS = (); }; };
 		75FE09121BCA7E2000765F7D /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
-		C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +105,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		7502C0C11BC58F72008ECF59 /* CityGuideTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityGuideTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7502C0E01BC58F72008ECF59 /* CityGuideTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityGuideTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7502C0E41BC58F72008ECF59 /* CityGuideTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityGuideTestAppTests.m; sourceTree = "<group>"; };
@@ -303,8 +301,6 @@
 		75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
 		75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
 		75FE09131BCA9F1300765F7D /* MTItemDetailViewConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDetailViewConstants.h; sourceTree = "<group>"; };
-		908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CityGuideTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityGuideTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				757831B11BC823B2008BD2FC /* CoreLocation.framework in Frameworks */,
-				C4B28B2B37A4598D3F3454D4 /* libPods-CityGuideTestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,15 +329,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0674B0BE189B2A069FED0DA7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */,
-				49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7502C0B81BC58F72008ECF59 = {
 			isa = PBXGroup;
 			children = (
@@ -350,7 +336,6 @@
 				7502C0E31BC58F72008ECF59 /* CityGuideTestAppTests */,
 				7502C0EE1BC58F72008ECF59 /* CityGuideTestAppUITests */,
 				7502C0C21BC58F72008ECF59 /* Products */,
-				0674B0BE189B2A069FED0DA7 /* Pods */,
 				D4F01DB5D825D904DAA3CA79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -1102,7 +1087,6 @@
 			isa = PBXGroup;
 			children = (
 				757831B01BC823B2008BD2FC /* CoreLocation.framework */,
-				908BFAE7D0521AD0F199B174 /* libPods-CityGuideTestApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1114,11 +1098,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7502C0F41BC58F72008ECF59 /* Build configuration list for PBXNativeTarget "CityGuideTestApp" */;
 			buildPhases = (
-				5DE1D3BA88DA45B4BE8210F1 /* Check Pods Manifest.lock */,
 				7502C0BD1BC58F72008ECF59 /* Sources */,
 				7502C0BE1BC58F72008ECF59 /* Frameworks */,
 				7502C0BF1BC58F72008ECF59 /* Resources */,
-				530E71AA55A152AB4FC1E945 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1238,39 +1220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		530E71AA55A152AB4FC1E945 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityGuideTestApp/Pods-CityGuideTestApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5DE1D3BA88DA45B4BE8210F1 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7502C0BD1BC58F72008ECF59 /* Sources */ = {
@@ -1465,7 +1414,6 @@
 		};
 		7502C0F51BC58F72008ECF59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D17DDA2024194641927E9AAF /* Pods-CityGuideTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1482,7 +1430,6 @@
 		};
 		7502C0F61BC58F72008ECF59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49B2ADFCA163EE49C1404490 /* Pods-CityGuideTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

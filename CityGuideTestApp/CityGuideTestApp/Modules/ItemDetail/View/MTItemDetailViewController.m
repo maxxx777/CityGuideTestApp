@@ -7,7 +7,6 @@
 //
 
 #import "MTItemDetailViewController.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "MTPlaceAnnotation.h"
 #import "MTItemDetailViewConstants.h"
 #import "UIImageView+MTActivityAnimation.h"

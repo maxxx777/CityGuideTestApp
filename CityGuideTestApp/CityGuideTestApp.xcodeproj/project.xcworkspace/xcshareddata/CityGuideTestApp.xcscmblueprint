@@ -3,6 +3,7 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A83CD2348ECEC42656B65FD5854EFB07004D394A" : 0,
     "7B3173A9A8711E26B2B7E8EB32A82862FE9BF726" : 0,
     "DFFAE996F9103407D4245264929536F346941CFC" : 0,
     "2D5F753908F82B92CBFDAB48E809B188427269EC" : 0,
@@ -10,6 +11,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4DBF60D4-BE59-4F34-8B07-709E7C63FBBC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A83CD2348ECEC42656B65FD5854EFB07004D394A" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/NSString-MTFormating\/",
     "7B3173A9A8711E26B2B7E8EB32A82862FE9BF726" : "",
     "DFFAE996F9103407D4245264929536F346941CFC" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/MTDataLayer\/",
     "2D5F753908F82B92CBFDAB48E809B188427269EC" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/MTItemListCache\/",
@@ -33,6 +35,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/alexthec0d3r\/scheduleapp-iphone-cloned.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7B3173A9A8711E26B2B7E8EB32A82862FE9BF726"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxxx777\/NSString-MTFormatting",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A83CD2348ECEC42656B65FD5854EFB07004D394A"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxxx777\/MTDataLayer",

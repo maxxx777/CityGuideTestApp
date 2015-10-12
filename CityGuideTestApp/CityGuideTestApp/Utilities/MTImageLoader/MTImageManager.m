@@ -7,7 +7,6 @@
 //
 
 #import "MTImageManager.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "NSString+MTFormatting.h"
 #import "MTMappedPlace.h"
 #import "MTOperationManager.h"
