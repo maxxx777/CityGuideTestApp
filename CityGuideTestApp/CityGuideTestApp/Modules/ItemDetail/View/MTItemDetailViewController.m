@@ -26,7 +26,22 @@
     [super viewDidLoad];
     
     [self configureView];
-    [self.presenter onDidLoadView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.presenter onWillAppearView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    if ([self.presenter respondsToSelector:@selector(onWillDisappearView)]) {
+        [self.presenter onWillDisappearView];
+    }
 }
 
 #pragma mark - MTItemDetailViewInterface
@@ -65,10 +80,30 @@
     [self.mapView regionThatFits:region];
 }
 
+- (void)configurePhotoCellAsAddPhoto
+{
+    self.imageViewPhoto.hidden = YES;
+    
+    self.photoCell.textLabel.text = NSLocalizedString(@"Add Photo", nil);
+    self.photoCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
 - (void)configureImageWithFilePath:(NSString *)filePath
 {
+    self.imageViewPhoto.hidden = NO;
+    self.photoCell.textLabel.text = @"";
+    self.photoCell.accessoryType = UITableViewCellAccessoryNone;
+    
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+    
+    CGFloat h = CGRectGetHeight(self.photoCell.contentView.frame) * image.size.width / CGRectGetWidth(self.photoCell.contentView.frame);
+    CGRect cropRect = CGRectMake(0,
+                                 CGRectGetHeight(self.photoCell.contentView.frame) / 2,
+                                 CGRectGetWidth(self.photoCell.contentView.frame),
+                                 h);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
     [self.imageViewPhoto setImage:image];
+    CGImageRelease(imageRef);
 }
 
 - (void)configureImageWithPlaceholder
@@ -84,6 +119,16 @@
                                       target:self
                                       action:@selector(saveButtonPressed:)];
     self.navigationItem.rightBarButtonItem = saveBarButton;
+}
+
+- (void)enableRightBarButtonOnNavigationBar
+{
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
+- (void)disableRightBarButtonOnNavigationBar
+{
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 - (void)enableActivityForImageLoading
@@ -158,6 +203,7 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
+    NSLog(@"save button pressed");
     [self.presenter onDidPressRightBarButtonOnNavigationBar];
 }
 

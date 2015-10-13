@@ -14,6 +14,9 @@
 #import "MTAlertWrapper.h"
 
 @interface MTEditPlaceDetailPresenter ()
+{
+    MTAlertWrapper *alertWrapper;
+}
 
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
@@ -34,13 +37,14 @@
         _itemOperator = itemOperator;
         _wireframe = wireframe;
         
+        alertWrapper = [[MTAlertWrapper alloc] init];
     }
     return self;
 }
 
 #pragma mark - MTItemDetailPresenterInterface
 
-- (void)onDidLoadView
+- (void)onWillAppearView
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
     
@@ -48,7 +52,12 @@
     
     [self.userInterface enableDropPinOnMapView];
     
-    [self.userInterface configureImageWithPlaceholder];
+    [self.userInterface configurePhotoCellAsAddPhoto];
+}
+
+- (void)onWillDisappearView
+{
+    [self.userInterface disableRightBarButtonOnNavigationBar];
 }
 
 - (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates
@@ -68,7 +77,17 @@
 
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
-    [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
+    if (![self.placeDetailConfigurator placeCoordinates]) {
+        [alertWrapper showAlertInViewController:self.userInterface
+                                      withTitle:NSLocalizedString(@"Place Coordinates", nil)
+                                        message:NSLocalizedString(@"Please Drop Pin on Map where Place is Located", nil)];
+    } else if (![self.placeDetailConfigurator placeName]) {
+        [alertWrapper showAlertInViewController:self.userInterface
+                                      withTitle:NSLocalizedString(@"Place Name", nil)
+                                        message:NSLocalizedString(@"Please Input Place Name", nil)];
+    } else {
+        [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
+    }
 }
 
 - (void)onDidSelectNameCell
@@ -83,7 +102,6 @@
 
 - (void)onDidSelectImageCell
 {
-    MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
     [alertWrapper showActionSheetInViewController:self.userInterface
                                         withTitle:NSLocalizedString(@"Attach photo", nil)
                                 cancelButtonTitle:NSLocalizedString(@"Cancel", nil)

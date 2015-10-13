@@ -14,10 +14,14 @@
 - (void)configureMapWithCoordinates:(NSDictionary *)coordinates;
 - (void)configureNameWithText:(NSString *)text;
 - (void)configureDescriptionWithText:(NSString *)text;
+- (void)configurePhotoCellAsAddPhoto;
 - (void)configureImageWithFilePath:(NSString *)filePath;
 - (void)configureImageWithPlaceholder;
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;
+
+- (void)enableRightBarButtonOnNavigationBar;
+- (void)disableRightBarButtonOnNavigationBar;
 
 - (void)beginEditName;
 - (void)beginEditDescription;

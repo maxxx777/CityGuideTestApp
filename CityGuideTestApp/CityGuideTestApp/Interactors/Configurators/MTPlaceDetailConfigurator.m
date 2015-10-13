@@ -48,10 +48,14 @@
 
 - (NSDictionary *)placeCoordinates
 {
-    return @{
-             @"latitude" : self.place.latitude,
-             @"longitude" : self.place.longitude
-             };
+    if (self.place.latitude && self.place.longitude) {
+        return @{
+                 @"latitude" : self.place.latitude,
+                 @"longitude" : self.place.longitude
+                 };
+    } else {
+        return nil;
+    }
 }
 
 - (NSURL *)photoURL

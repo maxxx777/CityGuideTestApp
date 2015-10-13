@@ -35,7 +35,7 @@
 
 #pragma mark - MTShowPlaceDetailPresenterInterface
 
-- (void)onDidLoadView
+- (void)onWillAppearView
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
     
