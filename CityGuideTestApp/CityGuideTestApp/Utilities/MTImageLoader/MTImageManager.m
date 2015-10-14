@@ -45,15 +45,12 @@
 
 + (MTImageManager *)sharedManager
 {
-    static MTImageManager *sharedManager = nil;
-    static dispatch_once_t isDispatched;
-    
-    dispatch_once(&isDispatched, ^
-                  {
-                      sharedManager = [[self alloc] init];
-                  });
-    
-    return sharedManager;
+    static id sharedInstance;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
 }
 
 #pragma mark - MTImageManagerInterface
@@ -320,12 +317,12 @@
                     [self.imageCache setObject:image forKey:[self clientIdForPlace:place]];
                 } else {
                     error = [NSError errorWithDomain:MTImageManagerErrorDomain
-                                                code:MTImageManagerErrorNoImage
+                                                code:MTImageManagerErrorAny
                                             userInfo:nil];
                 }
             } else {
                 error = [NSError errorWithDomain:MTImageManagerErrorDomain
-                                            code:MTImageManagerErrorNoImage
+                                            code:MTImageManagerErrorAny
                                         userInfo:nil];
             }
         }

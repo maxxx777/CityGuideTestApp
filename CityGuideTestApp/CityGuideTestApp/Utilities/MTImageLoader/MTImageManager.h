@@ -9,8 +9,6 @@
 #import "MTImageManagerInterface.h"
 #import "MTMergeObjectsOperationDelegate.h"
 
-@class MTMappedPlace;
-
 @interface MTImageManager : NSObject
 <
     MTImageManagerInterface,
@@ -20,7 +18,5 @@
 - (instancetype) __unavailable init;
 
 + (MTImageManager *)sharedManager;
-
-- (UIImage *)imageFromCacheForPlace:(MTMappedPlace *)place;
 
 @end

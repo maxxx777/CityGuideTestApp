@@ -10,6 +10,8 @@
 
 @protocol MTImageManagerDelegate;
 
+@class MTMappedPlace;
+
 @protocol MTImageManagerInterface <NSObject>
 
 - (void)fetchImageForPlace:(id)place
@@ -24,5 +26,6 @@
                scaledToSize:(CGSize)newSize;
 - (UIImage *)imageWithImage:(UIImage *)image
                    cropRect:(CGRect)cropRect;
+- (UIImage *)imageFromCacheForPlace:(MTMappedPlace *)place;
 
 @end
