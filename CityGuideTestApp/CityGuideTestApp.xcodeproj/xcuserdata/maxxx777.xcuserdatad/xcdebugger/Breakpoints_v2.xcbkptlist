@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CityGuideTestApp/Data/Store/DataManagers/MTItemDataManager.m"
-            timestampString = "466538444.446498"
+            timestampString = "466545196.093718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "-idsOfPlacesWithinRadius:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CityGuideTestApp/Modules/ItemDetail/View/MTItemDetailViewController.m"
-            timestampString = "466541186.292993"
+            timestampString = "466545196.093718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "-enableDropPinOnMapView"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CityGuideTestApp/Modules/ItemDetail/View/MTItemDetailViewController.m"
-            timestampString = "466541187.981633"
+            timestampString = "466545196.093718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-disableDropPinOnMapView"
             landmarkType = "5">
             <Locations>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CityGuideTestApp/Modules/ItemDetail/View/MTItemDetailViewController.m"
-            timestampString = "466541193.761258"
+            timestampString = "466545196.093718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "-handleDropPin:"
             landmarkType = "5">
          </BreakpointContent>

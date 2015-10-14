@@ -8,6 +8,8 @@
 
 @protocol MTMergeObjectsOperationDelegate <NSObject>
 
+@optional
+
 - (void)onDidObjectsMergeWithError: (NSError *)error
               isOperationCancelled: (BOOL)isOperationCancelled;
 - (void)onDidObjectMergeWithError: (NSError *)error

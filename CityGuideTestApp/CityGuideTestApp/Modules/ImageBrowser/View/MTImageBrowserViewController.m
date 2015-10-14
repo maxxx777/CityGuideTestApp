@@ -15,6 +15,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
         [self.presenter onDidLoadView];
     }    
