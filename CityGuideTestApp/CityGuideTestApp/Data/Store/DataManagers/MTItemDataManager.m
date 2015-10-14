@@ -133,43 +133,37 @@
 {
     if (self.placeListCache && [self.placeListCache respondsToSelector:@selector(cacheItemListWithEntityName:sortDescriptors:predicate:sectionNameKeyPath:context:completion:)]) {
         
-        NSDictionary *currentLocation = [[NSUserDefaults standardUserDefaults] objectForKey:@"MTSettingsCurrentLocation"];
-        BOOL isFilterWithLocationUse = self.filterType == MTItemListFilterType1Mile || self.filterType == MTItemListFilterType10Mile || self.filterType ==  MTItemListFilterType100Mile;
-        if (isFilterWithLocationUse && currentLocation == nil) {
-            completionBlock(nil, nil);
-        } else {
-         
-            NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@"city.itemName"
-                                                                ascending:YES];
-            NSSortDescriptor *sd2 = [[NSSortDescriptor alloc] initWithKey:@"itemName"
-                                                                ascending:YES];
-            [self.placeListCache cacheItemListWithEntityName:@"MTManagedPlace"
-                                             sortDescriptors:@[sd1, sd2]
-                                                   predicate:[self predicateForFilterType:self.filterType]
-                                          sectionNameKeyPath:@"city.itemName"
-                                                     context:[[MTDataStore sharedStore] mainQueueContext]
-                                                  completion:^(NSError *error, id fetchedItem){
+        
+        NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@"city.itemName"
+                                                            ascending:YES];
+        NSSortDescriptor *sd2 = [[NSSortDescriptor alloc] initWithKey:@"itemName"
+                                                            ascending:YES];
+        [self.placeListCache cacheItemListWithEntityName:@"MTManagedPlace"
+                                         sortDescriptors:@[sd1, sd2]
+                                               predicate:[self predicateForFilterType:self.filterType]
+                                      sectionNameKeyPath:@"city.itemName"
+                                                 context:[[MTDataStore sharedStore] mainQueueContext]
+                                              completion:^(NSError *error, id fetchedItem){
+                                                  
+                                                  if (self.cityListCache && [self.cityListCache respondsToSelector:@selector(cacheItemListWithSourceObjects:predicate:completion:)]) {
+                                                      NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@"itemName"
+                                                                                                          ascending:YES];
                                                       
-                                                      if (self.cityListCache && [self.cityListCache respondsToSelector:@selector(cacheItemListWithSourceObjects:predicate:completion:)]) {
-                                                          NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@"itemName"
-                                                                                                              ascending:YES];
-                                                          
-                                                          NSArray *allCities = [[MTDataStore sharedStore] objectsForEntity:@"MTManagedCity"
-                                                                                                                 predicate:[NSPredicate predicateWithFormat:@"SUBQUERY(places, $x, $x IN %@).@count > 0", [self.placeListCache allCachedItems]]
-                                                                                                         sortedDescriptors:@[sd1]
-                                                                                                                   context:[[MTDataStore sharedStore] mainQueueContext]];
-                                                          [self.cityListCache cacheItemListWithSourceObjects:allCities
-                                                                                                   predicate:nil
-                                                                                                  completion:^(NSError *error, id fetchedItem){
-                                                                                                      if (self.processItemCompletion != nil) {
-                                                                                                          self.processItemCompletion(error, nil);
-                                                                                                          [self setProcessItemCompletion:nil];
-                                                                                                      }
-                                                                                                  }];
-                                                      }
-                                                      
-                                                  }];
-        }
+                                                      NSArray *allCities = [[MTDataStore sharedStore] objectsForEntity:@"MTManagedCity"
+                                                                                                             predicate:[NSPredicate predicateWithFormat:@"SUBQUERY(places, $x, $x IN %@).@count > 0", [self.placeListCache allCachedItems]]
+                                                                                                     sortedDescriptors:@[sd1]
+                                                                                                               context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                      [self.cityListCache cacheItemListWithSourceObjects:allCities
+                                                                                               predicate:nil
+                                                                                              completion:^(NSError *error, id fetchedItem){
+                                                                                                  if (self.processItemCompletion != nil) {
+                                                                                                      self.processItemCompletion(error, nil);
+                                                                                                      [self setProcessItemCompletion:nil];
+                                                                                                  }
+                                                                                              }];
+                                                  }
+                                                  
+                                              }];
     }
 }
 
