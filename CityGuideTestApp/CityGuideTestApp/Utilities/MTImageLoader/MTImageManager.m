@@ -90,8 +90,14 @@
                                                        [self.savePlaceOperations addPointer:(__bridge void * _Nullable)(savePlaceOperation)];
                                                        [[MTOperationManager sharedManager] queueOperation:savePlaceOperation];
                                                        
+                                                   } else {
+                                                       [self.imageClients removeObjectForKey:clientId];
+                                                       completionBlock(error, nil);
                                                    }
                                    }];
+                               } else {
+                                   [self.imageClients removeObjectForKey:clientId];
+                                   completionBlock(error, nil);
                                }
             }];
         }
@@ -107,7 +113,13 @@
                                                             completionHandler:^(NSURL *location,
                                                                                 NSURLResponse *response,
                                                                                 NSError *error) {
-                                                                NSData *data = [NSData dataWithContentsOfURL:location];
+                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                                NSData *data;
+                                                                if ([httpResponse statusCode] == 200) {
+                                                                    data = [NSData dataWithContentsOfURL:location];
+                                                                } else {
+                                                                    error = [NSError errorWithDomain:@"domain" code:[httpResponse statusCode] userInfo:nil];
+                                                                }
                                                                 dispatch_async(dispatch_get_main_queue(), ^{
                                                                     if (completionBlock) {
                                                                         completionBlock(error, data);
