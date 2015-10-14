@@ -38,7 +38,7 @@
 - (void)main
 {
     NSError *error = nil;
-    NSManagedObjectContext *context = [[MTDataStore sharedStore] privateQueueContext];
+    NSManagedObjectContext *context = [MTDataStore sharedStore].privateQueueContext;
     
     NSPredicate *predicate;
     if (self.place.city && self.place.city.itemId) {
@@ -75,7 +75,7 @@
              NSManagedObject *managedPlace = [[MTDataStore sharedStore] objectForEntity:@"MTManagedPlace"
                                                                               predicate:[NSPredicate predicateWithFormat:@"itemId == %@", self.place.itemId]
                                                                       sortedDescriptors:nil
-                                                                                context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                                                context:[MTDataStore sharedStore].mainQueueContext];
              MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
              MTMappedPlace *mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];
              

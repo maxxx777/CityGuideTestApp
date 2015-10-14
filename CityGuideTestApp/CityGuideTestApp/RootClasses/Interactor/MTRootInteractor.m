@@ -43,7 +43,7 @@
 - (NSArray *)outputs
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    for (int i = 0; i < [self.outputsPointerArray count]; i++) {
+    for (int i = 0; i < (self.outputsPointerArray).count; i++) {
         id object = [self.outputsPointerArray pointerAtIndex:i];
         if (object) {
             [result addObject:object];

@@ -39,7 +39,7 @@
 - (void)main
 {
     NSError *error = nil;
-    NSManagedObjectContext *context = [[MTDataStore sharedStore] privateQueueContext];
+    NSManagedObjectContext *context = [MTDataStore sharedStore].privateQueueContext;
     
     BOOL success = NO;
     

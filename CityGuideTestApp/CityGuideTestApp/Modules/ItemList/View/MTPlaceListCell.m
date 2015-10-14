@@ -127,7 +127,7 @@
         if (isCurrentPlaceWithFetchedImage) {
             UIImage *image = [[MTImageManager sharedManager] imageFromCacheForPlace:place];
             if (image) {
-                [self.imageViewPhoto setImage:image];
+                (self.imageViewPhoto).image = image;
             } else {
                 [self showImagePlaceholder];
             }
@@ -138,7 +138,7 @@
 - (void)showImagePlaceholder
 {
     UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
-    [self.imageViewPhoto setImage:image];
+    (self.imageViewPhoto).image = image;
 }
 
 @end

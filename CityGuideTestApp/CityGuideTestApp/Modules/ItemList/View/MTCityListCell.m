@@ -26,7 +26,7 @@
     if (self) {
         
         _imageViewDisclosure = [[UIImageView alloc] init];
-        [self.imageViewDisclosure setImage:[UIImage imageNamed:@"disclosure.png"]];
+        (self.imageViewDisclosure).image = [UIImage imageNamed:@"disclosure.png"];
         
         [self.contentView addSubview:self.imageViewDisclosure];
         [self.imageViewDisclosure setTranslatesAutoresizingMaskIntoConstraints:NO];

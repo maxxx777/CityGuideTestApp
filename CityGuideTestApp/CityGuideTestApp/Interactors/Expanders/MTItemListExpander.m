@@ -56,10 +56,10 @@
 
 - (NSUInteger)numberOfRows
 {
-    NSUInteger result = [self.openedCities count];
-    for (NSUInteger i = 0; i < [self.openedCities count]; i++) {
-        if ([self.openedCities objectAtIndex:i]) {
-            result += [[self.openedCities objectAtIndex:i] integerValue];
+    NSUInteger result = (self.openedCities).count;
+    for (NSUInteger i = 0; i < (self.openedCities).count; i++) {
+        if ((self.openedCities)[i]) {
+            result += [(self.openedCities)[i] integerValue];
         }
     }
     return result;
@@ -93,23 +93,22 @@
 - (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger cityIndex = [self cityIndexForIndexPath:indexPath];
-    return [self.openedCities objectAtIndex:cityIndex] && ![[self.openedCities objectAtIndex:cityIndex] isEqualToNumber:@0];
+    return (self.openedCities)[cityIndex] && ![(self.openedCities)[cityIndex] isEqualToNumber:@0];
 }
 
 - (void)openOrCloseCityAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger cityIndex = [self cityIndexForIndexPath:indexPath];
-    if ([self.openedCities objectAtIndex:cityIndex] && ![[self.openedCities objectAtIndex:cityIndex] isEqualToNumber:@0]) {
+    if ((self.openedCities)[cityIndex] && ![(self.openedCities)[cityIndex] isEqualToNumber:@0]) {
         
         NSMutableArray *indexPathsToClose = [NSMutableArray array];
-        for (NSInteger i = 0; i < [[self.openedCities objectAtIndex:cityIndex] integerValue]; i++) {
+        for (NSInteger i = 0; i < [(self.openedCities)[cityIndex] integerValue]; i++) {
             NSIndexPath *indexPathToClose = [NSIndexPath indexPathForRow:i + indexPath.row + 1
                                                                inSection:0];
             [indexPathsToClose addObject:indexPathToClose];
         }
         
-        [self.openedCities replaceObjectAtIndex:cityIndex
-                                     withObject:@0];
+        (self.openedCities)[cityIndex] = @0;
         
         for (id<MTItemListExpanderOutputInterface> output in self.outputs) {
             if ([output respondsToSelector:@selector(onDidCloseCityPlacesAtIndexPaths:)]) {
@@ -126,8 +125,7 @@
             [indexPathsToOpen addObject:indexPathToOpen];
         }
         
-        [self.openedCities replaceObjectAtIndex:cityIndex
-                                      withObject:@([self.placeListCache numberOfRowsInSection:cityIndex])];
+        (self.openedCities)[cityIndex] = @([self.placeListCache numberOfRowsInSection:cityIndex]);
         
         for (id<MTItemListExpanderOutputInterface> output in self.outputs) {
             if ([output respondsToSelector:@selector(onDidOpenCityPlacesAtIndexPaths:)]) {
@@ -167,9 +165,9 @@
     while (indexPath.row > totalIndex) {
         
         //if city is open
-        if ([self.openedCities objectAtIndex:cityIndex] && ![[self.openedCities objectAtIndex:cityIndex] isEqualToNumber:@0]) {
+        if ((self.openedCities)[cityIndex] && ![(self.openedCities)[cityIndex] isEqualToNumber:@0]) {
             
-            NSInteger placeCountForCity = [[self.openedCities objectAtIndex:cityIndex] integerValue];
+            NSInteger placeCountForCity = [(self.openedCities)[cityIndex] integerValue];
 
             //if index path is more than opened city
             if (indexPath.row - totalIndex > placeCountForCity) {

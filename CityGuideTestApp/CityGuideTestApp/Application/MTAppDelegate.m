@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UIWindow* window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIWindow* window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     appModulesConnector = [[MTAppModulesConnector alloc] initWithWindow:window];
     appSettingsConfigurator = [[MTAppSettingsConfigurator alloc] init];

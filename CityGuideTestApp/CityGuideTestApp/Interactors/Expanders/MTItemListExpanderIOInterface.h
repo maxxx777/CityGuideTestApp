@@ -10,7 +10,7 @@
 
 @protocol MTItemListExpanderInputInterface <NSObject>
 
-- (NSUInteger)numberOfRows;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfRows;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isCityObjectAtIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath;

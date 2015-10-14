@@ -64,7 +64,7 @@
         }
         
         NSArray *citiesArray = [parsedCities filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"itemName LIKE %@", itemName]];
-        if ([citiesArray count] == 0) {
+        if (citiesArray.count == 0) {
             result = [[MTMappedCity alloc] initWithItemId:itemId
                                                  itemName:itemName
                                                    places:nil];
@@ -119,8 +119,8 @@
 
         NSString *cityName = rawObject[@"city"] ? rawObject[@"city"] : NSLocalizedString(@"Unknown City", nil);
         NSArray *citiesArray = [parsedCities filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"itemName LIKE %@", cityName]];
-        if ([citiesArray count] > 0) {
-            MTMappedCity *city = [citiesArray lastObject];
+        if (citiesArray.count > 0) {
+            MTMappedCity *city = citiesArray.lastObject;
             NSUInteger cityIndex = [parsedCities indexOfObject:city];
             
             NSMutableArray *cityPlaces;
@@ -135,8 +135,7 @@
                                                itemName:city.itemName
                                                  places:cityPlaces];
             
-            [parsedCities replaceObjectAtIndex:cityIndex
-                                    withObject:city];
+            parsedCities[cityIndex] = city;
         }
     }
 }

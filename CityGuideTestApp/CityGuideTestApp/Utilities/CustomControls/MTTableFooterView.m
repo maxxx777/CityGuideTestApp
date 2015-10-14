@@ -74,8 +74,8 @@
         [self.activityFooter stopAnimating];
     }
     
-    self.labelTitle.hidden = [self.labelTitle.text length] == 0;
-    CGFloat dh = [self.labelTitle.text length] == 0 ? 0.0f : 20.0f;
+    self.labelTitle.hidden = (self.labelTitle.text).length == 0;
+    CGFloat dh = (self.labelTitle.text).length == 0 ? 0.0f : 20.0f;
     
     self.labelTitle.preferredMaxLayoutWidth = self.labelTitle.frame.size.width + dh;
     

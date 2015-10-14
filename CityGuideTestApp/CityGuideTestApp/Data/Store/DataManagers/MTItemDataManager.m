@@ -40,10 +40,10 @@
                      placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
                          completion:(MTRootDataManagerCompletionBlock)completionBlock
 {
-    [self setFilterType:filterType];
-    [self setProcessItemCompletion:completionBlock];
-    [self setCityListCache:cityListCache];
-    [self setPlaceListCache:placeListCache];
+    self.filterType = filterType;
+    self.processItemCompletion = completionBlock;
+    self.cityListCache = cityListCache;
+    self.placeListCache = placeListCache;
     
     if ([self countOfCities] == 0) {
         [self refreshItemListWithCityListCache:cityListCache
@@ -57,7 +57,7 @@
 - (void)saveItem:(id)item
       completion:(MTRootDataManagerCompletionBlock)completionBlock
 {
-    [self setProcessItemCompletion:completionBlock];
+    self.processItemCompletion = completionBlock;
     
     _savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:item
                                                mergeOperationDelegate:self];
@@ -67,12 +67,12 @@
 - (void)fetchItemWithItemId:(NSNumber *)itemId
                  completion:(MTRootDataManagerCompletionBlock)completionBlock
 {
-    [self setProcessItemCompletion:completionBlock];
+    self.processItemCompletion = completionBlock;
     
     NSManagedObject *managedPlace = [[MTDataStore sharedStore] objectForEntity:@"MTManagedPlace"
                                                                      predicate:[NSPredicate predicateWithFormat:@"itemId == %@", itemId]
                                                              sortedDescriptors:nil
-                                                                       context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                                       context:[MTDataStore sharedStore].mainQueueContext];
     MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
     id mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];
     
@@ -102,16 +102,16 @@
     return [[MTDataStore sharedStore] countOfObjectsForEntity:@"MTManagedCity"
                                                     predicate:nil
                                             sortedDescriptors:nil
-                                                      context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                      context:[MTDataStore sharedStore].mainQueueContext];
 }
 
 - (void)refreshItemListWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
                           placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
                               completion:(MTRootDataManagerCompletionBlock)completionBlock
 {
-    [self setProcessItemCompletion:completionBlock];
-    [self setCityListCache:cityListCache];
-    [self setPlaceListCache:placeListCache];
+    self.processItemCompletion = completionBlock;
+    self.cityListCache = cityListCache;
+    self.placeListCache = placeListCache;
     
     [self.itemWebService fetchItemListWithCompletion:^(id data, NSError *error){
         if (data) {
@@ -142,7 +142,7 @@
                                          sortDescriptors:@[sd1, sd2]
                                                predicate:[self predicateForFilterType:self.filterType]
                                       sectionNameKeyPath:@"city.itemName"
-                                                 context:[[MTDataStore sharedStore] mainQueueContext]
+                                                 context:[MTDataStore sharedStore].mainQueueContext
                                               completion:^(NSError *error, id fetchedItem){
                                                   
                                                   if (self.cityListCache && [self.cityListCache respondsToSelector:@selector(cacheItemListWithSourceObjects:predicate:completion:)]) {
@@ -152,7 +152,7 @@
                                                       NSArray *allCities = [[MTDataStore sharedStore] objectsForEntity:@"MTManagedCity"
                                                                                                              predicate:[NSPredicate predicateWithFormat:@"SUBQUERY(places, $x, $x IN %@).@count > 0", [self.placeListCache allCachedItems]]
                                                                                                      sortedDescriptors:@[sd1]
-                                                                                                               context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                                                                               context:[MTDataStore sharedStore].mainQueueContext];
                                                       [self.cityListCache cacheItemListWithSourceObjects:allCities
                                                                                                predicate:nil
                                                                                               completion:^(NSError *error, id fetchedItem){
@@ -206,7 +206,7 @@
     NSArray *places = [[MTDataStore sharedStore] objectsForEntity:@"MTManagedPlace"
                                                         predicate:nil
                                                 sortedDescriptors:nil
-                                                          context:[[MTDataStore sharedStore] mainQueueContext]];
+                                                          context:[MTDataStore sharedStore].mainQueueContext];
     for (NSManagedObject *managedPlace in places) {
         
         MTMappedPlace *mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];

@@ -20,6 +20,6 @@
 
 - (instancetype)initWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
                        placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
-                      itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager;
+                      itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -14,10 +14,10 @@
 
 - (void)scrollViewWithOffset: (CGPoint)offset;
 
-- (NSUInteger)numberOfAllItemsOfSelectedType;
-- (NSUInteger)numberOfSections;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfAllItemsOfSelectedType;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section;
-- (NSArray *)sectionIndexTitles;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *sectionIndexTitles;
 - (NSString *)sectionIndexTitleForSectionName:(NSString *)sectionName;
 - (NSString *)titleForHeaderInSection:(NSInteger)section;
 - (void)configureCell:(UITableViewCell *)cell

@@ -83,14 +83,14 @@
         CLLocationDegrees currentLatitude = [[currentLocation valueForKey:@"latitude"] doubleValue];
         CLLocationDegrees currentLongitude = [[currentLocation valueForKey:@"longitude"] doubleValue];
         CLLocationCoordinate2D centerLocationCoordinate = CLLocationCoordinate2DMake(currentLatitude, currentLongitude);
-        CLLocationDistance distance = [radius doubleValue];
+        CLLocationDistance distance = radius.doubleValue;
         
         CLCircularRegion *circularRegion = [[CLCircularRegion alloc] initWithCenter:centerLocationCoordinate
                                                                             radius:distance
                                                                         identifier:@"MTCircularRegion"];
         
-        CLLocationDegrees latitudeToCheck = [latitude doubleValue];
-        CLLocationDegrees longitudeToCheck = [longitude doubleValue];
+        CLLocationDegrees latitudeToCheck = latitude.doubleValue;
+        CLLocationDegrees longitudeToCheck = longitude.doubleValue;
         CLLocationCoordinate2D locationCoordinateToCheck = CLLocationCoordinate2DMake(latitudeToCheck, longitudeToCheck);
 
         result = [circularRegion containsCoordinate:locationCoordinateToCheck];

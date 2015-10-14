@@ -131,10 +131,10 @@
                                                                                 NSError *error) {
                                                                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                                 NSData *data;
-                                                                if ([httpResponse statusCode] == 200) {
+                                                                if (httpResponse.statusCode == 200) {
                                                                     data = [NSData dataWithContentsOfURL:location];
                                                                 } else {
-                                                                    error = [NSError errorWithDomain:@"domain" code:[httpResponse statusCode] userInfo:nil];
+                                                                    error = [NSError errorWithDomain:@"domain" code:httpResponse.statusCode userInfo:nil];
                                                                 }
                                                                 dispatch_async(dispatch_get_main_queue(), ^{
                                                                     if (completionBlock) {
@@ -149,10 +149,10 @@
 - (void)saveFileWithData:(NSData *)data
               completion:(MTImageManagerSaveFileCompletionBlock)completionBlock
 {
-    [[[MTOperationManager sharedManager] sharedOperationQueue] addOperationWithBlock:^(){
+    [[MTOperationManager sharedManager].sharedOperationQueue addOperationWithBlock:^(){
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy-MM-dd-HH-mm-ss-SSS"];
+        df.dateFormat = @"yyyy-MM-dd-HH-mm-ss-SSS";
         
         NSString *fileName = [NSString stringWithFormat:@"IMG-%@.jpg", [df stringFromDate:[NSDate date]]];
         
@@ -198,7 +198,7 @@
 {
     UIImage *result;
     
-    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect);
     result = image;
     
     CGImageRelease(imageRef);
@@ -235,7 +235,7 @@
 {
     if (place) {
         NSPointerArray *clients = [self clientsForPlace:place];
-        if ([clients count] > 0) {
+        if (clients.count > 0) {
             for (id<MTImageManagerDelegate> delegate in clients) {
                 if (delegate) {
                     if (delegate && [delegate respondsToSelector:@selector(onDidFetchImageForPlace:error:)]) {
@@ -263,7 +263,7 @@
         if (delegate) {
             [clients addPointer:(__bridge void * _Nullable)(delegate)];
         }
-        [self.imageClients setObject:clients forKey:[self clientIdForPlace:place]];
+        (self.imageClients)[[self clientIdForPlace:place]] = clients;
     }
 }
 
@@ -272,7 +272,7 @@
     NSPointerArray *result;
     
     if ([self clientIdForPlace:place]) {
-        result = [self.imageClients objectForKey:[self clientIdForPlace:place]];
+        result = (self.imageClients)[[self clientIdForPlace:place]];
     }
     
     return result;
@@ -284,7 +284,7 @@
     
     NSString *clientId = [self clientIdForPlace:place];
     if (clientId) {
-        result = [self.imageClients objectForKey:clientId];
+        result = (self.imageClients)[clientId];
     }
     
     return result;
@@ -314,7 +314,7 @@
                 NSString *filePath = [place.fileName mt_formatDocumentsPath];
                 UIImage *image = [UIImage imageWithContentsOfFile:filePath];
                 if (image) {
-                    [self.imageCache setObject:image forKey:[self clientIdForPlace:place]];
+                    (self.imageCache)[[self clientIdForPlace:place]] = image;
                 } else {
                     error = [NSError errorWithDomain:MTImageManagerErrorDomain
                                                 code:MTImageManagerErrorAny
@@ -335,7 +335,7 @@
     UIImage *result;
     
     if (place) {
-        result = [self.imageCache objectForKey:[self clientIdForPlace:place]];
+        result = (self.imageCache)[[self clientIdForPlace:place]];
     }
     
     return result;

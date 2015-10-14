@@ -11,8 +11,8 @@
 @protocol MTLocationManagerInterface <NSObject>
 
 - (void)detectLocation;
-- (BOOL)isLocationEnabled;
-- (NSDictionary *)currentLocation;
+@property (NS_NONATOMIC_IOSONLY, getter=isLocationEnabled, readonly) BOOL locationEnabled;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *currentLocation;
 - (BOOL)isLocationWithLatitude:(NSNumber *)latitude
                      longitude:(NSNumber *)longitude
                   withinRadius:(NSNumber *)radius;

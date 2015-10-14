@@ -10,14 +10,14 @@
 
 @protocol MTPlaceDetailFetcherInputInterface <NSObject>
 
-- (NSString *)placeName;
-- (NSString *)cityName;
-- (NSString *)placeDescription;
-- (NSDictionary *)placeCoordinates;
-- (NSURL *)photoURL;
-- (NSString *)fileName;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *placeName;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *cityName;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *placeDescription;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *placeCoordinates;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSURL *photoURL;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *fileName;
 
-- (id)currentItem;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) id currentItem;
 
 - (void)refreshCurrentItem;
 

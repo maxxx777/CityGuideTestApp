@@ -81,12 +81,12 @@
 
 - (void)configureLeftBarButtonWithTitle:(NSString *)title
 {
-    [self.navigationItem.leftBarButtonItem setTitle:title];
+    (self.navigationItem.leftBarButtonItem).title = title;
 }
 
 - (void)configureRightBarButtonWithTitle:(NSString *)title
 {
-    [self.navigationItem.rightBarButtonItem setTitle:title];
+    (self.navigationItem.rightBarButtonItem).title = title;
 }
 
 - (void)configureBarButtonFilterWithTitle:(NSString *)title

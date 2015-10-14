@@ -136,7 +136,7 @@
     image = [[MTImageManager sharedManager] imageWithImage:image
                                                   cropRect:cropRect];
 
-    [self.imageViewPhoto setImage:image];
+    (self.imageViewPhoto).image = image;
 }
 
 - (void)configureRightBarButtonOnNavigationBarAsSave
@@ -198,7 +198,7 @@
 
 - (void)disableDropPinOnMapView
 {
-    for (UIGestureRecognizer *gestureRecognizer in [self.mapView gestureRecognizers]) {
+    for (UIGestureRecognizer *gestureRecognizer in (self.mapView).gestureRecognizers) {
         [self.mapView removeGestureRecognizer:gestureRecognizer];
     }
 }
@@ -316,7 +316,7 @@
     
     if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewDescriptionCellIdentifier]) {
         
-        if ([self.textViewDescription.text length] > 0) {
+        if ((self.textViewDescription.text).length > 0) {
             return [self.textViewDescription sizeThatFits:CGSizeMake(self.textViewDescription.frame.size.width, CGFLOAT_MAX)].height;
         } else {
             return 100.0f;
@@ -390,7 +390,7 @@
 
 - (void)presentImagePicker
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         //        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
         //        [popover presentPopoverFromRect:presentingViewController.navigationController.navigationBar.bounds
         //                                 inView:presentingViewController.view permittedArrowDirections:UIPopoverArrowDirectionAny
