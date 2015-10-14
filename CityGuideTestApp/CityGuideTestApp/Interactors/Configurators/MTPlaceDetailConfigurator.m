@@ -9,6 +9,7 @@
 #import "MTPlaceDetailConfigurator.h"
 #import "MTMutablePlace.h"
 #import "MTMappedCity.h"
+#import "NSString+MTFormatting.h"
 
 @interface MTPlaceDetailConfigurator ()
 
@@ -99,7 +100,7 @@
 
 - (void)configurePlacePhotoPath:(NSString *)photoPath
 {
-    _place.filePath = photoPath;
+    _place.fileName = [photoPath mt_formatDocumentsPath];
     
     for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
         if ([output respondsToSelector:@selector(onDidConfigurePlacePhotoPath)]) {
@@ -115,7 +116,7 @@
                                         latitude:self.place.latitude
                                        longitude:self.place.longitude
                                         imageUrl:self.place.imageUrl
-                                        filePath:self.place.filePath
+                                        fileName:self.place.fileName
                                 placeDescription:self.place.placeDescription
                                             city:self.place.city];
 }

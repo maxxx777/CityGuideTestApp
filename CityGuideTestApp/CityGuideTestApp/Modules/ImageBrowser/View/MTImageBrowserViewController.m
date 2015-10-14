@@ -8,6 +8,7 @@
 
 #import "MTImageBrowserViewController.h"
 #import "MTImageBrowserPresenterInterface.h"
+#import "NSString+MTFormatting.h"
 
 @implementation MTImageBrowserViewController
 @synthesize presenter = _presenter;
@@ -19,8 +20,11 @@
 
 #pragma mark - MTImageBrowserViewInterface
 
-- (void)configureImage:(UIImage *)image
+- (void)configureImageWithFileName:(NSString *)fileName
 {
+    NSString *filePath = [fileName mt_formatDocumentsPath];
+    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+
     self.imageView.image = image;
 }
 

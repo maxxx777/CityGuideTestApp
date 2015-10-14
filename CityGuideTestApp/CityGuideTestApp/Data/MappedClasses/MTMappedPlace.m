@@ -20,14 +20,14 @@
 @synthesize longitude = _longitude;
 @synthesize placeDescription = _placeDescription;
 @synthesize imageUrl = _imageUrl;
-@synthesize filePath = _filePath;
+@synthesize fileName = _fileName;
 
 - (instancetype)initWithItemId:(NSNumber *)itemId_
                       itemName:(NSString *)itemName_
                       latitude:(NSNumber *)latitude_
                      longitude:(NSNumber *)longitude_
                       imageUrl:(NSString *)imageUrl_
-                      filePath:(NSString *)filePath_
+                      fileName:(NSString *)fileName_
               placeDescription:(NSString *)placeDescription_
                           city:(MTMappedCity *)city_
 {
@@ -39,7 +39,7 @@
         _latitude = latitude_;
         _longitude = longitude_;
         _imageUrl = imageUrl_;
-        _filePath = filePath_;
+        _fileName = fileName_;
         _placeDescription = placeDescription_;
         _city = city_;
         
@@ -55,7 +55,7 @@
                        latitude:nil
                       longitude:nil
                        imageUrl:nil
-                       filePath:nil
+                       fileName:nil
                placeDescription:nil
                            city:nil];
 }
@@ -67,7 +67,7 @@
                                                       latitude:self.latitude
                                                      longitude:self.longitude
                                                       imageUrl:self.imageUrl
-                                                      filePath:self.filePath
+                                                      fileName:self.fileName
                                               placeDescription:self.placeDescription
                                                           city:self.city];
 }

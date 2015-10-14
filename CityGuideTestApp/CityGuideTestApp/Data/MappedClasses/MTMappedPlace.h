@@ -17,7 +17,7 @@
     NSNumber *_longitude;
     NSString *_imageUrl;
     NSString *_placeDescription;
-    NSString *_filePath;
+    NSString *_fileName;
 }
 
 @property (nonatomic, strong, readonly) NSNumber *latitude;
@@ -25,7 +25,7 @@
 @property (nonatomic, strong, readonly) NSString *imageUrl;
 @property (nonatomic, strong, readonly) NSString *placeDescription;
 @property (nonatomic, strong, readonly) MTMappedCity *city;
-@property (nonatomic, strong, readonly) NSString *filePath;
+@property (nonatomic, strong, readonly) NSString *fileName;
 
 - (instancetype) __unavailable initWithItemId: (NSNumber *)itemId_
                                      itemName: (NSString *)itemName_;
@@ -34,7 +34,7 @@
                       latitude: (NSNumber *)latitude_
                      longitude: (NSNumber *)longitude_
                       imageUrl: (NSString *)imageUrl_
-                      filePath: (NSString *)filePath_
+                      fileName: (NSString *)fileName_
               placeDescription: (NSString *)placeDescription_
                           city: (MTMappedCity *)city_ NS_DESIGNATED_INITIALIZER;
 

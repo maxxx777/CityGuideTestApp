@@ -72,8 +72,8 @@
 
 - (void)onDidSelectImageCell
 {
-    if ([self.userInterface imagePhoto]) {
-        [self.wireframe onDidSelectImage:[self.userInterface imagePhoto]];
+    if ([self.placeDetailFetcher fileName]) {
+        [self.wireframe onDidSelectImageWithFileName:[self.placeDetailFetcher fileName]];
     }
 }
 
@@ -81,7 +81,7 @@
 
 - (void)onDidRefreshCurrentItem
 {
-    [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
+    [self.userInterface configureImageWithFileName:[self.placeDetailFetcher fileName]];
 }
 
 @end

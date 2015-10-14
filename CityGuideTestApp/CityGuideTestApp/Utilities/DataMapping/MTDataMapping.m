@@ -35,7 +35,7 @@
                                             latitude:[managedObject valueForKey:@"latitude"]
                                            longitude:[managedObject valueForKey:@"longitude"]
                                             imageUrl:[managedObject valueForKey:@"imageUrl"]
-                                            filePath:[managedObject valueForKey:@"filePath"]
+                                            fileName:[managedObject valueForKey:@"fileName"]
                                     placeDescription:[managedObject valueForKey:@"itemDescription"]
                                                 city:mappedCity];
     }
@@ -87,8 +87,8 @@
             result[@"imageUrl"] = mappedPlace.imageUrl;
         }
         
-        if (mappedPlace.filePath) {
-            result[@"filePath"] = mappedPlace.filePath;
+        if (mappedPlace.fileName) {
+            result[@"fileName"] = mappedPlace.fileName;
         }
         
         if (mappedPlace.placeDescription) {

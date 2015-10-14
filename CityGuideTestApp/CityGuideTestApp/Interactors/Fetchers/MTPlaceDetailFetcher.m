@@ -63,9 +63,9 @@
     return [NSURL URLWithString:self.place.imageUrl];
 }
 
-- (NSString *)filePath
+- (NSString *)fileName
 {
-    return self.place.filePath;
+    return self.place.fileName;
 }
 
 - (id)currentItem

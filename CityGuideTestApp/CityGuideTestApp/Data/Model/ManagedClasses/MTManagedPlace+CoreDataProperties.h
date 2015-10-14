@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *latitude;
 @property (nullable, nonatomic, retain) NSNumber *longitude;
 @property (nullable, nonatomic, retain) MTManagedCity *city;
-@property (nullable, nonatomic, retain) NSString *filePath;
+@property (nullable, nonatomic, retain) NSString *fileName;
 
 @end
 

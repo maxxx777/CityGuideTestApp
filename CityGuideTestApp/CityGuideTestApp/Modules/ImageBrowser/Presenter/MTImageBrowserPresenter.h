@@ -20,7 +20,7 @@
 
 @property (nonatomic, weak) UIViewController<MTImageBrowserViewInterface> *userInterface;
 
-- (instancetype)initWithImage:(UIImage *)image
-                    wireframe:(MTImageBrowserWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithImageFileName:(NSString *)fileName
+                            wireframe:(MTImageBrowserWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

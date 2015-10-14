@@ -53,9 +53,9 @@
 {
     MTMappedPlace *mappedPlace = (MTMappedPlace *)place;
     
-    if (mappedPlace.filePath) {
+    if (mappedPlace.fileName) {
     
-        completionBlock(nil, mappedPlace.filePath);
+        completionBlock(nil, mappedPlace.fileName);
         
     } else {
         
@@ -73,20 +73,20 @@
                                if (data) {
                                 
                                    [self saveFileWithData:data
-                                               completion:^(NSError *error, NSString *filePath){
+                                               completion:^(NSError *error, NSString *fileName){
                                        
-                                                   if (filePath) {
+                                                   if (fileName) {
                                                        
-                                                       MTMappedPlace *placeWithFilePath = [[MTMappedPlace alloc]
+                                                       MTMappedPlace *placeWithFileName = [[MTMappedPlace alloc]
                                                                                            initWithItemId:mappedPlace.itemId
                                                                                            itemName:mappedPlace.itemName
                                                                                            latitude:mappedPlace.latitude
                                                                                            longitude:mappedPlace.longitude
                                                                                            imageUrl:mappedPlace.imageUrl
-                                                                                           filePath:filePath
+                                                                                           fileName:fileName
                                                                                            placeDescription:mappedPlace.placeDescription
                                                                                            city:mappedPlace.city];
-                                                       MTSavePlaceOperation *savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:placeWithFilePath mergeOperationDelegate:self];
+                                                       MTSavePlaceOperation *savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:placeWithFileName mergeOperationDelegate:self];
                                                        [self.savePlaceOperations addPointer:(__bridge void * _Nullable)(savePlaceOperation)];
                                                        [[MTOperationManager sharedManager] queueOperation:savePlaceOperation];
                                                        
@@ -136,7 +136,7 @@
         [data writeToFile:filePath options:NSDataWritingAtomic error:&error];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
-            completionBlock(error, filePath);
+            completionBlock(error, fileName);
         }];
     }];
 }
@@ -156,7 +156,7 @@
              
                 MTImageManagerFetchImageCompletionBlock completionBlock = [self.imageClients objectForKey:clientId];
                 if (completionBlock) {
-                    completionBlock(error, place.filePath);
+                    completionBlock(error, place.fileName);
                     
                     [self.imageClients removeObjectForKey:clientId];
                 }                

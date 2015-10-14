@@ -11,6 +11,6 @@
 @protocol MTImageBrowserViewInterface <NSObject>
 
 - (void)configureNavigationBarWithTitle: (NSString *)title;
-- (void)configureImage:(UIImage *)image;
+- (void)configureImageWithFileName:(NSString *)fileName;
 
 @end

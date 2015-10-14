@@ -86,7 +86,7 @@
         NSNumber *latitude;
         NSNumber *longitude;
         NSString *imageUrl;
-        NSString *filePath;
+        NSString *fileName;
         NSString *placeDescription;
         
         itemId = [NSNumber mt_newItemId];
@@ -101,7 +101,7 @@
                                               latitude:latitude
                                              longitude:longitude
                                               imageUrl:imageUrl
-                                              filePath:filePath
+                                              fileName:fileName
                                       placeDescription:placeDescription
                                                   city:nil];
     }

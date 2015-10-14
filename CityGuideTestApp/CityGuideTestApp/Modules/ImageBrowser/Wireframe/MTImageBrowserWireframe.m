@@ -20,14 +20,15 @@
 
 #pragma mark - MTImageBrowserModuleInterface
 
-- (void)showImage:(UIImage *)image navigationController:(UINavigationController *)navigationController
+- (void)showImageWithFileName:(NSString *)fileName
+         navigationController:(UINavigationController *)navigationController
 {
     //init
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
     _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ImageBrowserViewController"];
     
     //configure
-    [self configureStackWithImage:image];
+    [self configureStackWithImageFileName:fileName];
     
     //navigate
     [navigationController pushViewController:self.viewController
@@ -36,11 +37,12 @@
 
 #pragma mark - Helper
 
-- (void)configureStackWithImage:(UIImage *)image
+- (void)configureStackWithImageFileName:(NSString *)fileName
 {
     //init presenter
-    MTImageBrowserPresenter *presenter = [[MTImageBrowserPresenter alloc] initWithImage:image
-                                                                              wireframe:self];
+    MTImageBrowserPresenter *presenter = [[MTImageBrowserPresenter alloc]
+                                          initWithImageFileName:fileName
+                                          wireframe:self];
 
     //bind view controller - presenter
     self.viewController.presenter = presenter;

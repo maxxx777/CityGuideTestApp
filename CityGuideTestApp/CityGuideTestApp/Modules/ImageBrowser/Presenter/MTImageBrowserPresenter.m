@@ -12,20 +12,20 @@
 
 @interface MTImageBrowserPresenter ()
 
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, weak) MTImageBrowserWireframe *wireframe;
 
 @end
 
 @implementation MTImageBrowserPresenter
 
-- (instancetype)initWithImage:(UIImage *)image
-                    wireframe:(MTImageBrowserWireframe *)wireframe
+- (instancetype)initWithImageFileName:(NSString *)fileName
+                            wireframe:(MTImageBrowserWireframe *)wireframe
 {
     self = [super init];
     if (self) {
         
-        _image = image;
+        _fileName = fileName;
         _wireframe = wireframe;
         
     }
@@ -37,7 +37,7 @@
 - (void)onDidLoadView
 {
     [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Image", nil)];
-    [self.userInterface configureImage:self.image];
+    [self.userInterface configureImageWithFileName:self.fileName];
 }
 
 @end

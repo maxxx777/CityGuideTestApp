@@ -10,6 +10,7 @@
 #import "MTMappedPlace.h"
 #import "UIImageView+MTActivityAnimation.h"
 #import "MTImageManager.h"
+#import "NSString+MTFormatting.h"
 
 @interface MTPlaceListCell ()
 
@@ -92,16 +93,22 @@
     
     self.labelName.text = mappedPlace.itemName;
     
-    if (mappedPlace.filePath) {
-        UIImage *image = [UIImage imageWithContentsOfFile:mappedPlace.filePath];
+    if (mappedPlace.fileName) {
+        NSString *filePath = [mappedPlace.fileName mt_formatDocumentsPath];
+        NSError *error;
+        NSData *data = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedAlways error:&error];
+//        NSLog(@"error: %@", error);
+        UIImage *image = [UIImage imageWithData:data];
         [self.imageViewPhoto setImage:image];
     } else {
+        [self.imageViewPhoto setImage:nil];
         [self.imageViewPhoto mt_startActivityAnimation];
         [[MTImageManager sharedManager] fetchImageForPlace:mappedPlace
-                                                completion:^(NSError *error, NSString *filePath){
+                                                completion:^(NSError *error, NSString *fileName){
 
                                                     UIImage *image;
-                                                    if (filePath) {
+                                                    if (fileName) {
+                                                        NSString *filePath = [fileName mt_formatDocumentsPath];
                                                         image = [UIImage imageWithContentsOfFile:filePath];
                                                     } else {
                                                         image = [UIImage imageNamed:@"image_placeholder.png"];

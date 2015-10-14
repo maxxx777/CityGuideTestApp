@@ -52,7 +52,7 @@
     
     [self.userInterface enableDropPinOnMapView];
     
-    [self.userInterface configurePhotoCellAsAddPhoto];
+    [self.userInterface configurePhotoCellAsAddImage];
 }
 
 - (void)onWillDisappearView
@@ -139,9 +139,9 @@
 {
     NSData *data = UIImageJPEGRepresentation(image, 0.9f);
     [[MTImageManager sharedManager] saveFileWithData:data
-                                          completion:^(NSError *error, NSString *filePath){
-                                              if (filePath) {
-                                                  [self.userInterface configureImageWithFilePath:filePath];
+                                          completion:^(NSError *error, NSString *fileName){
+                                              if (fileName) {
+                                                  [self.userInterface configureImageWithFileName:fileName];
                                               } else {
                                                   NSLog(@"save file error: %@", error);
                                               }
