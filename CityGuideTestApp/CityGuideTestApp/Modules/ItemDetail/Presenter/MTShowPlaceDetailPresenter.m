@@ -16,6 +16,7 @@
 @property (nonatomic, strong) id<MTPlaceDetailFetcherInputInterface>placeDetailFetcher;
 @property (nonatomic, weak) MTItemDetailWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
+@property (nonatomic, strong) UIImage *image;
 
 @end
 
@@ -63,20 +64,13 @@
         [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
         
         if ([self.placeDetailFetcher fileName]) {
-            [self.userInterface configureImageWithFileName:[self.placeDetailFetcher fileName]];
+            [self.userInterface configureImageWithImage:self.image];
         } else {
             if ([self.placeDetailFetcher photoURL]) {
                 
                 [self.userInterface enableActivityForImageLoading];
                 [[MTImageManager sharedManager] fetchImageForPlace:[self.placeDetailFetcher currentItem]
-                                                        completion:^(NSError *error, NSString *fileName){
-                                                            if (fileName) {
-                                                                [self.placeDetailFetcher refreshCurrentItem];
-                                                            } else {
-                                                                [self.userInterface configurePhotoCellAsNoImage];
-                                                            }
-                                                            [self.userInterface disableActivityForImageLoading];
-                                                        }];
+                                                          delegate:self];
             } else {
                 [self.userInterface configurePhotoCellAsNoImage];
             }
@@ -89,7 +83,7 @@
 - (void)onDidSelectImageCell
 {
     if ([self.placeDetailFetcher fileName]) {
-        [self.wireframe onDidSelectImageWithFileName:[self.placeDetailFetcher fileName]];
+        [self.wireframe onDidSelectImage:self.image];
     }
 }
 
@@ -97,7 +91,31 @@
 
 - (void)onDidRefreshCurrentItem
 {
-    [self.userInterface configureImageWithFileName:[self.placeDetailFetcher fileName]];
+    [self.userInterface configureImageWithImage:self.image];
+}
+
+#pragma mark - MTImageManagerDelegate
+
+- (void)onDidFetchImageForPlace:(id)place
+                          error:(NSError *)error
+{
+    if (error) {
+        [self.userInterface configurePhotoCellAsNoImage];
+    } else {
+        [self.placeDetailFetcher refreshCurrentItem];
+    }
+    [self.userInterface disableActivityForImageLoading];
+}
+
+#pragma mark - Image
+
+- (UIImage *)image
+{
+    if (_image) {
+        return _image;
+    }
+    _image = [[MTImageManager sharedManager] imageFromCacheForPlace:[self.placeDetailFetcher currentItem]];
+    return _image;
 }
 
 @end

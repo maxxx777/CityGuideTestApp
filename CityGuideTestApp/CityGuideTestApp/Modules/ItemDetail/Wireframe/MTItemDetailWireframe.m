@@ -58,10 +58,10 @@
 
 #pragma mark - Public
 
-- (void)onDidSelectImageWithFileName:(NSString *)fileName
+- (void)onDidSelectImage:(UIImage *)image
 {
-    [self.imageBrowserModule showImageWithFileName:fileName
-                              navigationController:self.viewController.navigationController];
+    [self.imageBrowserModule showImage:image
+                  navigationController:self.viewController.navigationController];
 }
 
 #pragma mark - Helper

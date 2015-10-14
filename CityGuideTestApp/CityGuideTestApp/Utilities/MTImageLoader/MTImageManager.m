@@ -11,10 +11,12 @@
 #import "MTMappedPlace.h"
 #import "MTOperationManager.h"
 #import "MTSavePlaceOperation.h"
+#import "MTImageManagerDelegate.h"
 
 @interface MTImageManager ()
 
-@property (nonatomic, strong) NSMapTable *imageClients;
+@property (nonatomic, strong) NSMutableDictionary *imageClients;
+@property (nonatomic, strong) NSMutableDictionary *imageCache;
 @property (nonatomic, strong) NSPointerArray *savePlaceOperations;
 
 @end
@@ -26,11 +28,18 @@
     self = [super init];
     if (self) {
         
-        _imageClients = [[NSMapTable alloc] init];
+        _imageClients = [NSMutableDictionary dictionary];
+        _imageCache = [NSMutableDictionary dictionary];
         _savePlaceOperations = [NSPointerArray strongObjectsPointerArray];
         
+        [self subscribeForNotifications];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [self unsubscribeFromNotifications];
 }
 
 + (MTImageManager *)sharedManager
@@ -49,57 +58,66 @@
 #pragma mark - MTImageManagerInterface
 
 - (void)fetchImageForPlace:(id)place
-                completion:(MTImageManagerFetchImageCompletionBlock)completionBlock
+                  delegate:(id<MTImageManagerDelegate>)delegate
 {
-    MTMappedPlace *mappedPlace = (MTMappedPlace *)place;
+    if (place) {
+        
+        MTMappedPlace *mappedPlace = (MTMappedPlace *)place;
     
-    if (mappedPlace.fileName) {
-    
-        completionBlock(nil, mappedPlace.fileName);
+        BOOL isClientInQueue = [self isClientInQueueWithPlace:mappedPlace];
         
-    } else {
+        [self addClientWithPlace:mappedPlace
+                        delegate:delegate];
         
-        NSString *clientId = [NSString stringWithFormat:@"%@", mappedPlace.itemId];
-        BOOL isClientInQueue = [self.imageClients objectForKey:clientId];
-        
-        [self.imageClients setObject:completionBlock
-                              forKey:clientId];
-        
-        if (!isClientInQueue) {
+        if (mappedPlace.fileName) {
             
-            [self downloadFileWithURL:[NSURL URLWithString:mappedPlace.imageUrl]
-                           completion:^(NSError *error, NSData *data){
+            __weak MTImageManager *weakSelf = self;
+            [self addImageToCacheForPlace:mappedPlace
+                               completion:^(NSError *error, id place){
+                                   if (!error) {
+                                       [weakSelf notifyClientsWithPlace:mappedPlace
+                                                                  error:error];
+                                   }
+                               }];
+            
+        } else {
+    
+            if (!isClientInQueue) {
                 
-                               if (data) {
-                                
-                                   [self saveFileWithData:data
-                                               completion:^(NSError *error, NSString *fileName){
+                [self downloadFileWithURL:[NSURL URLWithString:mappedPlace.imageUrl]
+                               completion:^(NSError *error, NSData *data){
+                                   
+                                   if (data) {
                                        
-                                                   if (fileName) {
+                                       [self saveFileWithData:data
+                                                   completion:^(NSError *error, NSString *fileName){
                                                        
-                                                       MTMappedPlace *placeWithFileName = [[MTMappedPlace alloc]
-                                                                                           initWithItemId:mappedPlace.itemId
-                                                                                           itemName:mappedPlace.itemName
-                                                                                           latitude:mappedPlace.latitude
-                                                                                           longitude:mappedPlace.longitude
-                                                                                           imageUrl:mappedPlace.imageUrl
-                                                                                           fileName:fileName
-                                                                                           placeDescription:mappedPlace.placeDescription
-                                                                                           city:mappedPlace.city];
-                                                       MTSavePlaceOperation *savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:placeWithFileName mergeOperationDelegate:self];
-                                                       [self.savePlaceOperations addPointer:(__bridge void * _Nullable)(savePlaceOperation)];
-                                                       [[MTOperationManager sharedManager] queueOperation:savePlaceOperation];
-                                                       
-                                                   } else {
-                                                       [self.imageClients removeObjectForKey:clientId];
-                                                       completionBlock(error, nil);
-                                                   }
-                                   }];
-                               } else {
-                                   [self.imageClients removeObjectForKey:clientId];
-                                   completionBlock(error, nil);
-                               }
-            }];
+                                                       if (fileName) {
+                                                           
+                                                           MTMappedPlace *placeWithFileName = [[MTMappedPlace alloc]
+                                                                                               initWithItemId:mappedPlace.itemId
+                                                                                               itemName:mappedPlace.itemName
+                                                                                               latitude:mappedPlace.latitude
+                                                                                               longitude:mappedPlace.longitude
+                                                                                               imageUrl:mappedPlace.imageUrl
+                                                                                               fileName:fileName
+                                                                                               placeDescription:mappedPlace.placeDescription
+                                                                                               city:mappedPlace.city];
+                                                           MTSavePlaceOperation *savePlaceOperation = [[MTSavePlaceOperation alloc] initWithPlace:placeWithFileName mergeOperationDelegate:self];
+                                                           [self.savePlaceOperations addPointer:(__bridge void * _Nullable)(savePlaceOperation)];
+                                                           [[MTOperationManager sharedManager] queueOperation:savePlaceOperation];
+                                                           
+                                                       } else {
+                                                           [self notifyClientsWithPlace:mappedPlace
+                                                                                  error:error];
+                                                       }
+                                                   }];
+                                   } else {
+                                       [self notifyClientsWithPlace:mappedPlace
+                                                              error:error];
+                                   }
+                               }];
+            }
         }
     }
 }
@@ -148,9 +166,22 @@
         [data writeToFile:filePath options:NSDataWritingAtomic error:&error];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
-            completionBlock(error, fileName);
+            if (completionBlock) {
+                completionBlock(error, fileName);
+            }
         }];
     }];
+}
+
+- (void)removeFileWithName:(NSString *)fileName
+                completion:(MTImageManagerRemoveFileCompletionBlock)completionBlock
+{
+    NSString *filePath = [fileName mt_formatDocumentsPath];
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
+    if (completionBlock) {
+        completionBlock(error, fileName);
+    }
 }
 
 - (UIImage *)imageWithImage:(UIImage *)image
@@ -185,20 +216,160 @@
 {
     if (!isOperationCancelled) {
         if (object) {
-            MTMappedPlace *place = (MTMappedPlace *)object;
             
-            NSString *clientId = [NSString stringWithFormat:@"%@", place.itemId];
-            if ([self.imageClients objectForKey:clientId]) {
-             
-                MTImageManagerFetchImageCompletionBlock completionBlock = [self.imageClients objectForKey:clientId];
-                if (completionBlock) {
-                    completionBlock(error, place.fileName);
-                    
-                    [self.imageClients removeObjectForKey:clientId];
-                }                
+            MTMappedPlace *mappedPlace = (MTMappedPlace *)object;
+            __weak MTImageManager *weakSelf = self;
+            [self addImageToCacheForPlace:mappedPlace
+                               completion:^(NSError *error, id place){
+                                   if (!error) {
+                                       [weakSelf notifyClientsWithPlace:mappedPlace
+                                                                  error:error];
+                                   }
+            }];
+        }
+    }
+}
+
+#pragma mark - Image Clients
+
+- (void)notifyClientsWithPlace:(MTMappedPlace *)place
+                         error:(NSError *)error
+{
+    if (place) {
+        NSPointerArray *clients = [self clientsForPlace:place];
+        if ([clients count] > 0) {
+            for (id<MTImageManagerDelegate> delegate in clients) {
+                if (delegate) {
+                    if (delegate && [delegate respondsToSelector:@selector(onDidFetchImageForPlace:error:)]) {
+                        [delegate onDidFetchImageForPlace:place
+                                                    error:error];
+                    }
+                }
+            }
+        }
+        [self.imageClients removeObjectForKey:[self clientIdForPlace:place]];
+    }
+}
+
+- (void)addClientWithPlace:(MTMappedPlace *)place
+                  delegate:(id<MTImageManagerDelegate>)delegate
+{
+    if (place) {
+        NSPointerArray *clients;
+        
+        if ([self clientsForPlace:place]) {
+            clients = [self clientsForPlace:place];
+        } else {
+            clients = [NSPointerArray strongObjectsPointerArray];
+        }
+        if (delegate) {
+            [clients addPointer:(__bridge void * _Nullable)(delegate)];
+        }
+        [self.imageClients setObject:clients forKey:[self clientIdForPlace:place]];
+    }
+}
+
+- (NSPointerArray *)clientsForPlace:(MTMappedPlace *)place
+{
+    NSPointerArray *result;
+    
+    if ([self clientIdForPlace:place]) {
+        result = [self.imageClients objectForKey:[self clientIdForPlace:place]];
+    }
+    
+    return result;
+}
+
+- (BOOL)isClientInQueueWithPlace:(MTMappedPlace *)place
+{
+    BOOL result = NO;
+    
+    NSString *clientId = [self clientIdForPlace:place];
+    if (clientId) {
+        result = [self.imageClients objectForKey:clientId];
+    }
+    
+    return result;
+}
+
+- (NSString *)clientIdForPlace:(MTMappedPlace *)place
+{
+    NSString *result;
+    
+    if (place) {
+        result = [NSString stringWithFormat:@"%@", place.itemId];
+    }
+    
+    return result;
+}
+
+#pragma mark - Image Cache
+
+- (void)addImageToCacheForPlace:(MTMappedPlace *)place
+                     completion:(MTImageManagerCacheImageCompletionBlock)completion
+{
+    NSError *error;
+    
+    if (place) {
+        if (![self.imageCache valueForKey:[self clientIdForPlace:place]]) {
+            if (place.fileName) {
+                NSString *filePath = [place.fileName mt_formatDocumentsPath];
+                UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+                if (image) {
+                    [self.imageCache setObject:image forKey:[self clientIdForPlace:place]];
+                } else {
+                    error = [NSError errorWithDomain:MTImageManagerErrorDomain
+                                                code:MTImageManagerErrorNoImage
+                                            userInfo:nil];
+                }
+            } else {
+                error = [NSError errorWithDomain:MTImageManagerErrorDomain
+                                            code:MTImageManagerErrorNoImage
+                                        userInfo:nil];
             }
         }
     }
+    completion(error, place);
+}
+
+- (UIImage *)imageFromCacheForPlace:(MTMappedPlace *)place
+{
+    UIImage *result;
+    
+    if (place) {
+        result = [self.imageCache objectForKey:[self clientIdForPlace:place]];
+    }
+    
+    return result;
+}
+
+- (void)clearImageCache
+{
+    self.imageCache = [NSMutableDictionary dictionary];
+}
+
+#pragma mark - Notifications
+
+- (void)subscribeForNotifications {
+    
+    [self unsubscribeFromNotifications];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onDidReceiveMemoryWarning)
+                                                 name:UIApplicationDidReceiveMemoryWarningNotification
+                                               object:nil];
+}
+
+- (void)unsubscribeFromNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIApplicationDidReceiveMemoryWarningNotification
+                                                  object:nil];
+}
+
+- (void)onDidReceiveMemoryWarning
+{
+    [self clearImageCache];
 }
 
 @end

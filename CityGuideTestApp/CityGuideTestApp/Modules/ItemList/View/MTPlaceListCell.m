@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIImageView *imageViewPhoto;
 @property (nonatomic, strong) UILabel *labelName;
 @property (nonatomic, strong) UIView *viewLine;
+@property (nonatomic, strong) MTMappedPlace *mappedPlace;
 
 @end
 
@@ -89,35 +90,14 @@
 
 - (void)configureCellWithItem:(id)item
 {
-    MTMappedPlace *mappedPlace = (MTMappedPlace *)item;
+    _mappedPlace = (MTMappedPlace *)item;
     
-    self.labelName.text = mappedPlace.itemName;
+    self.labelName.text = self.mappedPlace.itemName;
     
-    if (mappedPlace.fileName) {
-        NSString *filePath = [mappedPlace.fileName mt_formatDocumentsPath];
-        NSError *error;
-        NSData *data = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedAlways error:&error];
-//        NSLog(@"error: %@", error);
-        UIImage *image = [UIImage imageWithData:data];
-        [self.imageViewPhoto setImage:image];
-    } else {
-        [self.imageViewPhoto setImage:nil];
-        [self.imageViewPhoto mt_startActivityAnimation];
-        [[MTImageManager sharedManager] fetchImageForPlace:mappedPlace
-                                                completion:^(NSError *error, NSString *fileName){
-
-                                                    UIImage *image;
-                                                    if (fileName) {
-                                                        NSString *filePath = [fileName mt_formatDocumentsPath];
-                                                        image = [UIImage imageWithContentsOfFile:filePath];
-                                                    } else {
-                                                        image = [UIImage imageNamed:@"image_placeholder.png"];
-                                                    }
-                                                    [self.imageViewPhoto setImage:image];
-                                                    
-                                                    [self.imageViewPhoto mt_stopActivityAnimation];
-        }];
-    }
+    [self.imageViewPhoto setImage:nil];
+    [self.imageViewPhoto mt_startActivityAnimation];
+    [[MTImageManager sharedManager] fetchImageForPlace:self.mappedPlace
+                                              delegate:self];
 }
 
 - (void)configureCellForOffScreenWithItem:(id)item
@@ -128,6 +108,37 @@
 - (CGFloat)heightForCellWithItem:(id)item
 {
     return 60.0f;
+}
+
+#pragma mark - MTImageManagerDelegate
+
+- (void)onDidFetchImageForPlace:(id)place error:(NSError *)error
+{
+    [self.imageViewPhoto mt_stopActivityAnimation];
+    
+    if (place) {
+        
+        BOOL isCurrentPlaceWithFetchedImage = NO;
+        if (place && self.mappedPlace) {
+            MTMappedPlace *placeWithFetchedImage = (MTMappedPlace *)place;
+            isCurrentPlaceWithFetchedImage = [placeWithFetchedImage.itemId isEqualToNumber:self.mappedPlace.itemId];
+        }
+        
+        if (isCurrentPlaceWithFetchedImage) {
+            UIImage *image = [[MTImageManager sharedManager] imageFromCacheForPlace:place];
+            if (image) {
+                [self.imageViewPhoto setImage:image];
+            } else {
+                [self showImagePlaceholder];
+            }
+        }        
+    }
+}
+
+- (void)showImagePlaceholder
+{
+    UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
+    [self.imageViewPhoto setImage:image];
 }
 
 @end

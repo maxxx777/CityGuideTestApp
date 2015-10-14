@@ -17,7 +17,7 @@
 - (void)reloadCells;
 - (void)configurePhotoCellAsAddImage;
 - (void)configurePhotoCellAsNoImage;
-- (void)configureImageWithFileName:(NSString *)fileName;
+- (void)configureImageWithImage:(UIImage *)image;
 - (void)configureImageWithPlaceholder;
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;

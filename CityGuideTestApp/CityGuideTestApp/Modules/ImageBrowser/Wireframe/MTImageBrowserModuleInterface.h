@@ -10,7 +10,6 @@
 
 @protocol MTImageBrowserModuleInterface <NSObject>
 
-- (void)showImageWithFileName:(NSString *)fileName
-         navigationController:(UINavigationController *)navigationController;
+- (void)showImage:(UIImage *)image navigationController:(UINavigationController *)navigationController;
 
 @end

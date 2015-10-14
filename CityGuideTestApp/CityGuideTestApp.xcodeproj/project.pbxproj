@@ -250,6 +250,7 @@
 		757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAppSettingsConfigurator.m; sourceTree = "<group>"; };
 		757831AE1BC82031008BD2FC /* MTAppSettingsConfiguratorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAppSettingsConfiguratorInterface.h; sourceTree = "<group>"; };
 		757831B01BC823B2008BD2FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		757C61BD1BCE4C7800E2E252 /* MTImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManagerDelegate.h; sourceTree = "<group>"; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -919,6 +920,7 @@
 				756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */,
 				756174F61BCAAA11004A843C /* MTImageManager.h */,
 				756174F71BCAAA11004A843C /* MTImageManager.m */,
+				757C61BD1BCE4C7800E2E252 /* MTImageManagerDelegate.h */,
 			);
 			path = MTImageLoader;
 			sourceTree = "<group>";

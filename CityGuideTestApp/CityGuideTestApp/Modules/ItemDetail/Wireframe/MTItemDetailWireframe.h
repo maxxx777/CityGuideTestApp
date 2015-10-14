@@ -18,6 +18,6 @@
 
 @property (nonatomic, strong, nonnull) id<MTImageBrowserModuleInterface>imageBrowserModule;
 
-- (void)onDidSelectImageWithFileName:(NSString *)fileName;
+- (void)onDidSelectImage:(UIImage *)image;
 
 @end

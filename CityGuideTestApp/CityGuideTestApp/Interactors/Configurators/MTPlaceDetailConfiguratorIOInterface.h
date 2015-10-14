@@ -13,7 +13,7 @@
 - (void)configurePlaceCoordinates:(NSDictionary *)coordinates;
 - (void)configurePlaceName:(NSString *)name;
 - (void)configurePlaceDescription:(NSString *)description;
-- (void)configurePlacePhotoPath:(NSString *)photoPath;
+- (void)configurePlaceFileName:(NSString *)fileName;
 
 @end
 
@@ -24,6 +24,6 @@
 - (void)onDidConfigurePlaceCoordinates;
 - (void)onDidConfigurePlaceName;
 - (void)onDidConfigurePlaceDescription;
-- (void)onDidConfigurePlacePhotoPath;
+- (void)onDidConfigurePlaceFileName;
 
 @end

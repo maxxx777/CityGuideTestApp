@@ -14,9 +14,6 @@
 #import "MTAlertWrapper.h"
 
 @interface MTEditPlaceDetailPresenter ()
-{
-    MTAlertWrapper *alertWrapper;
-}
 
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
@@ -38,7 +35,6 @@
         _itemOperator = itemOperator;
         _wireframe = wireframe;
         
-        alertWrapper = [[MTAlertWrapper alloc] init];
         _isFirstAppearance = YES;
     }
     return self;
@@ -48,6 +44,8 @@
 
 - (void)onWillAppearView
 {
+    [self.userInterface enableRightBarButtonOnNavigationBar];
+    
     if (self.isFirstAppearance) {
         
         [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
@@ -61,7 +59,7 @@
 - (void)onDidAppearView
 {
     if (self.isFirstAppearance) {
-    
+        
         [self.userInterface enableDropPinOnMapView];
         
         self.isFirstAppearance = NO;
@@ -91,10 +89,12 @@
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
     if (![self.placeDetailConfigurator placeCoordinates]) {
+        MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Coordinates", nil)
                                         message:NSLocalizedString(@"Please Drop Pin on Map where Place is Located", nil)];
     } else if (![self.placeDetailConfigurator placeName]) {
+        MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Name", nil)
                                         message:NSLocalizedString(@"Please Input Place Name", nil)];
@@ -115,6 +115,7 @@
 
 - (void)onDidSelectImageCell
 {
+    MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
     [alertWrapper showActionSheetInViewController:self.userInterface
                                         withTitle:NSLocalizedString(@"Attach photo", nil)
                                 cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
@@ -151,10 +152,15 @@
 - (void)onDidSelectImage:(UIImage *)image
 {
     NSData *data = UIImageJPEGRepresentation(image, 0.9f);
+    if ([self.placeDetailConfigurator fileName]) {
+        [[MTImageManager sharedManager] removeFileWithName:[self.placeDetailConfigurator fileName]
+                                                completion:nil];
+    }
     [[MTImageManager sharedManager] saveFileWithData:data
                                           completion:^(NSError *error, NSString *fileName){
                                               if (fileName) {
-                                                  [self.userInterface configureImageWithFileName:fileName];
+                                                  [self.placeDetailConfigurator configurePlaceFileName:fileName];
+                                                  [self.userInterface configureImageWithImage:image];
                                               } else {
                                                   NSLog(@"save file error: %@", error);
                                               }

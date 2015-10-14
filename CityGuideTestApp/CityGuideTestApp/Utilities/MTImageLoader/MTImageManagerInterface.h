@@ -8,14 +8,18 @@
 
 #import "MTImageManagerConstants.h"
 
+@protocol MTImageManagerDelegate;
+
 @protocol MTImageManagerInterface <NSObject>
 
 - (void)fetchImageForPlace:(id)place
-                completion:(MTImageManagerFetchImageCompletionBlock)completionBlock;
+                  delegate:(id<MTImageManagerDelegate>)delegate;
 - (void)downloadFileWithURL:(NSURL *)url
                  completion:(MTImageManagerDownloadFileCompletionBlock)completionBlock;
 - (void)saveFileWithData:(NSData *)data
               completion:(MTImageManagerSaveFileCompletionBlock)completionBlock;
+- (void)removeFileWithName:(NSString *)fileName
+                completion:(MTImageManagerRemoveFileCompletionBlock)completionBlock;
 - (UIImage *)imageWithImage:(UIImage *)image
                scaledToSize:(CGSize)newSize;
 - (UIImage *)imageWithImage:(UIImage *)image

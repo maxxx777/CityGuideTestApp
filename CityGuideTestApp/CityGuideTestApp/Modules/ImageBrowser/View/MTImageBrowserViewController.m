@@ -20,11 +20,8 @@
 
 #pragma mark - MTImageBrowserViewInterface
 
-- (void)configureImageWithFileName:(NSString *)fileName
+- (void)configureImageWithImage:(UIImage *)image
 {
-    NSString *filePath = [fileName mt_formatDocumentsPath];
-    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-
     self.imageView.image = image;
 }
 

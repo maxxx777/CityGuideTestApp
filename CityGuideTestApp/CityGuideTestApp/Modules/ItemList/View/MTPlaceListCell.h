@@ -7,8 +7,12 @@
 //
 
 #import "MTRootCell.h"
+#import "MTImageManagerDelegate.h"
 
 @interface MTPlaceListCell : MTRootCell
+<
+    MTImageManagerDelegate
+>
 
 - (void)configureCellWithItem:(id)item;
 

@@ -64,6 +64,11 @@
     return [NSURL URLWithString:self.place.imageUrl];
 }
 
+- (NSString *)fileName
+{
+    return self.place.fileName;
+}
+
 - (void)configurePlaceName:(NSString *)name
 {
     _place.itemName = name;
@@ -98,13 +103,13 @@
     }
 }
 
-- (void)configurePlacePhotoPath:(NSString *)photoPath
+- (void)configurePlaceFileName:(NSString *)fileName
 {
-    _place.fileName = [photoPath mt_formatDocumentsPath];
+    _place.fileName = fileName;
     
     for (id<MTPlaceDetailConfiguratorOutputInterface> output in self.outputs) {
-        if ([output respondsToSelector:@selector(onDidConfigurePlacePhotoPath)]) {
-            [output onDidConfigurePlacePhotoPath];
+        if ([output respondsToSelector:@selector(onDidConfigurePlaceFileName)]) {
+            [output onDidConfigurePlaceFileName];
         }
     }
 }

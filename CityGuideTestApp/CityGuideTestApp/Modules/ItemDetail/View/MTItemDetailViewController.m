@@ -115,14 +115,12 @@
     self.photoCell.accessoryType = UITableViewCellAccessoryNone;
 }
 
-- (void)configureImageWithFileName:(NSString *)fileName
+- (void)configureImageWithImage:(UIImage *)image
 {
     self.imageViewPhoto.hidden = NO;
     self.photoCell.textLabel.text = @"";
     self.photoCell.accessoryType = UITableViewCellAccessoryNone;
     
-    NSString *filePath = [fileName mt_formatDocumentsPath];
-    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
     NSLog(@"bounds %f %f", self.photoCell.bounds.size.width, self.photoCell.contentView.bounds.size.height);
     CGFloat scaledHeight = CGRectGetWidth(self.photoCell.contentView.frame) * image.size.height / image.size.width;
     CGSize scaledSize = CGSizeMake(self.photoCell.contentView.frame.size.width, scaledHeight);
