@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) id<MTPlaceDetailFetcherInputInterface>placeDetailFetcher;
 @property (nonatomic, weak) MTItemDetailWireframe *wireframe;
+@property (nonatomic) BOOL isFirstAppearance;
 
 @end
 
@@ -29,6 +30,7 @@
         _placeDetailFetcher = placeDetailFetcher;
         _wireframe = wireframe;
         
+        _isFirstAppearance = YES;
     }
     return self;
 }
@@ -37,37 +39,51 @@
 
 - (void)onWillAppearView
 {
-    [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
-    
-    NSString *placeName = [self.placeDetailFetcher placeName] ? [self.placeDetailFetcher placeName] : @"";
-    [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@", placeName]];
-    
-    NSString *placeDescription = [self.placeDetailFetcher placeDescription] ? [self.placeDetailFetcher placeDescription] : @"";
-    [self.userInterface configureDescriptionWithText:placeDescription];
-    
-    if ([self.placeDetailFetcher filePath]) {
-        [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
-    } else {
-        if ([self.placeDetailFetcher photoURL]) {
-            
-            [self.userInterface configureImageWithFilePath:[self.placeDetailFetcher filePath]];
-            
-            [self.userInterface enableActivityForImageLoading];
-            [[MTImageManager sharedManager] fetchImageForPlace:[self.placeDetailFetcher currentItem]
-                                                    completion:^(NSError *error, NSString *filePath){
-                                                            if (filePath) {
+    if (self.isFirstAppearance) {
+     
+        [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
+        
+        NSString *placeName = [self.placeDetailFetcher placeName] ? [self.placeDetailFetcher placeName] : @"";
+        [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@", placeName]];
+        [self.userInterface disableTextField];
+        
+        NSString *placeDescription = [self.placeDetailFetcher placeDescription] ? [self.placeDetailFetcher placeDescription] : @"";
+        [self.userInterface configureDescriptionWithText:placeDescription];
+        [self.userInterface disableTextView];
+        
+        [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
+        
+    }
+}
+
+- (void)onDidAppearView
+{
+    if (self.isFirstAppearance) {
+        
+        [self.userInterface reloadCells];
+        
+        if ([self.placeDetailFetcher fileName]) {
+            [self.userInterface configureImageWithFileName:[self.placeDetailFetcher fileName]];
+        } else {
+            if ([self.placeDetailFetcher photoURL]) {
+                
+                [self.userInterface enableActivityForImageLoading];
+                [[MTImageManager sharedManager] fetchImageForPlace:[self.placeDetailFetcher currentItem]
+                                                        completion:^(NSError *error, NSString *fileName){
+                                                            if (fileName) {
                                                                 [self.placeDetailFetcher refreshCurrentItem];
                                                             } else {
-                                                                [self.userInterface configureImageWithPlaceholder];
+                                                                [self.userInterface configurePhotoCellAsNoImage];
                                                             }
                                                             [self.userInterface disableActivityForImageLoading];
                                                         }];
-        } else {
-            [self.userInterface configureImageWithPlaceholder];
+            } else {
+                [self.userInterface configurePhotoCellAsNoImage];
+            }
         }
+        
+        self.isFirstAppearance = NO;
     }
-    
-    [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
 }
 
 - (void)onDidSelectImageCell

@@ -10,6 +10,8 @@
 #import "MTPlaceAnnotation.h"
 #import "MTItemDetailViewConstants.h"
 #import "UIImageView+MTActivityAnimation.h"
+#import "MTImageManager.h"
+#import "NSString+MTFormatting.h"
 
 @interface MTItemDetailViewController ()
 
@@ -33,6 +35,13 @@
     [super viewWillAppear:animated];
     
     [self.presenter onWillAppearView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.presenter onDidAppearView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -61,6 +70,12 @@
     self.textViewDescription.text = text;
 }
 
+- (void)reloadCells
+{
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
+}
+
 - (void)configureMapWithCoordinates:(NSDictionary *)coordinates
 {
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake([[coordinates valueForKey:@"latitude"] doubleValue], [[coordinates valueForKey:@"longitude"] doubleValue]);
@@ -80,35 +95,45 @@
     [self.mapView regionThatFits:region];
 }
 
-- (void)configurePhotoCellAsAddPhoto
+- (void)configurePhotoCellAsAddImage
 {
     self.imageViewPhoto.hidden = YES;
     
-    self.photoCell.textLabel.text = NSLocalizedString(@"Add Photo", nil);
+    self.photoCell.textLabel.text = NSLocalizedString(@"Add Image", nil);
     self.photoCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
-- (void)configureImageWithFilePath:(NSString *)filePath
+- (void)configurePhotoCellAsNoImage
+{
+    self.imageViewPhoto.hidden = YES;
+    
+    self.photoCell.textLabel.text = NSLocalizedString(@"No Image", nil);
+    self.photoCell.accessoryType = UITableViewCellAccessoryNone;
+}
+
+- (void)configureImageWithFileName:(NSString *)fileName
 {
     self.imageViewPhoto.hidden = NO;
     self.photoCell.textLabel.text = @"";
     self.photoCell.accessoryType = UITableViewCellAccessoryNone;
     
+    NSString *filePath = [fileName mt_formatDocumentsPath];
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+    NSLog(@"bounds %f %f", self.photoCell.bounds.size.width, self.photoCell.contentView.bounds.size.height);
+    CGFloat scaledHeight = CGRectGetWidth(self.photoCell.contentView.frame) * image.size.height / image.size.width;
+    CGSize scaledSize = CGSizeMake(self.photoCell.contentView.frame.size.width, scaledHeight);
     
-    CGFloat h = CGRectGetHeight(self.photoCell.contentView.frame) * image.size.width / CGRectGetWidth(self.photoCell.contentView.frame);
+    image = [[MTImageManager sharedManager] imageWithImage:image
+                                              scaledToSize:scaledSize];
+    
     CGRect cropRect = CGRectMake(0,
-                                 CGRectGetHeight(self.photoCell.contentView.frame) / 2,
-                                 CGRectGetWidth(self.photoCell.contentView.frame),
-                                 h);
-    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
-    [self.imageViewPhoto setImage:image];
-    CGImageRelease(imageRef);
-}
+                                 image.size.height / 2,
+                                 image.size.width,
+                                 image.size.height);
+    
+    image = [[MTImageManager sharedManager] imageWithImage:image
+                                                  cropRect:cropRect];
 
-- (void)configureImageWithPlaceholder
-{
-    UIImage *image = [UIImage imageNamed:@"image_placeholder.png"];
     [self.imageViewPhoto setImage:image];
 }
 
@@ -139,6 +164,26 @@
 - (void)disableActivityForImageLoading
 {
     [self.imageViewPhoto mt_stopActivityAnimation];
+}
+
+- (void)enableTextField
+{
+    self.textFieldName.userInteractionEnabled = YES;
+}
+
+- (void)disableTextField
+{
+    self.textFieldName.userInteractionEnabled = NO;
+}
+
+- (void)enableTextView
+{
+    self.textViewDescription.userInteractionEnabled = YES;
+}
+
+- (void)disableTextView
+{
+    self.textViewDescription.userInteractionEnabled = NO;
 }
 
 - (void)enableDropPinOnMapView
@@ -262,6 +307,19 @@
 }
 
 #pragma mark = TableView
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewDescriptionCellIdentifier]) {
+        
+        return [self.textViewDescription sizeThatFits:CGSizeMake(self.textViewDescription.frame.size.width, CGFLOAT_MAX)].height;
+        
+    } else {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

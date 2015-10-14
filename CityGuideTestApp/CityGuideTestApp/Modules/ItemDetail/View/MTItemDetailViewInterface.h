@@ -14,8 +14,10 @@
 - (void)configureMapWithCoordinates:(NSDictionary *)coordinates;
 - (void)configureNameWithText:(NSString *)text;
 - (void)configureDescriptionWithText:(NSString *)text;
-- (void)configurePhotoCellAsAddPhoto;
-- (void)configureImageWithFilePath:(NSString *)filePath;
+- (void)reloadCells;
+- (void)configurePhotoCellAsAddImage;
+- (void)configurePhotoCellAsNoImage;
+- (void)configureImageWithFileName:(NSString *)fileName;
 - (void)configureImageWithPlaceholder;
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;
@@ -30,6 +32,12 @@
 - (void)enableActivityForImageLoading;
 - (void)disableActivityForImageLoading;
 
+- (void)enableTextField;
+- (void)disableTextField;
+
+- (void)enableTextView;
+- (void)disableTextView;
+
 - (void)enableDropPinOnMapView;
 - (void)disableDropPinOnMapView;
 
@@ -37,7 +45,5 @@
 - (void)openPhotoLibrary;
 
 - (void)closeView;
-
-- (UIImage *)imagePhoto;
 
 @end
