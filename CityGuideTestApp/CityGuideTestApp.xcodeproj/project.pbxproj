@@ -168,7 +168,7 @@
 		7502C15C1BC59018008ECF59 /* MTRootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootCell.m; sourceTree = "<group>"; };
 		7502C15E1BC59018008ECF59 /* MTRootDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManager.h; sourceTree = "<group>"; };
 		7502C15F1BC59018008ECF59 /* MTRootDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootDataManager.m; sourceTree = "<group>"; };
-		7502C1601BC59018008ECF59 /* MTRootDataManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerConstants.h; sourceTree = "<group>"; };
+		7502C1601BC59018008ECF59 /* MTRootDataManagerCompletionHandlingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerCompletionHandlingConstants.h; sourceTree = "<group>"; };
 		7502C1611BC59018008ECF59 /* MTRootDataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerDelegate.h; sourceTree = "<group>"; };
 		7502C1621BC59018008ECF59 /* MTRootDataManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerInterface.h; sourceTree = "<group>"; };
 		7502C1651BC59018008ECF59 /* MTRootInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootInteractor.h; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 		756174CC1BCAA1B2004A843C /* NSString+MTFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTFormatting.m"; sourceTree = "<group>"; };
 		756174F61BCAAA11004A843C /* MTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManager.h; sourceTree = "<group>"; };
 		756174F71BCAAA11004A843C /* MTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageManager.m; sourceTree = "<group>"; };
-		756174F91BCAAA4B004A843C /* MTImageManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTImageManagerConstants.h; sourceTree = "<group>"; };
+		756174F91BCAAA4B004A843C /* MTImageManagerCompletionHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTImageManagerCompletionHandlingConstants.h; sourceTree = "<group>"; };
 		756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManagerInterface.h; sourceTree = "<group>"; };
 		756174FF1BCAB2AE004A843C /* UIImageView+MTActivityAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MTActivityAnimation.h"; sourceTree = "<group>"; };
 		756175001BCAB2AE004A843C /* UIImageView+MTActivityAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MTActivityAnimation.m"; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpanderIOInterface.h; sourceTree = "<group>"; };
 		7578319A1BC7FA14008BD2FC /* MTTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTableFooterView.h; sourceTree = "<group>"; };
 		7578319B1BC7FA14008BD2FC /* MTTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTableFooterView.m; sourceTree = "<group>"; };
-		7578319D1BC80015008BD2FC /* MTItemDataManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDataManagerConstants.h; sourceTree = "<group>"; };
+		7578319D1BC80015008BD2FC /* MTItemDataManagerFilterTypeConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDataManagerFilterTypeConstants.h; sourceTree = "<group>"; };
 		757831A91BC81639008BD2FC /* MTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLocationManager.h; sourceTree = "<group>"; };
 		757831AA1BC81639008BD2FC /* MTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLocationManager.m; sourceTree = "<group>"; };
 		757831AC1BC82031008BD2FC /* MTAppSettingsConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAppSettingsConfigurator.h; sourceTree = "<group>"; };
@@ -251,6 +251,10 @@
 		757831AE1BC82031008BD2FC /* MTAppSettingsConfiguratorInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAppSettingsConfiguratorInterface.h; sourceTree = "<group>"; };
 		757831B01BC823B2008BD2FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		757C61BD1BCE4C7800E2E252 /* MTImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageManagerDelegate.h; sourceTree = "<group>"; };
+		757C61C11BCE922800E2E252 /* MTImageManagerErrorHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTImageManagerErrorHandlingConstants.h; sourceTree = "<group>"; };
+		757C61C21BCE92BF00E2E252 /* MTRootDataManagerErrorHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerErrorHandlingConstants.h; sourceTree = "<group>"; };
+		757C61C31BCEAE1400E2E252 /* MTLocationManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLocationManagerInterface.h; sourceTree = "<group>"; };
+		757C61C51BCEC61A00E2E252 /* MTErrorHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTErrorHandlingConstants.h; sourceTree = "<group>"; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -481,7 +485,7 @@
 				7502C1121BC59017008ECF59 /* MTItemDataManager.h */,
 				7502C1131BC59017008ECF59 /* MTItemDataManager.m */,
 				7502C1141BC59017008ECF59 /* MTItemDataManagerInterface.h */,
-				7578319D1BC80015008BD2FC /* MTItemDataManagerConstants.h */,
+				7578319D1BC80015008BD2FC /* MTItemDataManagerFilterTypeConstants.h */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -701,9 +705,10 @@
 			children = (
 				7502C15E1BC59018008ECF59 /* MTRootDataManager.h */,
 				7502C15F1BC59018008ECF59 /* MTRootDataManager.m */,
-				7502C1601BC59018008ECF59 /* MTRootDataManagerConstants.h */,
+				7502C1601BC59018008ECF59 /* MTRootDataManagerCompletionHandlingConstants.h */,
 				7502C1611BC59018008ECF59 /* MTRootDataManagerDelegate.h */,
 				7502C1621BC59018008ECF59 /* MTRootDataManagerInterface.h */,
+				757C61C21BCE92BF00E2E252 /* MTRootDataManagerErrorHandlingConstants.h */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -789,6 +794,7 @@
 				7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */,
 				7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */,
 				7502C21C1BC59018008ECF59 /* RequestBuilder */,
+				757C61C51BCEC61A00E2E252 /* MTErrorHandlingConstants.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -916,7 +922,8 @@
 		756174F51BCAA9F4004A843C /* MTImageLoader */ = {
 			isa = PBXGroup;
 			children = (
-				756174F91BCAAA4B004A843C /* MTImageManagerConstants.h */,
+				757C61C11BCE922800E2E252 /* MTImageManagerErrorHandlingConstants.h */,
+				756174F91BCAAA4B004A843C /* MTImageManagerCompletionHandlingConstants.h */,
 				756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */,
 				756174F61BCAAA11004A843C /* MTImageManager.h */,
 				756174F71BCAAA11004A843C /* MTImageManager.m */,
@@ -1005,6 +1012,7 @@
 		757831A81BC81639008BD2FC /* MTLocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				757C61C31BCEAE1400E2E252 /* MTLocationManagerInterface.h */,
 				757831A91BC81639008BD2FC /* MTLocationManager.h */,
 				757831AA1BC81639008BD2FC /* MTLocationManager.m */,
 			);

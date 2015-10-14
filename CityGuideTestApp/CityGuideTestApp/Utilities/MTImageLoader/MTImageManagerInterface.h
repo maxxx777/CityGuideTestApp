@@ -6,7 +6,7 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTImageManagerConstants.h"
+#import "MTImageManagerCompletionHandlingConstants.h"
 
 @protocol MTImageManagerDelegate;
 

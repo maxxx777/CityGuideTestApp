@@ -12,6 +12,7 @@
 #import "MTOperationManager.h"
 #import "MTSavePlaceOperation.h"
 #import "MTImageManagerDelegate.h"
+#import "MTImageManagerErrorHandlingConstants.h"
 
 @interface MTImageManager ()
 

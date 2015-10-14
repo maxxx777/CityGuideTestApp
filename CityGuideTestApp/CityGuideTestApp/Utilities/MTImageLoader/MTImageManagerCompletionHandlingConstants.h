@@ -13,12 +13,3 @@ typedef void (^MTImageManagerDownloadFileCompletionBlock)(NSError *error, NSData
 typedef void (^MTImageManagerSaveFileCompletionBlock)(NSError *error, NSString *fileName);
 typedef void (^MTImageManagerRemoveFileCompletionBlock)(NSError *error, NSString *fileName);
 typedef void (^MTImageManagerCacheImageCompletionBlock)(NSError *error, id place);
-
-static NSString *const MTImageManagerErrorDomain = @"MTImageManager.ErrorDomain";
-
-typedef NS_ENUM(NSUInteger, MTImageManagerErrorType) {
-    
-    MTImageManagerErrorNoImage = 1
-};
-
-

@@ -7,7 +7,8 @@
 //
 
 #import "MTRootDataManagerInterface.h"
-#import "MTItemDataManagerConstants.h"
+
+#import "MTItemDataManagerFilterTypeConstants.h"
 
 @protocol MTFetchedResultsControllerBasedItemListCacheInterface;
 

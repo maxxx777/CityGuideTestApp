@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTRootDataManagerConstants.h"
+#import "MTRootDataManagerCompletionHandlingConstants.h"
 
 @protocol MTItemListCacheInterface;
 @protocol MTArrayBasedItemListCacheInterface;
