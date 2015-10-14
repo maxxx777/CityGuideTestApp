@@ -58,7 +58,8 @@
                                                     NSLocalizedString(@"100 miles", nil),
                                                     NSLocalizedString(@"10 miles", nil),
                                                     NSLocalizedString(@"1 mile", nil)]
-                                clickedCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
+                                clickedCompletion:nil
+                             didDismissCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
                                     if (actionTitle) {
                                         
                                         if ([actionTitle isEqualToString:NSLocalizedString(@"100 miles", nil)]) {
@@ -88,24 +89,26 @@
                                         if (buttonIndex == 1) {
                                             
                                             [self.itemListRequester fetchItemsWithin100Mile];
+                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"100 miles", nil)];
                                             
                                         } else if (buttonIndex == 2) {
                                             
                                             [self.itemListRequester fetchItemsWithin10Mile];
+                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"10 miles", nil)];
                                             
                                         } else if (buttonIndex == 3) {
                                             
                                             [self.itemListRequester fetchItemsWithin1Mile];
+                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"1 mile", nil)];
                                             
                                         } else if (buttonIndex == 4) {
                                             
                                             [self.itemListRequester fetchAllItems];
-                                            
+                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"All", nil)];
                                         }
                                         
                                     }
-                                }
-                             didDismissCompletion:nil];
+                                }];
 }
 
 @end

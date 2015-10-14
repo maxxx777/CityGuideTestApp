@@ -185,14 +185,9 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
         [self reloadView];
         
     } else {
-        [alertWrapper showRepeatRequestAlertInViewController:self.userInterface withTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"Sorry, can't receive countries from server", nil)
-                                           clickedCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
-                                               if (buttonIndex == 1) {
-//                                                   [self.itemListRequester refreshItems];
-                                               } else {
-                                                   [self reloadView];
-                                               }
-                                           } didDismissCompletion:nil];
+        
+        [alertWrapper showErrorAlertInViewController:self.userInterface
+                                         withMessage:NSLocalizedString(@"Sorry, can't receive products", nil)];
     }
 }
 
