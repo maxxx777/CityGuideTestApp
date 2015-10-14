@@ -10,4 +10,11 @@
 
 @protocol MTLocationManagerInterface <NSObject>
 
+- (void)detectLocation;
+- (BOOL)isLocationEnabled;
+- (NSDictionary *)currentLocation;
+- (BOOL)isLocationWithLatitude:(NSNumber *)latitude
+                     longitude:(NSNumber *)longitude
+                  withinRadius:(NSNumber *)radius;
+
 @end

@@ -8,8 +8,6 @@
 
 #import "MTLocationManager.h"
 
-static NSString *MTSettingsCurrentLocation = @"MTSettingsCurrentLocation";
-
 @interface MTLocationManager ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -25,43 +23,54 @@ static NSString *MTSettingsCurrentLocation = @"MTSettingsCurrentLocation";
         
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.distanceFilter = 500;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-        
+
     }
     return self;
 }
 
 + (MTLocationManager *)sharedManager
 {
-    static MTLocationManager *sharedManager = nil;
-    static dispatch_once_t isDispatched;
-    
-    dispatch_once(&isDispatched, ^
-                  {
-                      sharedManager = [[MTLocationManager alloc] init];
-                  });
-    
-    return sharedManager;
+    static id sharedInstance;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
 }
 
-- (void)detectCurrentLocation
+#pragma mark - MTLocationManagerInterface
+
+- (void)detectLocation
 {
-    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-        [self.locationManager requestAlwaysAuthorization];
+    //detect location only if it didn't before
+    if (![self currentLocation]) {     
+        if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+            [self.locationManager requestAlwaysAuthorization];
+        }
+        [self.locationManager startUpdatingLocation];
     }
-    [self.locationManager startUpdatingLocation];
 }
 
-- (BOOL)isCurrentLocationDetected
+- (BOOL)isLocationEnabled
 {
-    NSDictionary *currentLocation = [self currentLocation];
-    return currentLocation != nil;
+    return [CLLocationManager locationServicesEnabled] &&
+    [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied;
 }
 
 - (NSDictionary *)currentLocation
 {
-    return [[NSUserDefaults standardUserDefaults] valueForKey:MTSettingsCurrentLocation];
+    NSDictionary *result;
+    
+    if (self.locationManager.location) {
+        result = @{
+                 @"latitude" : @(self.locationManager.location.coordinate.latitude),
+                 @"longitude" : @(self.locationManager.location.coordinate.longitude)
+                 };
+    }
+    
+    return result;
 }
 
 - (BOOL)isLocationWithLatitude:(NSNumber *)latitude
@@ -93,17 +102,6 @@ static NSString *MTSettingsCurrentLocation = @"MTSettingsCurrentLocation";
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    //    DLog(@"detect location succeed");
-    
-    CLLocation *location = [locations lastObject];
-    
-    NSDictionary *currentLocation = @{
-                                      @"latitude" : [NSNumber numberWithDouble:location.coordinate.latitude],
-                                      @"longitude" : [NSNumber numberWithDouble:location.coordinate.longitude]
-                                      };
-    [[NSUserDefaults standardUserDefaults] setObject:currentLocation
-                                              forKey:MTSettingsCurrentLocation];
-    
     [self.locationManager stopUpdatingLocation];
 }
 

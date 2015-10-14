@@ -7,19 +7,16 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
+#import "MTLocationManagerInterface.h"
 
 @interface MTLocationManager : NSObject
 <
-    CLLocationManagerDelegate
+    CLLocationManagerDelegate,
+    MTLocationManagerInterface
 >
 
-+ (MTLocationManager *)sharedManager;
+- (instancetype) __unavailable init;
 
-- (void)detectCurrentLocation;
-- (BOOL)isCurrentLocationDetected;
-- (NSDictionary *)currentLocation;
-- (BOOL)isLocationWithLatitude:(NSNumber *)latitude
-                     longitude:(NSNumber *)longitude
-                  withinRadius:(NSNumber *)radius;
++ (MTLocationManager *)sharedManager;
 
 @end
