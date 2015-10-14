@@ -5,6 +5,9 @@
 //  Created by MAXIM TSVETKOV on 22.06.15.
 //  Copyright (c) 2015 Egar Technology Inc. All rights reserved.
 //
+/*
+Initial app settings can be configured here.
+*/
 
 #import "MTAppSettingsConfigurator.h"
 #import "MTLocationManager.h"
@@ -24,7 +27,7 @@
 
 - (void)configureSettings
 {
-    [[MTLocationManager sharedManager] detectCurrentLocation];
+    [[MTLocationManager sharedManager] detectLocation]; //TODO: move detect location on demand (e.g. when filter places around current location)
 }
 
 @end
