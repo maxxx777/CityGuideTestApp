@@ -51,8 +51,6 @@
         [self.userInterface configureDescriptionWithText:placeDescription];
         [self.userInterface disableTextView];
         
-        [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
-        
     }
 }
 
@@ -61,6 +59,8 @@
     if (self.isFirstAppearance) {
         
         [self.userInterface reloadCells];
+        
+        [self.userInterface configureMapWithCoordinates:[self.placeDetailFetcher placeCoordinates]];
         
         if ([self.placeDetailFetcher fileName]) {
             [self.userInterface configureImageWithFileName:[self.placeDetailFetcher fileName]];

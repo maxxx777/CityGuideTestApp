@@ -21,6 +21,7 @@
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
 @property (nonatomic, weak) MTItemDetailWireframe *wireframe;
+@property (nonatomic) BOOL isFirstAppearance;
 
 @end
 
@@ -38,6 +39,7 @@
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
+        _isFirstAppearance = YES;
     }
     return self;
 }
@@ -46,13 +48,24 @@
 
 - (void)onWillAppearView
 {
-    [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
+    if (self.isFirstAppearance) {
+        
+        [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
+        
+        [self.userInterface configureRightBarButtonOnNavigationBarAsSave];
+        
+        [self.userInterface configurePhotoCellAsAddImage];        
+    }
+}
+
+- (void)onDidAppearView
+{
+    if (self.isFirstAppearance) {
     
-    [self.userInterface configureRightBarButtonOnNavigationBarAsSave];
-    
-    [self.userInterface enableDropPinOnMapView];
-    
-    [self.userInterface configurePhotoCellAsAddImage];
+        [self.userInterface enableDropPinOnMapView];
+        
+        self.isFirstAppearance = NO;
+    }
 }
 
 - (void)onWillDisappearView

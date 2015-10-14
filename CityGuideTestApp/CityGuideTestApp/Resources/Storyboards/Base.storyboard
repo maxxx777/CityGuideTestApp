@@ -165,7 +165,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="44" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="44" id="ey2-Px-PFS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageCellIdentifier" rowHeight="44" id="ey2-Px-PFS">
                                         <rect key="frame" x="0.0" y="439" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ey2-Px-PFS" id="ZmH-em-cbX">

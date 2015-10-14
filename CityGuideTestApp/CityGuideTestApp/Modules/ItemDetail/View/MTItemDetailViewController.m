@@ -34,14 +34,18 @@
 {
     [super viewWillAppear:animated];
     
-    [self.presenter onWillAppearView];
+    if ([self.presenter respondsToSelector:@selector(onWillAppearView)]) {
+        [self.presenter onWillAppearView];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    [self.presenter onDidAppearView];
+    if ([self.presenter respondsToSelector:@selector(onDidAppearView)]) {
+        [self.presenter onDidAppearView];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -314,7 +318,11 @@
     
     if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewDescriptionCellIdentifier]) {
         
-        return [self.textViewDescription sizeThatFits:CGSizeMake(self.textViewDescription.frame.size.width, CGFLOAT_MAX)].height;
+        if ([self.textViewDescription.text length] > 0) {
+            return [self.textViewDescription sizeThatFits:CGSizeMake(self.textViewDescription.frame.size.width, CGFLOAT_MAX)].height;
+        } else {
+            return 100.0f;
+        }        
         
     } else {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
