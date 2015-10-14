@@ -16,5 +16,9 @@
                  completion:(MTImageManagerDownloadFileCompletionBlock)completionBlock;
 - (void)saveFileWithData:(NSData *)data
               completion:(MTImageManagerSaveFileCompletionBlock)completionBlock;
+- (UIImage *)imageWithImage:(UIImage *)image
+               scaledToSize:(CGSize)newSize;
+- (UIImage *)imageWithImage:(UIImage *)image
+                   cropRect:(CGRect)cropRect;
 
 @end

@@ -153,6 +153,30 @@
     }];
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image
+               scaledToSize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContext( newSize );
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image
+                   cropRect:(CGRect)cropRect
+{
+    UIImage *result;
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    result = image;
+    
+    CGImageRelease(imageRef);
+    
+    return result;
+}
+
 #pragma mark - MTMergeObjectsOperationDelegate
 
 - (void)onDidObjectMergeWithError:(NSError *)error
