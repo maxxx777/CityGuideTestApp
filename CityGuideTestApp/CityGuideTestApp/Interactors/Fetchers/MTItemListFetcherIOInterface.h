@@ -8,8 +8,6 @@
 
 @protocol MTItemListFetcherInputInterface <NSObject>
 
-@optional
-
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger countOfItems;
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section;
@@ -18,7 +16,6 @@
 - (NSString *)sectionIndexTitleForSectionName:(NSString *)sectionName;
 - (NSString *)titleForHeaderInSection:(NSInteger)section;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
-- (NSIndexPath *)indexPathForObjectWithItemId:(NSNumber *)itemId;
 
 @end
 

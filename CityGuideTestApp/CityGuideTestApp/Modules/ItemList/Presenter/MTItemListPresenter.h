@@ -22,6 +22,7 @@
 
 @property (nonatomic, weak) UIViewController<MTItemListViewInterface> *userInterface;
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                                 wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 

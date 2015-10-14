@@ -12,9 +12,9 @@
 
 - (void)detectLocation;
 @property (NS_NONATOMIC_IOSONLY, getter=isLocationEnabled, readonly) BOOL locationEnabled;
-@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *currentLocation;
-- (BOOL)isLocationWithLatitude:(NSNumber *)latitude
-                     longitude:(NSNumber *)longitude
-                  withinRadius:(NSNumber *)radius;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary * _Nullable currentLocation;
+- (BOOL)isLocationWithLatitude:(NSNumber * _Nonnull)latitude
+                     longitude:(NSNumber * _Nonnull)longitude
+                  withinRadius:(NSNumber * _Nonnull)radius;
 
 @end

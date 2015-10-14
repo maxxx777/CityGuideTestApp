@@ -13,7 +13,6 @@
 		7502C2211BC59018008ECF59 /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1001BC59017008ECF59 /* MTAppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2221BC59018008ECF59 /* MTAppModulesConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1021BC59017008ECF59 /* MTAppModulesConnector.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2231BC59018008ECF59 /* NSString+MTSpecificStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1051BC59017008ECF59 /* NSString+MTSpecificStrings.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2241BC59018008ECF59 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7502C1071BC59017008ECF59 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		7502C2251BC59018008ECF59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1081BC59017008ECF59 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2261BC59018008ECF59 /* CityGuideTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7502C10D1BC59017008ECF59 /* CityGuideTestApp.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1131BC59017008ECF59 /* MTItemDataManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -62,6 +61,8 @@
 		757831AB1BC81639008BD2FC /* MTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 757831AA1BC81639008BD2FC /* MTLocationManager.m */; settings = {ASSET_TAGS = (); }; };
 		757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */; settings = {ASSET_TAGS = (); }; };
 		757831B11BC823B2008BD2FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757831B01BC823B2008BD2FC /* CoreLocation.framework */; };
+		757C61C71BCED81D00E2E252 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757C61C61BCED81D00E2E252 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		757C61C91BCEDB2800E2E252 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757C61C81BCEDB2800E2E252 /* MapKit.framework */; };
 		75D32D3F1BC6299D0010D705 /* MTItemOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D32D3D1BC6299D0010D705 /* MTItemOperator.m */; settings = {ASSET_TAGS = (); }; };
 		75D32D451BC649110010D705 /* places_25_06.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D421BC649110010D705 /* places_25_06.json */; settings = {ASSET_TAGS = (); }; };
 		75D32D461BC649110010D705 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D32D441BC649110010D705 /* Base.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -78,13 +79,11 @@
 		75EAA90E1BC9788E000BE44A /* MTItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		75EAA9191BC97C22000BE44A /* MTPlaceDetailFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */; settings = {ASSET_TAGS = (); }; };
-		75EAA9211BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */; settings = {ASSET_TAGS = (); }; };
 		75EAA9241BC9A4A1000BE44A /* MTPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */; settings = {ASSET_TAGS = (); }; };
 		75FE08FF1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE08FD1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		75FE09031BCA41B600765F7D /* MTPlaceDetailConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09021BCA41B600765F7D /* MTPlaceDetailConfigurator.m */; settings = {ASSET_TAGS = (); }; };
 		75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09091BCA4E9000765F7D /* MTMutablePlace.m */; settings = {ASSET_TAGS = (); }; };
 		75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */; settings = {ASSET_TAGS = (); }; };
-		75FE09121BCA7E2000765F7D /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,7 +214,6 @@
 		7502C1C01BC59018008ECF59 /* MTItemListCacheConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheConstants.h; sourceTree = "<group>"; };
 		7502C1C11BC59018008ECF59 /* MTItemListCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheDelegate.h; sourceTree = "<group>"; };
 		7502C1C21BC59018008ECF59 /* MTItemListCacheInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCacheInterface.h; sourceTree = "<group>"; };
-		7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificColorsInterface.h; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
 		756174CB1BCAA1B2004A843C /* NSString+MTFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MTFormatting.h"; sourceTree = "<group>"; };
 		756174CC1BCAA1B2004A843C /* NSString+MTFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTFormatting.m"; sourceTree = "<group>"; };
@@ -255,6 +253,9 @@
 		757C61C21BCE92BF00E2E252 /* MTRootDataManagerErrorHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerErrorHandlingConstants.h; sourceTree = "<group>"; };
 		757C61C31BCEAE1400E2E252 /* MTLocationManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLocationManagerInterface.h; sourceTree = "<group>"; };
 		757C61C51BCEC61A00E2E252 /* MTErrorHandlingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTErrorHandlingConstants.h; sourceTree = "<group>"; };
+		757C61C61BCED81D00E2E252 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		757C61C81BCEDB2800E2E252 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		757C61CA1BCEDD1C00E2E252 /* MTRootViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootViewInterface.h; sourceTree = "<group>"; };
 		75D32D3C1BC6299D0010D705 /* MTItemOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperator.h; sourceTree = "<group>"; };
 		75D32D3D1BC6299D0010D705 /* MTItemOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemOperator.m; sourceTree = "<group>"; };
 		75D32D3E1BC6299D0010D705 /* MTItemOperatorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemOperatorIOInterface.h; sourceTree = "<group>"; };
@@ -289,8 +290,6 @@
 		75EAA9171BC97C22000BE44A /* MTPlaceDetailFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailFetcher.h; sourceTree = "<group>"; };
 		75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceDetailFetcher.m; sourceTree = "<group>"; };
 		75EAA91A1BC97C44000BE44A /* MTPlaceDetailFetcherIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailFetcherIOInterface.h; sourceTree = "<group>"; };
-		75EAA91E1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailMapViewHelper.h; sourceTree = "<group>"; };
-		75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceDetailMapViewHelper.m; sourceTree = "<group>"; };
 		75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceAnnotation.h; sourceTree = "<group>"; };
 		75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceAnnotation.m; sourceTree = "<group>"; };
 		75FE08FC1BCA412C00765F7D /* MTEditPlaceDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTEditPlaceDetailPresenter.h; sourceTree = "<group>"; };
@@ -302,9 +301,6 @@
 		75FE09091BCA4E9000765F7D /* MTMutablePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMutablePlace.m; sourceTree = "<group>"; };
 		75FE090B1BCA780200765F7D /* MTSavePlaceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSavePlaceOperation.h; sourceTree = "<group>"; };
 		75FE090C1BCA780200765F7D /* MTSavePlaceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSavePlaceOperation.m; sourceTree = "<group>"; };
-		75FE090F1BCA7E2000765F7D /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
-		75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
-		75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
 		75FE09131BCA9F1300765F7D /* MTItemDetailViewConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTItemDetailViewConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757C61C91BCEDB2800E2E252 /* MapKit.framework in Frameworks */,
 				757831B11BC823B2008BD2FC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +334,7 @@
 		7502C0B81BC58F72008ECF59 = {
 			isa = PBXGroup;
 			children = (
+				757C61C61BCED81D00E2E252 /* Default-568h@2x.png */,
 				7502C0C31BC58F72008ECF59 /* CityGuideTestApp */,
 				7502C0E31BC58F72008ECF59 /* CityGuideTestAppTests */,
 				7502C0EE1BC58F72008ECF59 /* CityGuideTestAppUITests */,
@@ -536,7 +534,6 @@
 		7502C1291BC59017008ECF59 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				75FE090E1BCA7E2000765F7D /* ChangeDetectors */,
 				75FE09001BCA419E00765F7D /* Configurators */,
 				756901041BC6E44300825B62 /* Expanders */,
 				75D32D3B1BC6299D0010D705 /* Operators */,
@@ -582,7 +579,6 @@
 		7502C1371BC59018008ECF59 /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
-				75EAA91B1BC97F96000BE44A /* Helper */,
 				7502C1381BC59018008ECF59 /* Presenter */,
 				7502C1391BC59018008ECF59 /* View */,
 				7502C13A1BC59018008ECF59 /* Wireframe */,
@@ -758,6 +754,7 @@
 				7502C1731BC59018008ECF59 /* MTRootTableViewController.m */,
 				7502C1741BC59018008ECF59 /* MTRootViewController.h */,
 				7502C1751BC59018008ECF59 /* MTRootViewController.m */,
+				757C61CA1BCEDD1C00E2E252 /* MTRootViewInterface.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -791,7 +788,6 @@
 				75D32D621BC66E990010D705 /* NSNumber-NewItemId */,
 				7502C1851BC59018008ECF59 /* DataMapping */,
 				7502C1891BC59018008ECF59 /* External */,
-				7502C21A1BC59018008ECF59 /* MTSpecificColorsInterface.h */,
 				7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */,
 				7502C21C1BC59018008ECF59 /* RequestBuilder */,
 				757C61C51BCEC61A00E2E252 /* MTErrorHandlingConstants.h */,
@@ -1064,15 +1060,6 @@
 			path = "NSNumber-NewItemId";
 			sourceTree = "<group>";
 		};
-		75EAA91B1BC97F96000BE44A /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				75EAA91E1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.h */,
-				75EAA91F1BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		75FE09001BCA419E00765F7D /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,19 +1070,10 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
-		75FE090E1BCA7E2000765F7D /* ChangeDetectors */ = {
-			isa = PBXGroup;
-			children = (
-				75FE090F1BCA7E2000765F7D /* MTItemListChangeDetector.h */,
-				75FE09101BCA7E2000765F7D /* MTItemListChangeDetector.m */,
-				75FE09111BCA7E2000765F7D /* MTItemListChangeDetectorIOInterface.h */,
-			);
-			path = ChangeDetectors;
-			sourceTree = "<group>";
-		};
 		D4F01DB5D825D904DAA3CA79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				757C61C81BCEDB2800E2E252 /* MapKit.framework */,
 				757831B01BC823B2008BD2FC /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -1208,9 +1186,9 @@
 			files = (
 				7564866F1BC7B42B0012A794 /* disclosure.png in Resources */,
 				756175031BCAB74F004A843C /* image_placeholder.png in Resources */,
-				7502C2241BC59018008ECF59 /* Info.plist in Resources */,
 				75D32D461BC649110010D705 /* Base.storyboard in Resources */,
 				75D32D451BC649110010D705 /* places_25_06.json in Resources */,
+				757C61C71BCED81D00E2E252 /* Default-568h@2x.png in Resources */,
 				7502C2201BC59018008ECF59 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1237,7 +1215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */,
-				75FE09121BCA7E2000765F7D /* MTItemListChangeDetector.m in Sources */,
 				75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */,
 				7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */,
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
@@ -1292,7 +1269,6 @@
 				7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */,
 				7502C2391BC59018008ECF59 /* MTRootCell.m in Sources */,
 				75D32D4D1BC6514B0010D705 /* MTMappedCity.m in Sources */,
-				75EAA9211BC97F96000BE44A /* MTPlaceDetailMapViewHelper.m in Sources */,
 				7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */,
 				7502C2261BC59018008ECF59 /* CityGuideTestApp.xcdatamodeld in Sources */,
 				75D32D5F1BC66C200010D705 /* MTManagedCity.m in Sources */,
@@ -1426,6 +1402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
@@ -1442,6 +1419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";

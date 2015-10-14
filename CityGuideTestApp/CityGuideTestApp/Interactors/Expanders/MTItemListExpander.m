@@ -72,13 +72,19 @@
     
     id mappedObject;
     if ([self isCityObjectAtIndexPath:indexPath]) {
-        mappedObject = [self.itemDataManager mappedObjectAtIndexPath:[NSIndexPath indexPathForRow:cityIndex
-                                                                                        inSection:0]
-                                                       itemListCache:self.cityListCache];
+        if ([self.itemDataManager respondsToSelector:@selector(mappedObjectAtIndexPath:itemListCache:)]) {
+            mappedObject = [self.itemDataManager mappedObjectAtIndexPath:[NSIndexPath indexPathForRow:cityIndex
+                                                                                            inSection:0]
+                                                           itemListCache:self.cityListCache];
+        }
+        
     } else {
-        mappedObject = [self.itemDataManager mappedObjectAtIndexPath:[NSIndexPath indexPathForRow:placeIndex
-                                                                                        inSection:cityIndex]
-                                                       itemListCache:self.placeListCache];
+        
+        if ([self.itemDataManager respondsToSelector:@selector(mappedObjectAtIndexPath:itemListCache:)]) {
+            mappedObject = [self.itemDataManager mappedObjectAtIndexPath:[NSIndexPath indexPathForRow:placeIndex
+                                                                                            inSection:cityIndex]
+                                                           itemListCache:self.placeListCache];
+        }
     }
     return mappedObject;
 }

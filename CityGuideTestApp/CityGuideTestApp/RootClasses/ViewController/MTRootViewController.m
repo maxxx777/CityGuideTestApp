@@ -29,4 +29,9 @@
     [super viewDidLoad];
 }
 
+- (void)configureNavigationBarWithTitle:(NSString *)title
+{
+    self.navigationItem.title = title;
+}
+
 @end

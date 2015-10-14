@@ -11,7 +11,6 @@
 #import "MTItemDetailViewController.h"
 #import "MTShowPlaceDetailPresenter.h"
 #import "MTEditPlaceDetailPresenter.h"
-#import "MTPlaceDetailMapViewHelper.h"
 #import "MTPlaceDetailFetcher.h"
 #import "MTPlaceDetailConfigurator.h"
 #import "MTItemOperator.h"
@@ -81,14 +80,8 @@
                                              initWithPlaceDetailFetcher:placeDetailFetcher
                                              wireframe:self];
     
-    //init helper
-    MTPlaceDetailMapViewHelper *mapViewHelper = [[MTPlaceDetailMapViewHelper alloc] initWithPlace:item];
-    
     //bind view controller - presenter
     self.viewController.presenter = presenter;
-    
-    //bind view controller - helper
-    self.viewController.mapViewHelper = mapViewHelper;
     
     //bind presenter - view controller
     presenter.userInterface = self.viewController;

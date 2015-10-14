@@ -17,6 +17,7 @@
     MTItemListFetcherInputInterface
 >
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithItemListCache:(id<MTItemListCacheInterface>)itemListCache
                       rootDataManager:(id<MTRootDataManagerInterface>)rootDataManager NS_DESIGNATED_INITIALIZER;
 

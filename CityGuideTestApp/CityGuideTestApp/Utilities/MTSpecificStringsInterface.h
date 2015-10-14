@@ -9,7 +9,6 @@
 @protocol MTSpecificStringsInterface <NSObject>
 
 + (NSString *)mt_appHostName;
-+ (NSString *)mt_apiUserName;
 + (NSString *)mt_propertyNameForItemId;
 
 @end

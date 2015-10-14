@@ -76,8 +76,10 @@
     MTDataMapping *dataMapping = [[MTDataMapping alloc] init];
     id mappedPlace = [dataMapping mappedObjectFromManagedObject:managedPlace];
     
-    self.processItemCompletion(nil, mappedPlace);
-    [self setProcessItemCompletion:nil];
+    if (self.processItemCompletion) {
+        self.processItemCompletion(nil, mappedPlace);
+        [self setProcessItemCompletion:nil];
+    }
 }
 
 #pragma mark - MTMergeObjectsOperationDelegate

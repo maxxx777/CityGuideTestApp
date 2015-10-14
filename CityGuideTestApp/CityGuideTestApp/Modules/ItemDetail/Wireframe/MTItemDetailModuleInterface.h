@@ -8,8 +8,8 @@
 
 @protocol MTItemDetailModuleInterface <NSObject>
 
-- (void)showDetailsForPlace:(id)place
-       navigationController:(UINavigationController *)navigationController;
-- (void)addNewPlaceWithNavigationController:(UINavigationController *)navigationController;
+- (void)showDetailsForPlace:(id _Nonnull)place
+       navigationController:(UINavigationController * _Nonnull)navigationController;
+- (void)addNewPlaceWithNavigationController:(UINavigationController * _Nonnull)navigationController;
 
 @end

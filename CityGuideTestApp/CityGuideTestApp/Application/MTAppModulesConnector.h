@@ -13,6 +13,7 @@
     MTAppModulesConnectorInterface
 >
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithWindow:(UIWindow *)window NS_DESIGNATED_INITIALIZER;
 
 @end

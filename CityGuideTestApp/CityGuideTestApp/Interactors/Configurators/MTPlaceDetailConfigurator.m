@@ -126,4 +126,9 @@
                                             city:self.place.city];
 }
 
+- (void)refreshCurrentItem
+{
+    //
+}
+
 @end

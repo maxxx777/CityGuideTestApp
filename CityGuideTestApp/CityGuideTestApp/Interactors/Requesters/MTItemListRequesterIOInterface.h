@@ -8,17 +8,16 @@
 
 @protocol MTItemListRequesterInputInterface <NSObject>
 
-@optional
-
 - (void)fetchAllItems;
 - (void)fetchItemsWithin1Mile;
 - (void)fetchItemsWithin10Mile;
 - (void)fetchItemsWithin100Mile;
-- (void)cancelActions;
 
 @end
 
 @protocol MTItemListRequesterOutputInterface <NSObject>
+
+@optional
 
 - (void)onDidFetchItemsWithError:(NSError *)error;
 

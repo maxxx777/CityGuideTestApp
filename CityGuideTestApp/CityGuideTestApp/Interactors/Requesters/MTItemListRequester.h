@@ -18,6 +18,7 @@
     MTItemListRequesterInputInterface
 >
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithCityListCache:(id<MTArrayBasedItemListCacheInterface>)cityListCache
                        placeListCache:(id<MTFetchedResultsControllerBasedItemListCacheInterface>)placeListCache
                       itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;

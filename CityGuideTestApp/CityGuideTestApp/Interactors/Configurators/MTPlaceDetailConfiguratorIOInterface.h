@@ -10,10 +10,10 @@
 
 @protocol MTPlaceDetailConfiguratorInputInterface <NSObject, MTPlaceDetailFetcherInputInterface>
 
-- (void)configurePlaceCoordinates:(NSDictionary *)coordinates;
-- (void)configurePlaceName:(NSString *)name;
-- (void)configurePlaceDescription:(NSString *)description;
-- (void)configurePlaceFileName:(NSString *)fileName;
+- (void)configurePlaceCoordinates:(NSDictionary * _Nonnull)coordinates;
+- (void)configurePlaceName:(NSString * _Nonnull)name;
+- (void)configurePlaceDescription:(NSString * _Nonnull)description;
+- (void)configurePlaceFileName:(NSString * _Nonnull)fileName;
 
 @end
 

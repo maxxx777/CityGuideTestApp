@@ -10,7 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "MTItemDetailViewInterface.h"
 #import "MTItemDetailPresenterInterface.h"
-#import "MTPlaceDetailMapViewHelper.h"
 
 @interface MTItemDetailViewController : MTRootTableViewController
 <
@@ -27,7 +26,6 @@
 @property (nonatomic, strong) IBOutlet UITextField *textFieldName;
 @property (nonatomic, strong) IBOutlet UITextView *textViewDescription;
 @property (nonatomic, strong) IBOutlet UIImageView *imageViewPhoto;
-@property (nonatomic, strong) MTPlaceDetailMapViewHelper *mapViewHelper;
 
 - (IBAction)saveButtonPressed:(id)sender;
 

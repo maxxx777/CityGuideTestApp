@@ -25,4 +25,10 @@
     return self;
 }
 
+- (instancetype)init
+{
+    return [self initWithItemId:nil
+                       itemName:nil];
+}
+
 @end

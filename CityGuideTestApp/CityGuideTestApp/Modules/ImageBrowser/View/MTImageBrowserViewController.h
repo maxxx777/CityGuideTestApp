@@ -8,8 +8,7 @@
 
 #import "MTRootViewController.h"
 #import "MTImageBrowserViewInterface.h"
-
-@protocol MTImageBrowserPresenterInterface;
+#import "MTImageBrowserPresenterInterface.h"
 
 @interface MTImageBrowserViewController : MTRootViewController
 <

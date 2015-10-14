@@ -25,7 +25,6 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
-@property (nonatomic, strong) id<MTItemListChangeDetectorInputInterface>itemListChangeDetector;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTCityListCell *prototypeCityListCell;
@@ -37,7 +36,6 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
-                   itemListChangeDetector:(id<MTItemListChangeDetectorInputInterface>)itemListChangeDetector
                                 wireframe:(MTItemListWireframe *)wireframe
 {
     self = [super init];
@@ -45,7 +43,6 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
         
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
-        _itemListChangeDetector = itemListChangeDetector;
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
@@ -64,21 +61,6 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
         [self.userInterface updateFooterLabelWithText:@"Data Loading..."];
         [self.itemListRequester fetchAllItems];
     }
-}
-
-- (void)onDidAppearView
-{
-    
-}
-
-- (void)onWillDisappearView
-{
-//    [self.itemListRequester cancelActions];
-}
-
-- (void)scrollViewWithOffset:(CGPoint)offset
-{
-    
 }
 
 - (NSUInteger)numberOfSections
@@ -125,20 +107,10 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
              atIndexPath:(NSIndexPath *)indexPath
              inTableView:(UITableView *)tableView
 {
-    id item = [self.itemListExpander objectAtIndexPath:indexPath];
-    
     if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
-        if (!self.prototypeCityListCell) {
-            self.prototypeCityListCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenCityListCellIdentifier];
-        }
-        
-        return [self.prototypeCityListCell heightForCellWithItem:item];
+        return 44.0f;
     } else {
-        if (!self.prototypePlaceListCell) {
-            self.prototypePlaceListCell = [tableView dequeueReusableCellWithIdentifier:MTOffScreenPlaceListCellIdentifier];
-        }
-        
-        return [self.prototypePlaceListCell heightForCellWithItem:item];
+        return 60.0f;
     }
 }
 

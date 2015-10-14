@@ -9,13 +9,11 @@
 #import "MTRootDataManagerCompletionHandlingConstants.h"
 
 @protocol MTItemListCacheInterface;
-@protocol MTArrayBasedItemListCacheInterface;
 
 @protocol MTRootDataManagerInterface <NSObject>
 
 @optional
 
-- (void)cancelActions;
 - (id)mappedObjectAtIndexPath:(NSIndexPath *)indexPath
                 itemListCache:(id<MTItemListCacheInterface>)itemListCache;
 

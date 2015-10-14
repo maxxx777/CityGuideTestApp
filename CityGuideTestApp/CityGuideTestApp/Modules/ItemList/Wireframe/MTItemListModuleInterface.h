@@ -8,6 +8,6 @@
 
 @protocol MTItemListModuleInterface <NSObject>
 
-- (void)showItemListViewInWindow:(UIWindow *)window;
+- (void)showItemListViewInWindow:(UIWindow * _Nonnull)window;
 
 @end

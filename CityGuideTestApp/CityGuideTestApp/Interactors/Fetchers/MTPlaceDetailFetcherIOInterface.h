@@ -25,6 +25,8 @@
 
 @protocol MTPlaceDetailFetcherOutputInterface <NSObject>
 
+@optional
+
 - (void)onDidRefreshCurrentItem;
 
 @end

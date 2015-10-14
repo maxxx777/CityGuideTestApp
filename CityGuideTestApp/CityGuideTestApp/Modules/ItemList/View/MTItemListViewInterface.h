@@ -6,13 +6,10 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-@protocol MTItemListViewInterface <NSObject>
+#import "MTRootViewInterface.h"
 
-- (void)configureNavigationBarWithTitle: (NSString *)title;
+@protocol MTItemListViewInterface <NSObject, MTRootViewInterface>
 
-@optional
-- (void)configureLeftBarButtonWithTitle: (NSString *)title;
-- (void)configureRightBarButtonWithTitle: (NSString *)title;
-- (void)configureBarButtonFilterWithTitle:(NSString *)title;
+- (void)configureBarButtonFilterWithTitle:(NSString * _Nonnull)title;
 
 @end

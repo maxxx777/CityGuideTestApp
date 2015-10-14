@@ -21,6 +21,8 @@
 
 @protocol MTItemListExpanderOutputInterface <NSObject>
 
+@optional
+
 - (void)onDidOpenCityPlacesAtIndexPaths:(NSArray *)indexPaths;
 - (void)onDidCloseCityPlacesAtIndexPaths:(NSArray *)indexPaths;
 

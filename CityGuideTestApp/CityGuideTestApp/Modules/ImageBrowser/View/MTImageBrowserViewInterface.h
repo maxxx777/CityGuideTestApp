@@ -6,11 +6,10 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MTRootViewInterface.h"
 
-@protocol MTImageBrowserViewInterface <NSObject>
+@protocol MTImageBrowserViewInterface <NSObject, MTRootViewInterface>
 
-- (void)configureNavigationBarWithTitle: (NSString *)title;
-- (void)configureImageWithImage:(UIImage *)image;
+- (void)configureImageWithImage:(UIImage * _Nonnull)image;
 
 @end

@@ -10,6 +10,6 @@
 
 @optional
 
-- (id)parseItemListFromRawData:(id)rawData;
+- (id _Nullable)parseItemListFromRawData:(id _Nonnull)rawData;
 
 @end

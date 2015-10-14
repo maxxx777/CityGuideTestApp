@@ -20,7 +20,9 @@
 {
     [super viewDidLoad];
     
-    [self.presenter onDidLoadView];
+    if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
+        [self.presenter onDidLoadView];
+    }
     [self configureChildTableViewController];
 }
 
@@ -40,12 +42,16 @@
 
 - (IBAction)addButtonPressed:(id)sender
 {
-    [self.presenter onDidPressRightBarButtonOnNavigationBar];
+    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnNavigationBar)]) {
+        [self.presenter onDidPressRightBarButtonOnNavigationBar];
+    }
 }
 
 - (IBAction)filterButtonPressed:(id)sender
 {
-    [self.presenter onDidPressRightBarButtonOnToolbar];
+    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnToolbar)]) {
+        [self.presenter onDidPressRightBarButtonOnToolbar];
+    }    
 }
 
 #pragma mark - Helper 
@@ -73,21 +79,6 @@
 }
 
 #pragma mark - MTItemListViewInterface
-
-- (void)configureNavigationBarWithTitle:(NSString *)title
-{
-    self.navigationItem.title = title;
-}
-
-- (void)configureLeftBarButtonWithTitle:(NSString *)title
-{
-    (self.navigationItem.leftBarButtonItem).title = title;
-}
-
-- (void)configureRightBarButtonWithTitle:(NSString *)title
-{
-    (self.navigationItem.rightBarButtonItem).title = title;
-}
 
 - (void)configureBarButtonFilterWithTitle:(NSString *)title
 {

@@ -24,13 +24,20 @@
     
     if (rawData) {
         
-        id result = [self.parser parseItemListFromRawData:rawData];
+        id result;
+        if ([self.parser respondsToSelector:@selector(parseItemListFromRawData:)]) {
+            result = [self.parser parseItemListFromRawData:rawData];
+        }        
         
-        completion(result, error);
+        if (completion) {
+            completion(result, error);
+        }
         
     } else {
         
-        completion(nil, error);
+        if (completion) {
+            completion(nil, error);
+        }
         
     }
 }

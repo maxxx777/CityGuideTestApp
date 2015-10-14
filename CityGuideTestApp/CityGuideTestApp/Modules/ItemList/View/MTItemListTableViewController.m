@@ -27,31 +27,25 @@
 {
     [super viewWillAppear:animated];
     
-//    [UIView transitionWithView: self.tableView
-//                      duration: 0.0f
-//                       options: UIViewAnimationOptionTransitionNone
-//                    animations: ^(void)
-//     {
-         [self.presenter onWillAppearView];
-//     }
-//                    completion: ^(BOOL isFinished)
-//     {
-//         [self reloadData];
-//     }];
+    if ([self.presenter respondsToSelector:@selector(onWillAppearView)]) {
+        [self.presenter onWillAppearView];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    [self.presenter onDidAppearView];
+    if ([self.presenter respondsToSelector:@selector(onDidAppearView)]) {
+        [self.presenter onDidAppearView];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     
-    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+    if ([self.presenter respondsToSelector:@selector(onWillDisappearView)]) {
         [self.presenter onWillDisappearView];
     }
 }

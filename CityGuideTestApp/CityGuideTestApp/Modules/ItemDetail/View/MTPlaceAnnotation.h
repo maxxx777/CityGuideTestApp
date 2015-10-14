@@ -13,6 +13,7 @@
 
 }
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate NS_DESIGNATED_INITIALIZER;
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;

@@ -24,6 +24,7 @@
 
 @property (nonatomic, weak) UIViewController<MTItemDetailViewInterface> *userInterface;
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithPlaceDetailConfigurator:(id<MTPlaceDetailConfiguratorInputInterface>)placeDetailConfigurator
                                    itemOperator:(id<MTItemOperatorInputInterface>)itemOperator
                                       wireframe:(MTItemDetailWireframe *)wireframe NS_DESIGNATED_INITIALIZER;

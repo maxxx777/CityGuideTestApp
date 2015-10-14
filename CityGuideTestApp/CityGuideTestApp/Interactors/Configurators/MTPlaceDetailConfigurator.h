@@ -16,6 +16,7 @@
     MTPlaceDetailConfiguratorInputInterface
 >
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithNewItem NS_DESIGNATED_INITIALIZER;;
 
 @end

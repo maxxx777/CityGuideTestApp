@@ -6,19 +6,17 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MTRootViewInterface.h"
 
-@protocol MTItemDetailViewInterface <NSObject>
+@protocol MTItemDetailViewInterface <NSObject, MTRootViewInterface>
 
-- (void)configureNavigationBarWithTitle: (NSString *)title;
-- (void)configureMapWithCoordinates:(NSDictionary *)coordinates;
-- (void)configureNameWithText:(NSString *)text;
-- (void)configureDescriptionWithText:(NSString *)text;
+- (void)configureMapWithCoordinates:(NSDictionary * _Nonnull)coordinates;
+- (void)configureNameWithText:(NSString * _Nonnull)text;
+- (void)configureDescriptionWithText:(NSString * _Nonnull)text;
 - (void)reloadCells;
 - (void)configurePhotoCellAsAddImage;
 - (void)configurePhotoCellAsNoImage;
-- (void)configureImageWithImage:(UIImage *)image;
-- (void)configureImageWithPlaceholder;
+- (void)configureImageWithImage:(UIImage * _Nonnull)image;
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;
 
@@ -27,7 +25,6 @@
 
 - (void)beginEditName;
 - (void)beginEditDescription;
-- (void)showFullScreenPhoto;
 
 - (void)enableActivityForImageLoading;
 - (void)disableActivityForImageLoading;

@@ -14,7 +14,7 @@
 @interface MTRootDataManager : NSObject
 <
     MTRootDataManagerInterface,
-    MTItemListCacheDelegate, MTRootDataManagerDelegate
+    MTItemListCacheDelegate
 >
 
 - (instancetype)initWithDelegate:(id<MTRootDataManagerDelegate>)delegate NS_DESIGNATED_INITIALIZER;

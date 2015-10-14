@@ -18,6 +18,7 @@
     MTPlaceDetailFetcherInputInterface
 >
 
+- (instancetype) __unavailable init;
 - (instancetype)initWithPlace:(MTMappedPlace *)place
               itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;
 

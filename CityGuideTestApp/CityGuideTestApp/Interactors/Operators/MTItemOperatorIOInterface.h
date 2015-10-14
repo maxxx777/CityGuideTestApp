@@ -8,7 +8,7 @@
 
 @protocol MTItemOperatorInputInterface <NSObject>
 
-- (void)saveItem:(id)item;
+- (void)saveItem:(id _Nonnull)item;
 
 @end
 

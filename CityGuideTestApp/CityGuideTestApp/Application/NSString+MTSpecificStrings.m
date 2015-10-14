@@ -17,11 +17,6 @@
     return @"api.geonames.org";
 }
 
-+ (NSString *)mt_apiUserName
-{
-    return @"maxxx777";
-}
-
 + (NSString *)mt_propertyNameForItemId
 {
     return @"itemId";

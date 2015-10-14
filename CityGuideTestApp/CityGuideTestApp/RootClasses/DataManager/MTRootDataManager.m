@@ -35,6 +35,11 @@
     return self;
 }
 
+- (instancetype)init
+{
+    return [self initWithDelegate:nil];
+}
+
 #pragma mark - MTRootDataManagerInterface
 
 - (id)mappedObjectAtIndexPath:(NSIndexPath *)indexPath

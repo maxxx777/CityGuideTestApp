@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rh0-7z-5D1">
-                                <rect key="frame" x="0.0" y="-49" width="600" height="605"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rh0-7z-5D1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-lN-BVZ">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -91,7 +91,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ItemDetailViewController" id="Sa7-vx-0lQ" customClass="MTItemDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="QXM-nQ-cZL">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -172,8 +172,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-28-y8p">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cdq-28-y8p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -196,7 +196,7 @@
                     <navigationItem key="navigationItem" id="Dt0-ul-5Yp"/>
                     <connections>
                         <outlet property="imageViewPhoto" destination="Cdq-28-y8p" id="dH3-A7-mzo"/>
-                        <outlet property="mapView" destination="NMn-pu-Ebw" id="48v-id-FkO"/>
+                        <outlet property="mapView" destination="NMn-pu-Ebw" id="IXn-FD-cpD"/>
                         <outlet property="photoCell" destination="ey2-Px-PFS" id="XUb-Nk-O2r"/>
                         <outlet property="textFieldName" destination="805-Du-GhS" id="6EG-k9-5nN"/>
                         <outlet property="textViewDescription" destination="UQh-BO-PZz" id="RQy-Js-GVG"/>
@@ -205,24 +205,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Oo-1d-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="337"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cmv-jq-Hbe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WmT-hf-N9N" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcF-ix-cyJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Sa7-vx-0lQ" kind="relationship" relationship="rootViewController" id="UbH-CU-cGg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CxW-Ep-3Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="305" y="337"/>
         </scene>
         <!--Image Browser View Controller-->
         <scene sceneID="vhD-nR-iAD">

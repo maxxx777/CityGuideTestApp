@@ -121,7 +121,6 @@
     self.photoCell.textLabel.text = @"";
     self.photoCell.accessoryType = UITableViewCellAccessoryNone;
     
-    NSLog(@"bounds %f %f", self.photoCell.bounds.size.width, self.photoCell.contentView.bounds.size.height);
     CGFloat scaledHeight = CGRectGetWidth(self.photoCell.contentView.frame) * image.size.height / image.size.width;
     CGSize scaledSize = CGSizeMake(self.photoCell.contentView.frame.size.width, scaledHeight);
     
@@ -213,11 +212,6 @@
     [self.textViewDescription becomeFirstResponder];
 }
 
-- (void)showFullScreenPhoto
-{
-    
-}
-
 - (void)closeView
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -245,8 +239,9 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    NSLog(@"save button pressed");
-    [self.presenter onDidPressRightBarButtonOnNavigationBar];
+    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnNavigationBar)]) {
+        [self.presenter onDidPressRightBarButtonOnNavigationBar];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -260,7 +255,9 @@
         return NO;
     } else {
         
-        [self.presenter onDidChangeTextFieldName:textField.text];
+        if ([self.presenter respondsToSelector:@selector(onDidChangeTextFieldName:)]) {
+            [self.presenter onDidChangeTextFieldName:textField.text];
+        }
     }
     
     return YES;
@@ -277,7 +274,9 @@
         return NO;
     } else {
         
-        [self.presenter onDidChangeTextViewDescription:textView.text];
+        if ([self.presenter respondsToSelector:@selector(onDidChangeTextViewDescription:)]) {
+            [self.presenter onDidChangeTextViewDescription:textView.text];
+        }
     }
     
     return YES;
@@ -382,10 +381,12 @@
     _placeAnnotation = [[MTPlaceAnnotation alloc] initWithCoordinate:touchMapCoordinate];
     [self.mapView addAnnotation:self.placeAnnotation];
     
-    [self.presenter onDidChangeMapCoordinates:@{
-                                           @"latitude" : @(touchMapCoordinate.latitude),
-                                           @"longitude" : @(touchMapCoordinate.longitude)
-                                           }];
+    if ([self.presenter respondsToSelector:@selector(onDidChangeMapCoordinates:)]) {
+        [self.presenter onDidChangeMapCoordinates:@{
+                                                    @"latitude" : @(touchMapCoordinate.latitude),
+                                                    @"longitude" : @(touchMapCoordinate.longitude)
+                                                    }];
+    }
 }
 
 - (void)presentImagePicker

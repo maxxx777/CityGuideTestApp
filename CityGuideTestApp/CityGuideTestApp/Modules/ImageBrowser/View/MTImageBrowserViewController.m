@@ -15,7 +15,9 @@
 
 - (void)viewDidLoad
 {
-    [self.presenter onDidLoadView];
+    if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
+        [self.presenter onDidLoadView];
+    }    
 }
 
 #pragma mark - MTImageBrowserViewInterface
