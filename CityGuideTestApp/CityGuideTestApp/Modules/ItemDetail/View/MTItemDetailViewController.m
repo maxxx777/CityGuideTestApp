@@ -92,8 +92,8 @@
     region.span = span;
     region.center = center;
     
-    MTPlaceAnnotation *placeAnnotation = [[MTPlaceAnnotation alloc] initWithCoordinate:center];
-    [self.mapView addAnnotation:placeAnnotation];
+    _placeAnnotation = [[MTPlaceAnnotation alloc] initWithCoordinate:center];
+    [self.mapView addAnnotation:self.placeAnnotation];
     
     [self.mapView setRegion:region animated:YES];
     [self.mapView regionThatFits:region];

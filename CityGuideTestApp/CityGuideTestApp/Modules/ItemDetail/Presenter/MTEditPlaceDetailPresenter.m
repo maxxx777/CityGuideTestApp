@@ -60,6 +60,10 @@
 {
     if (self.isFirstAppearance) {
         
+        if ([[MTLocationManager sharedManager] currentLocation]) {
+            [self.userInterface configureMapWithCoordinates:[[MTLocationManager sharedManager] currentLocation]];
+        }
+        
         [self.userInterface enableDropPinOnMapView];
         
         self.isFirstAppearance = NO;
