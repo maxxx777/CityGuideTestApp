@@ -88,23 +88,24 @@
                                         
                                         if (buttonIndex == 1) {
                                             
+                                            [self.itemListRequester fetchAllItems];
+                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"All", nil)];
+                                            
+                                        } else if (buttonIndex == 2) {
+                                            
                                             [self.itemListRequester fetchItemsWithin100Mile];
                                             [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"100 miles", nil)];
                                             
-                                        } else if (buttonIndex == 2) {
+                                        } else if (buttonIndex == 3) {
                                             
                                             [self.itemListRequester fetchItemsWithin10Mile];
                                             [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"10 miles", nil)];
                                             
-                                        } else if (buttonIndex == 3) {
+                                        } else if (buttonIndex == 4) {
                                             
                                             [self.itemListRequester fetchItemsWithin1Mile];
                                             [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"1 mile", nil)];
                                             
-                                        } else if (buttonIndex == 4) {
-                                            
-                                            [self.itemListRequester fetchAllItems];
-                                            [self.userInterface configureBarButtonFilterWithTitle:NSLocalizedString(@"All", nil)];
                                         }
                                         
                                     }

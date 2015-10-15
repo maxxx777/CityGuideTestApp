@@ -97,6 +97,13 @@
     
     [self.mapView setRegion:region animated:YES];
     [self.mapView regionThatFits:region];
+    
+    if ([self.presenter respondsToSelector:@selector(onDidChangeMapCoordinates:)]) {
+        [self.presenter onDidChangeMapCoordinates:@{
+                                                    @"latitude" : @(center.latitude),
+                                                    @"longitude" : @(center.longitude)
+                                                    }];
+    }
 }
 
 - (void)configurePhotoCellAsAddImage
@@ -239,7 +246,11 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnNavigationBar)]) {
+    if ([self.presenter respondsToSelector:@selector(onDidChangeTextFieldName:)]) {
+        [self.presenter onDidChangeTextFieldName:self.textFieldName.text];
+    }
+    
+    if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnNavigationBar)]) {
         [self.presenter onDidPressRightBarButtonOnNavigationBar];
     }
 }
@@ -272,14 +283,16 @@
         [self.textViewDescription endEditing:YES];
         
         return NO;
-    } else {
-        
-        if ([self.presenter respondsToSelector:@selector(onDidChangeTextViewDescription:)]) {
-            [self.presenter onDidChangeTextViewDescription:textView.text];
-        }
     }
     
     return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    if ([self.presenter respondsToSelector:@selector(onDidChangeTextViewDescription:)]) {
+        [self.presenter onDidChangeTextViewDescription:textView.text];
+    }
 }
 
 #pragma mark - UIImagePickerControllerDelegate

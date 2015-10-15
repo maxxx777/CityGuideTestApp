@@ -42,14 +42,14 @@
 
 - (IBAction)addButtonPressed:(id)sender
 {
-    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnNavigationBar)]) {
+    if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnNavigationBar)]) {
         [self.presenter onDidPressRightBarButtonOnNavigationBar];
     }
 }
 
 - (IBAction)filterButtonPressed:(id)sender
 {
-    if ([self.presenter respondsToSelector:@selector(onDidPressLeftBarButtonOnToolbar)]) {
+    if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnToolbar)]) {
         [self.presenter onDidPressRightBarButtonOnToolbar];
     }    
 }
