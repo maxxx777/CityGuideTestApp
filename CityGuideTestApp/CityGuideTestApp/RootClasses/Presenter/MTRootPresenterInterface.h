@@ -11,6 +11,7 @@
 @optional
 
 - (void)onDidLoadView;
+- (void)onWillCloseView;
 
 - (void)onWillAppearView;
 - (void)onDidAppearView;

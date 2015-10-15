@@ -34,4 +34,15 @@
     self.navigationItem.title = title;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        if ([self.presenter respondsToSelector:@selector(onWillCloseView)]) {
+            [self.presenter onWillCloseView];
+        }
+    }
+}
+
 @end

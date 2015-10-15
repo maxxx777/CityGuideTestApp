@@ -14,6 +14,9 @@
 #import "MTAlertWrapper.h"
 
 @interface MTEditPlaceDetailPresenter ()
+{
+    BOOL isSaved;
+}
 
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
@@ -36,6 +39,7 @@
         _wireframe = wireframe;
         
         _isFirstAppearance = YES;
+        isSaved = NO;
     }
     return self;
 }
@@ -73,6 +77,16 @@
 - (void)onWillDisappearView
 {
     [self.userInterface disableRightBarButtonOnNavigationBar];
+}
+
+- (void)onWillCloseView
+{
+    if (!isSaved) {
+        if ([self.placeDetailConfigurator fileName]) {
+            [[MTImageManager sharedManager] removeFileWithName:[self.placeDetailConfigurator fileName]
+                                                    completion:nil];
+        }
+    }
 }
 
 - (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates
@@ -175,6 +189,7 @@
 
 - (void)onDidSaveItem
 {
+    isSaved = YES;
     [self.userInterface closeView];
 }
 
