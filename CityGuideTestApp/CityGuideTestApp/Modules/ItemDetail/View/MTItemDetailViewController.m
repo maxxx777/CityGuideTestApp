@@ -12,6 +12,7 @@
 #import "UIImageView+MTActivityAnimation.h"
 #import "MTImageManager.h"
 #import "NSString+MTFormatting.h"
+#import "UIImage+MTEditing.h"
 
 @interface MTItemDetailViewController ()
 
@@ -131,16 +132,14 @@
     CGFloat scaledHeight = CGRectGetWidth(self.photoCell.contentView.frame) * image.size.height / image.size.width;
     CGSize scaledSize = CGSizeMake(self.photoCell.contentView.frame.size.width, scaledHeight);
     
-    image = [[MTImageManager sharedManager] imageWithImage:image
-                                              scaledToSize:scaledSize];
+    image = [image mt_resizeToSize:scaledSize];
     
     CGRect cropRect = CGRectMake(0,
                                  image.size.height / 2,
                                  image.size.width,
                                  image.size.height);
     
-    image = [[MTImageManager sharedManager] imageWithImage:image
-                                                  cropRect:cropRect];
+    image = [image mt_cropToRect:cropRect];
 
     (self.imageViewPhoto).image = image;
 }

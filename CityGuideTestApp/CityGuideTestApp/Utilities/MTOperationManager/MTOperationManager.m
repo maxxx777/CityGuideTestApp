@@ -9,6 +9,12 @@
 #import "MTOperationManager.h"
 #import "MTRootOperation.h"
 
+@interface MTOperationManager ()
+
+@property (nonatomic, strong) NSOperationQueue* sharedOperationQueue;
+
+@end
+
 @implementation MTOperationManager
 
 - (instancetype)init
@@ -33,6 +39,11 @@
 }
 
 #pragma mark - Public
+
+- (void)queueOperationWithBlock:(MTOperationManageCompletionBlock)block
+{
+    [self.sharedOperationQueue addOperationWithBlock:block];
+}
 
 - (void)queueOperation:(MTRootOperation *)operation
 {

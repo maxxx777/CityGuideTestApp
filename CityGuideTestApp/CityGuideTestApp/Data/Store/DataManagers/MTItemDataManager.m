@@ -10,15 +10,15 @@
 #import "MTItemWebService.h"
 #import "MTSavePlaceOperation.h"
 #import "MTSaveItemsOperation.h"
-#import "MTOperationManager.h"
 #import "MTArrayBasedItemListCacheInterface.h"
 #import "MTFetchedResultsControllerBasedItemListCacheInterface.h"
-#import "NSString+MTSpecificStrings.h"
+#import "MTDataMapping.h"
 #import "MTDataStore.h"
+#import "NSString+MTSpecificStrings.h"
 #import "MTMappedCity.h"
 #import "MTMappedPlace.h"
 #import "MTLocationManager.h"
-#import "MTDataMapping.h"
+#import "MTOperationManager.h"
 
 @interface MTItemDataManager ()
 

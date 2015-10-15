@@ -11,6 +11,7 @@
 #import "UIImageView+MTActivityAnimation.h"
 #import "MTImageManager.h"
 #import "NSString+MTFormatting.h"
+#import "MTImageCache.h"
 
 @interface MTPlaceListCell ()
 
@@ -115,7 +116,7 @@
         }
         
         if (isCurrentPlaceWithFetchedImage) {
-            UIImage *image = [[MTImageManager sharedManager] imageFromCacheForPlace:place];
+            UIImage *image = [[MTImageCache sharedCache] imageFromCacheForPlace:place];
             if (image) {
                 (self.imageViewPhoto).image = image;
             } else {

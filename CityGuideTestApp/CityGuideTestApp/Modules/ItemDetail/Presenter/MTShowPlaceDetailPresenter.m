@@ -9,6 +9,7 @@
 #import "MTShowPlaceDetailPresenter.h"
 #import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
+#import "MTImageCache.h"
 #import "MTImageManager.h"
 
 @interface MTShowPlaceDetailPresenter ()
@@ -114,7 +115,7 @@
     if (_image) {
         return _image;
     }
-    _image = [[MTImageManager sharedManager] imageFromCacheForPlace:[self.placeDetailFetcher currentItem]];
+    _image = [[MTImageCache sharedCache] imageFromCacheForPlace:[self.placeDetailFetcher currentItem]];
     return _image;
 }
 

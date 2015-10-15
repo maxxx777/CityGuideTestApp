@@ -12,9 +12,11 @@
 #import "MTLocationManager.h"
 #import "MTImageManager.h"
 #import "MTAlertWrapper.h"
+#import "MTFileManager.h"
 
 @interface MTEditPlaceDetailPresenter ()
 {
+    MTFileManager *fileManager;
     BOOL isSaved;
 }
 
@@ -39,6 +41,7 @@
         _wireframe = wireframe;
         
         _isFirstAppearance = YES;
+        fileManager = [[MTFileManager alloc] init];
         isSaved = NO;
     }
     return self;
@@ -83,8 +86,8 @@
 {
     if (!isSaved) {
         if ([self.placeDetailConfigurator fileName]) {
-            [[MTImageManager sharedManager] removeFileWithName:[self.placeDetailConfigurator fileName]
-                                                    completion:nil];
+            [fileManager removeFileWithName:[self.placeDetailConfigurator fileName]
+                                 completion:nil];
         }
     }
 }
@@ -171,11 +174,11 @@
 {
     NSData *data = UIImageJPEGRepresentation(image, 0.9f);
     if ([self.placeDetailConfigurator fileName]) {
-        [[MTImageManager sharedManager] removeFileWithName:[self.placeDetailConfigurator fileName]
-                                                completion:nil];
+        [fileManager removeFileWithName:[self.placeDetailConfigurator fileName]
+                             completion:nil];
     }
-    [[MTImageManager sharedManager] saveFileWithData:data
-                                          completion:^(NSError *error, NSString *fileName){
+    [fileManager saveFileWithData:data
+                       completion:^(NSError *error, NSString *fileName){
                                               if (fileName) {
                                                   [self.placeDetailConfigurator configurePlaceFileName:fileName];
                                                   [self.userInterface configureImageWithImage:image];

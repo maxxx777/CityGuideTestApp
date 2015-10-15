@@ -6,17 +6,15 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-@class MTRootOperation;
+#import "MTOperationManagerInterface.h"
 
 @interface MTOperationManager : NSObject
-
-@property (nonatomic, strong) NSOperationQueue* sharedOperationQueue;
+<
+    MTOperationManagerInterface
+>
 
 - (instancetype) __unavailable init;
 
 + (MTOperationManager *)sharedManager;
-
-- (void)queueOperation:(MTRootOperation *)operation;
-- (void)cancelAllOperations;
 
 @end
