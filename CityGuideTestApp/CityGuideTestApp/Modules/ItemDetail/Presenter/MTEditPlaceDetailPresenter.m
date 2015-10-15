@@ -179,8 +179,6 @@
                                               if (fileName) {
                                                   [self.placeDetailConfigurator configurePlaceFileName:fileName];
                                                   [self.userInterface configureImageWithImage:image];
-                                              } else {
-                                                  NSLog(@"save file error: %@", error);
                                               }
     }];
 }

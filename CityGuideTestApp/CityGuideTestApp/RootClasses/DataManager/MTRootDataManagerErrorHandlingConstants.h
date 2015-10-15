@@ -8,7 +8,7 @@
 
 static NSString *const MTRootDataManagerErrorDomain = @"MTRootDataManager.ErrorDomain";
 
-//TODO: add more error types (e.g. merge data error)
+//FIXME: add more error types (e.g. merge data error)
 typedef NS_ENUM(NSUInteger, MTRootDataManagerErrorType) {
     
     MTRootDataManagerErrorAny = 1

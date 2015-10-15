@@ -8,7 +8,7 @@
 
 static NSString *const MTImageManagerErrorDomain = @"MTImageManager.ErrorDomain";
 
-//TODO: add more error types (e.g. http timeout)
+//FIXME: add more error types (e.g. http timeout)
 typedef NS_ENUM(NSUInteger, MTImageManagerErrorType) {
     
     MTImageManagerErrorAny = 1

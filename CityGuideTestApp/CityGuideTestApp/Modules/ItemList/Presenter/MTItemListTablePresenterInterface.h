@@ -12,8 +12,6 @@
 
 @optional
 
-- (void)scrollViewWithOffset: (CGPoint)offset;
-
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfAllItemsOfSelectedType;
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section;

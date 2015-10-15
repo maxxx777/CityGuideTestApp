@@ -1,9 +1,9 @@
 //
-//  NSNumber+ETNewItemId.m
-//  NotesTestApp
+//  NSNumber+MTNewItemId.m
+//  CityGuideTestApp
 //
-//  Created by MAXIM TSVETKOV on 30.09.15.
-//  Copyright (c) 2015 Egar Technology Inc. All rights reserved.
+//  Created by MAXIM TSVETKOV on 11.10.15.
+//  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
 #import "NSNumber+MTNewItemId.h"

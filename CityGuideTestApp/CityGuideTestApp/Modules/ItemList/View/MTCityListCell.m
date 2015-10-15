@@ -25,6 +25,10 @@
                 reuseIdentifier:reuseIdentifier];
     if (self) {
         
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        self.textLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         _imageViewDisclosure = [[UIImageView alloc] init];
         (self.imageViewDisclosure).image = [UIImage imageNamed:@"disclosure.png"];
         
@@ -52,19 +56,7 @@
 {
     [super layoutSubviews];
     
-    self.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    self.textLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    if (_isOpened) {
-        CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_2);
-        self.imageViewDisclosure.transform = transform;
-    } else {
-        CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-        self.imageViewDisclosure.transform = transform;
-    }
-    
-//    self.accessoryView = disclosureImageView;
+    [self transformImageViewDisclosureWithState:_isOpened];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -76,16 +68,12 @@
         
         [UIView animateWithDuration:0.3f
                          animations:^(){
-                             if (isOpenedNow) {
-                                 CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_2);
-                                 self.imageViewDisclosure.transform = transform;
-                             } else {
-                                 CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-                                 self.imageViewDisclosure.transform = transform;                                 
-                             }
+                             [self transformImageViewDisclosureWithState:isOpenedNow];
         }];
     }
 }
+
+#pragma mark - Public
 
 - (void)configureCellWithItem:(id)item
                      isOpened:(BOOL)isOpened
@@ -96,14 +84,17 @@
     self.textLabel.text = mappedCity.itemName;
 }
 
-- (void)configureCellForOffScreenWithItem:(id)item
-{
-    //
-}
+#pragma mark - Helper 
 
-- (CGFloat)heightForCellWithItem:(id)item
+- (void)transformImageViewDisclosureWithState:(BOOL)isOpenState
 {
-    return 44.0f;
+    if (isOpenState) {
+        CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_2);
+        self.imageViewDisclosure.transform = transform;
+    } else {
+        CGAffineTransform transform = CGAffineTransformMakeRotation(0);
+        self.imageViewDisclosure.transform = transform;
+    }
 }
 
 @end

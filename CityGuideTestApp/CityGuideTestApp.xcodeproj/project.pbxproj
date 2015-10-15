@@ -388,17 +388,17 @@
 		7502C0FD1BC59017008ECF59 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7502C0FF1BC59017008ECF59 /* MTAppDelegate.h */,
+				7502C1001BC59017008ECF59 /* MTAppDelegate.m */,
 				757831AC1BC82031008BD2FC /* MTAppSettingsConfigurator.h */,
 				757831AD1BC82031008BD2FC /* MTAppSettingsConfigurator.m */,
 				757831AE1BC82031008BD2FC /* MTAppSettingsConfiguratorInterface.h */,
-				7502C0FE1BC59017008ECF59 /* Images.xcassets */,
-				7502C0FF1BC59017008ECF59 /* MTAppDelegate.h */,
-				7502C1001BC59017008ECF59 /* MTAppDelegate.m */,
 				7502C1011BC59017008ECF59 /* MTAppModulesConnector.h */,
 				7502C1021BC59017008ECF59 /* MTAppModulesConnector.m */,
 				7502C1031BC59017008ECF59 /* MTAppModulesConnectorInterface.h */,
 				7502C1041BC59017008ECF59 /* NSString+MTSpecificStrings.h */,
 				7502C1051BC59017008ECF59 /* NSString+MTSpecificStrings.m */,
+				7502C0FE1BC59017008ECF59 /* Images.xcassets */,
 				7502C1061BC59017008ECF59 /* SupportingFiles */,
 			);
 			path = Application;
@@ -569,9 +569,9 @@
 		7502C1361BC59018008ECF59 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				756175071BCAE3CA004A843C /* ImageBrowser */,
-				7502C1371BC59018008ECF59 /* ItemDetail */,
 				7502C13E1BC59018008ECF59 /* ItemList */,
+				7502C1371BC59018008ECF59 /* ItemDetail */,
+				756175071BCAE3CA004A843C /* ImageBrowser */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -601,12 +601,12 @@
 		7502C1391BC59018008ECF59 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */,
-				75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */,
 				75EAA90C1BC9788E000BE44A /* MTItemDetailViewController.h */,
 				75EAA90D1BC9788E000BE44A /* MTItemDetailViewController.m */,
 				75EAA9121BC97A0F000BE44A /* MTItemDetailViewInterface.h */,
 				75FE09131BCA9F1300765F7D /* MTItemDetailViewConstants.h */,
+				75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */,
+				75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,16 +647,16 @@
 		7502C1491BC59018008ECF59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7502C1521BC59018008ECF59 /* MTItemListViewController.h */,
+				7502C1531BC59018008ECF59 /* MTItemListViewController.m */,
+				7502C1541BC59018008ECF59 /* MTItemListViewInterface.h */,
+				7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */,
+				7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */,
+				7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */,
 				7502C14A1BC59018008ECF59 /* MTCityListCell.h */,
 				7502C14B1BC59018008ECF59 /* MTCityListCell.m */,
 				7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */,
 				7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */,
-				7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */,
-				7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */,
-				7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */,
-				7502C1521BC59018008ECF59 /* MTItemListViewController.h */,
-				7502C1531BC59018008ECF59 /* MTItemListViewController.m */,
-				7502C1541BC59018008ECF59 /* MTItemListViewInterface.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,7 +676,6 @@
 			children = (
 				7502C15A1BC59018008ECF59 /* Cell */,
 				7502C15D1BC59018008ECF59 /* DataManager */,
-				7502C1631BC59018008ECF59 /* Helper */,
 				7502C1641BC59018008ECF59 /* Interactor */,
 				7502C1671BC59018008ECF59 /* Operation */,
 				7502C16A1BC59018008ECF59 /* Presenter */,
@@ -707,13 +706,6 @@
 				757C61C21BCE92BF00E2E252 /* MTRootDataManagerErrorHandlingConstants.h */,
 			);
 			path = DataManager;
-			sourceTree = "<group>";
-		};
-		7502C1631BC59018008ECF59 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		7502C1641BC59018008ECF59 /* Interactor */ = {
@@ -789,7 +781,6 @@
 				75D32D621BC66E990010D705 /* NSNumber-NewItemId */,
 				7502C1891BC59018008ECF59 /* External */,
 				7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */,
-				7502C21C1BC59018008ECF59 /* RequestBuilder */,
 				757C61C51BCEC61A00E2E252 /* MTErrorHandlingConstants.h */,
 			);
 			path = Utilities;
@@ -805,22 +796,15 @@
 			path = External;
 			sourceTree = "<group>";
 		};
-		7502C21C1BC59018008ECF59 /* RequestBuilder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RequestBuilder;
-			sourceTree = "<group>";
-		};
 		756174F51BCAA9F4004A843C /* MTImageLoader */ = {
 			isa = PBXGroup;
 			children = (
-				757C61C11BCE922800E2E252 /* MTImageManagerErrorHandlingConstants.h */,
-				756174F91BCAAA4B004A843C /* MTImageManagerCompletionHandlingConstants.h */,
 				756174FA1BCAAA5F004A843C /* MTImageManagerInterface.h */,
 				756174F61BCAAA11004A843C /* MTImageManager.h */,
 				756174F71BCAAA11004A843C /* MTImageManager.m */,
 				757C61BD1BCE4C7800E2E252 /* MTImageManagerDelegate.h */,
+				757C61C11BCE922800E2E252 /* MTImageManagerErrorHandlingConstants.h */,
+				756174F91BCAAA4B004A843C /* MTImageManagerCompletionHandlingConstants.h */,
 			);
 			path = MTImageLoader;
 			sourceTree = "<group>";

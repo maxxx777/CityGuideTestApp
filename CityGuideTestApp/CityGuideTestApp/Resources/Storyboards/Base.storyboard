@@ -105,7 +105,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NMn-pu-Ebw">
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMn-pu-Ebw">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                                 </mapView>
                                             </subviews>

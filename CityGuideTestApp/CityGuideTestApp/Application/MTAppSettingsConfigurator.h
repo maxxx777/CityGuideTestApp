@@ -1,9 +1,9 @@
 //
-//  ETAppSettingsConfigurator.h
-//  UniversitySchedule
+//  MTAppSettingsConfigurator.h
+//  CityGuideTestApp
 //
-//  Created by MAXIM TSVETKOV on 22.06.15.
-//  Copyright (c) 2015 Egar Technology Inc. All rights reserved.
+//  Created by MAXIM TSVETKOV on 11.10.15.
+//  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
 #import "MTAppSettingsConfiguratorInterface.h"

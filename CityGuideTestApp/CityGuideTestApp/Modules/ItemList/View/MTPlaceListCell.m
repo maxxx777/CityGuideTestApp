@@ -100,16 +100,6 @@
                                               delegate:self];
 }
 
-- (void)configureCellForOffScreenWithItem:(id)item
-{
-    //
-}
-
-- (CGFloat)heightForCellWithItem:(id)item
-{
-    return 60.0f;
-}
-
 #pragma mark - MTImageManagerDelegate
 
 - (void)onDidFetchImageForPlace:(id)place error:(NSError *)error

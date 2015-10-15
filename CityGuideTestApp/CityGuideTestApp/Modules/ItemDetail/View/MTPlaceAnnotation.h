@@ -1,21 +1,20 @@
 //
-//  ETAddressAnnotation.h
-//  UniversitySchedule
+//  MTAddressAnnotation.h
+//  CityGuideTestApp
 //
-//  Created by Grigory Avdyushin on 2/18/13.
-//  Copyright (c) 2013 Grigory Avdyushin. All rights reserved.
+//  Created by MAXIM TSVETKOV on 11.10.15.
+//  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface MTPlaceAnnotation : NSObject <MKAnnotation> {
-
-}
+@interface MTPlaceAnnotation : NSObject
+<
+    MKAnnotation
+>
 
 - (instancetype) __unavailable init;
 - (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate NS_DESIGNATED_INITIALIZER;
-
-@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
 @end

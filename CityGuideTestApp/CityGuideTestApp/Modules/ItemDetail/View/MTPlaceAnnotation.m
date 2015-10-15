@@ -1,9 +1,9 @@
 //
-//  ETAddressAnnotation.m
-//  UniversitySchedule
+//  MTAddressAnnotation.m
+//  CityGuideTestApp
 //
-//  Created by Grigory Avdyushin on 2/18/13.
-//  Copyright (c) 2013 Grigory Avdyushin. All rights reserved.
+//  Created by MAXIM TSVETKOV on 11.10.15.
+//  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
 #import "MTPlaceAnnotation.h"
