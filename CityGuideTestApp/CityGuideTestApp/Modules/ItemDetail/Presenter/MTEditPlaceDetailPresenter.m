@@ -114,12 +114,20 @@
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Coordinates", nil)
                                         message:NSLocalizedString(@"Please Drop Pin on Map where Place is Located", nil)];
-    } else if (![self.placeDetailConfigurator placeName]) {
+    } else if (![self.placeDetailConfigurator placeName] || [[self.placeDetailConfigurator placeName] length] == 0) {
         MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Name", nil)
                                         message:NSLocalizedString(@"Please Input Place Name", nil)];
     } else {
+        
+        /*
+        TODO:
+         Save new place with selected city (new place has Unknown City now). 
+         City can be detected by either CLGeocoder or Wikipedia/Google Api. 
+         Also it can be added manually.
+         */
+        
         [self.itemOperator saveItem:[self.placeDetailConfigurator currentItem]];
     }
 }
