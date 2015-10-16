@@ -85,12 +85,18 @@
 - (void)removeFileWithName:(NSString *)fileName
                 completion:(MTFileManagerRemoveFileCompletionBlock)completionBlock
 {
-    NSString *filePath = [fileName mt_formatDocumentsPath];
-    NSError *error;
-    [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
-    if (completionBlock) {
-        completionBlock(error, fileName);
-    }
+    [[MTOperationManager sharedManager] queueOperationWithBlock:^(){
+        
+        NSString *filePath = [fileName mt_formatDocumentsPath];
+        NSError *error;
+        [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
+            if (completionBlock) {
+                completionBlock(error, fileName);
+            }
+        }];
+    }];
 }
 
 @end
