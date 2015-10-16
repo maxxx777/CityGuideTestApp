@@ -22,7 +22,7 @@
     MTItemListExpanderOutputInterface
 >
 
-@property (nonatomic, weak) UIViewController<MTItemListTableViewInterface> *userInterface;
+@property (nonatomic, weak) UITableViewController<MTItemListTableViewInterface> *userInterface;
 
 - (instancetype) __unavailable init;
 

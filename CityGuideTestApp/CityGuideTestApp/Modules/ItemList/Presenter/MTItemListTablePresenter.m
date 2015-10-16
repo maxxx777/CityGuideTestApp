@@ -15,8 +15,6 @@
 
 static NSString *MTCityListCellIdentifier = @"CityListCell";
 static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
-static NSString *MTOffScreenCityListCellIdentifier = @"OffScreenCityListCell";
-static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 
 @interface MTItemListTablePresenter ()
 {
@@ -54,6 +52,11 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 }
 
 #pragma mark - MTItemListTablePresenterInterface
+
+- (void)onDidLoadView
+{
+    [self registerCellForTableView:self.userInterface.tableView];
+}
 
 - (void)onWillAppearView
 {
@@ -128,12 +131,8 @@ static NSString *MTOffScreenPlaceListCellIdentifier = @"OffScreenPlaceListCell";
 {
     [tableView registerClass:[MTCityListCell class]
       forCellReuseIdentifier:MTCityListCellIdentifier];
-    [tableView registerClass:[MTCityListCell class]
-      forCellReuseIdentifier:MTOffScreenCityListCellIdentifier];
     [tableView registerClass:[MTPlaceListCell class]
       forCellReuseIdentifier:MTPlaceListCellIdentifier];
-    [tableView registerClass:[MTPlaceListCell class]
-      forCellReuseIdentifier:MTOffScreenPlaceListCellIdentifier];
 }
 
 - (NSString *)cellIdentifierForIndexPath:(NSIndexPath *)indexPath

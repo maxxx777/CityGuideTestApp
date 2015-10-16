@@ -20,7 +20,9 @@
 {
     [super viewDidLoad];
     
-    [self.presenter registerCellForTableView:self.tableView];
+    if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
+        [self.presenter onDidLoadView];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -100,19 +102,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
-    
-    CGFloat height = [self.presenter heightForCell:cell
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
+//    
+    CGFloat height = [self.presenter heightForCell:nil
                                        atIndexPath:indexPath
                                        inTableView:tableView];
     return height;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([self.presenter respondsToSelector:@selector(willDisplayCell:atIndexPath:inTableView:)]) {
-        [self.presenter willDisplayCell:cell atIndexPath:indexPath inTableView:self.tableView];
-    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

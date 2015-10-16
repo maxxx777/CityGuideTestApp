@@ -10,9 +10,6 @@
 
 @protocol MTItemListTablePresenterInterface <NSObject, MTRootTablePresenterInterface>
 
-@optional
-
-@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfAllItemsOfSelectedType;
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSInteger)section;
 @property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *sectionIndexTitles;
@@ -28,7 +25,6 @@
             atIndexPath:(NSIndexPath *)indexPath
             inTableView:(UITableView *)tableView;
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)registerCellForTableView:(UITableView *)tableView;
 - (NSString *)cellIdentifierForIndexPath:(NSIndexPath *)indexPath;
 
 @end
