@@ -13,6 +13,8 @@
 
 - (void)downloadFileWithURL:(NSURL *)url
                  completion:(MTFileManagerDownloadFileCompletionBlock)completionBlock;
+- (void)readJSONFromFileWithName:(NSString *)fileName
+                      completion:(MTFileManagerReadJSONCompletionBlock)completionBlock;
 - (void)saveFileWithData:(NSData *)data
               completion:(MTFileManagerSaveFileCompletionBlock)completionBlock;
 - (void)removeFileWithName:(NSString *)fileName

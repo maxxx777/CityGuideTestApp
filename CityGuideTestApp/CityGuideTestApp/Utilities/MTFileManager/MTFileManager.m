@@ -38,6 +38,25 @@
     [downloadFileTask resume];
 }
 
+- (void)readJSONFromFileWithName:(NSString *)fileName
+                      completion:(MTFileManagerReadJSONCompletionBlock)completionBlock
+{
+    [[MTOperationManager sharedManager] queueOperationWithBlock:^(){
+       
+        NSError *error;
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        NSDictionary *rawData = [NSJSONSerialization JSONObjectWithData:data
+                                                                options:kNilOptions
+                                                                  error:&error];
+        [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
+            if (completionBlock) {
+                completionBlock(error, fileName, rawData);
+            }
+        }];
+    }];
+}
+
 - (void)saveFileWithData:(NSData *)data
               completion:(MTFileManagerSaveFileCompletionBlock)completionBlock
 {

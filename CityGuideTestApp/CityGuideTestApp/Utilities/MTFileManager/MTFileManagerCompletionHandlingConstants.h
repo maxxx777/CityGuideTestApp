@@ -7,5 +7,6 @@
 //
 
 typedef void (^MTFileManagerDownloadFileCompletionBlock)(NSError *error, NSData *data);
+typedef void (^MTFileManagerReadJSONCompletionBlock)(NSError *error, NSString *fileName, NSDictionary *rawData);
 typedef void (^MTFileManagerSaveFileCompletionBlock)(NSError *error, NSString *fileName);
 typedef void (^MTFileManagerRemoveFileCompletionBlock)(NSError *error, NSString *fileName);
