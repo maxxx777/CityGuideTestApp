@@ -369,6 +369,25 @@
     } 
 }
 
+#pragma mark - MapView
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    MKPinAnnotationView *pinView;
+    
+    if ([annotation isEqual:self.placeAnnotation]) {
+        pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:MTItemDetailViewPinAnnotationIdentifier];
+        
+        if (pinView == nil) {
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:MTItemDetailViewPinAnnotationIdentifier];
+            pinView.animatesDrop = YES;
+        }
+    }
+    
+    return pinView;
+}
+
+
 #pragma mark - Helper
 
 - (void)configureView

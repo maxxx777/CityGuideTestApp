@@ -6,6 +6,8 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
+static NSString * const MTItemDetailViewPinAnnotationIdentifier = @"PinAnnotationIdentifier";
+
 static NSString * const MTItemDetailViewMapCellIdentifier = @"MapCellIdentifier";
 static NSString * const MTItemDetailViewNameCellIdentifier = @"NameCellIdentifier";
 static NSString * const MTItemDetailViewDescriptionCellIdentifier = @"DescriptionCellIdentifier";

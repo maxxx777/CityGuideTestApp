@@ -17,7 +17,8 @@
     UITextFieldDelegate,
     UITextViewDelegate,
     UIImagePickerControllerDelegate,
-    UINavigationControllerDelegate
+    UINavigationControllerDelegate,
+    MKMapViewDelegate
 >
 
 @property (nonatomic, strong) IBOutlet UITableViewCell *photoCell;
