@@ -15,7 +15,7 @@
 - (BOOL)isCityObjectAtIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath;
 - (void)openOrCloseCityAtIndexPath:(NSIndexPath *)indexPath;
-- (void)onDidUpdateItemList;
+- (void)closeAllCities;
 
 @end
 
@@ -25,5 +25,6 @@
 
 - (void)onDidOpenCityPlacesAtIndexPaths:(NSArray *)indexPaths;
 - (void)onDidCloseCityPlacesAtIndexPaths:(NSArray *)indexPaths;
+- (void)onDidCloseAllCities;
 
 @end

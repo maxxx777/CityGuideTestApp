@@ -13,6 +13,7 @@
 #import "MTImageManager.h"
 #import "MTAlertWrapper.h"
 #import "MTFileManager.h"
+#import "MTEditPlaceDetailDelegate.h"
 
 @interface MTEditPlaceDetailPresenter ()
 {
@@ -22,6 +23,7 @@
 
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
+@property (nonatomic, strong) id<MTEditPlaceDetailDelegate>editPlaceDetailDelegate;
 @property (nonatomic, weak) MTItemDetailWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 
@@ -31,6 +33,7 @@
 
 - (instancetype)initWithPlaceDetailConfigurator:(id<MTPlaceDetailConfiguratorInputInterface>)placeDetailConfigurator
                                    itemOperator:(id<MTItemOperatorInputInterface>)itemOperator
+                        editPlaceDetailDelegate:(id<MTEditPlaceDetailDelegate>)editPlaceDetailDelegate
                                       wireframe:(MTItemDetailWireframe *)wireframe
 {
     self = [super init];
@@ -38,6 +41,7 @@
         
         _placeDetailConfigurator = placeDetailConfigurator;
         _itemOperator = itemOperator;
+        _editPlaceDetailDelegate = editPlaceDetailDelegate;
         _wireframe = wireframe;
         
         _isFirstAppearance = YES;
@@ -204,6 +208,11 @@
 - (void)onDidSaveItem
 {
     isSaved = YES;
+    
+    if (self.editPlaceDetailDelegate && [self.editPlaceDetailDelegate respondsToSelector:@selector(onDidEditPlaceDetail)]) {
+        [self.editPlaceDetailDelegate onDidEditPlaceDetail];
+    }
+    
     [self.userInterface closeView];
 }
 

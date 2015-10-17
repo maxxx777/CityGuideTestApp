@@ -12,7 +12,6 @@
 #import "MTFetchedResultsControllerBasedItemListCache.h"
 #import "MTArrayBasedItemListCache.h"
 #import "MTItemDataManager.h"
-#import "MTItemListChangeDetector.h"
 #import "MTItemListRequester.h"
 #import "MTItemListExpander.h"
 #import "MTItemListCollectionPresenter.h"
@@ -47,9 +46,10 @@
 
 #pragma mark - Public
 
-- (void)onDidAddNewItem
+- (void)onDidAddNewItemWithDelegate:(id<MTEditPlaceDetailDelegate>)delegate
 {
-    [self.itemDetailModule addNewPlaceWithNavigationController:self.viewController.navigationController];
+    [self.itemDetailModule addNewPlaceWithNavigationController:self.viewController.navigationController
+                                                      delegate:delegate];
 }
 
 - (void)onDidSelectItem:(id)item
@@ -67,11 +67,8 @@
     //init web serice
     MTItemWebService *itemWebService = [[MTItemWebService alloc] init];
     
-    //init item list change detector
-    MTItemListChangeDetector *itemListChangeDetector = [[MTItemListChangeDetector alloc] init];
-    
     //init data manager
-    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] initWithDelegate:itemListChangeDetector];
+    MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] init];
     
     //init cache
     MTArrayBasedItemListCache *cityListCache = [[MTArrayBasedItemListCache alloc] init];
@@ -91,7 +88,6 @@
     MTItemListCollectionPresenter *itemListCollectionPresenter = [[MTItemListCollectionPresenter alloc]
                                                         initWithItemListRequester:itemListRequester
                                                         itemListExpander:itemListExpander
-                                                          itemListChangeDetector:itemListChangeDetector
                                                         wireframe:self];
     MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithItemListRequester:itemListRequester
                                                                                           wireframe:self];
@@ -105,7 +101,6 @@
     //bind interactor
     itemListRequester.outputs = @[itemListCollectionPresenter];
     itemListExpander.outputs = @[itemListCollectionPresenter];
-    itemListChangeDetector.outputs = @[itemListCollectionPresenter];
     
     //bind data manager
     itemDataManager.itemWebService = itemWebService;

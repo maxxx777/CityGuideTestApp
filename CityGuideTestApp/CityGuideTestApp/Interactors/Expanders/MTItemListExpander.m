@@ -141,9 +141,15 @@
     }
 }
 
-- (void)onDidUpdateItemList
+- (void)closeAllCities
 {
     _openedCities = nil;
+    
+    for (id<MTItemListExpanderOutputInterface> output in self.outputs) {
+        if ([output respondsToSelector:@selector(onDidCloseAllCities)]) {
+            [output onDidCloseAllCities];
+        }
+    }
 }
 
 #pragma mark - Helper

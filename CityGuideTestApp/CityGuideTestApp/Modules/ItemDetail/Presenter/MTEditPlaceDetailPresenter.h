@@ -14,6 +14,7 @@
 @class MTItemDetailWireframe;
 
 @protocol MTItemDetailViewInterface;
+@protocol MTEditPlaceDetailDelegate;
 
 @interface MTEditPlaceDetailPresenter : MTRootCollectionPresenter
 <
@@ -27,6 +28,7 @@
 - (instancetype) __unavailable init;
 - (instancetype)initWithPlaceDetailConfigurator:(id<MTPlaceDetailConfiguratorInputInterface>)placeDetailConfigurator
                                    itemOperator:(id<MTItemOperatorInputInterface>)itemOperator
+                        editPlaceDetailDelegate:(id<MTEditPlaceDetailDelegate>)editPlaceDetailDelegate
                                       wireframe:(MTItemDetailWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

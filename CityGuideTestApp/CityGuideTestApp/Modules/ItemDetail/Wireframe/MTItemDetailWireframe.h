@@ -10,6 +10,7 @@
 #import "MTItemDetailModuleInterface.h"
 
 @protocol MTImageBrowserModuleInterface;
+@protocol MTEditPlaceDetailDelegate;
 
 @interface MTItemDetailWireframe : MTRootWireframe
 <

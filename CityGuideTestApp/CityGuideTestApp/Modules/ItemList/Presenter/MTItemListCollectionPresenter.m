@@ -26,7 +26,6 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
-@property (nonatomic, strong) id<MTItemListChangeDetectorInputInterface>itemListChangeDetector;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTCityListTableViewCell *prototypeCityListCell;
@@ -38,7 +37,6 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
-                   itemListChangeDetector:(id<MTItemListChangeDetectorInputInterface>)itemListChangeDetector
                                 wireframe:(MTItemListWireframe *)wireframe
 {
     self = [super init];
@@ -46,7 +44,6 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
         
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
-        _itemListChangeDetector = itemListChangeDetector;
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
@@ -155,15 +152,14 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 - (void)onDidFetchItemsWithError:(NSError *)error
 {
-    [self.itemListExpander onDidUpdateItemList];
+    [self.itemListExpander closeAllCities];
     
-    self.isFirstAppearance = NO;
-    if (!error) {
-        
-        [self reloadView];
-        
-    } else {
-        
+    if (self.isFirstAppearance) {
+        self.isFirstAppearance = NO;
+    }
+    
+    if (error) {
+
         [alertWrapper showErrorAlertInViewController:self.userInterface
                                          withMessage:NSLocalizedString(@"Sorry, can't receive products", nil)];
     }
@@ -181,13 +177,9 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     [self.userInterface deleteItemsAtIndexPaths:indexPaths];
 }
 
-#pragma mark - MTItemListChangeDetectorOutputInterface
-
-- (void)onDidChangeItemList
+- (void)onDidCloseAllCities
 {
-    //FIXME: don't close opened cities after new place was added
-    [self.itemListExpander onDidUpdateItemList];
-    
+    //FIXME: don't close opened cities after new place was added or places were filtered
     [self reloadView];
 }
 

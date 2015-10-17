@@ -9,6 +9,7 @@
 #import "MTRootPresenter.h"
 #import "MTItemListRequesterIOInterface.h"
 #import "MTItemListPresenterInterface.h"
+#import "MTEditPlaceDetailDelegate.h"
 
 @protocol MTItemListViewInterface;
 
@@ -17,7 +18,8 @@
 @interface MTItemListPresenter : MTRootPresenter
 <
     MTItemListPresenterInterface,
-    MTItemListRequesterOutputInterface
+    MTItemListRequesterOutputInterface,
+    MTEditPlaceDetailDelegate
 >
 
 @property (nonatomic, weak) UIViewController<MTItemListViewInterface> *userInterface;

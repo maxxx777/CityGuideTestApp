@@ -50,12 +50,14 @@
 }
 
 - (void)addNewPlaceWithNavigationController:(UINavigationController *)navigationController
+                                   delegate:(id<MTEditPlaceDetailDelegate>)delegate
+
 {
     //init
     [self configureViewController];
     
     //configure
-    [self configureEditDetailStack];
+    [self configureEditDetailStackWithDelegate:delegate];
     
     //navigate
     if (IS_IPAD) {
@@ -111,7 +113,7 @@
     placeDetailFetcher.outputs = @[presenter];
 }
 
-- (void)configureEditDetailStack
+- (void)configureEditDetailStackWithDelegate:(id<MTEditPlaceDetailDelegate>)delegate
 {
     //init data manager
     MTItemDataManager *itemDataManager = [[MTItemDataManager alloc] init];
@@ -125,6 +127,7 @@
     MTEditPlaceDetailPresenter *presenter = [[MTEditPlaceDetailPresenter alloc]
                                              initWithPlaceDetailConfigurator:placeDetailConfigurator
                                              itemOperator:itemOperator
+                                             editPlaceDetailDelegate:delegate
                                              wireframe:self];
     
     //bind view controller - presenter

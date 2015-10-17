@@ -12,7 +12,9 @@
 #import "MTItemDataManagerInterface.h"
 
 @interface MTItemListRequester ()
-
+{
+    MTItemListFilterType lastFilterType;
+}
 @property (nonatomic, strong) id<MTArrayBasedItemListCacheInterface>cityListCache;
 @property (nonatomic, strong) id<MTFetchedResultsControllerBasedItemListCacheInterface>placeListCache;
 @property (nonatomic, strong) id<MTItemDataManagerInterface>itemDataManager;
@@ -32,12 +34,15 @@
         _placeListCache = placeListCache;
         _itemDataManager = itemDataManager;
         
+        lastFilterType = MTItemListFilterTypeAll;
     }
     return self;
 }
 
 - (void)fetchAllItems
 {
+    lastFilterType = MTItemListFilterTypeAll;
+    
     [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterTypeAll
                                         cityListCache:self.cityListCache
                                        placeListCache:self.placeListCache
@@ -52,6 +57,8 @@
 
 - (void)fetchItemsWithin1Mile
 {
+    lastFilterType = MTItemListFilterType1Mile;
+    
     [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType1Mile
                                         cityListCache:self.cityListCache
                                        placeListCache:self.placeListCache
@@ -66,6 +73,8 @@
 
 - (void)fetchItemsWithin10Mile
 {
+    lastFilterType = MTItemListFilterType10Mile;
+    
     [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType10Mile
                                         cityListCache:self.cityListCache
                                        placeListCache:self.placeListCache
@@ -80,6 +89,8 @@
 
 - (void)fetchItemsWithin100Mile
 {
+    lastFilterType = MTItemListFilterType100Mile;
+
     [self.itemDataManager fetchItemListWithFilterType:MTItemListFilterType100Mile
                                         cityListCache:self.cityListCache
                                        placeListCache:self.placeListCache
@@ -90,6 +101,32 @@
                                                    }
                                                }
                                            }];
+}
+
+- (void)fetchItemsWithLastFilterType
+{
+    switch (lastFilterType) {
+        case MTItemListFilterTypeAll:
+        {
+            [self fetchAllItems];
+        }
+            break;
+        case MTItemListFilterType1Mile:
+        {
+            [self fetchItemsWithin1Mile];
+        }
+            break;
+        case MTItemListFilterType10Mile:
+        {
+            [self fetchItemsWithin10Mile];
+        }
+            break;
+        case MTItemListFilterType100Mile:
+        {
+            [self fetchItemsWithin100Mile];
+        }
+            break;
+    }
 }
 
 @end

@@ -50,7 +50,6 @@
 		756DB3F81BD248B600906F0F /* MTItemListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EB1BD248B600906F0F /* MTItemListCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EE1BD248B600906F0F /* MTItemListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		756DB3FA1BD248B600906F0F /* MTItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3F01BD248B600906F0F /* MTItemListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		756DB4041BD28A0700906F0F /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
 		7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */; settings = {ASSET_TAGS = (); }; };
 		7572538E1BCEEEF300E740DC /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 757253521BCEEEF300E740DC /* UIDevice+SystemVersion.m */; settings = {ASSET_TAGS = (); }; };
 		7572539B1BCEEEF300E740DC /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572536C1BCEEEF300E740DC /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
@@ -228,9 +227,7 @@
 		756DB3EF1BD248B600906F0F /* MTItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewController.h; sourceTree = "<group>"; };
 		756DB3F01BD248B600906F0F /* MTItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListViewController.m; sourceTree = "<group>"; };
 		756DB3F11BD248B600906F0F /* MTItemListViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewInterface.h; sourceTree = "<group>"; };
-		756DB4011BD28A0700906F0F /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
-		756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
-		756DB4031BD28A0700906F0F /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
+		756DB4051BD290B300906F0F /* MTEditPlaceDetailDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTEditPlaceDetailDelegate.h; sourceTree = "<group>"; };
 		7572534C1BCEEEF300E740DC /* MTAlertWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapper.h; sourceTree = "<group>"; };
 		7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAlertWrapper.m; sourceTree = "<group>"; };
 		7572534E1BCEEEF300E740DC /* MTAlertWrapperConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapperConstants.h; sourceTree = "<group>"; };
@@ -579,7 +576,6 @@
 		7502C1291BC59017008ECF59 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				756DB4001BD28A0700906F0F /* ChangeDetectors */,
 				75FE09001BCA419E00765F7D /* Configurators */,
 				756901041BC6E44300825B62 /* Expanders */,
 				75D32D3B1BC6299D0010D705 /* Operators */,
@@ -637,6 +633,7 @@
 			children = (
 				75FE08FC1BCA412C00765F7D /* MTEditPlaceDetailPresenter.h */,
 				75FE08FD1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m */,
+				756DB4051BD290B300906F0F /* MTEditPlaceDetailDelegate.h */,
 				75EAA9131BC97BBA000BE44A /* MTShowPlaceDetailPresenter.h */,
 				75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */,
 				75EAA9161BC97BCE000BE44A /* MTItemDetailPresenterInterface.h */,
@@ -939,16 +936,6 @@
 				756DB3F11BD248B600906F0F /* MTItemListViewInterface.h */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		756DB4001BD28A0700906F0F /* ChangeDetectors */ = {
-			isa = PBXGroup;
-			children = (
-				756DB4011BD28A0700906F0F /* MTItemListChangeDetector.h */,
-				756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */,
-				756DB4031BD28A0700906F0F /* MTItemListChangeDetectorIOInterface.h */,
-			);
-			path = ChangeDetectors;
 			sourceTree = "<group>";
 		};
 		7572534A1BCEEEF300E740DC /* MTAlertWrapper */ = {
@@ -1406,7 +1393,6 @@
 				7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */,
 				756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */,
 				7591B3731BD016D0001440E3 /* NSObject+MTMergeObject.m in Sources */,
-				756DB4041BD28A0700906F0F /* MTItemListChangeDetector.m in Sources */,
 				75D32D4E1BC6514B0010D705 /* MTMappedPlace.m in Sources */,
 				7502C23A1BC59018008ECF59 /* MTRootDataManager.m in Sources */,
 				75D32D5C1BC66C200010D705 /* MTManagedItem+CoreDataProperties.m in Sources */,

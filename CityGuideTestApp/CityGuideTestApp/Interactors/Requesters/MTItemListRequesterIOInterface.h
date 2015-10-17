@@ -12,6 +12,7 @@
 - (void)fetchItemsWithin1Mile;
 - (void)fetchItemsWithin10Mile;
 - (void)fetchItemsWithin100Mile;
+- (void)fetchItemsWithLastFilterType;
 
 @end
 

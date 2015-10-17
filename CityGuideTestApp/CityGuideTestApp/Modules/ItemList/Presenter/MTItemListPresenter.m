@@ -46,7 +46,7 @@
 
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
-    [self.wireframe onDidAddNewItem];
+    [self.wireframe onDidAddNewItemWithDelegate:self];
 }
 
 - (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton
@@ -112,6 +112,13 @@
                                         
                                     }
                                 }];
+}
+
+#pragma mark - MTEditPlaceDetailDelegate
+
+- (void)onDidEditPlaceDetail
+{
+    [self.itemListRequester fetchItemsWithLastFilterType];
 }
 
 @end

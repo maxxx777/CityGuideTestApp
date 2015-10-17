@@ -10,6 +10,7 @@
 #import "MTItemListModuleInterface.h"
 
 @protocol MTItemDetailModuleInterface;
+@protocol MTEditPlaceDetailDelegate;
 
 @interface MTItemListWireframe : MTRootWireframe
 <
@@ -19,7 +20,7 @@
 @property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>itemDetailModule;
 @property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>addItemModule;
 
-- (void)onDidAddNewItem;
+- (void)onDidAddNewItemWithDelegate:(id<MTEditPlaceDetailDelegate>)delegate;
 - (void)onDidSelectItem:(__nonnull id)item
                fromRect:(CGRect)rect;
 
