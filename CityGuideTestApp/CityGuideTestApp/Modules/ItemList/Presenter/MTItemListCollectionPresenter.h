@@ -10,6 +10,7 @@
 #import "MTItemListCollectionPresenterInterface.h"
 #import "MTItemListRequesterIOInterface.h"
 #import "MTItemListExpanderIOInterface.h"
+#import "MTItemListChangeDetectorIOInterface.h"
 
 @class MTItemListWireframe;
 
@@ -19,7 +20,8 @@
 <
     MTItemListCollectionPresenterInterface,
     MTItemListRequesterOutputInterface,
-    MTItemListExpanderOutputInterface
+    MTItemListExpanderOutputInterface,
+    MTItemListChangeDetectorOutputInterface
 >
 
 @property (nonatomic, weak) UIViewController<MTItemListCollectionViewInterface> *userInterface;
@@ -28,6 +30,7 @@
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
+                   itemListChangeDetector:(id<MTItemListChangeDetectorInputInterface>)itemListChangeDetector
                                 wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

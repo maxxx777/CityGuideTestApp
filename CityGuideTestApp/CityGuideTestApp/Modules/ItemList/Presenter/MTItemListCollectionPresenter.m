@@ -26,6 +26,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
+@property (nonatomic, strong) id<MTItemListChangeDetectorInputInterface>itemListChangeDetector;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTCityListTableViewCell *prototypeCityListCell;
@@ -37,6 +38,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
+                   itemListChangeDetector:(id<MTItemListChangeDetectorInputInterface>)itemListChangeDetector
                                 wireframe:(MTItemListWireframe *)wireframe
 {
     self = [super init];
@@ -44,6 +46,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
         
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
+        _itemListChangeDetector = itemListChangeDetector;
         _wireframe = wireframe;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
@@ -178,6 +181,16 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     [self.userInterface deleteItemsAtIndexPaths:indexPaths];
 }
 
+#pragma mark - MTItemListChangeDetectorOutputInterface
+
+- (void)onDidChangeItemList
+{
+    //FIXME: don't close opened cities after new place was added
+    [self.itemListExpander onDidUpdateItemList];
+    
+    [self reloadView];
+}
+
 #pragma mark - Helper
 
 - (void)reloadView
@@ -188,6 +201,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
         [self.userInterface updateFooterLabelWithText:@""];
     }
     
+    //FIXME: don't reload whole table/collection view. use insert/feload/delete items.
     [self.userInterface reloadData];
 }
 
