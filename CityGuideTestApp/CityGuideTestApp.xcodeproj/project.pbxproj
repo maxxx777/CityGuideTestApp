@@ -50,7 +50,7 @@
 		756DB3F81BD248B600906F0F /* MTItemListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EB1BD248B600906F0F /* MTItemListCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EE1BD248B600906F0F /* MTItemListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		756DB3FA1BD248B600906F0F /* MTItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3F01BD248B600906F0F /* MTItemListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		756DB3FF1BD2527400906F0F /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3FD1BD2527400906F0F /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
+		756DB4041BD28A0700906F0F /* MTItemListChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */; settings = {ASSET_TAGS = (); }; };
 		7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */; settings = {ASSET_TAGS = (); }; };
 		7572538E1BCEEEF300E740DC /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 757253521BCEEEF300E740DC /* UIDevice+SystemVersion.m */; settings = {ASSET_TAGS = (); }; };
 		7572539B1BCEEEF300E740DC /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572536C1BCEEEF300E740DC /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
@@ -228,9 +228,9 @@
 		756DB3EF1BD248B600906F0F /* MTItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewController.h; sourceTree = "<group>"; };
 		756DB3F01BD248B600906F0F /* MTItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListViewController.m; sourceTree = "<group>"; };
 		756DB3F11BD248B600906F0F /* MTItemListViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewInterface.h; sourceTree = "<group>"; };
-		756DB3FC1BD2527400906F0F /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
-		756DB3FD1BD2527400906F0F /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
-		756DB3FE1BD2527400906F0F /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
+		756DB4011BD28A0700906F0F /* MTItemListChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetector.h; sourceTree = "<group>"; };
+		756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListChangeDetector.m; sourceTree = "<group>"; };
+		756DB4031BD28A0700906F0F /* MTItemListChangeDetectorIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListChangeDetectorIOInterface.h; sourceTree = "<group>"; };
 		7572534C1BCEEEF300E740DC /* MTAlertWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapper.h; sourceTree = "<group>"; };
 		7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAlertWrapper.m; sourceTree = "<group>"; };
 		7572534E1BCEEEF300E740DC /* MTAlertWrapperConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapperConstants.h; sourceTree = "<group>"; };
@@ -579,7 +579,7 @@
 		7502C1291BC59017008ECF59 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				756DB3FB1BD2527400906F0F /* ChangeDetectors */,
+				756DB4001BD28A0700906F0F /* ChangeDetectors */,
 				75FE09001BCA419E00765F7D /* Configurators */,
 				756901041BC6E44300825B62 /* Expanders */,
 				75D32D3B1BC6299D0010D705 /* Operators */,
@@ -941,12 +941,12 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		756DB3FB1BD2527400906F0F /* ChangeDetectors */ = {
+		756DB4001BD28A0700906F0F /* ChangeDetectors */ = {
 			isa = PBXGroup;
 			children = (
-				756DB3FC1BD2527400906F0F /* MTItemListChangeDetector.h */,
-				756DB3FD1BD2527400906F0F /* MTItemListChangeDetector.m */,
-				756DB3FE1BD2527400906F0F /* MTItemListChangeDetectorIOInterface.h */,
+				756DB4011BD28A0700906F0F /* MTItemListChangeDetector.h */,
+				756DB4021BD28A0700906F0F /* MTItemListChangeDetector.m */,
+				756DB4031BD28A0700906F0F /* MTItemListChangeDetectorIOInterface.h */,
 			);
 			path = ChangeDetectors;
 			sourceTree = "<group>";
@@ -1406,7 +1406,7 @@
 				7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */,
 				756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */,
 				7591B3731BD016D0001440E3 /* NSObject+MTMergeObject.m in Sources */,
-				756DB3FF1BD2527400906F0F /* MTItemListChangeDetector.m in Sources */,
+				756DB4041BD28A0700906F0F /* MTItemListChangeDetector.m in Sources */,
 				75D32D4E1BC6514B0010D705 /* MTMappedPlace.m in Sources */,
 				7502C23A1BC59018008ECF59 /* MTRootDataManager.m in Sources */,
 				75D32D5C1BC66C200010D705 /* MTManagedItem+CoreDataProperties.m in Sources */,
@@ -1559,12 +1559,44 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_DELETE_RULE_WARNINGS = YES;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
+				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = YES;
+				MOMC_NO_WARNINGS = YES;
+				MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1576,12 +1608,44 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CityGuideTestApp/Application/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_DELETE_RULE_WARNINGS = YES;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
+				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = YES;
+				MOMC_NO_WARNINGS = YES;
+				MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxxx.CityGuideTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
