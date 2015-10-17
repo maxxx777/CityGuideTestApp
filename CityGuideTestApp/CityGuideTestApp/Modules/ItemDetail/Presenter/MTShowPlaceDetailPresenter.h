@@ -6,7 +6,7 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTRootTablePresenter.h"
+#import "MTRootCollectionPresenter.h"
 #import "MTItemDetailPresenterInterface.h"
 #import "MTPlaceDetailFetcherIOInterface.h"
 #import "MTImageManagerDelegate.h"
@@ -15,7 +15,7 @@
 
 @protocol MTItemDetailViewInterface;
 
-@interface MTShowPlaceDetailPresenter : MTRootTablePresenter
+@interface MTShowPlaceDetailPresenter : MTRootCollectionPresenter
 <
     MTPlaceDetailFetcherOutputInterface,
     MTItemDetailPresenterInterface,

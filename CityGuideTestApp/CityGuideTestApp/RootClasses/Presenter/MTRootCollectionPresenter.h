@@ -7,11 +7,11 @@
 //
 
 #import "MTRootPresenter.h"
-#import "MTRootTablePresenterInterface.h"
+#import "MTRootCollectionPresenterInterface.h"
 
-@interface MTRootTablePresenter : MTRootPresenter
+@interface MTRootCollectionPresenter : MTRootPresenter
 <
-    MTRootTablePresenterInterface
+    MTRootCollectionPresenterInterface
 >
 
 @end

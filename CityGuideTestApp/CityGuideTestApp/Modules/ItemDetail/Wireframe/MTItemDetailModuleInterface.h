@@ -9,7 +9,8 @@
 @protocol MTItemDetailModuleInterface <NSObject>
 
 - (void)showDetailsForPlace:(id _Nonnull)place
-       navigationController:(UINavigationController * _Nonnull)navigationController;
+                   fromRect:(CGRect)rect
+             viewController:(UIViewController * _Nonnull)viewController;
 - (void)addNewPlaceWithNavigationController:(UINavigationController * _Nonnull)navigationController;
 
 @end

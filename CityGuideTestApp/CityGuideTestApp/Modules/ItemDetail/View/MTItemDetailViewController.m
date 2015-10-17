@@ -153,6 +153,25 @@
     self.navigationItem.rightBarButtonItem = saveBarButton;
 }
 
+- (void)configureLeftBarButtonOnNavigationBarAsCancel
+{
+    UIBarButtonItem *cancelBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                      target:self
+                                      action:@selector(cancelButtonPressed:)];
+    self.navigationItem.leftBarButtonItem = cancelBarButton;
+}
+
+- (void)configureLeftBarButtonOnNavigationBarAsClose
+{
+    UIBarButtonItem *closeBarButton = [[UIBarButtonItem alloc]
+                                       initWithTitle:NSLocalizedString(@"Close", nil)
+                                       style:UIBarButtonItemStyleBordered
+                                       target:self
+                                       action:@selector(closeButtonPressed:)];
+    self.navigationItem.leftBarButtonItem = closeBarButton;
+}
+
 - (void)enableRightBarButtonOnNavigationBar
 {
     self.navigationItem.rightBarButtonItem.enabled = YES;
@@ -220,7 +239,12 @@
 
 - (void)closeView
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (IS_IPAD) {
+        [self dismissViewControllerAnimated:YES
+                                 completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)openPhotoCamera
@@ -252,6 +276,18 @@
     if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnNavigationBar)]) {
         [self.presenter onDidPressRightBarButtonOnNavigationBar];
     }
+}
+
+- (IBAction)closeButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
+- (IBAction)cancelButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -362,8 +398,10 @@
         
     } else if ([cell.reuseIdentifier isEqualToString:MTItemDetailViewImageCellIdentifier]) {
 
-        if ([self.presenter respondsToSelector:@selector(onDidSelectImageCell)]) {
-            [self.presenter onDidSelectImageCell];
+        if ([self.presenter respondsToSelector:@selector(onDidSelectImageCellWithRect:)]) {
+            CGRect rect = [tableView rectForRowAtIndexPath:indexPath];
+            rect = [tableView convertRect:rect toView:tableView.superview];
+            [self.presenter onDidSelectImageCellWithRect:rect];
         }
         
     } 
@@ -422,12 +460,12 @@
 
 - (void)presentImagePicker
 {
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-        //        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
-        //        [popover presentPopoverFromRect:presentingViewController.navigationController.navigationBar.bounds
-        //                                 inView:presentingViewController.view permittedArrowDirections:UIPopoverArrowDirectionAny
-        //                               animated:YES];
-        //        self.popOver = popover;
+    if (IS_IPAD) {
+        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
+        [popover presentPopoverFromRect:self.view.frame
+                                 inView:self.view
+               permittedArrowDirections:UIPopoverArrowDirectionAny
+                               animated:YES];
     } else {
         [self presentViewController:self.imagePicker
                            animated:YES

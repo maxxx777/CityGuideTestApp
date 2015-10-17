@@ -18,9 +18,13 @@
 - (void)onWillDisappearView;
 - (void)onDidDisappearView;
 
+- (void)onWillRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                  duration:(NSTimeInterval)duration;
+- (void)onDidRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
+
 - (void)onDidPressLeftBarButtonOnNavigationBar;
 - (void)onDidPressRightBarButtonOnNavigationBar;
-- (void)onDidPressLeftBarButtonOnToolbar;
-- (void)onDidPressRightBarButtonOnToolbar;
+- (void)onDidPressLeftBarButtonOnToolbar:(UIBarButtonItem *)barButton;
+- (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton;
 
 @end

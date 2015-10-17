@@ -23,6 +23,8 @@
     if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
         [self.presenter onDidLoadView];
     }
+    
+    [self.presenter registerCellForTableView:self.tableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,25 +63,39 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.presenter numberOfRowsInSection:section];
+    return [self.presenter numberOfItemsInSection:section];
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return [self.presenter sectionIndexTitles];
+    if ([self.presenter respondsToSelector:@selector(sectionIndexTitles)]) {
+        return [self.presenter sectionIndexTitles];
+    } else {
+        return nil;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [self.presenter titleForHeaderInSection:section];
+    if ([self.presenter respondsToSelector:@selector(titleForHeaderInSection:)]) {
+        return [self.presenter titleForHeaderInSection:section];
+    } else {
+        return nil;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
-    [self.presenter configureCell:cell
-                      atIndexPath:indexPath
-                      inTableView:tableView];
+    UITableViewCell *cell;
+    
+    if ([self.presenter respondsToSelector:@selector(cellIdentifierForIndexPath:)]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
+        if ([self.presenter respondsToSelector:@selector(configureCell:atIndexPath:)]) {
+            [self.presenter configureCell:cell
+                              atIndexPath:indexPath];
+        }
+    }
+
     return cell;
 }
 
@@ -102,22 +118,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self.presenter cellIdentifierForIndexPath:indexPath]];
-//    
-    CGFloat height = [self.presenter heightForCell:nil
-                                       atIndexPath:indexPath
-                                       inTableView:tableView];
+    CGFloat height = 0.0f;
+    if ([self.presenter respondsToSelector:@selector(sizeForCellAtIndexPath:)]) {
+        height = [self.presenter sizeForCellAtIndexPath:indexPath].height;
+    }
     return height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!tableView.isEditing) {
-        
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        
-        [self.presenter didSelectRowAtIndexPath:indexPath];
-        
+    if ([self.presenter respondsToSelector:@selector(didSelectItemAtIndexPath:fromRect:)]) {
+        [self.presenter didSelectItemAtIndexPath:indexPath
+                                        fromRect:CGRectZero];
     }
 }
 
@@ -133,7 +145,7 @@
     [self.tableView reloadData];
 }
 
-- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths
+- (void)insertItemsAtIndexPaths:(NSArray *)indexPaths
 {
     [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexPaths:indexPaths
@@ -141,7 +153,7 @@
     [self.tableView endUpdates];
 }
 
-- (void)reloadRowsAtIndexPaths:(NSArray *)indexPaths
+- (void)reloadItemsAtIndexPaths:(NSArray *)indexPaths
 {
     [self.tableView beginUpdates];
     [self.tableView reloadRowsAtIndexPaths:indexPaths
@@ -149,12 +161,22 @@
     [self.tableView endUpdates];
 }
 
-- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths
+- (void)deleteItemsAtIndexPaths:(NSArray *)indexPaths
 {
     [self.tableView beginUpdates];
     [self.tableView deleteRowsAtIndexPaths:indexPaths
                           withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView endUpdates];
+}
+
+- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
+- (void)deselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

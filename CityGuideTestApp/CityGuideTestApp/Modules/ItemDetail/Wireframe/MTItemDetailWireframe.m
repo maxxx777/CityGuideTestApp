@@ -27,32 +27,47 @@
 #pragma mark - MTItemDetailModuleInterface
 
 - (void)showDetailsForPlace:(id)place
-       navigationController:(UINavigationController *)navigationController
+                   fromRect:(CGRect)rect
+             viewController:(UIViewController *)viewController
 {
     //init
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
-    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+    [self configureViewController];
     
     //configure
     [self configureShowDetailStackWithItem:place];
     
     //navigate
-    [navigationController pushViewController:self.viewController
-                                    animated:YES];
+    if (IS_IPAD) {
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+        UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:navigationController];
+        [popoverController presentPopoverFromRect:rect
+                                           inView:viewController.view
+                         permittedArrowDirections:UIPopoverArrowDirectionAny
+                                         animated:YES];
+    } else {
+        [viewController.navigationController pushViewController:self.viewController animated:YES];
+    }
 }
 
 - (void)addNewPlaceWithNavigationController:(UINavigationController *)navigationController
 {
     //init
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
-    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+    [self configureViewController];
     
     //configure
     [self configureEditDetailStack];
     
     //navigate
-    [navigationController pushViewController:self.viewController
-                                    animated:YES];
+    if (IS_IPAD) {
+        UINavigationController *navigationControllerForViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+        UIPopoverController *popoverController = [[UIPopoverController alloc] initWithContentViewController:navigationControllerForViewController];
+        [popoverController presentPopoverFromBarButtonItem:navigationController.topViewController.navigationItem.rightBarButtonItem
+                                  permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                  animated:YES];
+    } else {
+        [navigationController pushViewController:self.viewController
+                                        animated:YES];
+    }
 }
 
 #pragma mark - Public
@@ -64,6 +79,12 @@
 }
 
 #pragma mark - Helper
+
+- (void)configureViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
+    _viewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+}
 
 - (void)configureShowDetailStackWithItem:(id)item
 {

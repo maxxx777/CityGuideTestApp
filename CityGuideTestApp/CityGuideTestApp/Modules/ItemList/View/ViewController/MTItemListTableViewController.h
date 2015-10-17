@@ -7,17 +7,17 @@
 //
 
 #import "MTRootTableViewController.h"
-#import "MTItemListTableViewInterface.h"
-#import "MTItemListTablePresenterInterface.h"
+#import "MTItemListCollectionViewInterface.h"
+#import "MTItemListCollectionPresenterInterface.h"
 
 @class MTTableFooterView;
 
 @interface MTItemListTableViewController : MTRootTableViewController
 <
-    MTItemListTableViewInterface
+    MTItemListCollectionViewInterface
 >
 
 @property (nonatomic, strong) IBOutlet MTTableFooterView *tableFooterView;
-@property (nonatomic, strong) id<MTItemListTablePresenterInterface> presenter;
+@property (nonatomic, strong) id<MTItemListCollectionPresenterInterface> presenter;
 
 @end

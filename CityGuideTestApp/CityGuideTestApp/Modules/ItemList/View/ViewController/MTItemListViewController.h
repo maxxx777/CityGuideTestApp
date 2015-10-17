@@ -10,8 +10,6 @@
 #import "MTItemListViewInterface.h"
 #import "MTItemListPresenterInterface.h"
 
-@class MTItemListTableViewController;
-
 @interface MTItemListViewController : MTRootViewController
 <
     MTItemListViewInterface
@@ -19,7 +17,7 @@
 
 @property (nonatomic, strong) IBOutlet UIView *containerView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *barButtonFilter;
-@property (nonatomic, strong) MTItemListTableViewController *childTableViewController;
+@property (nonatomic, strong) UIViewController *childViewController;
 @property (nonatomic, strong) id<MTItemListPresenterInterface> presenter;
 
 - (IBAction)addButtonPressed:(id)sender;

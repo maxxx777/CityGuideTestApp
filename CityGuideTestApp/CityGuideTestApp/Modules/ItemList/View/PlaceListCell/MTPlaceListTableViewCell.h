@@ -6,14 +6,12 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTRootCell.h"
-#import "MTImageManagerDelegate.h"
+#import "MTRootTableViewCell.h"
+#import "MTPlaceListCellInterface.h"
 
-@interface MTPlaceListCell : MTRootCell
+@interface MTPlaceListTableViewCell : MTRootTableViewCell
 <
-    MTImageManagerDelegate
+    MTPlaceListCellInterface
 >
-
-- (void)configureCellWithItem:(id)item;
 
 @end

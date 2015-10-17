@@ -6,17 +6,15 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTCityListCell.h"
-#import "MTMappedCity.h"
+#import "MTCityListTableViewCell.h"
 
-@interface MTCityListCell ()
+@interface MTCityListTableViewCell ()
 
-@property (nonatomic) BOOL isOpened;
 @property (nonatomic, strong) UIImageView *imageViewDisclosure;
 
 @end
 
-@implementation MTCityListCell
+@implementation MTCityListTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
               reuseIdentifier:(NSString *)reuseIdentifier
@@ -46,8 +44,6 @@
                                           options:NSLayoutFormatDirectionLeadingToTrailing
                                           metrics:nil
                                           views:NSDictionaryOfVariableBindings(disclosureImageView)]];
-        
-        _isOpened = NO;
     }
     return self;
 }
@@ -55,46 +51,12 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    [self transformImageViewDisclosureWithState:_isOpened];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    if (selected) {
-        _isOpened = !self.isOpened;
-        
-        __block BOOL isOpenedNow = self.isOpened;
-        
-        [UIView animateWithDuration:0.3f
-                         animations:^(){
-                             [self transformImageViewDisclosureWithState:isOpenedNow];
-        }];
-    }
-}
-
-#pragma mark - Public
-
-- (void)configureCellWithItem:(id)item
-                     isOpened:(BOOL)isOpened
-{
-    MTMappedCity *mappedCity = (MTMappedCity *)item;
-    _isOpened = isOpened;
-    
-    self.textLabel.text = mappedCity.itemName;
-}
-
-#pragma mark - Helper 
-
-- (void)transformImageViewDisclosureWithState:(BOOL)isOpenState
-{
-    if (isOpenState) {
-        CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_2);
-        self.imageViewDisclosure.transform = transform;
-    } else {
-        CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-        self.imageViewDisclosure.transform = transform;
-    }
+    [self mt_animateImageViewDisclosureTransfromationWithState:selected
+                                                      duration:0.3f];
 }
 
 @end

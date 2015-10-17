@@ -14,9 +14,10 @@
 #import "MTItemDataManager.h"
 #import "MTItemListRequester.h"
 #import "MTItemListExpander.h"
-#import "MTItemListTablePresenter.h"
+#import "MTItemListCollectionPresenter.h"
 #import "MTItemListPresenter.h"
 #import "MTItemListTableViewController.h"
+#import "MTItemListCollectionViewController.h"
 #import "MTItemListViewController.h"
 
 @interface MTItemListWireframe ()
@@ -51,9 +52,11 @@
 }
 
 - (void)onDidSelectItem:(id)item
+               fromRect:(CGRect)rect
 {
     [self.itemDetailModule showDetailsForPlace:item
-                          navigationController:self.viewController.navigationController];
+                                      fromRect:rect
+                                viewController:self.viewController];
 }
 
 #pragma mark - Helper
@@ -81,32 +84,52 @@
                                             itemDataManager:itemDataManager];
     
     //init presenter
-    MTItemListTablePresenter *itemListTablePresenter = [[MTItemListTablePresenter alloc]
+    MTItemListCollectionPresenter *itemListCollectionPresenter = [[MTItemListCollectionPresenter alloc]
                                                         initWithItemListRequester:itemListRequester
                                                         itemListExpander:itemListExpander
                                                         wireframe:self];
     MTItemListPresenter *itemListPresenter = [[MTItemListPresenter alloc] initWithItemListRequester:itemListRequester
                                                                                           wireframe:self];
     
-    //init view controller
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
-    MTItemListTableViewController *itemListTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListTableViewController"];
-    
     //bind view controller
-    self.viewController.childTableViewController = itemListTableViewController;
     self.viewController.presenter = itemListPresenter;
-    itemListTableViewController.presenter = itemListTablePresenter;
     
     //bind presenter
     itemListPresenter.userInterface = self.viewController;
-    itemListTablePresenter.userInterface = itemListTableViewController;
     
     //bind interactor
-    itemListRequester.outputs = @[itemListTablePresenter];
-    itemListExpander.outputs = @[itemListTablePresenter];
+    itemListRequester.outputs = @[itemListCollectionPresenter];
+    itemListExpander.outputs = @[itemListCollectionPresenter];
     
     //bind data manager
     itemDataManager.itemWebService = itemWebService;
+    
+    //init child view controller
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Base" bundle: nil];
+    if (IS_IPAD) {
+        
+        MTItemListCollectionViewController *childViewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListCollectionViewController"];
+        
+        self.viewController.childViewController = childViewController;
+        
+        //bind view controller
+        childViewController.presenter = itemListCollectionPresenter;
+        
+        //bind presenter
+        itemListCollectionPresenter.userInterface = childViewController;
+        
+    } else {
+        
+        MTItemListTableViewController *childViewController = [storyboard instantiateViewControllerWithIdentifier:@"ItemListTableViewController"];
+        
+        self.viewController.childViewController = childViewController;
+        
+        //bind view controller
+        childViewController.presenter = itemListCollectionPresenter;
+        
+        //bind presenter
+        itemListCollectionPresenter.userInterface = childViewController;
+    }
 }
 
 @end

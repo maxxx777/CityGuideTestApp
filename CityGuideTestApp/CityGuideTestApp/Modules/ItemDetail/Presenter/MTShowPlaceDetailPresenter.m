@@ -45,6 +45,10 @@
      
         [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"Place", nil)];
         
+        if (IS_IPAD) {
+            [self.userInterface configureLeftBarButtonOnNavigationBarAsClose];
+        }
+        
         NSString *placeName = [self.placeDetailFetcher placeName] ? [self.placeDetailFetcher placeName] : @"";
         [self.userInterface configureNameWithText:[NSString stringWithFormat:@"%@", placeName]];
         [self.userInterface disableTextField];
@@ -81,7 +85,7 @@
     }
 }
 
-- (void)onDidSelectImageCell
+- (void)onDidSelectImageCellWithRect:(CGRect)rect
 {
     if ([self.placeDetailFetcher fileName]) {
         [self.wireframe onDidSelectImage:self.image];

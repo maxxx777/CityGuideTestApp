@@ -57,6 +57,9 @@
         
         [self.userInterface configureNavigationBarWithTitle:NSLocalizedString(@"New Place", nil)];
         
+        if (IS_IPAD) {
+            [self.userInterface configureLeftBarButtonOnNavigationBarAsCancel];
+        }
         [self.userInterface configureRightBarButtonOnNavigationBarAsSave];
         
         [self.userInterface configurePhotoCellAsAddImage];        
@@ -142,10 +145,12 @@
     [self.userInterface beginEditDescription];
 }
 
-- (void)onDidSelectImageCell
+- (void)onDidSelectImageCellWithRect:(CGRect)rect
 {
     MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
     [alertWrapper showActionSheetInViewController:self.userInterface
+                                    fromBarButton:nil
+                                         fromRect:rect
                                         withTitle:NSLocalizedString(@"Attach photo", nil)
                                 cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
                            otherButtonTitlesArray:@[NSLocalizedString(@"Camera", nil), NSLocalizedString(@"Photo library", nil)]

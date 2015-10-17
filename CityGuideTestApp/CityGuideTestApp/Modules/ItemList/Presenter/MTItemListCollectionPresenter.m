@@ -6,17 +6,20 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTItemListTablePresenter.h"
-#import "MTItemListTableViewInterface.h"
+#import "MTItemListCollectionPresenter.h"
+#import "MTItemListCollectionViewInterface.h"
 #import "MTItemListWireframe.h"
-#import "MTCityListCell.h"
-#import "MTPlaceListCell.h"
+#import "MTCityListTableViewCell.h"
+#import "MTPlaceListTableViewCell.h"
+#import "MTCityListCollectionViewCell.h"
+#import "MTPlaceListCollectionViewCell.h"
+#import "MTPlaceListCellInterface.h"
 #import "MTAlertWrapper.h"
 
 static NSString *MTCityListCellIdentifier = @"CityListCell";
 static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
-@interface MTItemListTablePresenter ()
+@interface MTItemListCollectionPresenter ()
 {
     MTAlertWrapper *alertWrapper;
 }
@@ -25,12 +28,12 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 @property (nonatomic) BOOL isFirstAppearance;
-@property (nonatomic, strong) MTCityListCell *prototypeCityListCell;
-@property (nonatomic, strong) MTPlaceListCell *prototypePlaceListCell;
+@property (nonatomic, strong) MTCityListTableViewCell *prototypeCityListCell;
+@property (nonatomic, strong) MTPlaceListTableViewCell *prototypePlaceListCell;
 
 @end
 
-@implementation MTItemListTablePresenter
+@implementation MTItemListCollectionPresenter
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
@@ -53,11 +56,6 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 #pragma mark - MTItemListTablePresenterInterface
 
-- (void)onDidLoadView
-{
-    [self registerCellForTableView:self.userInterface.tableView];
-}
-
 - (void)onWillAppearView
 {
     if (self.isFirstAppearance) {
@@ -66,72 +64,78 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     }
 }
 
+- (void)onDidRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self.userInterface reloadData];
+}
+
 - (NSUInteger)numberOfSections
 {
     return 1;
 }
 
-- (NSUInteger)numberOfRowsInSection:(NSInteger)section
+- (NSUInteger)numberOfItemsInSection:(NSInteger)section
 {
     return [self.itemListExpander numberOfRows];
 }
 
-- (NSArray *)sectionIndexTitles
-{
-    return nil;
-}
-
-- (NSString *)sectionIndexTitleForSectionName:(NSString *)sectionName
-{
-    return nil;
-}
-
-- (NSString *)titleForHeaderInSection:(NSInteger)section
-{
-    return nil;
-}
-
-- (void)configureCell:(UITableViewCell *)cell
+- (void)configureCell:(UIView *)cell
           atIndexPath:(NSIndexPath *)indexPath
-          inTableView:(UITableView *)tableView
 {
     id item = [self.itemListExpander objectAtIndexPath:indexPath];
     if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
-        MTCityListCell *cellToConfigure = (MTCityListCell *)cell;
-        [cellToConfigure configureCellWithItem:item
-                                      isOpened:[self.itemListExpander isOpenedCityAtIndexPath:indexPath]];
+        UIView<MTCityListCellInterface> *cellToConfigure = (UIView <MTCityListCellInterface> *)cell;
+        [cellToConfigure mt_configureCellWithItem:item
+                                         isOpened:[self.itemListExpander isOpenedCityAtIndexPath:indexPath]];
     } else {
-        MTPlaceListCell *cellToConfigure = (MTPlaceListCell *)cell;
-        [cellToConfigure configureCellWithItem:item];
+        UIView<MTPlaceListCellInterface> *cellToConfigure = (UIView <MTPlaceListCellInterface> *)cell;
+        [cellToConfigure mt_configureCellWithItem:item];
     }
 }
 
-- (CGFloat)heightForCell:(UITableViewCell *)cell
-             atIndexPath:(NSIndexPath *)indexPath
-             inTableView:(UITableView *)tableView
+- (CGSize)sizeForCellAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
-        return 44.0f;
+        return CGSizeMake([UIScreen mainScreen].bounds.size.width, 44.0f);
     } else {
-        return 60.0f;
+        return IS_IPAD ? CGSizeMake(260.0f, 260.0f) : CGSizeMake([UIScreen mainScreen].bounds.size.width, 60.0f);
     }
 }
 
-- (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+                        fromRect:(CGRect)rect
 {
     if ([self.itemListExpander isCityObjectAtIndexPath:indexPath]) {
         [self.itemListExpander openOrCloseCityAtIndexPath:indexPath];
+        
+        if ([self.itemListExpander isOpenedCityAtIndexPath:indexPath]) {
+            [self.userInterface selectItemAtIndexPath:indexPath];
+        } else {
+            [self.userInterface deselectItemAtIndexPath:indexPath];
+        }
     } else {
+        [self.userInterface deselectItemAtIndexPath:indexPath];
+        
         id item = [self.itemListExpander objectAtIndexPath:indexPath];
-        [self.wireframe onDidSelectItem:item];
+        
+        [self.wireframe onDidSelectItem:item
+                               fromRect:rect];
     }
+}
+
+- (void)registerCellForCollectionView:(UICollectionView *)collectionView
+{
+    [collectionView registerClass:[MTCityListCollectionViewCell class]
+       forCellWithReuseIdentifier:MTCityListCellIdentifier];
+    [collectionView registerClass:[MTPlaceListCollectionViewCell class]
+       forCellWithReuseIdentifier:MTPlaceListCellIdentifier];
 }
 
 - (void)registerCellForTableView:(UITableView *)tableView
 {
-    [tableView registerClass:[MTCityListCell class]
+    [tableView registerClass:[MTCityListTableViewCell class]
       forCellReuseIdentifier:MTCityListCellIdentifier];
-    [tableView registerClass:[MTPlaceListCell class]
+    [tableView registerClass:[MTPlaceListTableViewCell class]
       forCellReuseIdentifier:MTPlaceListCellIdentifier];
 }
 
@@ -166,12 +170,12 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 - (void)onDidOpenCityPlacesAtIndexPaths:(NSArray *)indexPaths
 {
-    [self.userInterface insertRowsAtIndexPaths:indexPaths];
+    [self.userInterface insertItemsAtIndexPaths:indexPaths];
 }
 
 - (void)onDidCloseCityPlacesAtIndexPaths:(NSArray *)indexPaths
 {
-    [self.userInterface deleteRowsAtIndexPaths:indexPaths];
+    [self.userInterface deleteItemsAtIndexPaths:indexPaths];
 }
 
 #pragma mark - Helper

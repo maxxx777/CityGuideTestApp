@@ -19,6 +19,8 @@
 - (void)configureImageWithImage:(UIImage * _Nonnull)image;
 
 - (void)configureRightBarButtonOnNavigationBarAsSave;
+- (void)configureLeftBarButtonOnNavigationBarAsCancel;
+- (void)configureLeftBarButtonOnNavigationBarAsClose;
 
 - (void)enableRightBarButtonOnNavigationBar;
 - (void)disableRightBarButtonOnNavigationBar;

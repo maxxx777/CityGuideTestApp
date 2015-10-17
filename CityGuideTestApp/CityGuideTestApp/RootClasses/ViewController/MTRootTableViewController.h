@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-@protocol MTRootTablePresenterInterface;
+@protocol MTRootCollectionPresenterInterface;
 
 @interface MTRootTableViewController : UITableViewController
 
-@property (nonatomic, strong) id<MTRootTablePresenterInterface> presenter;
+@property (nonatomic, strong) id<MTRootCollectionPresenterInterface> presenter;
 
 @end

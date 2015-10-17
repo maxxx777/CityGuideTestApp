@@ -8,6 +8,6 @@
 
 #import "MTRootPresenterInterface.h"
 
-@protocol MTRootTablePresenterInterface <NSObject, MTRootPresenterInterface>
+@protocol MTRootCollectionPresenterInterface <NSObject, MTRootPresenterInterface>
 
 @end

@@ -49,15 +49,17 @@
     [self.wireframe onDidAddNewItem];
 }
 
-- (void)onDidPressRightBarButtonOnToolbar
+- (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton
 {
     [alertWrapper showActionSheetInViewController:self.userInterface
+                                    fromBarButton:barButton
+                                         fromRect:CGRectZero
                                         withTitle:NSLocalizedString(@"Filter Places", nil)
                                 cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
                            otherButtonTitlesArray:@[NSLocalizedString(@"All", nil),
-                                                    NSLocalizedString(@"100 miles", nil),
-                                                    NSLocalizedString(@"10 miles", nil),
-                                                    NSLocalizedString(@"1 mile", nil)]
+                                                                                                                                                                                                                            NSLocalizedString(@"100 miles", nil),
+                                                                                                                                                                                                                            NSLocalizedString(@"10 miles", nil),
+                                                                                                                                                                                                                            NSLocalizedString(@"1 mile", nil)]
                                 clickedCompletion:nil
                              didDismissCompletion:^(NSInteger buttonIndex, NSString *actionTitle, NSString *inputText){
                                     if (actionTitle) {

@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTRootCell.h"
+#import "MTRootTableViewCell.h"
+#import "MTCityListCellInterface.h"
 
-@interface MTCityListCell : MTRootCell
-
-- (void)configureCellWithItem:(id)item
-                     isOpened:(BOOL)isOpened;
+@interface MTCityListTableViewCell : MTRootTableViewCell
+<
+    MTCityListCellInterface
+>
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MTItemListViewController.h"
 #import "MTItemListTableViewController.h"
+#import "MTItemListCollectionViewController.h"
 
 @interface MTItemListViewController ()
 
@@ -23,7 +24,7 @@
     if ([self.presenter respondsToSelector:@selector(onDidLoadView)]) {
         [self.presenter onDidLoadView];
     }
-    [self configureChildTableViewController];
+    [self configureChildViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,33 +50,40 @@
 
 - (IBAction)filterButtonPressed:(id)sender
 {
-    if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnToolbar)]) {
-        [self.presenter onDidPressRightBarButtonOnToolbar];
+    if ([self.presenter respondsToSelector:@selector(onDidPressRightBarButtonOnToolbar:)]) {
+        [self.presenter onDidPressRightBarButtonOnToolbar:sender];
     }    
 }
 
 #pragma mark - Helper 
 
-- (void)configureChildTableViewController
+- (void)configureChildViewController
 {
-    UIView *tableView = self.childTableViewController.tableView;
+    UIView *childView;
+//    if ([self.childViewController isKindOfClass:[UICollectionViewController class]]) {
+//        childView = [self.childViewController valueForKey:@"collectionView"];
+//    } else if ([self.childViewController isKindOfClass:[UITableViewController class]]) {
+//        childView = [self.childViewController valueForKey:@"tableView"];
+//    } else {
+        childView = [self.childViewController valueForKey:@"view"];
+//    }
     
-    [self addChildViewController:self.childTableViewController];
-    [self.containerView addSubview:tableView];
+    [self addChildViewController:self.childViewController];
+    [self.containerView addSubview:childView];
     
-    [tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [childView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.containerView addConstraints:[NSLayoutConstraint
-                                        constraintsWithVisualFormat:@"H:|-0-[tableView]-0-|"
+                                        constraintsWithVisualFormat:@"H:|-0-[childView]-0-|"
                                         options:NSLayoutFormatDirectionLeadingToTrailing
                                         metrics:nil
-                                        views:NSDictionaryOfVariableBindings(tableView)]];
+                                        views:NSDictionaryOfVariableBindings(childView)]];
     [self.containerView addConstraints:[NSLayoutConstraint
-                                        constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|"
+                                        constraintsWithVisualFormat:@"V:|-0-[childView]-0-|"
                                         options:NSLayoutFormatDirectionLeadingToTrailing
                                         metrics:nil
-                                        views:NSDictionaryOfVariableBindings(tableView)]];
+                                        views:NSDictionaryOfVariableBindings(childView)]];
     
-    [self.childTableViewController didMoveToParentViewController:self];
+    [self.childViewController didMoveToParentViewController:self];
 }
 
 #pragma mark - MTItemListViewInterface

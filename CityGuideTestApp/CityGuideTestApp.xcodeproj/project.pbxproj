@@ -23,17 +23,14 @@
 		7502C22E1BC59018008ECF59 /* MTItemListRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1301BC59017008ECF59 /* MTItemListRequester.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C13D1BC59018008ECF59 /* MTItemDetailWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1411BC59018008ECF59 /* MTItemListPresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2341BC59018008ECF59 /* MTCityListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C14B1BC59018008ECF59 /* MTCityListCell.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2361BC59018008ECF59 /* MTItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2371BC59018008ECF59 /* MTItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1531BC59018008ECF59 /* MTItemListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7502C2331BC59018008ECF59 /* MTItemListCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1471BC59018008ECF59 /* MTItemListCollectionPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1581BC59018008ECF59 /* MTItemListWireframe.m */; settings = {ASSET_TAGS = (); }; };
-		7502C2391BC59018008ECF59 /* MTRootCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C15C1BC59018008ECF59 /* MTRootCell.m */; settings = {ASSET_TAGS = (); }; };
+		7502C2391BC59018008ECF59 /* MTRootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C15C1BC59018008ECF59 /* MTRootTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		7502C23A1BC59018008ECF59 /* MTRootDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C15F1BC59018008ECF59 /* MTRootDataManager.m */; settings = {ASSET_TAGS = (); }; };
 		7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1661BC59018008ECF59 /* MTRootInteractor.m */; settings = {ASSET_TAGS = (); }; };
 		7502C23C1BC59018008ECF59 /* MTRootOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1691BC59018008ECF59 /* MTRootOperation.m */; settings = {ASSET_TAGS = (); }; };
 		7502C23D1BC59018008ECF59 /* MTRootPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C16C1BC59018008ECF59 /* MTRootPresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7502C23E1BC59018008ECF59 /* MTRootTablePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C16F1BC59018008ECF59 /* MTRootTablePresenter.m */; settings = {ASSET_TAGS = (); }; };
+		7502C23E1BC59018008ECF59 /* MTRootCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C16F1BC59018008ECF59 /* MTRootCollectionPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1731BC59018008ECF59 /* MTRootTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1751BC59018008ECF59 /* MTRootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1791BC59018008ECF59 /* MTRootWebService.m */; settings = {ASSET_TAGS = (); }; };
@@ -42,9 +39,17 @@
 		7561750C1BCAE457004A843C /* MTImageBrowserWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		756175101BCAE514004A843C /* MTImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750F1BCAE514004A843C /* MTImageBrowserViewController.m */; settings = {ASSET_TAGS = (); }; };
 		756175141BCAEA79004A843C /* MTImageBrowserPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 756175131BCAEA79004A843C /* MTImageBrowserPresenter.m */; settings = {ASSET_TAGS = (); }; };
-		7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */; settings = {ASSET_TAGS = (); }; };
 		7564866F1BC7B42B0012A794 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7564866E1BC7B42B0012A794 /* disclosure.png */; settings = {ASSET_TAGS = (); }; };
 		756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */ = {isa = PBXBuildFile; fileRef = 756901061BC6E45F00825B62 /* MTItemListExpander.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F21BD248B600906F0F /* MTCityListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3DC1BD248B600906F0F /* MTCityListCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F31BD248B600906F0F /* MTCityListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3DE1BD248B600906F0F /* MTCityListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F41BD248B600906F0F /* UIView+MTCityListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3E01BD248B600906F0F /* UIView+MTCityListCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F51BD248B600906F0F /* MTPlaceListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3E41BD248B600906F0F /* MTPlaceListCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F61BD248B600906F0F /* MTPlaceListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3E61BD248B600906F0F /* MTPlaceListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F71BD248B600906F0F /* UIView+MTPlaceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3E81BD248B600906F0F /* UIView+MTPlaceListCell.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F81BD248B600906F0F /* MTItemListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EB1BD248B600906F0F /* MTItemListCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3EE1BD248B600906F0F /* MTItemListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		756DB3FA1BD248B600906F0F /* MTItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756DB3F01BD248B600906F0F /* MTItemListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */; settings = {ASSET_TAGS = (); }; };
 		7572538E1BCEEEF300E740DC /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 757253521BCEEEF300E740DC /* UIDevice+SystemVersion.m */; settings = {ASSET_TAGS = (); }; };
 		7572539B1BCEEEF300E740DC /* MTArrayBasedItemListCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7572536C1BCEEEF300E740DC /* MTArrayBasedItemListCache.m */; settings = {ASSET_TAGS = (); }; };
@@ -83,6 +88,9 @@
 		75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9141BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		75EAA9191BC97C22000BE44A /* MTPlaceDetailFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */; settings = {ASSET_TAGS = (); }; };
 		75EAA9241BC9A4A1000BE44A /* MTPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+		75F028341BD0CC1900CE94B2 /* MTRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F028331BD0CC1900CE94B2 /* MTRootCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		75F028371BD0CF3B00CE94B2 /* MTRootCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F028361BD0CF3B00CE94B2 /* MTRootCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		75F028441BD0EAE300CE94B2 /* UIImageView+MTEditing.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F028431BD0EAE300CE94B2 /* UIImageView+MTEditing.m */; settings = {ASSET_TAGS = (); }; };
 		75FE08FF1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE08FD1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		75FE09031BCA41B600765F7D /* MTPlaceDetailConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09021BCA41B600765F7D /* MTPlaceDetailConfigurator.m */; settings = {ASSET_TAGS = (); }; };
 		75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FE09091BCA4E9000765F7D /* MTMutablePlace.m */; settings = {ASSET_TAGS = (); }; };
@@ -150,22 +158,14 @@
 		7502C1401BC59018008ECF59 /* MTItemListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListPresenter.h; sourceTree = "<group>"; };
 		7502C1411BC59018008ECF59 /* MTItemListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListPresenter.m; sourceTree = "<group>"; };
 		7502C1421BC59018008ECF59 /* MTItemListPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListPresenterInterface.h; sourceTree = "<group>"; };
-		7502C1461BC59018008ECF59 /* MTItemListTablePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTablePresenter.h; sourceTree = "<group>"; };
-		7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListTablePresenter.m; sourceTree = "<group>"; };
-		7502C1481BC59018008ECF59 /* MTItemListTablePresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTablePresenterInterface.h; sourceTree = "<group>"; };
-		7502C14A1BC59018008ECF59 /* MTCityListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityListCell.h; sourceTree = "<group>"; };
-		7502C14B1BC59018008ECF59 /* MTCityListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityListCell.m; sourceTree = "<group>"; };
-		7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTableViewController.h; sourceTree = "<group>"; };
-		7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListTableViewController.m; sourceTree = "<group>"; };
-		7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTableViewInterface.h; sourceTree = "<group>"; };
-		7502C1521BC59018008ECF59 /* MTItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewController.h; sourceTree = "<group>"; };
-		7502C1531BC59018008ECF59 /* MTItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListViewController.m; sourceTree = "<group>"; };
-		7502C1541BC59018008ECF59 /* MTItemListViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewInterface.h; sourceTree = "<group>"; };
+		7502C1461BC59018008ECF59 /* MTItemListCollectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCollectionPresenter.h; sourceTree = "<group>"; };
+		7502C1471BC59018008ECF59 /* MTItemListCollectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListCollectionPresenter.m; sourceTree = "<group>"; };
+		7502C1481BC59018008ECF59 /* MTItemListCollectionPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCollectionPresenterInterface.h; sourceTree = "<group>"; };
 		7502C1561BC59018008ECF59 /* MTItemListModuleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListModuleInterface.h; sourceTree = "<group>"; };
 		7502C1571BC59018008ECF59 /* MTItemListWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListWireframe.h; sourceTree = "<group>"; };
 		7502C1581BC59018008ECF59 /* MTItemListWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListWireframe.m; sourceTree = "<group>"; };
-		7502C15B1BC59018008ECF59 /* MTRootCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootCell.h; sourceTree = "<group>"; };
-		7502C15C1BC59018008ECF59 /* MTRootCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootCell.m; sourceTree = "<group>"; };
+		7502C15B1BC59018008ECF59 /* MTRootTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootTableViewCell.h; sourceTree = "<group>"; };
+		7502C15C1BC59018008ECF59 /* MTRootTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootTableViewCell.m; sourceTree = "<group>"; };
 		7502C15E1BC59018008ECF59 /* MTRootDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManager.h; sourceTree = "<group>"; };
 		7502C15F1BC59018008ECF59 /* MTRootDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootDataManager.m; sourceTree = "<group>"; };
 		7502C1601BC59018008ECF59 /* MTRootDataManagerCompletionHandlingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootDataManagerCompletionHandlingConstants.h; sourceTree = "<group>"; };
@@ -178,9 +178,9 @@
 		7502C16B1BC59018008ECF59 /* MTRootPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootPresenter.h; sourceTree = "<group>"; };
 		7502C16C1BC59018008ECF59 /* MTRootPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootPresenter.m; sourceTree = "<group>"; };
 		7502C16D1BC59018008ECF59 /* MTRootPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootPresenterInterface.h; sourceTree = "<group>"; };
-		7502C16E1BC59018008ECF59 /* MTRootTablePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootTablePresenter.h; sourceTree = "<group>"; };
-		7502C16F1BC59018008ECF59 /* MTRootTablePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootTablePresenter.m; sourceTree = "<group>"; };
-		7502C1701BC59018008ECF59 /* MTRootTablePresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootTablePresenterInterface.h; sourceTree = "<group>"; };
+		7502C16E1BC59018008ECF59 /* MTRootCollectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootCollectionPresenter.h; sourceTree = "<group>"; };
+		7502C16F1BC59018008ECF59 /* MTRootCollectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootCollectionPresenter.m; sourceTree = "<group>"; };
+		7502C1701BC59018008ECF59 /* MTRootCollectionPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootCollectionPresenterInterface.h; sourceTree = "<group>"; };
 		7502C1721BC59018008ECF59 /* MTRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootTableViewController.h; sourceTree = "<group>"; };
 		7502C1731BC59018008ECF59 /* MTRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootTableViewController.m; sourceTree = "<group>"; };
 		7502C1741BC59018008ECF59 /* MTRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootViewController.h; sourceTree = "<group>"; };
@@ -201,12 +201,32 @@
 		756175131BCAEA79004A843C /* MTImageBrowserPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageBrowserPresenter.m; sourceTree = "<group>"; };
 		756175151BCAEA8D004A843C /* MTImageBrowserPresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserPresenterInterface.h; sourceTree = "<group>"; };
 		756175161BCAEAC7004A843C /* MTImageBrowserViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserViewInterface.h; sourceTree = "<group>"; };
-		7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCell.h; sourceTree = "<group>"; };
-		7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListCell.m; sourceTree = "<group>"; };
 		7564866E1BC7B42B0012A794 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
 		756901051BC6E45F00825B62 /* MTItemListExpander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpander.h; sourceTree = "<group>"; };
 		756901061BC6E45F00825B62 /* MTItemListExpander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListExpander.m; sourceTree = "<group>"; };
 		756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListExpanderIOInterface.h; sourceTree = "<group>"; };
+		756DB3DA1BD248B600906F0F /* MTCityListCellInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityListCellInterface.h; sourceTree = "<group>"; };
+		756DB3DB1BD248B600906F0F /* MTCityListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityListCollectionViewCell.h; sourceTree = "<group>"; };
+		756DB3DC1BD248B600906F0F /* MTCityListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityListCollectionViewCell.m; sourceTree = "<group>"; };
+		756DB3DD1BD248B600906F0F /* MTCityListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityListTableViewCell.h; sourceTree = "<group>"; };
+		756DB3DE1BD248B600906F0F /* MTCityListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityListTableViewCell.m; sourceTree = "<group>"; };
+		756DB3DF1BD248B600906F0F /* UIView+MTCityListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MTCityListCell.h"; sourceTree = "<group>"; };
+		756DB3E01BD248B600906F0F /* UIView+MTCityListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MTCityListCell.m"; sourceTree = "<group>"; };
+		756DB3E21BD248B600906F0F /* MTPlaceListCellInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCellInterface.h; sourceTree = "<group>"; };
+		756DB3E31BD248B600906F0F /* MTPlaceListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListCollectionViewCell.h; sourceTree = "<group>"; };
+		756DB3E41BD248B600906F0F /* MTPlaceListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListCollectionViewCell.m; sourceTree = "<group>"; };
+		756DB3E51BD248B600906F0F /* MTPlaceListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceListTableViewCell.h; sourceTree = "<group>"; };
+		756DB3E61BD248B600906F0F /* MTPlaceListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceListTableViewCell.m; sourceTree = "<group>"; };
+		756DB3E71BD248B600906F0F /* UIView+MTPlaceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MTPlaceListCell.h"; sourceTree = "<group>"; };
+		756DB3E81BD248B600906F0F /* UIView+MTPlaceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MTPlaceListCell.m"; sourceTree = "<group>"; };
+		756DB3EA1BD248B600906F0F /* MTItemListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCollectionViewController.h; sourceTree = "<group>"; };
+		756DB3EB1BD248B600906F0F /* MTItemListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListCollectionViewController.m; sourceTree = "<group>"; };
+		756DB3EC1BD248B600906F0F /* MTItemListCollectionViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListCollectionViewInterface.h; sourceTree = "<group>"; };
+		756DB3ED1BD248B600906F0F /* MTItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListTableViewController.h; sourceTree = "<group>"; };
+		756DB3EE1BD248B600906F0F /* MTItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListTableViewController.m; sourceTree = "<group>"; };
+		756DB3EF1BD248B600906F0F /* MTItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewController.h; sourceTree = "<group>"; };
+		756DB3F01BD248B600906F0F /* MTItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListViewController.m; sourceTree = "<group>"; };
+		756DB3F11BD248B600906F0F /* MTItemListViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListViewInterface.h; sourceTree = "<group>"; };
 		7572534C1BCEEEF300E740DC /* MTAlertWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapper.h; sourceTree = "<group>"; };
 		7572534D1BCEEEF300E740DC /* MTAlertWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAlertWrapper.m; sourceTree = "<group>"; };
 		7572534E1BCEEEF300E740DC /* MTAlertWrapperConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAlertWrapperConstants.h; sourceTree = "<group>"; };
@@ -308,6 +328,12 @@
 		75EAA91A1BC97C44000BE44A /* MTPlaceDetailFetcherIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailFetcherIOInterface.h; sourceTree = "<group>"; };
 		75EAA9221BC9A4A1000BE44A /* MTPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceAnnotation.h; sourceTree = "<group>"; };
 		75EAA9231BC9A4A1000BE44A /* MTPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPlaceAnnotation.m; sourceTree = "<group>"; };
+		75F028321BD0CC1900CE94B2 /* MTRootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootCollectionViewController.h; sourceTree = "<group>"; };
+		75F028331BD0CC1900CE94B2 /* MTRootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootCollectionViewController.m; sourceTree = "<group>"; };
+		75F028351BD0CF3B00CE94B2 /* MTRootCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootCollectionViewCell.h; sourceTree = "<group>"; };
+		75F028361BD0CF3B00CE94B2 /* MTRootCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootCollectionViewCell.m; sourceTree = "<group>"; };
+		75F028421BD0EAE300CE94B2 /* UIImageView+MTEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MTEditing.h"; sourceTree = "<group>"; };
+		75F028431BD0EAE300CE94B2 /* UIImageView+MTEditing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MTEditing.m"; sourceTree = "<group>"; };
 		75FE08FC1BCA412C00765F7D /* MTEditPlaceDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTEditPlaceDetailPresenter.h; sourceTree = "<group>"; };
 		75FE08FD1BCA412C00765F7D /* MTEditPlaceDetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTEditPlaceDetailPresenter.m; sourceTree = "<group>"; };
 		75FE09011BCA41B600765F7D /* MTPlaceDetailConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlaceDetailConfigurator.h; sourceTree = "<group>"; };
@@ -652,9 +678,9 @@
 				7502C1401BC59018008ECF59 /* MTItemListPresenter.h */,
 				7502C1411BC59018008ECF59 /* MTItemListPresenter.m */,
 				7502C1421BC59018008ECF59 /* MTItemListPresenterInterface.h */,
-				7502C1461BC59018008ECF59 /* MTItemListTablePresenter.h */,
-				7502C1471BC59018008ECF59 /* MTItemListTablePresenter.m */,
-				7502C1481BC59018008ECF59 /* MTItemListTablePresenterInterface.h */,
+				7502C1461BC59018008ECF59 /* MTItemListCollectionPresenter.h */,
+				7502C1471BC59018008ECF59 /* MTItemListCollectionPresenter.m */,
+				7502C1481BC59018008ECF59 /* MTItemListCollectionPresenterInterface.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -662,16 +688,9 @@
 		7502C1491BC59018008ECF59 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7502C1521BC59018008ECF59 /* MTItemListViewController.h */,
-				7502C1531BC59018008ECF59 /* MTItemListViewController.m */,
-				7502C1541BC59018008ECF59 /* MTItemListViewInterface.h */,
-				7502C14F1BC59018008ECF59 /* MTItemListTableViewController.h */,
-				7502C1501BC59018008ECF59 /* MTItemListTableViewController.m */,
-				7502C1511BC59018008ECF59 /* MTItemListTableViewInterface.h */,
-				7502C14A1BC59018008ECF59 /* MTCityListCell.h */,
-				7502C14B1BC59018008ECF59 /* MTCityListCell.m */,
-				7564866A1BC7A9B70012A794 /* MTPlaceListCell.h */,
-				7564866B1BC7A9B70012A794 /* MTPlaceListCell.m */,
+				756DB3D91BD248B600906F0F /* CityListCell */,
+				756DB3E11BD248B600906F0F /* PlaceListCell */,
+				756DB3E91BD248B600906F0F /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -704,8 +723,10 @@
 		7502C15A1BC59018008ECF59 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7502C15B1BC59018008ECF59 /* MTRootCell.h */,
-				7502C15C1BC59018008ECF59 /* MTRootCell.m */,
+				7502C15B1BC59018008ECF59 /* MTRootTableViewCell.h */,
+				7502C15C1BC59018008ECF59 /* MTRootTableViewCell.m */,
+				75F028351BD0CF3B00CE94B2 /* MTRootCollectionViewCell.h */,
+				75F028361BD0CF3B00CE94B2 /* MTRootCollectionViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -747,9 +768,9 @@
 				7502C16B1BC59018008ECF59 /* MTRootPresenter.h */,
 				7502C16C1BC59018008ECF59 /* MTRootPresenter.m */,
 				7502C16D1BC59018008ECF59 /* MTRootPresenterInterface.h */,
-				7502C16E1BC59018008ECF59 /* MTRootTablePresenter.h */,
-				7502C16F1BC59018008ECF59 /* MTRootTablePresenter.m */,
-				7502C1701BC59018008ECF59 /* MTRootTablePresenterInterface.h */,
+				7502C16E1BC59018008ECF59 /* MTRootCollectionPresenter.h */,
+				7502C16F1BC59018008ECF59 /* MTRootCollectionPresenter.m */,
+				7502C1701BC59018008ECF59 /* MTRootCollectionPresenterInterface.h */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -757,11 +778,13 @@
 		7502C1711BC59018008ECF59 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7502C1721BC59018008ECF59 /* MTRootTableViewController.h */,
-				7502C1731BC59018008ECF59 /* MTRootTableViewController.m */,
 				7502C1741BC59018008ECF59 /* MTRootViewController.h */,
 				7502C1751BC59018008ECF59 /* MTRootViewController.m */,
 				757C61CA1BCEDD1C00E2E252 /* MTRootViewInterface.h */,
+				7502C1721BC59018008ECF59 /* MTRootTableViewController.h */,
+				7502C1731BC59018008ECF59 /* MTRootTableViewController.m */,
+				75F028321BD0CC1900CE94B2 /* MTRootCollectionViewController.h */,
+				75F028331BD0CC1900CE94B2 /* MTRootCollectionViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -868,6 +891,49 @@
 				756901081BC6E47500825B62 /* MTItemListExpanderIOInterface.h */,
 			);
 			path = Expanders;
+			sourceTree = "<group>";
+		};
+		756DB3D91BD248B600906F0F /* CityListCell */ = {
+			isa = PBXGroup;
+			children = (
+				756DB3DA1BD248B600906F0F /* MTCityListCellInterface.h */,
+				756DB3DB1BD248B600906F0F /* MTCityListCollectionViewCell.h */,
+				756DB3DC1BD248B600906F0F /* MTCityListCollectionViewCell.m */,
+				756DB3DD1BD248B600906F0F /* MTCityListTableViewCell.h */,
+				756DB3DE1BD248B600906F0F /* MTCityListTableViewCell.m */,
+				756DB3DF1BD248B600906F0F /* UIView+MTCityListCell.h */,
+				756DB3E01BD248B600906F0F /* UIView+MTCityListCell.m */,
+			);
+			path = CityListCell;
+			sourceTree = "<group>";
+		};
+		756DB3E11BD248B600906F0F /* PlaceListCell */ = {
+			isa = PBXGroup;
+			children = (
+				756DB3E21BD248B600906F0F /* MTPlaceListCellInterface.h */,
+				756DB3E31BD248B600906F0F /* MTPlaceListCollectionViewCell.h */,
+				756DB3E41BD248B600906F0F /* MTPlaceListCollectionViewCell.m */,
+				756DB3E51BD248B600906F0F /* MTPlaceListTableViewCell.h */,
+				756DB3E61BD248B600906F0F /* MTPlaceListTableViewCell.m */,
+				756DB3E71BD248B600906F0F /* UIView+MTPlaceListCell.h */,
+				756DB3E81BD248B600906F0F /* UIView+MTPlaceListCell.m */,
+			);
+			path = PlaceListCell;
+			sourceTree = "<group>";
+		};
+		756DB3E91BD248B600906F0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				756DB3EA1BD248B600906F0F /* MTItemListCollectionViewController.h */,
+				756DB3EB1BD248B600906F0F /* MTItemListCollectionViewController.m */,
+				756DB3EC1BD248B600906F0F /* MTItemListCollectionViewInterface.h */,
+				756DB3ED1BD248B600906F0F /* MTItemListTableViewController.h */,
+				756DB3EE1BD248B600906F0F /* MTItemListTableViewController.m */,
+				756DB3EF1BD248B600906F0F /* MTItemListViewController.h */,
+				756DB3F01BD248B600906F0F /* MTItemListViewController.m */,
+				756DB3F11BD248B600906F0F /* MTItemListViewInterface.h */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		7572534A1BCEEEF300E740DC /* MTAlertWrapper */ = {
@@ -981,6 +1047,7 @@
 				7591B34A1BD016B4001440E3 /* NSNumber-NewItemId */,
 				7591B34D1BD016B4001440E3 /* UIImage-MTEditing */,
 				7591B3501BD016B4001440E3 /* UIImageView-MTActivityView */,
+				75F028411BD0EACE00CE94B2 /* UIImageView-MTEditing */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1111,6 +1178,15 @@
 				75D32D441BC649110010D705 /* Base.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		75F028411BD0EACE00CE94B2 /* UIImageView-MTEditing */ = {
+			isa = PBXGroup;
+			children = (
+				75F028421BD0EAE300CE94B2 /* UIImageView+MTEditing.h */,
+				75F028431BD0EAE300CE94B2 /* UIImageView+MTEditing.m */,
+			);
+			path = "UIImageView-MTEditing";
 			sourceTree = "<group>";
 		};
 		75FE09001BCA419E00765F7D /* Configurators */ = {
@@ -1270,7 +1346,9 @@
 				7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */,
 				75EAA9151BC97BBA000BE44A /* MTShowPlaceDetailPresenter.m in Sources */,
 				7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */,
+				756DB3F31BD248B600906F0F /* MTCityListTableViewCell.m in Sources */,
 				7502C23F1BC59018008ECF59 /* MTRootTableViewController.m in Sources */,
+				756DB3F21BD248B600906F0F /* MTCityListCollectionViewCell.m in Sources */,
 				7591B3601BD016B4001440E3 /* MTImageManager.m in Sources */,
 				7502C2221BC59018008ECF59 /* MTAppModulesConnector.m in Sources */,
 				756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */,
@@ -1285,6 +1363,7 @@
 				7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */,
 				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
 				7591B35D1BD016B4001440E3 /* NSNumber+MTNewItemId.m in Sources */,
+				756DB3F41BD248B600906F0F /* UIView+MTCityListCell.m in Sources */,
 				7561750C1BCAE457004A843C /* MTImageBrowserWireframe.m in Sources */,
 				75FE090A1BCA4E9000765F7D /* MTMutablePlace.m in Sources */,
 				7591B3451BD00D1A001440E3 /* MTFileManager.m in Sources */,
@@ -1292,12 +1371,14 @@
 				7502C22A1BC59018008ECF59 /* MTItemWebService.m in Sources */,
 				75FE09031BCA41B600765F7D /* MTPlaceDetailConfigurator.m in Sources */,
 				75EAA9191BC97C22000BE44A /* MTPlaceDetailFetcher.m in Sources */,
-				7502C2331BC59018008ECF59 /* MTItemListTablePresenter.m in Sources */,
+				7502C2331BC59018008ECF59 /* MTItemListCollectionPresenter.m in Sources */,
 				7502C2211BC59018008ECF59 /* MTAppDelegate.m in Sources */,
 				7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */,
 				7502C2251BC59018008ECF59 /* main.m in Sources */,
 				75EAA90E1BC9788E000BE44A /* MTItemDetailViewController.m in Sources */,
 				7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */,
+				756DB3FA1BD248B600906F0F /* MTItemListViewController.m in Sources */,
+				756DB3F81BD248B600906F0F /* MTItemListCollectionViewController.m in Sources */,
 				7591B3741BD016D0001440E3 /* NSObject+MTMergeObjects.m in Sources */,
 				75D32D5E1BC66C200010D705 /* MTManagedCity+CoreDataProperties.m in Sources */,
 				7591B3611BD016B4001440E3 /* MTOperationManager.m in Sources */,
@@ -1308,22 +1389,22 @@
 				75FE090D1BCA780200765F7D /* MTSavePlaceOperation.m in Sources */,
 				7502C2381BC59018008ECF59 /* MTItemListWireframe.m in Sources */,
 				7572538D1BCEEEF300E740DC /* MTAlertWrapper.m in Sources */,
+				756DB3F91BD248B600906F0F /* MTItemListTableViewController.m in Sources */,
 				7591B3731BD016D0001440E3 /* NSObject+MTMergeObject.m in Sources */,
 				75D32D4E1BC6514B0010D705 /* MTMappedPlace.m in Sources */,
 				7502C23A1BC59018008ECF59 /* MTRootDataManager.m in Sources */,
 				75D32D5C1BC66C200010D705 /* MTManagedItem+CoreDataProperties.m in Sources */,
+				75F028341BD0CC1900CE94B2 /* MTRootCollectionViewController.m in Sources */,
 				75D32D4F1BC6514B0010D705 /* MTMappedItem.m in Sources */,
-				7502C2371BC59018008ECF59 /* MTItemListViewController.m in Sources */,
 				7502C2281BC59018008ECF59 /* MTSaveItemsOperation.m in Sources */,
 				7572539E1BCEEEF300E740DC /* NSString+MTFormatting.m in Sources */,
-				7502C2341BC59018008ECF59 /* MTCityListCell.m in Sources */,
+				75F028441BD0EAE300CE94B2 /* UIImageView+MTEditing.m in Sources */,
 				75D32D5D1BC66C200010D705 /* MTManagedItem.m in Sources */,
 				7502C2231BC59018008ECF59 /* NSString+MTSpecificStrings.m in Sources */,
-				7502C2361BC59018008ECF59 /* MTItemListTableViewController.m in Sources */,
+				756DB3F71BD248B600906F0F /* UIView+MTPlaceListCell.m in Sources */,
 				75EAA9241BC9A4A1000BE44A /* MTPlaceAnnotation.m in Sources */,
-				7502C23E1BC59018008ECF59 /* MTRootTablePresenter.m in Sources */,
-				7564866C1BC7A9B70012A794 /* MTPlaceListCell.m in Sources */,
-				7502C2391BC59018008ECF59 /* MTRootCell.m in Sources */,
+				7502C23E1BC59018008ECF59 /* MTRootCollectionPresenter.m in Sources */,
+				7502C2391BC59018008ECF59 /* MTRootTableViewCell.m in Sources */,
 				75D32D4D1BC6514B0010D705 /* MTMappedCity.m in Sources */,
 				7578319C1BC7FA14008BD2FC /* MTTableFooterView.m in Sources */,
 				7591B3711BD016D0001440E3 /* MTDataMapping.m in Sources */,
@@ -1331,6 +1412,9 @@
 				7572538E1BCEEEF300E740DC /* UIDevice+SystemVersion.m in Sources */,
 				75D32D5F1BC66C200010D705 /* MTManagedCity.m in Sources */,
 				7502C23D1BC59018008ECF59 /* MTRootPresenter.m in Sources */,
+				756DB3F51BD248B600906F0F /* MTPlaceListCollectionViewCell.m in Sources */,
+				756DB3F61BD248B600906F0F /* MTPlaceListTableViewCell.m in Sources */,
+				75F028371BD0CF3B00CE94B2 /* MTRootCollectionViewCell.m in Sources */,
 				75D32D601BC66C200010D705 /* MTManagedPlace+CoreDataProperties.m in Sources */,
 				7502C22E1BC59018008ECF59 /* MTItemListRequester.m in Sources */,
 				75D32D611BC66C200010D705 /* MTManagedPlace.m in Sources */,

@@ -20,6 +20,7 @@
 @property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>addItemModule;
 
 - (void)onDidAddNewItem;
-- (void)onDidSelectItem:(__nonnull id)item;
+- (void)onDidSelectItem:(__nonnull id)item
+               fromRect:(CGRect)rect;
 
 @end

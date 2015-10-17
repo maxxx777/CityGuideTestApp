@@ -6,23 +6,23 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import "MTRootTablePresenter.h"
-#import "MTItemListTablePresenterInterface.h"
+#import "MTRootCollectionPresenter.h"
+#import "MTItemListCollectionPresenterInterface.h"
 #import "MTItemListRequesterIOInterface.h"
 #import "MTItemListExpanderIOInterface.h"
 
 @class MTItemListWireframe;
 
-@protocol MTItemListTableViewInterface;
+@protocol MTItemListCollectionViewInterface;
 
-@interface MTItemListTablePresenter : MTRootTablePresenter
+@interface MTItemListCollectionPresenter : MTRootCollectionPresenter
 <
-    MTItemListTablePresenterInterface,
+    MTItemListCollectionPresenterInterface,
     MTItemListRequesterOutputInterface,
     MTItemListExpanderOutputInterface
 >
 
-@property (nonatomic, weak) UITableViewController<MTItemListTableViewInterface> *userInterface;
+@property (nonatomic, weak) UIViewController<MTItemListCollectionViewInterface> *userInterface;
 
 - (instancetype) __unavailable init;
 

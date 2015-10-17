@@ -6,10 +6,9 @@
 //  Copyright © 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "MTRootTablePresenterInterface.h"
+#import "MTRootCollectionPresenterInterface.h"
 
-@protocol MTItemDetailPresenterInterface <NSObject, MTRootTablePresenterInterface>
+@protocol MTItemDetailPresenterInterface <NSObject, MTRootCollectionPresenterInterface>
 
 @optional
 
@@ -19,7 +18,7 @@
 - (void)onDidSelectMapCell;
 - (void)onDidSelectNameCell;
 - (void)onDidSelectDescriptionCell;
-- (void)onDidSelectImageCell;
+- (void)onDidSelectImageCellWithRect:(CGRect)rect;
 - (void)onDidSelectImage:(UIImage *)image;
 
 @end

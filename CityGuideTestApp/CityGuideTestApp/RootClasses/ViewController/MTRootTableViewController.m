@@ -7,7 +7,7 @@
 //
 
 #import "MTRootTableViewController.h"
-#import "MTRootTablePresenterInterface.h"
+#import "MTRootCollectionPresenterInterface.h"
 
 @interface MTRootTableViewController ()
 
@@ -26,6 +26,18 @@
     
     self.tableView.sectionHeaderHeight = 0.0f;
     self.tableView.sectionFooterHeight = 0.0f;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    //FIXME: replace with more elegant solution
+    if (IS_IPAD || [self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        if ([self.presenter respondsToSelector:@selector(onWillCloseView)]) {
+            [self.presenter onWillCloseView];
+        }
+    }
 }
 
 @end
