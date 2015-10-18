@@ -9,9 +9,9 @@
 
 @protocol MTDataMappingInterface <NSObject>
 
-- (id)mappedObjectFromManagedObject: (NSManagedObject *)managedObject;
-- (NSDictionary*)managedObjectDictFromMappedObject: (id)mappedObject
-                                    additionalData: (id)additionalData
-                                        entityName: (NSString *)entityName;
+- (id)mappedObjectFromManagedObject: (NSManagedObject * _Nullable)managedObject;
+- (NSDictionary*)managedObjectDictFromMappedObject: (id _Nonnull)mappedObject
+                                    additionalData: (id _Nullable)additionalData
+                                        entityName: (NSString * _Nonnull)entityName;
 
 @end

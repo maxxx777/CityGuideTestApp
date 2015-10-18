@@ -26,8 +26,8 @@
 
 - (instancetype) __unavailable init;
 
-- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
-                         itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
-                                wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface> _Nonnull)itemListRequester
+                         itemListExpander:(id<MTItemListExpanderInputInterface> _Nonnull)itemListExpander
+                                wireframe:(MTItemListWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

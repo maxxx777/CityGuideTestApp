@@ -24,7 +24,7 @@
 
 - (void)onDidPressLeftBarButtonOnNavigationBar;
 - (void)onDidPressRightBarButtonOnNavigationBar;
-- (void)onDidPressLeftBarButtonOnToolbar:(UIBarButtonItem *)barButton;
-- (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton;
+- (void)onDidPressLeftBarButtonOnToolbar:(UIBarButtonItem * _Nonnull)barButton;
+- (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem * _Nonnull)barButton;
 
 @end

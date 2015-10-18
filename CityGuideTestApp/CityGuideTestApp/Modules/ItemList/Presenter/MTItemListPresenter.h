@@ -22,10 +22,10 @@
     MTEditPlaceDetailDelegate
 >
 
-@property (nonatomic, weak) UIViewController<MTItemListViewInterface> *userInterface;
+@property (nonatomic, weak) UIViewController<MTItemListViewInterface> * userInterface;
 
 - (instancetype) __unavailable init;
-- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
-                                wireframe:(MTItemListWireframe *)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface> _Nonnull)itemListRequester
+                                wireframe:(MTItemListWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
 
 @end

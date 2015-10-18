@@ -13,7 +13,7 @@
 @property (nonatomic, weak) UILabel *textLabel;
 @property (nonatomic, strong) UIImageView *imageViewDisclosure;
 
-- (void)mt_configureCellWithItem:(id)item
+- (void)mt_configureCellWithItem:(id _Nonnull)item
                         isOpened:(BOOL)isOpened;
 - (void)mt_animateImageViewDisclosureTransfromationWithState:(BOOL)isTransfromed
                                                     duration:(NSTimeInterval)duration;

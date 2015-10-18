@@ -12,7 +12,7 @@
 
 @protocol MTImageManagerInterface <NSObject>
 
-- (void)fetchImageForPlace:(id)place
-                  delegate:(id<MTImageManagerDelegate>)delegate;
+- (void)fetchImageForPlace:(id _Nonnull)place
+                  delegate:(id<MTImageManagerDelegate> _Nullable)delegate;
 
 @end

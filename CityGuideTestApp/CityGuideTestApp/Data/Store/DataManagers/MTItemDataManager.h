@@ -18,6 +18,6 @@
     MTMergeObjectsOperationDelegate
 >
 
-@property (nonatomic, strong) MTItemWebService *itemWebService;
+@property (nonatomic, strong) MTItemWebService * _Nullable itemWebService;
 
 @end

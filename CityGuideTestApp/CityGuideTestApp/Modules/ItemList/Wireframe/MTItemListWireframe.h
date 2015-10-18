@@ -17,8 +17,8 @@
     MTItemListModuleInterface
 >
 
-@property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>itemDetailModule;
-@property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface>addItemModule;
+@property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface> _Nonnull itemDetailModule;
+@property (nonatomic, strong, nonnull) id<MTItemDetailModuleInterface> _Nonnull addItemModule;
 
 - (void)onDidAddNewItemWithDelegate:(id<MTEditPlaceDetailDelegate>)delegate;
 - (void)onDidSelectItem:(__nonnull id)item

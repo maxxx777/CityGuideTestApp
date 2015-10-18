@@ -10,28 +10,28 @@
 
 @interface NSObject (MTMergeObject)
 
-- (BOOL)mt_mergeObjectWithEntity: (NSString *)entityName
-                    mappedObject: (id)mappedObject
-                  additionalData: (id)additionalData
-                       predicate: (NSPredicate *)predicate
+- (BOOL)mt_mergeObjectWithEntity: (NSString * _Nonnull)entityName
+                    mappedObject: (id _Nullable)mappedObject
+                  additionalData: (id _Nullable)additionalData
+                       predicate: (NSPredicate * _Nullable)predicate
                     mergeChanges: (BOOL)mergeChanges
-                         context: (NSManagedObjectContext *)context
+                         context: (NSManagedObjectContext * _Nonnull)context
                            error: (NSError * __autoreleasing *)error;
-- (BOOL)mt_mergeObjectWithEntity: (NSString *)entityName
-                    mappedObject: (id)mappedObject
-                  additionalData: (id)additionalData
-                       predicate: (NSPredicate *)predicate
-                         context: (NSManagedObjectContext *)context
-                           error: (NSError * __autoreleasing *)error;
-- (void)mt_updateObject: (NSManagedObject *)object
-           mappedObject: (id)mappedObject
-         additionalData: (id)additionalData
-                 entity: (NSString *)entityName
+- (BOOL)mt_mergeObjectWithEntity: (NSString * _Nonnull)entityName
+                    mappedObject: (id _Nullable)mappedObject
+                  additionalData: (id _Nullable)additionalData
+                       predicate: (NSPredicate * _Nullable)predicate
+                         context: (NSManagedObjectContext * _Nonnull)context
+                           error: (NSError * __autoreleasing * _Nullable)error;
+- (void)mt_updateObject: (NSManagedObject * _Nullable)object
+           mappedObject: (id _Nullable)mappedObject
+         additionalData: (id _Nullable)additionalData
+                 entity: (NSString * _Nonnull)entityName
            mergeChanges: (BOOL)mergeChanges
-                context: (NSManagedObjectContext *)context;
-- (void)mt_insertObjectWithMappedObject: (id)mappedObject
-                         additionalData: (id)additionalData
-                                 entity: (NSString*)entityName
-                                context: (NSManagedObjectContext*)context;
+                context: (NSManagedObjectContext * _Nonnull)context;
+- (void)mt_insertObjectWithMappedObject: (id _Nullable)mappedObject
+                         additionalData: (id _Nullable)additionalData
+                                 entity: (NSString * _Nonnull)entityName
+                                context: (NSManagedObjectContext * _Nonnull)context;
 
 @end

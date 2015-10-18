@@ -20,6 +20,6 @@
 @property (nonatomic, strong) UILabel *labelName;
 @property (nonatomic, strong) MTMappedPlace *mappedPlace;
 
-- (void)mt_configureCellWithItem:(id)item;
+- (void)mt_configureCellWithItem:(id _Nonnull)item;
 
 @end

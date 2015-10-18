@@ -10,12 +10,12 @@
 
 @protocol MTItemListCollectionViewInterface <NSObject, MTRootCollectionPresenterInterface>
 
-- (void)updateFooterLabelWithText:(NSString *)text;
+- (void)updateFooterLabelWithText:(NSString * _Nonnull)text;
 - (void)reloadData;
-- (void)insertItemsAtIndexPaths:(NSArray *)indexPaths;
-- (void)reloadItemsAtIndexPaths:(NSArray *)indexPaths;
-- (void)deleteItemsAtIndexPaths:(NSArray *)indexPaths;
-- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath;
-- (void)deselectItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)insertItemsAtIndexPaths:(NSArray * _Nonnull)indexPaths;
+- (void)reloadItemsAtIndexPaths:(NSArray * _Nonnull)indexPaths;
+- (void)deleteItemsAtIndexPaths:(NSArray * _Nonnull)indexPaths;
+- (void)selectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)deselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 
 @end

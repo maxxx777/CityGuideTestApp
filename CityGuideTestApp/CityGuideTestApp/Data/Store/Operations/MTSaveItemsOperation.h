@@ -13,7 +13,7 @@
 @interface MTSaveItemsOperation : MTRootOperation
 
 - (instancetype) __unavailable init;
-- (instancetype)initWithItems:(NSArray *)items
-                     delegate:(id<MTMergeObjectsOperationDelegate>)delegate NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItems:(NSArray * _Nonnull)items
+                     delegate:(id<MTMergeObjectsOperationDelegate> _Nullable)delegate NS_DESIGNATED_INITIALIZER;
 
 @end

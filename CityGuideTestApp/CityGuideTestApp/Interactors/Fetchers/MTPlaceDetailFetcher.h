@@ -19,7 +19,7 @@
 >
 
 - (instancetype) __unavailable init;
-- (instancetype)initWithPlace:(MTMappedPlace *)place
-              itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlace:(MTMappedPlace * _Nonnull)place
+              itemDataManager:(id<MTItemDataManagerInterface> _Nonnull)itemDataManager NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -17,8 +17,8 @@
     MTItemOperatorInputInterface
 >
 
-- (instancetype)initWithItemListCache:(id<MTItemListCacheInterface>)itemListCache
-                      itemDataManager:(id<MTItemDataManagerInterface>)itemDataManager NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItemListCache:(id<MTItemListCacheInterface> _Nonnull)itemListCache
+                      itemDataManager:(id<MTItemDataManagerInterface> _Nonnull)itemDataManager NS_DESIGNATED_INITIALIZER;
 - (instancetype) __unavailable init;
 
 @end

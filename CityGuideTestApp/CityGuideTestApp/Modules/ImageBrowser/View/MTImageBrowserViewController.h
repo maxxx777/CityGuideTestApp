@@ -16,7 +16,7 @@
     UIScrollViewDelegate
 >
 
-@property (nonatomic, strong) id<MTImageBrowserPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTImageBrowserPresenterInterface> _Nonnull presenter;
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 @end

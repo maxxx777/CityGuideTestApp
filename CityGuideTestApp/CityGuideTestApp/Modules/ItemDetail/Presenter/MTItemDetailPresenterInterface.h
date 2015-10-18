@@ -12,13 +12,13 @@
 
 @optional
 
-- (void)onDidChangeMapCoordinates:(NSDictionary *)coordinates;
-- (void)onDidChangeTextFieldName:(NSString *)name;
-- (void)onDidChangeTextViewDescription:(NSString *)description;
+- (void)onDidChangeMapCoordinates:(NSDictionary * _Nonnull)coordinates;
+- (void)onDidChangeTextFieldName:(NSString * _Nonnull)name;
+- (void)onDidChangeTextViewDescription:(NSString * _Nonnull)description;
 - (void)onDidSelectMapCell;
 - (void)onDidSelectNameCell;
 - (void)onDidSelectDescriptionCell;
 - (void)onDidSelectImageCellWithRect:(CGRect)rect;
-- (void)onDidSelectImage:(UIImage *)image;
+- (void)onDidSelectImage:(UIImage * _Nonnull)image;
 
 @end

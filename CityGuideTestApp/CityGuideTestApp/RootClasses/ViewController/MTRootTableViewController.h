@@ -10,6 +10,6 @@
 
 @interface MTRootTableViewController : UITableViewController
 
-@property (nonatomic, strong) id<MTRootCollectionPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTRootCollectionPresenterInterface> _Nonnull presenter;
 
 @end

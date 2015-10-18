@@ -10,7 +10,7 @@
 
 @protocol MTImageManagerDelegate <NSObject>
 
-- (void)onDidFetchImageForPlace:(id)place
-                          error:(NSError *)error;
+- (void)onDidFetchImageForPlace:(id _Nonnull)place
+                          error:(NSError * _Nullable)error;
 
 @end

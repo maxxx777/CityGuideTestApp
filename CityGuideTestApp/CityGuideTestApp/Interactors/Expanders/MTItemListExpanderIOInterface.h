@@ -11,10 +11,10 @@
 @protocol MTItemListExpanderInputInterface <NSObject>
 
 @property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfRows;
-- (id)objectAtIndexPath:(NSIndexPath *)indexPath;
-- (BOOL)isCityObjectAtIndexPath:(NSIndexPath *)indexPath;
-- (BOOL)isOpenedCityAtIndexPath:(NSIndexPath *)indexPath;
-- (void)openOrCloseCityAtIndexPath:(NSIndexPath *)indexPath;
+- (id)objectAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (BOOL)isCityObjectAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (BOOL)isOpenedCityAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)openOrCloseCityAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)closeAllCities;
 
 @end
@@ -23,8 +23,8 @@
 
 @optional
 
-- (void)onDidOpenCityPlacesAtIndexPaths:(NSArray *)indexPaths;
-- (void)onDidCloseCityPlacesAtIndexPaths:(NSArray *)indexPaths;
+- (void)onDidOpenCityPlacesAtIndexPaths:(NSArray * _Nonnull)indexPaths;
+- (void)onDidCloseCityPlacesAtIndexPaths:(NSArray * _Nonnull)indexPaths;
 - (void)onDidCloseAllCities;
 
 @end

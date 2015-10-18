@@ -17,8 +17,8 @@
 
 @property (nonatomic, strong) IBOutlet UIView *containerView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *barButtonFilter;
-@property (nonatomic, strong) UIViewController *childViewController;
-@property (nonatomic, strong) id<MTItemListPresenterInterface> presenter;
+@property (nonatomic, strong) UIViewController * _Nonnull childViewController;
+@property (nonatomic, strong) id<MTItemListPresenterInterface> _Nonnull presenter;
 
 - (IBAction)addButtonPressed:(id)sender;
 - (IBAction)filterButtonPressed:(id)sender;

@@ -16,18 +16,18 @@
 @optional
 
 @property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *sectionIndexTitles;
-- (NSString *)sectionIndexTitleForSectionName:(NSString *)sectionName;
+- (NSString *)sectionIndexTitleForSectionName:(NSString * _Nonnull)sectionName;
 - (NSString *)titleForHeaderInSection:(NSInteger)section;
 
-- (void)configureCell:(UIView *)cell
-          atIndexPath:(NSIndexPath *)indexPath;
-- (CGSize)sizeForCellAtIndexPath:(NSIndexPath *)indexPath;
+- (void)configureCell:(UIView * _Nonnull)cell
+          atIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGSize)sizeForCellAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 
-- (void)didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath
                         fromRect:(CGRect)rect;
 
-- (NSString *)cellIdentifierForIndexPath:(NSIndexPath *)indexPath;
-- (void)registerCellForTableView:(UITableView *)tableView;
-- (void)registerCellForCollectionView:(UICollectionView *)collectionView;
+- (NSString *)cellIdentifierForIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)registerCellForTableView:(UITableView * _Nonnull)tableView;
+- (void)registerCellForCollectionView:(UICollectionView * _Nonnull)collectionView;
 
 @end

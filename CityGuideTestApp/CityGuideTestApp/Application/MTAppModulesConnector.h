@@ -14,6 +14,6 @@
 >
 
 - (instancetype) __unavailable init;
-- (instancetype)initWithWindow:(UIWindow *)window NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithWindow:(UIWindow * _Nonnull)window NS_DESIGNATED_INITIALIZER;
 
 @end

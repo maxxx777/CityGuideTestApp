@@ -17,7 +17,7 @@
     MTItemDetailModuleInterface
 >
 
-@property (nonatomic, strong, nonnull) id<MTImageBrowserModuleInterface>imageBrowserModule;
+@property (nonatomic, strong, nonnull) id<MTImageBrowserModuleInterface> _Nonnull imageBrowserModule;
 
 - (void)onDidSelectImage:(UIImage * _Nonnull)image;
 

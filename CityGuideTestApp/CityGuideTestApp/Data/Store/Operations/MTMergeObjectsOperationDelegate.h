@@ -10,10 +10,10 @@
 
 @optional
 
-- (void)onDidObjectsMergeWithError: (NSError *)error
+- (void)onDidObjectsMergeWithError: (NSError * _Nullable)error
               isOperationCancelled: (BOOL)isOperationCancelled;
-- (void)onDidObjectMergeWithError: (NSError *)error
-                           object: (id)object
+- (void)onDidObjectMergeWithError: (NSError * _Nullable)error
+                           object: (id _Nonnull)object
              isOperationCancelled: (BOOL)isOperationCancelled;
 
 @end

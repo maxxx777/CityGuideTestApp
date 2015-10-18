@@ -11,9 +11,9 @@
 
 @protocol MTImageCacheInterface <NSObject>
 
-- (void)addImageToCacheForPlace:(id)place
+- (void)addImageToCacheForPlace:(id _Nonnull)place
                      completion:(MTImageCacheCompletionBlock)completion;
-- (UIImage *)imageFromCacheForPlace:(id)place;
+- (UIImage *)imageFromCacheForPlace:(id _Nonnull)place;
 - (void)clearImageCache;
 
 @end

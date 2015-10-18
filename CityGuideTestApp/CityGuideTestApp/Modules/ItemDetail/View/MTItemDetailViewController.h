@@ -22,7 +22,7 @@
 >
 
 @property (nonatomic, strong) IBOutlet UITableViewCell *photoCell;
-@property (nonatomic, strong) id<MTItemDetailPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTItemDetailPresenterInterface> _Nonnull presenter;
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UITextField *textFieldName;
 @property (nonatomic, strong) IBOutlet UITextView *textViewDescription;

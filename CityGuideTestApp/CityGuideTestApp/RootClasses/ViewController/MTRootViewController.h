@@ -15,6 +15,6 @@
     MTRootViewInterface
 >
 
-@property (nonatomic, strong) id<MTRootPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTRootPresenterInterface> _Nonnull presenter;
 
 @end

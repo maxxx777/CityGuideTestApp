@@ -19,6 +19,6 @@
 >
 
 @property (nonatomic, strong) IBOutlet MTTableFooterView *tableFooterView;
-@property (nonatomic, strong) id<MTItemListCollectionPresenterInterface> presenter;
+@property (nonatomic, strong) id<MTItemListCollectionPresenterInterface> _Nonnull presenter;
 
 @end

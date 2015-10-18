@@ -14,8 +14,8 @@
 
 @interface MTSavePlaceOperation : MTRootOperation
 
-- (instancetype)initWithPlace:(MTMappedPlace *)place
-       mergeOperationDelegate:(id<MTMergeObjectsOperationDelegate>)delegate NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlace:(MTMappedPlace * _Nonnull)place
+       mergeOperationDelegate:(id<MTMergeObjectsOperationDelegate> _Nullable)delegate NS_DESIGNATED_INITIALIZER;
 - (instancetype) __unavailable init;
 
 @end

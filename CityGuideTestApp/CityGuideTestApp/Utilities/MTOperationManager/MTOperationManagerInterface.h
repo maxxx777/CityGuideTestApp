@@ -13,7 +13,7 @@
 @protocol MTOperationManagerInterface <NSObject>
 
 - (void)queueOperationWithBlock:(MTOperationManageCompletionBlock)block;
-- (void)queueOperation:(MTRootOperation *)operation;
+- (void)queueOperation:(MTRootOperation * _Nonnull)operation;
 - (void)cancelAllOperations;
 
 @end

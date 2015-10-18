@@ -14,7 +14,7 @@
 
 @optional
 
-- (id)mappedObjectAtIndexPath:(NSIndexPath *)indexPath
-                itemListCache:(id<MTItemListCacheInterface>)itemListCache;
+- (id)mappedObjectAtIndexPath:(NSIndexPath * _Nonnull)indexPath
+                itemListCache:(id<MTItemListCacheInterface> _Nonnull)itemListCache;
 
 @end

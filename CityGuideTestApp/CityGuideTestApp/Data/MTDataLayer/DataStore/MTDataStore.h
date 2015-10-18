@@ -19,55 +19,55 @@
 
 - (void)saveContext: (NSManagedObjectContext*)context;
 
-- (NSFetchRequest *)fetchRequestWithEntity: (NSString *)entityName
-                                 predicate: (NSPredicate *)predicate
-                         sortedDescriptors: (NSArray *)sortedDescriptors
-                                   context: (NSManagedObjectContext *)context;
-- (NSFetchRequest *)fetchRequestWithEntity: (NSString *)entityName
-                                 predicate: (NSPredicate *)predicate
-                         sortedDescriptors: (NSArray *)sortedDescriptors
-                         propertiesToFetch: (NSArray *)propertiesToFetch
+- (NSFetchRequest *)fetchRequestWithEntity: (NSString * _Nonnull)entityName
+                                 predicate: (NSPredicate * _Nullable)predicate
+                         sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+                                   context: (NSManagedObjectContext * _Nonnull)context;
+- (NSFetchRequest *)fetchRequestWithEntity: (NSString * _Nonnull)entityName
+                                 predicate: (NSPredicate * _Nullable)predicate
+                         sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+                         propertiesToFetch: (NSArray * _Nullable)propertiesToFetch
                        includesSubentities: (BOOL)includesSubentities
                     returnsObjectsAsFaults: (BOOL)returnsObjectsAsFaults
                     includesPendingChanges: (BOOL)includesPendingChanges
-                                   context: (NSManagedObjectContext *)context;
-- (NSArray *)objectsForEntity: (NSString *)entityName
-                    predicate: (NSPredicate *)predicate
-            sortedDescriptors: (NSArray *)sortedDescriptors
-                      context: (NSManagedObjectContext *)context;
-- (NSArray *)objectsForEntity: (NSString *)entityName
-                    predicate: (NSPredicate *)predicate
-            sortedDescriptors: (NSArray *)sortedDescriptors
-            propertiesToFetch: (NSArray *)propertiesToFetch
+                                   context: (NSManagedObjectContext * _Nonnull)context;
+- (NSArray *)objectsForEntity: (NSString * _Nonnull)entityName
+                    predicate: (NSPredicate * _Nullable)predicate
+            sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+                      context: (NSManagedObjectContext * _Nonnull)context;
+- (NSArray *)objectsForEntity: (NSString * _Nonnull)entityName
+                    predicate: (NSPredicate * _Nullable)predicate
+            sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+            propertiesToFetch: (NSArray * _Nullable)propertiesToFetch
           includesSubentities: (BOOL)includesSubentities
        returnsObjectsAsFaults: (BOOL)returnsObjectsAsFaults
        includesPendingChanges: (BOOL)includesPendingChanges
-                      context: (NSManagedObjectContext *)context;
-- (id)objectForEntity: (NSString *)entityName
-            predicate: (NSPredicate *)predicate
-    sortedDescriptors: (NSArray *)sortedDescriptors
-              context: (NSManagedObjectContext *)context;
-- (id)objectForEntity: (NSString *)entityName
-            predicate: (NSPredicate *)predicate
-    sortedDescriptors: (NSArray *)sortedDescriptors
-    propertiesToFetch: (NSArray *)propertiesToFetch
+                      context: (NSManagedObjectContext * _Nonnull)context;
+- (id)objectForEntity: (NSString * _Nonnull)entityName
+            predicate: (NSPredicate * _Nullable)predicate
+    sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+              context: (NSManagedObjectContext * _Nonnull)context;
+- (id)objectForEntity: (NSString * _Nonnull)entityName
+            predicate: (NSPredicate * _Nullable)predicate
+    sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+    propertiesToFetch: (NSArray * _Nullable)propertiesToFetch
   includesSubentities: (BOOL)includesSubentities
 returnsObjectsAsFaults: (BOOL)returnsObjectsAsFaults
 includesPendingChanges: (BOOL)includesPendingChanges
-              context: (NSManagedObjectContext *)context;
-- (NSUInteger)countOfObjectsForEntity: (NSString *)entityName
-                            predicate: (NSPredicate *)predicate
-                    sortedDescriptors: (NSArray *)sortedDescriptors
-                              context: (NSManagedObjectContext *)context;
-- (NSUInteger)countOfObjectsForEntity: (NSString *)entityName
-                            predicate: (NSPredicate *)predicate
-                    sortedDescriptors: (NSArray *)sortedDescriptors
-                    propertiesToFetch: (NSArray *)propertiesToFetch
+              context: (NSManagedObjectContext * _Nonnull)context;
+- (NSUInteger)countOfObjectsForEntity: (NSString * _Nonnull)entityName
+                            predicate: (NSPredicate * _Nullable)predicate
+                    sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+                              context: (NSManagedObjectContext * _Nonnull)context;
+- (NSUInteger)countOfObjectsForEntity: (NSString * _Nonnull)entityName
+                            predicate: (NSPredicate * _Nullable)predicate
+                    sortedDescriptors: (NSArray * _Nullable)sortedDescriptors
+                    propertiesToFetch: (NSArray * _Nullable)propertiesToFetch
                   includesSubentities: (BOOL)includesSubentities
                returnsObjectsAsFaults: (BOOL)returnsObjectsAsFaults
                includesPendingChanges: (BOOL)includesPendingChanges
-                              context: (NSManagedObjectContext *)context;
-- (void)deleteObject: (NSManagedObject *)object
-             context: (NSManagedObjectContext *)context;
+                              context: (NSManagedObjectContext * _Nonnull)context;
+- (void)deleteObject: (NSManagedObject * _Nonnull)object
+             context: (NSManagedObjectContext * _Nonnull)context;
 
 @end
