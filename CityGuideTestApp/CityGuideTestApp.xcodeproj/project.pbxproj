@@ -19,7 +19,6 @@
 		7502C2281BC59018008ECF59 /* MTSaveItemsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1171BC59017008ECF59 /* MTSaveItemsOperation.m */; settings = {ASSET_TAGS = (); }; };
 		7502C22A1BC59018008ECF59 /* MTItemWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C11F1BC59017008ECF59 /* MTItemWebService.m */; settings = {ASSET_TAGS = (); }; };
 		7502C22B1BC59018008ECF59 /* MTWebServiceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1231BC59017008ECF59 /* MTWebServiceParser.m */; settings = {ASSET_TAGS = (); }; };
-		7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C12C1BC59017008ECF59 /* MTItemListFetcher.m */; settings = {ASSET_TAGS = (); }; };
 		7502C22E1BC59018008ECF59 /* MTItemListRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1301BC59017008ECF59 /* MTItemListRequester.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2301BC59018008ECF59 /* MTItemDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C13D1BC59018008ECF59 /* MTItemDetailWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1411BC59018008ECF59 /* MTItemListPresenter.m */; settings = {ASSET_TAGS = (); }; };
@@ -146,9 +145,6 @@
 		7502C1221BC59017008ECF59 /* MTWebServiceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTWebServiceParser.h; sourceTree = "<group>"; };
 		7502C1231BC59017008ECF59 /* MTWebServiceParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTWebServiceParser.m; sourceTree = "<group>"; };
 		7502C1241BC59017008ECF59 /* MTWebServiceParserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTWebServiceParserInterface.h; sourceTree = "<group>"; };
-		7502C12B1BC59017008ECF59 /* MTItemListFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListFetcher.h; sourceTree = "<group>"; };
-		7502C12C1BC59017008ECF59 /* MTItemListFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListFetcher.m; sourceTree = "<group>"; };
-		7502C12D1BC59017008ECF59 /* MTItemListFetcherIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListFetcherIOInterface.h; sourceTree = "<group>"; };
 		7502C12F1BC59017008ECF59 /* MTItemListRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListRequester.h; sourceTree = "<group>"; };
 		7502C1301BC59017008ECF59 /* MTItemListRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTItemListRequester.m; sourceTree = "<group>"; };
 		7502C1311BC59017008ECF59 /* MTItemListRequesterIOInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTItemListRequesterIOInterface.h; sourceTree = "<group>"; };
@@ -588,9 +584,6 @@
 		7502C12A1BC59017008ECF59 /* Fetchers */ = {
 			isa = PBXGroup;
 			children = (
-				7502C12B1BC59017008ECF59 /* MTItemListFetcher.h */,
-				7502C12C1BC59017008ECF59 /* MTItemListFetcher.m */,
-				7502C12D1BC59017008ECF59 /* MTItemListFetcherIOInterface.h */,
 				75EAA9171BC97C22000BE44A /* MTPlaceDetailFetcher.h */,
 				75EAA9181BC97C22000BE44A /* MTPlaceDetailFetcher.m */,
 				75EAA91A1BC97C44000BE44A /* MTPlaceDetailFetcherIOInterface.h */,
@@ -1360,7 +1353,6 @@
 				756175141BCAEA79004A843C /* MTImageBrowserPresenter.m in Sources */,
 				7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */,
 				7502C2271BC59018008ECF59 /* MTItemDataManager.m in Sources */,
-				7502C22D1BC59018008ECF59 /* MTItemListFetcher.m in Sources */,
 				7591B3721BD016D0001440E3 /* MTDataStore.m in Sources */,
 				7502C2311BC59018008ECF59 /* MTItemListPresenter.m in Sources */,
 				757831AF1BC82031008BD2FC /* MTAppSettingsConfigurator.m in Sources */,
