@@ -12,9 +12,7 @@
 #import "MTAlertWrapper.h"
 
 @interface MTItemListPresenter ()
-{
-    MTAlertWrapper *alertWrapper;
-}
+
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, weak) MTItemListWireframe *wireframe;
 
@@ -31,7 +29,6 @@
         _itemListRequester = itemListRequester;
         _wireframe = wireframe;
         
-        alertWrapper = [[MTAlertWrapper alloc] init];
     }
     return self;
 }
@@ -57,6 +54,7 @@
 
 - (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton
 {
+    MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
     [alertWrapper showActionSheetInViewController:self.userInterface
                                     fromBarButton:barButton
                                          fromRect:CGRectZero
