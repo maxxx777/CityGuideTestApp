@@ -205,6 +205,8 @@
                                               if (fileName) {
                                                   [self.placeDetailConfigurator configurePlaceFileName:fileName];
                                                   [self.userInterface configureImageWithImage:image];
+                                              } else {
+                                                  //FIXME: message UI about error
                                               }
     }];
 }

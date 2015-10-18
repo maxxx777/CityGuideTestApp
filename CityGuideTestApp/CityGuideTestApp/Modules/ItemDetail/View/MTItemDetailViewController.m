@@ -439,6 +439,12 @@
     if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
         return;
     
+    /*
+    TODO: 
+     Use CLGeocoder to fetch placemark information about dropped point.
+     It can be also Wikipedia/Google Api instead of CLGeocoder    
+     */
+    
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D touchMapCoordinate =
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
