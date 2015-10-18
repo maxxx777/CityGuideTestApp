@@ -1273,7 +1273,6 @@
 				TargetAttributes = {
 					7502C0C01BC58F72008ECF59 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = BJN9J8JUPL;
 					};
 					7502C0DF1BC58F72008ECF59 = {
 						CreatedOnToolsVersion = 7.0.1;
