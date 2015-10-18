@@ -12,7 +12,7 @@
 
 @interface MTImageCache ()
 
-@property (nonatomic, strong) NSMutableDictionary *imageCache;
+@property (nonatomic, strong) NSMapTable *imageCache;
 
 @end
 
@@ -23,7 +23,7 @@
     self = [super init];
     if (self) {
         
-        _imageCache = [NSMutableDictionary dictionary];
+        _imageCache = [[NSMapTable alloc] init];
         
         [self subscribeForNotifications];
     }
@@ -53,13 +53,13 @@
     NSError *error;
     
     if (place) {
-        if (![self.imageCache valueForKey:[self clientIdForPlace:place]]) {
+        if (![self.imageCache objectForKey:[self clientIdForPlace:place]]) {
             MTMappedPlace *mappedPlace = (MTMappedPlace *)place;
             if (mappedPlace.fileName) {
                 NSString *filePath = [mappedPlace.fileName mt_formatDocumentsPath];
                 UIImage *image = [UIImage imageWithContentsOfFile:filePath];
                 if (image) {
-                    (self.imageCache)[[self clientIdForPlace:mappedPlace]] = image;
+                    [self.imageCache setObject:image forKey:[self clientIdForPlace:mappedPlace]];
                 } else {
                     error = [NSError errorWithDomain:MTImageCacheErrorDomain
                                                 code:MTImageCacheErrorAny
@@ -80,7 +80,7 @@
     UIImage *result;
     
     if (place) {
-        result = (self.imageCache)[[self clientIdForPlace:place]];
+        return [self.imageCache objectForKey:[self clientIdForPlace:place]];
     }
     
     return result;
@@ -88,7 +88,7 @@
 
 - (void)clearImageCache
 {
-    self.imageCache = [NSMutableDictionary dictionary];
+    self.imageCache = [[NSMapTable alloc] init];
 }
 
 #pragma mark - Notifications
