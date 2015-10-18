@@ -77,6 +77,9 @@
                      longitude:(NSNumber *)longitude
                   withinRadius:(NSNumber *)radius
 {
+    //convert meters to miles
+    radius = @([radius doubleValue] * ONE_MILE);
+    
     BOOL result = NO;
     NSDictionary *currentLocation = [self currentLocation];
     if (currentLocation) {

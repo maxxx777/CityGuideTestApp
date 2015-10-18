@@ -187,6 +187,7 @@
 		7502C17B1BC59018008ECF59 /* MTRootWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootWireframe.h; sourceTree = "<group>"; };
 		7502C17C1BC59018008ECF59 /* MTRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootWireframe.m; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
+		75603C801BD406FF004FEDE6 /* MTLocationManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLocationManagerConstants.h; sourceTree = "<group>"; };
 		756175021BCAB74F004A843C /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		7561750A1BCAE457004A843C /* MTImageBrowserWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserWireframe.h; sourceTree = "<group>"; };
 		7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageBrowserWireframe.m; sourceTree = "<group>"; };
@@ -1008,6 +1009,7 @@
 				757831A91BC81639008BD2FC /* MTLocationManager.h */,
 				757831AA1BC81639008BD2FC /* MTLocationManager.m */,
 				757C61C31BCEAE1400E2E252 /* MTLocationManagerInterface.h */,
+				75603C801BD406FF004FEDE6 /* MTLocationManagerConstants.h */,
 			);
 			path = MTLocationManager;
 			sourceTree = "<group>";
