@@ -27,7 +27,7 @@
 @property (nonatomic, strong) MTSaveItemsOperation *saveItemsOperation;
 @property (nonatomic, weak) id<MTArrayBasedItemListCacheInterface>cityListCache;
 @property (nonatomic, weak) id<MTFetchedResultsControllerBasedItemListCacheInterface>placeListCache;
-@property (nonatomic, strong) void(^processItemCompletion)(NSError *, id);
+@property (nonatomic, copy) void(^processItemCompletion)(NSError *, id);
 
 @end
 
