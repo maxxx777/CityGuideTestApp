@@ -49,7 +49,7 @@
         if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
             [self.locationManager requestAlwaysAuthorization];
         }
-        [self.locationManager startUpdatingLocation];
+        [self.locationManager startUpdatingLocation]; //TODO: add requestLocation available since iOS 9
     }
 }
 
@@ -102,12 +102,14 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [self.locationManager stopUpdatingLocation];
+    //don't stop updating location in order to detect more precise location each time
+//    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    [self.locationManager stopUpdatingLocation];
+    //don't stop updating location in order to detect more precise location each time
+//    [self.locationManager stopUpdatingLocation];
 }
 
 @end
