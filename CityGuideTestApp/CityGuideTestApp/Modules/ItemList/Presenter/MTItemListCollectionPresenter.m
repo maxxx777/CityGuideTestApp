@@ -149,7 +149,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     }
 }
 
-#pragma mark - MTItemListFetcherOutputInterface
+#pragma mark - MTItemListRequesterOutputInterface
 
 - (void)onDidFetchItemsWithError:(NSError *)error
 {
