@@ -159,7 +159,7 @@
 
 - (void)selectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredVertically];
+    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
 }
 
 - (void)deselectItemAtIndexPath:(NSIndexPath *)indexPath

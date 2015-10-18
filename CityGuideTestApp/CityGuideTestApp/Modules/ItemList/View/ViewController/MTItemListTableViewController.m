@@ -171,7 +171,7 @@
 
 - (void)selectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)deselectItemAtIndexPath:(NSIndexPath *)indexPath
