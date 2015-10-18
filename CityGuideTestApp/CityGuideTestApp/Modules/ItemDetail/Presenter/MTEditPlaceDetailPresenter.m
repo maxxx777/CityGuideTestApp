@@ -17,6 +17,7 @@
 
 @interface MTEditPlaceDetailPresenter ()
 {
+    MTAlertWrapper *alertWrapper;
     MTFileManager *fileManager;
     BOOL isSaved;
 }
@@ -45,6 +46,7 @@
         _wireframe = wireframe;
         
         _isFirstAppearance = YES;
+        alertWrapper = [[MTAlertWrapper alloc] init];
         fileManager = [[MTFileManager alloc] init];
         isSaved = NO;
     }
@@ -123,12 +125,12 @@
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
     if (![self.placeDetailConfigurator placeCoordinates]) {
-        MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
+        alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Coordinates", nil)
                                         message:NSLocalizedString(@"Please Drop Pin on Map where Place is Located", nil)];
     } else if (![self.placeDetailConfigurator placeName] || [[self.placeDetailConfigurator placeName] length] == 0) {
-        MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
+        alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showAlertInViewController:self.userInterface
                                       withTitle:NSLocalizedString(@"Place Name", nil)
                                         message:NSLocalizedString(@"Please Input Place Name", nil)];
@@ -157,7 +159,7 @@
 
 - (void)onDidSelectImageCellWithRect:(CGRect)rect
 {
-    MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
+    alertWrapper = [[MTAlertWrapper alloc] init];
     [alertWrapper showActionSheetInViewController:self.userInterface
                                     fromBarButton:nil
                                          fromRect:rect

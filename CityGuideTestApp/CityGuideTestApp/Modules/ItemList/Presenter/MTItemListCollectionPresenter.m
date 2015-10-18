@@ -20,6 +20,9 @@ static NSString *MTCityListCellIdentifier = @"CityListCell";
 static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 @interface MTItemListCollectionPresenter ()
+{
+    MTAlertWrapper *alertWrapper;
+}
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
@@ -42,6 +45,8 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
         _wireframe = wireframe;
+        
+        alertWrapper = [[MTAlertWrapper alloc] init];
         
         _isFirstAppearance = YES;
         
@@ -161,7 +166,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     
     if (error) {
 
-        MTAlertWrapper *alertWrapper = [[MTAlertWrapper alloc] init];
+        alertWrapper = [[MTAlertWrapper alloc] init];
         [alertWrapper showRepeatRequestAlertInViewController:self.userInterface
                                                    withTitle:NSLocalizedString(@"Error", nil)
                                                      message:NSLocalizedString(@"Sorry, can't receive data", nil)
