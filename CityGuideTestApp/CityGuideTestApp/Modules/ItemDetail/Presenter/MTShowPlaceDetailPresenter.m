@@ -37,6 +37,12 @@
     return self;
 }
 
+- (UIViewController<MTItemDetailViewInterface> *)userInterface
+{
+    NSAssert(_userInterface != nil, @"userInterface is equal to nil");
+    return _userInterface;
+}
+
 #pragma mark - MTShowPlaceDetailPresenterInterface
 
 - (void)onWillAppearView

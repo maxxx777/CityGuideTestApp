@@ -36,6 +36,12 @@
     return self;
 }
 
+- (UIViewController<MTItemListViewInterface> *)userInterface
+{
+    NSAssert(_userInterface != nil, @"userInterface is equal to nil");
+    return _userInterface;
+}
+
 #pragma mark - MTItemListPresenterInterface
 
 - (void)onDidLoadView

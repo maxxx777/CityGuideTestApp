@@ -54,6 +54,12 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
     return self;
 }
 
+- (UIViewController<MTItemListCollectionViewInterface> *)userInterface
+{
+    NSAssert(_userInterface != nil, @"userInterface is equal to nil");
+    return _userInterface;
+}
+
 #pragma mark - MTItemListTablePresenterInterface
 
 - (void)onWillAppearView
