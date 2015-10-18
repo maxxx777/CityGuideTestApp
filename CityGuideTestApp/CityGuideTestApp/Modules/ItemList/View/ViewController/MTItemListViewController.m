@@ -59,14 +59,7 @@
 
 - (void)configureChildViewController
 {
-    UIView *childView;
-//    if ([self.childViewController isKindOfClass:[UICollectionViewController class]]) {
-//        childView = [self.childViewController valueForKey:@"collectionView"];
-//    } else if ([self.childViewController isKindOfClass:[UITableViewController class]]) {
-//        childView = [self.childViewController valueForKey:@"tableView"];
-//    } else {
-        childView = [self.childViewController valueForKey:@"view"];
-//    }
+    UIView *childView = self.childViewController.view;
     
     [self addChildViewController:self.childViewController];
     [self.containerView addSubview:childView];
