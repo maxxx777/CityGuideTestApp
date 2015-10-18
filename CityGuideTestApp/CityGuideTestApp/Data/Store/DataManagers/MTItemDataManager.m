@@ -94,7 +94,10 @@
                            object:(id)object
              isOperationCancelled:(BOOL)isOperationCancelled
 {
-    self.processItemCompletion(error, nil);
+    if (self.processItemCompletion) {
+        self.processItemCompletion(error, nil);
+        [self setProcessItemCompletion:nil];
+    }
 }
 
 #pragma mark - Helper
@@ -115,20 +118,27 @@
     self.cityListCache = cityListCache;
     self.placeListCache = placeListCache;
     
-    [self.itemWebService fetchItemListWithCompletion:^(id data, NSError *error){
-        if (data) {
-            
-            _saveItemsOperation = [[MTSaveItemsOperation alloc] initWithItems:data
-                                                                     delegate:self];
-            [[MTOperationManager sharedManager] queueOperation:self.saveItemsOperation];
-            
-        } else {
-            if (self.processItemCompletion) {
-                self.processItemCompletion(error, nil);
-                [self setProcessItemCompletion:nil];
+    if (self.itemWebService) {
+        [self.itemWebService fetchItemListWithCompletion:^(id data, NSError *error){
+            if (data) {
+                
+                _saveItemsOperation = [[MTSaveItemsOperation alloc] initWithItems:data
+                                                                         delegate:self];
+                [[MTOperationManager sharedManager] queueOperation:self.saveItemsOperation];
+                
+            } else {
+                if (self.processItemCompletion) {
+                    self.processItemCompletion(error, nil);
+                    [self setProcessItemCompletion:nil];
+                }
             }
+        }];
+    } else {
+        if (self.processItemCompletion) {
+            self.processItemCompletion(nil, nil);
+            [self setProcessItemCompletion:nil];
         }
-    }];
+    }
 }
 
 - (void)cacheItemListWithCompletion:(MTRootDataManagerCompletionBlock)completionBlock
