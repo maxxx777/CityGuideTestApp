@@ -138,17 +138,23 @@
 
 - (void)insertItemsAtIndexPaths:(NSArray *)indexPaths
 {
-    [self.collectionView insertItemsAtIndexPaths:indexPaths];
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView insertItemsAtIndexPaths:indexPaths];
+    } completion:nil];
 }
 
 - (void)reloadItemsAtIndexPaths:(NSArray *)indexPaths
 {
-    [self.collectionView reloadItemsAtIndexPaths:indexPaths];
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView reloadItemsAtIndexPaths:indexPaths];
+    } completion:nil];
 }
 
 - (void)deleteItemsAtIndexPaths:(NSArray *)indexPaths
 {
-    [self.collectionView deleteItemsAtIndexPaths:indexPaths];
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView deleteItemsAtIndexPaths:indexPaths];
+    } completion:nil];        
 }
 
 - (void)selectItemAtIndexPath:(NSIndexPath *)indexPath
