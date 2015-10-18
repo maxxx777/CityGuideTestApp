@@ -64,7 +64,37 @@
                 
                 UIImage *image = [[MTImageCache sharedCache] imageFromCacheForPlace:place];
                 if (image) {
-                    image = [image mt_resizeToSize:self.imageViewPhoto.frame.size];
+                    
+                    if (image.size.height > image.size.width) {
+                        
+                        CGFloat scaledHeight = image.size.height * CGRectGetWidth(self.imageViewPhoto.frame) / image.size.width;
+                        CGSize scaledSize = CGSizeMake(CGRectGetWidth(self.imageViewPhoto.frame), scaledHeight);
+                        
+                        image = [image mt_resizeToSize:scaledSize];
+                        
+                        CGRect cropRect = CGRectMake(0,
+                                                     (image.size.height - CGRectGetHeight(self.imageViewPhoto.frame)) / 2,
+                                                     image.size.width,
+                                                     image.size.height);
+                        
+                        image = [image mt_cropToRect:cropRect];
+                        
+                    } else {
+                        
+                        CGFloat scaledWidth = image.size.width * CGRectGetHeight(self.imageViewPhoto.frame) / image.size.height;
+                        CGSize scaledSize = CGSizeMake(scaledWidth, CGRectGetHeight(self.imageViewPhoto.frame));
+                        
+                        image = [image mt_resizeToSize:scaledSize];
+                        
+                        CGRect cropRect = CGRectMake((image.size.width - CGRectGetWidth(self.imageViewPhoto.frame)) / 2,
+                                                     0,
+                                                     image.size.width,
+                                                     image.size.height);
+                        
+                        image = [image mt_cropToRect:cropRect];
+                        
+                    }
+                    
                 } else {
                     image = [UIImage imageNamed:@"image_placeholder.png"];
                 }

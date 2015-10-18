@@ -7,6 +7,7 @@
 //
 
 #import "MTCityListTableViewCell.h"
+#import "UIImage+MTEditing.h"
 
 @interface MTCityListTableViewCell ()
 
@@ -27,20 +28,24 @@
         self.textLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        _imageViewDisclosure = [[UIImageView alloc] init];
-        (self.imageViewDisclosure).image = [UIImage imageNamed:@"disclosure.png"];
+        UIImage *image = [UIImage imageNamed:@"disclosure.png"];
+        image = [image mt_resizeToSize:CGSizeMake(26.0f, 40.0f)];
+        _imageViewDisclosure = [[UIImageView alloc] initWithImage:image];
+        self.imageViewDisclosure.contentMode = UIViewContentModeScaleAspectFit;
         
         [self.contentView addSubview:self.imageViewDisclosure];
+        
         [self.imageViewDisclosure setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         UIView *disclosureImageView = self.imageViewDisclosure;
+        
         [self.contentView addConstraints:[NSLayoutConstraint
-                                        constraintsWithVisualFormat:@"H:[disclosureImageView(==13)]-10-|"
+                                        constraintsWithVisualFormat:@"H:[disclosureImageView]-10-|"
                                         options:NSLayoutFormatDirectionLeadingToTrailing
                                         metrics:nil
                                          views:NSDictionaryOfVariableBindings(disclosureImageView)]];
         [self.contentView addConstraints:[NSLayoutConstraint
-                                          constraintsWithVisualFormat:@"V:|-12-[disclosureImageView(==20)]-12-|"
+                                          constraintsWithVisualFormat:@"V:|-12-[disclosureImageView]-12-|"
                                           options:NSLayoutFormatDirectionLeadingToTrailing
                                           metrics:nil
                                           views:NSDictionaryOfVariableBindings(disclosureImageView)]];

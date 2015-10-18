@@ -45,13 +45,13 @@
         [self.viewName addSubview:self.labelName];
         [self.contentView addSubview:self.imageViewPhoto];
         
+        [self.viewName setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self.labelName setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self.imageViewPhoto setTranslatesAutoresizingMaskIntoConstraints:NO];
+        
         UIView *imageView = self.imageViewPhoto;
         UIView *labelName = self.labelName;
         UIView *viewName = self.viewName;
-        
-        [self.viewName setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self.imageViewPhoto setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self.labelName setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         [self.contentView addConstraints:[NSLayoutConstraint
                                           constraintsWithVisualFormat:@"V:|-30-[imageView(==150)]-0-[viewName]-30-|"

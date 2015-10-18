@@ -45,12 +45,14 @@
         [self.contentView addSubview:self.labelName];
         [self.contentView addSubview:self.viewLine];
         
-        UIView *imageView = self.imageViewPhoto;
-        UIView *labelName = self.labelName;
-        UIView *viewLine = self.viewLine;
         [self.imageViewPhoto setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.labelName setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.viewLine setTranslatesAutoresizingMaskIntoConstraints:NO];
+        
+        UIView *imageView = self.imageViewPhoto;
+        UIView *labelName = self.labelName;
+        UIView *viewLine = self.viewLine;
+        
         [self.contentView addConstraints:[NSLayoutConstraint
                                           constraintsWithVisualFormat:@"H:|-5-[imageView(==50)]-5-[labelName]-5-|"
                                           options:NSLayoutFormatDirectionLeadingToTrailing
