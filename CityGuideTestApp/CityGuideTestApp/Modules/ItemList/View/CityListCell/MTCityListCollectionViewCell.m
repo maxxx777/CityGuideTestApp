@@ -43,7 +43,7 @@
         UIView *disclosureImageView = self.imageViewDisclosure;        
         
         [self.contentView addConstraints:[NSLayoutConstraint
-                                          constraintsWithVisualFormat:@"H:|-10-[textLabel]-10-[disclosureImageView]-10-|"
+                                          constraintsWithVisualFormat:@"H:|-10-[textLabel]-10-[disclosureImageView(==40)]-10-|"
                                           options:NSLayoutFormatDirectionLeadingToTrailing
                                           metrics:nil
                                           views:NSDictionaryOfVariableBindings(textLabel, disclosureImageView)]];
