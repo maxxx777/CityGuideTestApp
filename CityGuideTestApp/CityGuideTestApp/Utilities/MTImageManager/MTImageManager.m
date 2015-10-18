@@ -33,7 +33,7 @@
     if (self) {
         
         _imageClients = [NSMutableDictionary dictionary];
-        _savePlaceOperations = [NSPointerArray strongObjectsPointerArray];
+        _savePlaceOperations = [NSPointerArray weakObjectsPointerArray];
         
         fileManager = [[MTFileManager alloc] init];
     }
@@ -66,12 +66,13 @@
         
         if (mappedPlace.fileName) {
             
-            __weak MTImageManager *weakSelf = self;
             [[MTImageCache sharedCache] addImageToCacheForPlace:mappedPlace
                                                      completion:^(NSError *error, id place){
                                    if (!error) {
-                                       [weakSelf notifyClientsWithPlace:mappedPlace
-                                                                  error:error];
+                                       [self notifyClientsWithPlace:mappedPlace
+                                                              error:error];
+                                   } else {
+                                       //FIXME: notify clients about error
                                    }
                                }];
             
@@ -127,12 +128,13 @@
         if (object) {
             
             MTMappedPlace *mappedPlace = (MTMappedPlace *)object;
-            __weak MTImageManager *weakSelf = self;
             [[MTImageCache sharedCache] addImageToCacheForPlace:mappedPlace
                                                      completion:^(NSError *error, id place){
                                    if (!error) {
-                                       [weakSelf notifyClientsWithPlace:mappedPlace
-                                                                  error:error];
+                                       [self notifyClientsWithPlace:mappedPlace
+                                                              error:error];
+                                   } else {
+                                       //FIXME: notify clients about error
                                    }
             }];
         }
@@ -169,7 +171,7 @@
         if ([self clientsForPlace:place]) {
             clients = [self clientsForPlace:place];
         } else {
-            clients = [NSPointerArray strongObjectsPointerArray];
+            clients = [NSPointerArray weakObjectsPointerArray];
         }
         if (delegate) {
             [clients addPointer:(__bridge void * _Nullable)(delegate)];
@@ -195,7 +197,7 @@
     
     NSString *clientId = [self clientIdForPlace:place];
     if (clientId) {
-        result = (self.imageClients)[clientId];
+        result = [self.imageClients objectForKey:clientId] != nil;
     }
     
     return result;

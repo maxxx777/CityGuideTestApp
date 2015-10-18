@@ -15,9 +15,9 @@
 {
     MTItemListFilterType lastFilterType;
 }
-@property (nonatomic, strong) id<MTArrayBasedItemListCacheInterface>cityListCache;
-@property (nonatomic, strong) id<MTFetchedResultsControllerBasedItemListCacheInterface>placeListCache;
-@property (nonatomic, strong) id<MTItemDataManagerInterface>itemDataManager;
+@property (nonatomic, weak) id<MTArrayBasedItemListCacheInterface>cityListCache;
+@property (nonatomic, weak) id<MTFetchedResultsControllerBasedItemListCacheInterface>placeListCache;
+@property (nonatomic, weak) id<MTItemDataManagerInterface>itemDataManager;
 
 @end
 

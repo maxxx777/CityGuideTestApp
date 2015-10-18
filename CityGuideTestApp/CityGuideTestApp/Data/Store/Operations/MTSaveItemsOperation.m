@@ -17,7 +17,7 @@
 @interface MTSaveItemsOperation ()
 
 @property (nonatomic, strong) NSArray *items;
-@property (nonatomic, weak) id<MTMergeObjectsOperationDelegate> delegate;
+@property (nonatomic, strong) id<MTMergeObjectsOperationDelegate> delegate;
 
 @end
 

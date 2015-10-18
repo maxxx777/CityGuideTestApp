@@ -22,7 +22,7 @@
 
 @interface MTItemListWireframe ()
 
-@property (nonatomic, strong) MTItemListViewController *viewController;
+@property (nonatomic, weak) MTItemListViewController *viewController;
 
 @end
 
