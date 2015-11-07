@@ -1,4 +1,5 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5D52C5B075E99D3AFC8826DE7421E123096A61A2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -7,6 +8,7 @@
     "7B3173A9A8711E26B2B7E8EB32A82862FE9BF726" : 0,
     "DFFAE996F9103407D4245264929536F346941CFC" : 0,
     "2D5F753908F82B92CBFDAB48E809B188427269EC" : 0,
+    "5D52C5B075E99D3AFC8826DE7421E123096A61A2" : 0,
     "672DC9DDF8BAF2210F4A15A1A02A97ED9FD53855" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4DBF60D4-BE59-4F34-8B07-709E7C63FBBC",
@@ -15,6 +17,7 @@
     "7B3173A9A8711E26B2B7E8EB32A82862FE9BF726" : "",
     "DFFAE996F9103407D4245264929536F346941CFC" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/MTDataLayer\/",
     "2D5F753908F82B92CBFDAB48E809B188427269EC" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/MTItemListCache\/",
+    "5D52C5B075E99D3AFC8826DE7421E123096A61A2" : "CityGuideTestApp\/",
     "672DC9DDF8BAF2210F4A15A1A02A97ED9FD53855" : "city-guide\/CityGuideTestApp\/CityGuideTestApp\/Utilities\/External\/MTAlertWrapper\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CityGuideTestApp",
@@ -25,6 +28,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxxx777\/MTItemListCache",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D5F753908F82B92CBFDAB48E809B188427269EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxxx777\/CityGuideTestApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D52C5B075E99D3AFC8826DE7421E123096A61A2"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maxxx777\/MTAlertWrapper",
