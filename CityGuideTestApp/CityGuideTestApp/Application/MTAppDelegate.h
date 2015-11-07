@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 MAXIM TSVETKOV. All rights reserved.
 //
 
-@class MTAppModulesConnector;
-@class MTAppSettingsConfigurator;
+@protocol MTAppSettingsConfiguratorInterface;
+@protocol MTAppModulesConnectorInterface;
 
 @interface MTAppDelegate : UIResponder
 <
     UIApplicationDelegate
 >
-{
-    MTAppModulesConnector *appModulesConnector;
-    MTAppSettingsConfigurator *appSettingsConfigurator;
-}
+
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) id<MTAppSettingsConfiguratorInterface> appSettingsConfigurator;
+@property (nonatomic, strong) id<MTAppModulesConnectorInterface> appModulesConnector;
 
 @end

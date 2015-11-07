@@ -34,6 +34,7 @@
 		7502C2401BC59018008ECF59 /* MTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1751BC59018008ECF59 /* MTRootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2411BC59018008ECF59 /* MTRootWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C1791BC59018008ECF59 /* MTRootWebService.m */; settings = {ASSET_TAGS = (); }; };
 		7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502C17C1BC59018008ECF59 /* MTRootWireframe.m */; settings = {ASSET_TAGS = (); }; };
+		7534F0FD1BEDF83000C5164B /* MTApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 7534F0FC1BEDF83000C5164B /* MTApplicationAssembly.m */; settings = {ASSET_TAGS = (); }; };
 		756175031BCAB74F004A843C /* image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 756175021BCAB74F004A843C /* image_placeholder.png */; settings = {ASSET_TAGS = (); }; };
 		7561750C1BCAE457004A843C /* MTImageBrowserWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750B1BCAE457004A843C /* MTImageBrowserWireframe.m */; settings = {ASSET_TAGS = (); }; };
 		756175101BCAE514004A843C /* MTImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7561750F1BCAE514004A843C /* MTImageBrowserViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -190,6 +191,8 @@
 		7502C17B1BC59018008ECF59 /* MTRootWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRootWireframe.h; sourceTree = "<group>"; };
 		7502C17C1BC59018008ECF59 /* MTRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRootWireframe.m; sourceTree = "<group>"; };
 		7502C21B1BC59018008ECF59 /* MTSpecificStringsInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSpecificStringsInterface.h; sourceTree = "<group>"; };
+		7534F0FB1BEDF83000C5164B /* MTApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTApplicationAssembly.h; sourceTree = "<group>"; };
+		7534F0FC1BEDF83000C5164B /* MTApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTApplicationAssembly.m; sourceTree = "<group>"; };
 		75603C801BD406FF004FEDE6 /* MTLocationManagerConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLocationManagerConstants.h; sourceTree = "<group>"; };
 		756175021BCAB74F004A843C /* image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_placeholder.png; sourceTree = "<group>"; };
 		7561750A1BCAE457004A843C /* MTImageBrowserWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageBrowserWireframe.h; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				7502C0FD1BC59017008ECF59 /* Application */,
+				7534F0FA1BEDF83000C5164B /* Assembly */,
 				7502C1361BC59018008ECF59 /* Modules */,
 				7502C1291BC59017008ECF59 /* Interactors */,
 				7502C10A1BC59017008ECF59 /* Data */,
@@ -834,6 +838,15 @@
 				757253751BCEEEF300E740DC /* NSString-MTFormatting */,
 			);
 			path = External;
+			sourceTree = "<group>";
+		};
+		7534F0FA1BEDF83000C5164B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7534F0FB1BEDF83000C5164B /* MTApplicationAssembly.h */,
+				7534F0FC1BEDF83000C5164B /* MTApplicationAssembly.m */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		756175071BCAE3CA004A843C /* ImageBrowser */ = {
@@ -1401,6 +1414,7 @@
 				756901071BC6E45F00825B62 /* MTItemListExpander.m in Sources */,
 				756175101BCAE514004A843C /* MTImageBrowserViewController.m in Sources */,
 				757831AB1BC81639008BD2FC /* MTLocationManager.m in Sources */,
+				7534F0FD1BEDF83000C5164B /* MTApplicationAssembly.m in Sources */,
 				7502C2421BC59018008ECF59 /* MTRootWireframe.m in Sources */,
 				756175141BCAEA79004A843C /* MTImageBrowserPresenter.m in Sources */,
 				7502C23B1BC59018008ECF59 /* MTRootInteractor.m in Sources */,
