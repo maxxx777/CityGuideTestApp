@@ -81,9 +81,7 @@ In this demo app I used `UITableViewController` (and `UICollectionViewController
 
 Usage
 ====================
-Run `CityGuideTestApp.xcodeproj` from `/city-guide/CityGuideTestApp` directory.
-
-Use `git` to get to know with development process.  
+Clone the pepository with all submodules (see submodules in `Utilities/External`).
 
 Feedback
 ====================
