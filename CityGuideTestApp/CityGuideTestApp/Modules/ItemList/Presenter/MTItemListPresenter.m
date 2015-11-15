@@ -8,7 +8,7 @@
 
 #import "MTItemListPresenter.h"
 #import "MTItemListViewInterface.h"
-#import "MTItemListWireframe.h"
+#import "MTAppRouterInterface.h"
 #import "MTAlertWrapper.h"
 
 @interface MTItemListPresenter ()
@@ -16,20 +16,20 @@
     MTAlertWrapper *alertWrapper;
 }
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
-@property (nonatomic, weak) MTItemListWireframe *wireframe;
+@property (nonatomic, weak) id<MTAppRouterInterface> router;
 
 @end
 
 @implementation MTItemListPresenter
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
-                                wireframe:(MTItemListWireframe *)wireframe
+                                   router:(id<MTAppRouterInterface>)router
 {
     self = [super init];
     if (self) {
         
         _itemListRequester = itemListRequester;
-        _wireframe = wireframe;
+        _router = router;
      
         alertWrapper = [[MTAlertWrapper alloc] init];
     }
@@ -52,7 +52,8 @@
 
 - (void)onDidPressRightBarButtonOnNavigationBar
 {
-    [self.wireframe onDidAddNewItemWithDelegate:self];
+    [self.router addNewPlaceWithNavigationController:self.userInterface.navigationController
+                                            delegate:self];
 }
 
 - (void)onDidPressRightBarButtonOnToolbar:(UIBarButtonItem *)barButton

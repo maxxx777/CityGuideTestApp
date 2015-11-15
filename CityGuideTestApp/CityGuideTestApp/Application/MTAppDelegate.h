@@ -7,7 +7,7 @@
 //
 
 @protocol MTAppSettingsConfiguratorInterface;
-@protocol MTAppModulesConnectorInterface;
+@protocol MTAppRouterInterface;
 
 @interface MTAppDelegate : UIResponder
 <
@@ -16,6 +16,6 @@
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) id<MTAppSettingsConfiguratorInterface> appSettingsConfigurator;
-@property (nonatomic, strong) id<MTAppModulesConnectorInterface> appModulesConnector;
+@property (nonatomic, strong) id<MTAppRouterInterface> appRouter;
 
 @end

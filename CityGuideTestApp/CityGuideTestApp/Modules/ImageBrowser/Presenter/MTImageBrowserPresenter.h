@@ -10,8 +10,7 @@
 #import "MTImageBrowserPresenterInterface.h"
 
 @protocol MTImageBrowserViewInterface;
-
-@class MTImageBrowserWireframe;
+@protocol MTAppRouterInterface;
 
 @interface MTImageBrowserPresenter : MTRootPresenter
 <
@@ -22,6 +21,6 @@
 
 - (instancetype) __unavailable init;
 - (instancetype)initWithImage:(UIImage * _Nonnull)image
-                    wireframe:(MTImageBrowserWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
+                       router:(id<MTAppRouterInterface> _Nonnull)router NS_DESIGNATED_INITIALIZER;
 
 @end

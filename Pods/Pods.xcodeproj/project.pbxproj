@@ -212,7 +212,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CAE38981F9F37B105ED2241E809FA5D3 /* PBXContainerItemProxy */ = {
+		1B200A490478C033E6FC3648366F99F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -898,7 +898,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CAF574104FD9A8844CAB5C0C392B647 /* PBXTargetDependency */,
+				FD108E224C6D1C54463821EEA0F90F24 /* PBXTargetDependency */,
 			);
 			name = "Pods-CityGuideTestApp";
 			productName = "Pods-CityGuideTestApp";
@@ -1040,11 +1040,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CAF574104FD9A8844CAB5C0C392B647 /* PBXTargetDependency */ = {
+		FD108E224C6D1C54463821EEA0F90F24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Typhoon;
 			target = 1B87DC909C6EB46A1962A436CA2A84AC /* Typhoon */;
-			targetProxy = CAE38981F9F37B105ED2241E809FA5D3 /* PBXContainerItemProxy */;
+			targetProxy = 1B200A490478C033E6FC3648366F99F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

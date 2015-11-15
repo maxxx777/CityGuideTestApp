@@ -8,13 +8,13 @@
 
 #import "MTItemListCollectionPresenter.h"
 #import "MTItemListCollectionViewInterface.h"
-#import "MTItemListWireframe.h"
 #import "MTCityListTableViewCell.h"
 #import "MTPlaceListTableViewCell.h"
 #import "MTCityListCollectionViewCell.h"
 #import "MTPlaceListCollectionViewCell.h"
 #import "MTPlaceListCellInterface.h"
 #import "MTAlertWrapper.h"
+#import "MTAppRouterInterface.h"
 
 static NSString *MTCityListCellIdentifier = @"CityListCell";
 static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
@@ -26,7 +26,7 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 @property (nonatomic, strong) id<MTItemListRequesterInputInterface>itemListRequester;
 @property (nonatomic, strong) id<MTItemListExpanderInputInterface>itemListExpander;
-@property (nonatomic, weak) MTItemListWireframe *wireframe;
+@property (nonatomic, weak) id<MTAppRouterInterface> router;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) MTCityListTableViewCell *prototypeCityListCell;
 @property (nonatomic, strong) MTPlaceListTableViewCell *prototypePlaceListCell;
@@ -37,14 +37,14 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
 
 - (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
                          itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
-                                wireframe:(MTItemListWireframe *)wireframe
+                                   router:(id<MTAppRouterInterface>)router
 {
     self = [super init];
     if (self) {
         
         _itemListRequester = itemListRequester;
         _itemListExpander = itemListExpander;
-        _wireframe = wireframe;
+        _router = router;
         
         alertWrapper = [[MTAlertWrapper alloc] init];
         
@@ -124,8 +124,9 @@ static NSString *MTPlaceListCellIdentifier = @"PlaceListCell";
         
         id item = [self.itemListExpander objectAtIndexPath:indexPath];
         
-        [self.wireframe onDidSelectItem:item
-                               fromRect:rect];
+        [self.router showDetailsForPlace:item
+                                fromRect:rect
+                      fromViewController:self.userInterface.parentViewController];
     }
 }
 

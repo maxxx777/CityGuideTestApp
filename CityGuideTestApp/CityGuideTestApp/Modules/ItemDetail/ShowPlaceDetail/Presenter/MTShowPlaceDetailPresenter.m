@@ -7,15 +7,15 @@
 //
 
 #import "MTShowPlaceDetailPresenter.h"
-#import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
+#import "MTAppRouterInterface.h"
 #import "MTImageCache.h"
 #import "MTImageManager.h"
 
 @interface MTShowPlaceDetailPresenter ()
 
 @property (nonatomic, strong) id<MTPlaceDetailFetcherInputInterface>placeDetailFetcher;
-@property (nonatomic, weak) MTItemDetailWireframe *wireframe;
+@property (nonatomic, weak) id<MTAppRouterInterface> router;
 @property (nonatomic) BOOL isFirstAppearance;
 @property (nonatomic, strong) UIImage *image;
 
@@ -24,13 +24,13 @@
 @implementation MTShowPlaceDetailPresenter
 
 - (instancetype)initWithPlaceDetailFetcher:(id<MTPlaceDetailFetcherInputInterface>)placeDetailFetcher
-                                 wireframe:(MTItemDetailWireframe *)wireframe
+                                    router:(id<MTAppRouterInterface>)router
 {
     self = [super init];
     if (self) {
         
         _placeDetailFetcher = placeDetailFetcher;
-        _wireframe = wireframe;
+        _router = router;
         
         _isFirstAppearance = YES;
     }
@@ -94,7 +94,8 @@
 - (void)onDidSelectImageCellWithRect:(CGRect)rect
 {
     if ([self.placeDetailFetcher fileName]) {
-        [self.wireframe onDidSelectImage:self.image];
+        [self.router showImage:self.image
+          navigationController:self.userInterface.navigationController];
     }
 }
 

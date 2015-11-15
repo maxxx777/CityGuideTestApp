@@ -7,13 +7,13 @@
 //
 
 #import "MTEditPlaceDetailPresenter.h"
-#import "MTItemDetailWireframe.h"
 #import "MTItemDetailViewInterface.h"
 #import "MTLocationManager.h"
 #import "MTImageManager.h"
 #import "MTAlertWrapper.h"
 #import "MTFileManager.h"
 #import "MTEditPlaceDetailDelegate.h"
+#import "MTAppRouterInterface.h"
 
 @interface MTEditPlaceDetailPresenter ()
 {
@@ -25,7 +25,7 @@
 @property (nonatomic, strong) id<MTPlaceDetailConfiguratorInputInterface>placeDetailConfigurator;
 @property (nonatomic, strong) id<MTItemOperatorInputInterface>itemOperator;
 @property (nonatomic, strong) id<MTEditPlaceDetailDelegate>editPlaceDetailDelegate;
-@property (nonatomic, weak) MTItemDetailWireframe *wireframe;
+@property (nonatomic, weak) id<MTAppRouterInterface> router;
 @property (nonatomic) BOOL isFirstAppearance;
 
 @end
@@ -35,7 +35,7 @@
 - (instancetype)initWithPlaceDetailConfigurator:(id<MTPlaceDetailConfiguratorInputInterface>)placeDetailConfigurator
                                    itemOperator:(id<MTItemOperatorInputInterface>)itemOperator
                         editPlaceDetailDelegate:(id<MTEditPlaceDetailDelegate>)editPlaceDetailDelegate
-                                      wireframe:(MTItemDetailWireframe *)wireframe
+                                         router:(id<MTAppRouterInterface>)router
 {
     self = [super init];
     if (self) {
@@ -43,7 +43,7 @@
         _placeDetailConfigurator = placeDetailConfigurator;
         _itemOperator = itemOperator;
         _editPlaceDetailDelegate = editPlaceDetailDelegate;
-        _wireframe = wireframe;
+        _router = router;
         
         _isFirstAppearance = YES;
         alertWrapper = [[MTAlertWrapper alloc] init];

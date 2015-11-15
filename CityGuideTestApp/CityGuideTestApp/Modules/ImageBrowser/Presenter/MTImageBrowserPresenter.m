@@ -8,25 +8,25 @@
 
 #import "MTImageBrowserPresenter.h"
 #import "MTImageBrowserViewInterface.h"
-#import "MTImageBrowserWireframe.h"
+#import "MTAppRouterInterface.h"
 
 @interface MTImageBrowserPresenter ()
 
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic, weak) MTImageBrowserWireframe *wireframe;
+@property (nonatomic, strong) id<MTAppRouterInterface> router;
 
 @end
 
 @implementation MTImageBrowserPresenter
 
 - (instancetype)initWithImage:(UIImage *)image
-                    wireframe:(MTImageBrowserWireframe *)wireframe
+                       router:(id<MTAppRouterInterface>)router
 {
     self = [super init];
     if (self) {
         
         _image = image;
-        _wireframe = wireframe;
+        _router = router;
         
     }
     return self;

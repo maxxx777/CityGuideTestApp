@@ -5,6 +5,12 @@
 	<key>TyphoonInitialAssemblies</key>
 	<array>
 		<string>MTApplicationAssembly</string>
+		<string>MTViewComponentsAssembly</string>
+		<string>MTDataComponentsAssembly</string>
+		<string>MTItemListAssembly</string>
+		<string>MTShowPlaceDetailAssembly</string>
+		<string>MTAddNewPlaceAssembly</string>
+		<string>MTImageBrowserAssembly</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

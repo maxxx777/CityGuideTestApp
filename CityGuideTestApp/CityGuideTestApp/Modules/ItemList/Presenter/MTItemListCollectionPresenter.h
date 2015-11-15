@@ -11,8 +11,7 @@
 #import "MTItemListRequesterIOInterface.h"
 #import "MTItemListExpanderIOInterface.h"
 
-@class MTItemListWireframe;
-
+@protocol MTAppRouterInterface;
 @protocol MTItemListCollectionViewInterface;
 
 @interface MTItemListCollectionPresenter : MTRootCollectionPresenter
@@ -26,8 +25,8 @@
 
 - (instancetype) __unavailable init;
 
-- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface> _Nonnull)itemListRequester
-                         itemListExpander:(id<MTItemListExpanderInputInterface> _Nonnull)itemListExpander
-                                wireframe:(MTItemListWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithItemListRequester:(id<MTItemListRequesterInputInterface>)itemListRequester
+                         itemListExpander:(id<MTItemListExpanderInputInterface>)itemListExpander
+                                   router:(id<MTAppRouterInterface>)router NS_DESIGNATED_INITIALIZER;
 
 @end

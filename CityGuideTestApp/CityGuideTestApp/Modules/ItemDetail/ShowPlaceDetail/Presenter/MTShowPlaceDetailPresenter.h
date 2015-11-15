@@ -11,9 +11,8 @@
 #import "MTPlaceDetailFetcherIOInterface.h"
 #import "MTImageManagerDelegate.h"
 
-@class MTItemDetailWireframe;
-
 @protocol MTItemDetailViewInterface;
+@protocol MTAppRouterInterface;
 
 @interface MTShowPlaceDetailPresenter : MTRootCollectionPresenter
 <
@@ -25,7 +24,7 @@
 @property (nonatomic, weak) UIViewController<MTItemDetailViewInterface> *userInterface;
 
 - (instancetype) __unavailable init;
-- (instancetype)initWithPlaceDetailFetcher:(id<MTPlaceDetailFetcherInputInterface> _Nonnull)placeDetailFetcher
-                                 wireframe:(MTItemDetailWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPlaceDetailFetcher:(id<MTPlaceDetailFetcherInputInterface>)placeDetailFetcher
+                                    router:(id<MTAppRouterInterface>)router NS_DESIGNATED_INITIALIZER;
 
 @end

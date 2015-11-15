@@ -11,10 +11,9 @@
 #import "MTPlaceDetailConfiguratorIOInterface.h"
 #import "MTItemOperatorIOInterface.h"
 
-@class MTItemDetailWireframe;
-
 @protocol MTItemDetailViewInterface;
 @protocol MTEditPlaceDetailDelegate;
+@protocol MTAppRouterInterface;
 
 @interface MTEditPlaceDetailPresenter : MTRootCollectionPresenter
 <
@@ -29,6 +28,6 @@
 - (instancetype)initWithPlaceDetailConfigurator:(id<MTPlaceDetailConfiguratorInputInterface> _Nonnull)placeDetailConfigurator
                                    itemOperator:(id<MTItemOperatorInputInterface> _Nonnull)itemOperator
                         editPlaceDetailDelegate:(id<MTEditPlaceDetailDelegate> _Nonnull)editPlaceDetailDelegate
-                                      wireframe:(MTItemDetailWireframe * _Nonnull)wireframe NS_DESIGNATED_INITIALIZER;
+                                         router:(id<MTAppRouterInterface>)router NS_DESIGNATED_INITIALIZER;
 
 @end
