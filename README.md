@@ -61,6 +61,8 @@ Notes
 Overview
 ====================
 
+## *first-stable git branch*
+
 Designing this app there was chosen [VIPER architecture](https://www.objc.io/issues/13-architecture/viper/).
 
 Horizontal architecture of the app consists of modules. Each screen of the app is a distinct module. It gives flexibility of modules' connection and ability to replace modules.
@@ -79,10 +81,37 @@ In this demo app I used `UITableViewController` (and `UICollectionViewController
 **Interactors** connected with **presenters** asynchronously and with **DataManager** via blocks.<br />
 **DataManager** does operations with data, for example select data source (server/local database), merge and cache data.
 
+## *dependecy-injection git branch*
+
+How dependencies were configured in `first-stable` git branch:
+- `AppDelegate` class configured dependencies with `AppSettingsConfigurator` and `AppModulesConnector`;
+- `AppModulesConnector` class configured dependencies between modules;
+- `Wireframe` classes configured dependencies inside a module and performed navigation between modules.
+
+How dependencies are configured in this git branch:
+- `ApplicationAssembly` configures dependencies for `AppDelegate`;
+- `Assembly` classes configure dependencies inside a module;
+- `AppRouter` class performs navigation between modules (probably god router is not the best solution).
+
+To configure dependencies we use [Typhoon Dependency Injection Framework](http://typhoonframework.org/).
+
+Assembly modularity is presented on the picture:
+
+![ScreenShot2](https://cloud.githubusercontent.com/assets/2142832/11167840/0e783ccc-8b9e-11e5-8405-147037dbecce.png)
+
+`ViewComponentsAssembly` class and `DataComponentsAssembly` class are used as helper classes.
+
 Usage
 ====================
-Clone the pepository with all submodules (see submodules in `Utilities/External`).
+
+## *first-stable git branch*
+
+Clone the repository with all submodules (see submodules in `Utilities/External`).
+
+## *dependecy-injection git branch*
+
+Clone the repository with all submodules (see submodules in `Utilities/External`) and install necessary pods using [CocoaPods](http://cocoapods.org/).
 
 Feedback
 ====================
-My email is 777.maxxx@gmail.com. Feel free to contact with me.
+My email is 777.maxxx@gmail.com. Feel free to contact me.
